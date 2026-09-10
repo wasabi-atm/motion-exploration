@@ -1,0 +1,9 @@
+{
+  "name": "motion-the-agency",
+  "version": "1.0.0",
+  "description": "Motion The Agency website",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "start": "node dev-server.js"
+  }
+}
