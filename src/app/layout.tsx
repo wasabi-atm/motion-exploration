@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Navbar } from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
   title: "Motion Graphics & Design Agency | Free Video Sample",
@@ -30,7 +31,6 @@ export default function RootLayout({
           rel="stylesheet"
           type="text/css"
         />
-        <link href="/css/mobile-nav.css" rel="stylesheet" type="text/css" />
 
         {/* Fonts & Preconnects */}
         <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -47,6 +47,7 @@ export default function RootLayout({
         />
       </head>
       <body className="body" suppressHydrationWarning>
+        <Navbar />
         {children}
 
         {/* Production Webflow & jQuery runtime */}
@@ -59,7 +60,6 @@ export default function RootLayout({
           type="text/javascript"
         />
         <script src="/js/flowbitz.umd.js" type="text/javascript" />
-        <script src="/js/mobile-nav.js" type="text/javascript" />
         <script src="/js/live-scripts.js" type="text/javascript" />
       </body>
     </html>

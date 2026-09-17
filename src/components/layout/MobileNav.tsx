@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { NAVIGATION_DATA, NavItem } from "@/data/navigation";
 import { GlowingButton } from "@/components/ui/GlowingButton";
 
@@ -36,93 +36,113 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-          className="fixed inset-0 z-40 flex flex-col h-[100dvh] w-screen overflow-hidden bg-[radial-gradient(ellipse_at_50%_0%,#1c1038_0%,#0e0822_35%,#080610_70%)] text-white"
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+          className="fixed inset-0 z-40 flex flex-col h-[100dvh] w-screen overflow-hidden bg-[#080610]/98 backdrop-blur-2xl text-white"
         >
-          {/* Scrollable navigation list */}
-          <div className="flex-1 overflow-y-auto px-4 pt-24 pb-28">
-            <div className="text-[10px] font-bold tracking-widest uppercase text-white/35 px-2 mb-3">
-              Navigation
-            </div>
-
-            <div className="flex flex-col gap-2">
+          {/* Scrollable navigation list (Superside divided list layout) */}
+          <div className="flex-1 overflow-y-auto px-5 pt-24 pb-32">
+            <nav className="flex flex-col divide-y divide-white/[0.08]">
               {NAVIGATION_DATA.map((item: NavItem) => {
                 const hasSubsections = item.sections && item.sections.length > 0;
                 const isExpanded = expandedItem === item.title;
 
+                // Direct page link (e.g. "Our work"): NO chevron, NO arrow icon, pure Superside style
                 if (!hasSubsections) {
                   return (
-                    <Link
-                      key={item.title}
-                      href={item.href || "#"}
-                      onClick={onClose}
-                      className="flex items-center justify-between rounded-xl bg-white/[0.03] border border-white/[0.08] px-4 py-3.5 text-base font-semibold text-white active:bg-white/[0.08] transition-colors"
-                    >
-                      <span>{item.title}</span>
-                      <ArrowRight className="h-4 w-4 text-white/40" />
-                    </Link>
+                    <div key={item.title} className="py-2">
+                      <Link
+                        href={item.href || "#"}
+                        onClick={onClose}
+                        className="flex items-center w-full py-3.5 text-[22px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] transition-colors"
+                      >
+                        <span>{item.title}</span>
+                      </Link>
+                    </div>
                   );
                 }
 
+                // Accordion disclosure item (e.g. "Services", "For whom", "Resources", "Pricing")
                 return (
-                  <div
-                    key={item.title}
-                    className="overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.03] transition-colors"
-                  >
+                  <div key={item.title} className="py-2">
                     <button
                       type="button"
                       onClick={() => toggleAccordion(item.title)}
-                      className="flex w-full items-center justify-between px-4 py-3.5 text-left text-base font-semibold text-white focus:outline-none"
+                      aria-expanded={isExpanded}
+                      className="flex w-full items-center justify-between py-3.5 text-left text-[22px] font-semibold tracking-tight text-white hover:text-white/90 focus:outline-none transition-colors"
                     >
                       <span>{item.title}</span>
                       <ChevronDown
-                        className={`h-4 w-4 text-white/50 transition-transform duration-200 ${
-                          isExpanded ? "rotate-180 text-white" : ""
+                        className={`h-5 w-5 text-white/50 transition-transform duration-300 ease-out ${
+                          isExpanded ? "rotate-180 text-[#ff4dcb]" : ""
                         }`}
                       />
                     </button>
 
-                    <AnimatePresence>
+                    <AnimatePresence initial={false}>
                       {isExpanded && (
                         <motion.div
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.25, ease: "easeInOut" }}
-                          className="overflow-hidden border-t border-white/[0.06] bg-black/20 px-3 py-3"
+                          transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                          className="overflow-hidden pt-2 pb-4"
                         >
+                          {/* Parent Overview Link (e.g. "See all services →", "Compare all plans →") */}
+                          {item.href && item.parentLabel && (
+                            <div className="mb-3 pb-2.5 border-b border-white/[0.06]">
+                              <Link
+                                href={item.href}
+                                onClick={onClose}
+                                className="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-[#ff008e]/15 to-[#ff4dcb]/10 border border-[#ff008e]/25 text-[#ff4dcb] hover:bg-[#ff008e]/20 transition-all group"
+                              >
+                                <span className="text-sm font-semibold tracking-wide">
+                                  {item.parentLabel}
+                                </span>
+                                <span className="text-base font-bold transition-transform group-hover:translate-x-1">
+                                  →
+                                </span>
+                              </Link>
+                            </div>
+                          )}
+
                           {item.sections?.map((section) => (
-                            <div key={section.title} className="mb-3 last:mb-0">
-                              <div className="text-[10px] font-bold tracking-wider uppercase text-white/35 px-2 py-1">
-                                {section.title}
-                              </div>
-                              <div className="flex flex-col gap-1.5 mt-1">
+                            <div key={section.title} className="mb-4 last:mb-0">
+                              {/* Eyebrow text: ONLY rendered when multiple sections exist (suppressed on monolith datasets) */}
+                              {item.sections && item.sections.length > 1 && (
+                                <div className="text-[11px] font-bold tracking-wider uppercase text-white/40 px-2 py-1 mb-1">
+                                  {section.title}
+                                </div>
+                              )}
+
+                              {/* Sub-item rows (Apple HIG clean rows) */}
+                              <div className="flex flex-col gap-1">
                                 {section.items.map((sub) => (
                                   <Link
                                     key={sub.title}
                                     href={sub.href}
                                     onClick={onClose}
-                                    className="flex items-center gap-3 rounded-lg px-2.5 py-2 hover:bg-white/[0.06] active:bg-white/[0.08] transition-colors"
+                                    className="flex items-center gap-3.5 rounded-xl px-2.5 py-2.5 hover:bg-white/[0.05] active:bg-white/[0.08] transition-colors group"
                                   >
                                     {sub.icon && (
-                                      <div className="h-8 w-8 relative flex-shrink-0 overflow-hidden rounded-md bg-white/5">
+                                      <div className="h-10 w-10 relative flex-shrink-0 overflow-hidden rounded-xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center">
                                         <Image
                                           src={sub.icon}
                                           alt={sub.title}
-                                          fill
-                                          className="object-contain p-1"
+                                          width={40}
+                                          height={40}
+                                          className="object-contain p-1.5 group-hover:scale-105 transition-transform"
                                         />
                                       </div>
                                     )}
                                     <div className="flex-1 min-w-0">
-                                      <div className="text-sm font-semibold text-white/90">
+                                      <div className="text-[15px] font-semibold text-white group-hover:text-[#ff4dcb] transition-colors">
                                         {sub.title}
                                       </div>
                                       {sub.description && (
-                                        <div className="text-xs text-white/50 truncate">
+                                        <div className="text-xs text-white/60 line-clamp-1 mt-0.5">
                                           {sub.description}
                                         </div>
                                       )}
@@ -138,11 +158,11 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                   </div>
                 );
               })}
-            </div>
+            </nav>
           </div>
 
           {/* Sticky Bottom CTA Bar */}
-          <div className="fixed bottom-0 inset-x-0 z-50 flex gap-2.5 p-4 bg-gradient-to-t from-[#080610] via-[#080610]/95 to-transparent backdrop-blur-md border-t border-white/[0.08]">
+          <div className="fixed bottom-0 inset-x-0 z-50 flex gap-3 p-4 bg-[#080610]/90 backdrop-blur-xl border-t border-white/[0.08]">
             <GlowingButton
               href="/contact-us.html"
               variant="white"

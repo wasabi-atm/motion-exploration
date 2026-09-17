@@ -81,13 +81,29 @@ export function Navbar() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.96 }}
                           transition={{ duration: 0.18, ease: "easeOut" }}
-                          className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-[440px] rounded-2xl border border-white/10 bg-[#0c081a]/95 backdrop-blur-2xl p-4 shadow-2xl shadow-black/80"
+                          className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-[460px] rounded-2xl border border-white/10 bg-[#0c081a]/95 backdrop-blur-2xl p-4 shadow-2xl shadow-black/80"
                         >
+                          {/* Parent Overview Link if exists */}
+                          {item.href && item.parentLabel && (
+                            <div className="mb-2 pb-2 border-b border-white/[0.08]">
+                              <Link
+                                href={item.href}
+                                className="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-[#ff4dcb] hover:bg-white/[0.06] transition-colors"
+                              >
+                                <span>{item.parentLabel}</span>
+                                <span className="text-sm">→</span>
+                              </Link>
+                            </div>
+                          )}
+
                           {item.sections?.map((section) => (
-                            <div key={section.title} className="space-y-1.5">
-                              <div className="text-[11px] font-bold tracking-wider uppercase text-white/40 px-3 py-1">
-                                {section.title}
-                              </div>
+                            <div key={section.title} className="space-y-1.5 mb-3 last:mb-0">
+                              {/* Only show eyebrow text if multiple sections exist (not a monolith dataset) */}
+                              {item.sections && item.sections.length > 1 && (
+                                <div className="text-[11px] font-bold tracking-wider uppercase text-white/40 px-3 py-1">
+                                  {section.title}
+                                </div>
+                              )}
                               <div className="grid grid-cols-1 gap-1">
                                 {section.items.map((sub) => (
                                   <Link
@@ -138,28 +154,36 @@ export function Navbar() {
               </GlowingButton>
             </div>
 
-            {/* Mobile Right: Hamburger Toggle */}
+            {/* Mobile Right: Pink Hamburger Toggle morphing to X */}
             <div className="flex items-center gap-2 lg:hidden">
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen((prev) => !prev)}
-                aria-label="Toggle navigation menu"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.07] border border-white/[0.12] text-white active:scale-95 transition-all"
+                aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+                aria-expanded={mobileMenuOpen}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.08] border border-white/[0.14] hover:border-[#ff008e]/50 text-white active:scale-95 transition-all"
               >
-                <div className="flex flex-col justify-center items-center gap-1.5 w-5">
+                <div className="relative flex flex-col justify-center items-center w-5 h-4">
+                  {/* Top Bar */}
                   <span
-                    className={`h-0.5 w-full bg-white rounded-full transition-all duration-300 ${
-                      mobileMenuOpen ? "translate-y-2 rotate-45" : ""
+                    className={`absolute h-[2.5px] w-5 rounded-full bg-gradient-to-r from-[#ff008e] to-[#ff4dcb] transition-all duration-300 ease-in-out ${
+                      mobileMenuOpen
+                        ? "rotate-45 translate-y-0"
+                        : "-translate-y-1.5"
                     }`}
                   />
+                  {/* Middle Bar */}
                   <span
-                    className={`h-0.5 w-full bg-white rounded-full transition-all duration-300 ${
-                      mobileMenuOpen ? "opacity-0" : ""
+                    className={`absolute h-[2.5px] w-5 rounded-full bg-gradient-to-r from-[#ff008e] to-[#ff4dcb] transition-all duration-300 ease-in-out ${
+                      mobileMenuOpen ? "opacity-0 scale-x-0" : "opacity-100"
                     }`}
                   />
+                  {/* Bottom Bar */}
                   <span
-                    className={`h-0.5 w-full bg-white rounded-full transition-all duration-300 ${
-                      mobileMenuOpen ? "-translate-y-2 -rotate-45" : ""
+                    className={`absolute h-[2.5px] w-5 rounded-full bg-gradient-to-r from-[#ff008e] to-[#ff4dcb] transition-all duration-300 ease-in-out ${
+                      mobileMenuOpen
+                        ? "-rotate-45 translate-y-0"
+                        : "translate-y-1.5"
                     }`}
                   />
                 </div>
