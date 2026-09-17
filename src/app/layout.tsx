@@ -59,7 +59,6 @@ export default function RootLayout({
           type="text/javascript"
         />
         <script src="/js/flowbitz.umd.js" type="text/javascript" />
-        <script src="/js/lottie.min.js" type="text/javascript" />
         <script src="/js/mobile-nav.js" type="text/javascript" />
         <script src="/js/live-scripts.js" type="text/javascript" />
       </body>

@@ -748,62 +748,25 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Robust Lottie Animation Initializer
-(function initLottieAnimations() {
-  function renderLotties() {
-    if (typeof lottie === 'undefined') {
-      return;
-    }
-    const elements = document.querySelectorAll('[data-animation-type="lottie"]');
-    elements.forEach(function(el) {
-      if (el.querySelector('svg') || el.querySelector('canvas') || el.dataset.lottieReady === 'true') {
-        return;
-      }
-      var src = el.getAttribute('data-src') || (el.dataset && el.dataset.src);
-      if (!src) return;
-
-      // Prefer fast local static asset
-      if (src.indexOf('Homepage%20-%20Hero%20Illustration%20v2.json') !== -1 || src.indexOf('Homepage---Hero-Illustration-v2.json') !== -1) {
-        src = '/documents/Homepage---Hero-Illustration-v2.json';
-      } else if (src.indexOf('circuit.json') !== -1) {
-        src = '/documents/circuit.json';
-      } else if (src.indexOf('documents/') === 0) {
-        src = '/' + src;
-      }
-
-      el.dataset.lottieReady = 'true';
-      var loopAttr = el.getAttribute('data-loop');
-      var loop = loopAttr === null || loopAttr === '1' || loopAttr === 'true';
-      var autoplayAttr = el.getAttribute('data-autoplay');
-      var autoplay = autoplayAttr === null || autoplayAttr === '1' || autoplayAttr === 'true';
-
-      try {
-        lottie.loadAnimation({
-          container: el,
-          renderer: 'svg',
-          loop: loop,
-          autoplay: autoplay,
-          path: src,
-          rendererSettings: {
-            preserveAspectRatio: 'xMidYMid meet',
-            progressiveLoad: true,
-            hideOnTransparent: true
-          }
-        });
-      } catch (err) {
-        console.warn('Lottie load error:', err);
+// Ensure no duplicate Lottie renderers in hero
+(function deduplicateLottie() {
+  function check() {
+    document.querySelectorAll('.lottie-hide-responsive, [data-animation-type="lottie"]').forEach(function(container) {
+      const renderers = container.querySelectorAll('svg, canvas');
+      if (renderers.length > 1) {
+        for (let i = 1; i < renderers.length; i++) {
+          renderers[i].remove();
+        }
       }
     });
   }
-
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', renderLotties);
+    document.addEventListener('DOMContentLoaded', check);
   } else {
-    renderLotties();
+    check();
   }
-  window.addEventListener('load', renderLotties);
-  setTimeout(renderLotties, 50);
-  setTimeout(renderLotties, 300);
-  setTimeout(renderLotties, 1000);
-  setTimeout(renderLotties, 2500);
+  window.addEventListener('load', check);
+  setTimeout(check, 100);
+  setTimeout(check, 400);
+  setTimeout(check, 1200);
 })();

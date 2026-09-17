@@ -121,6 +121,7 @@ body {
 .lottie-hide-responsive {
   width: 100%;
   display: block;
+  position: relative;
 }
 
 .lottie-hide-responsive svg,
@@ -128,6 +129,11 @@ body {
   width: 100% !important;
   height: auto !important;
   display: block;
+}
+
+/* Guard: strictly prevent any duplicate renderer elements */
+.lottie-hide-responsive > :not(:first-child) {
+  display: none !important;
 }
 
 @media screen and (max-width: 991px) {
