@@ -1,11 +1,12 @@
 /* ==========================================================================
    Motion The Agency — Apple HIG Inspired Mobile Navigation
-   Design Language:
-   - Apple Human Interface Guidelines (Large Title 25px/700, -0.025em tracking)
-   - Inset Grouped Card Architecture (20px border radius, subtle hairline borders)
-   - iOS Ultra-Thin Frosted Glass Materials (backdrop-filter: blur(40px) saturate(190%))
-   - Smooth Accordion Spring Physics (cubic-bezier(0.32, 0.72, 0, 1))
-   - Ergonomic Thumb Zone (44pt+ touch targets, sticky bottom action pill bar)
+   Key Requirements:
+   - Hamburger bars: 100% Motion signature pink gradient (#ff008e to #ff4dcb)
+   - Top-level items: Apple HIG Large Title scale (24px, Bold, -0.025em tracking)
+   - Zero text clipping: Every card has full comfortable min-height (60px)
+   - No long text on mobile: All paragraph descriptions (.text-14-150) are hidden
+   - Smooth accordion behavior with 180° chevron rotation
+   - Frosted glass backdrop and sticky thumb-zone action buttons
    Scoped strictly to <= 991px.
    ========================================================================== */
 
@@ -40,7 +41,7 @@ body.mobile-nav-open {
 
   /* Inner pill — Apple-grade frosted capsule */
   .wrapper-navbar {
-    background: rgba(15, 11, 30, 0.82) !important;
+    background: rgba(15, 11, 30, 0.85) !important;
     -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
     backdrop-filter: blur(25px) saturate(180%) !important;
     border: 1px solid rgba(255, 255, 255, 0.14) !important;
@@ -56,8 +57,8 @@ body.mobile-nav-open {
   }
 
   body.mobile-nav-open .wrapper-navbar {
-    border-color: rgba(255, 0, 142, 0.28) !important;
-    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.65), 0 0 24px rgba(255, 0, 142, 0.12) !important;
+    border-color: rgba(255, 0, 142, 0.35) !important;
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.65), 0 0 24px rgba(255, 0, 142, 0.15) !important;
   }
 
   .group-1-nav.responsive {
@@ -92,7 +93,9 @@ body.mobile-nav-open {
     gap: 0 !important;
   }
 
-  /* Hamburger / Close circular button */
+  /* ------------------------------------------------------------------------
+     HAMBURGER BUTTON: ALL 3 BARS UNIFORM PINK GRADIENT
+     ------------------------------------------------------------------------ */
   .menu-button.w-nav-button {
     width: 44px !important;
     height: 44px !important;
@@ -116,34 +119,70 @@ body.mobile-nav-open {
   }
 
   body.mobile-nav-open .menu-button.w-nav-button {
-    background: rgba(255, 0, 142, 0.16) !important;
-    border-color: rgba(255, 0, 142, 0.38) !important;
+    background: rgba(255, 0, 142, 0.18) !important;
+    border-color: rgba(255, 0, 142, 0.45) !important;
   }
 
-  /* Burger morphing into X */
   .burger-3 {
-    width: 18px !important;
-    height: 13px !important;
+    width: 20px !important;
+    height: 14px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
     position: relative !important;
   }
 
+  .b3-top-wrap {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    position: relative !important;
+  }
+
+  /* ALL BARS UNIFORMLY PINK */
   .b3-bar1,
   .b3-bar3,
-  .b3-middlebar-base {
-    display: block !important;
-    width: 100% !important;
-    height: 2px !important;
-    background: #ffffff !important;
+  .b3-middlebar-base,
+  .b3-middlebar-top,
+  .b3-middlebar {
+    background: linear-gradient(90deg, #ff008e, #ff4dcb) !important;
+    background-image: linear-gradient(90deg, #ff008e, #ff4dcb) !important;
     border-radius: 2px !important;
+    box-shadow: 0 0 8px rgba(255, 0, 142, 0.35) !important;
+  }
+
+  .b3-bar1,
+  .b3-bar3 {
+    display: block !important;
+    width: 20px !important;
+    height: 2.2px !important;
     transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.2s ease !important;
     transform-origin: center !important;
   }
 
+  .b3-middlebar-base {
+    display: block !important;
+    width: 20px !important;
+    height: 2.2px !important;
+    margin: 0 !important;
+    position: relative !important;
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+  }
+
+  .b3-middlebar-top,
+  .b3-middlebar {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    inset: 0 !important;
+  }
+
+  /* Morph into Pink "X" when menu is open */
   body.mobile-nav-open .b3-bar1 {
-    transform: translateY(5.5px) rotate(45deg) !important;
+    transform: translateY(5.9px) rotate(45deg) !important;
   }
 
   body.mobile-nav-open .b3-middlebar-base,
@@ -154,7 +193,7 @@ body.mobile-nav-open {
   }
 
   body.mobile-nav-open .b3-bar3 {
-    transform: translateY(-5.5px) rotate(-45deg) !important;
+    transform: translateY(-5.9px) rotate(-45deg) !important;
   }
 
   .wrapper-btn.is-hide {
@@ -174,8 +213,7 @@ body.mobile-nav-open {
     max-height: 100dvh !important;
     z-index: 99990 !important;
 
-    /* Apple-style deep blur material */
-    background: rgba(8, 6, 16, 0.86) !important;
+    background: rgba(8, 6, 16, 0.88) !important;
     -webkit-backdrop-filter: blur(40px) saturate(190%) !important;
     backdrop-filter: blur(40px) saturate(190%) !important;
 
@@ -189,7 +227,7 @@ body.mobile-nav-open {
     /* Closed state */
     opacity: 0 !important;
     pointer-events: none !important;
-    transform: scale(0.98) translateY(-10px) !important;
+    transform: scale(0.98) translateY(-8px) !important;
     visibility: hidden !important;
     transition: opacity 0.32s cubic-bezier(0.32, 0.72, 0, 1),
                 transform 0.32s cubic-bezier(0.32, 0.72, 0, 1),
@@ -220,50 +258,55 @@ body.mobile-nav-open {
     overflow: hidden !important;
   }
 
-  /* Scrollable Inset Grouped List */
+  /* Scrollable Navigation Card List */
   .nav-menu_list {
     flex: 1 1 auto !important;
     width: 100% !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
     -webkit-overflow-scrolling: touch !important;
-    /* Clearance: 88px top for floating capsule, 128px bottom for sticky action bar */
-    padding: 88px 16px 132px 16px !important;
+    padding: 86px 16px 130px 16px !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 10px !important;
+    gap: 12px !important;
     box-sizing: border-box !important;
   }
 }
 
 /* --------------------------------------------------------------------------
-   3. Apple HIG Large Title Accordion Headers & Cards
+   3. Top-Level Accordion Cards & Direct Links (Apple Large Title: 24px)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
-  /* Inset Grouped Card */
+  /* Accordion Card Container — Full height, never squished */
   .nav-drop.w-dropdown {
     width: 100% !important;
-    display: block !important;
+    min-height: 60px !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
     position: static !important;
     margin: 0 !important;
-    border-radius: 20px !important;
+    border-radius: 18px !important;
     background: rgba(255, 255, 255, 0.04) !important;
     border: 1px solid rgba(255, 255, 255, 0.09) !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
     overflow: hidden !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
     transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
   }
 
   .nav-drop.w-dropdown.mobile-expanded {
-    background: rgba(255, 255, 255, 0.065) !important;
+    background: rgba(255, 255, 255, 0.07) !important;
     border-color: rgba(255, 255, 255, 0.18) !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45) !important;
   }
 
-  /* Top-Level Header Row */
+  /* Header Row inside each Card */
   .dropdown-toggle.responsive.w-dropdown-toggle {
     width: 100% !important;
-    min-height: 64px !important;
+    min-height: 60px !important;
+    height: auto !important;
     padding: 16px 20px !important;
     display: flex !important;
     align-items: center !important;
@@ -275,6 +318,7 @@ body.mobile-nav-open {
     background: transparent !important;
     border: none !important;
     gap: 12px !important;
+    flex-shrink: 0 !important;
     transition: background 0.15s ease !important;
   }
 
@@ -282,46 +326,13 @@ body.mobile-nav-open {
     background: rgba(255, 255, 255, 0.06) !important;
   }
 
-  /* Apple HIG Large Title: 25px, Bold, -0.025em tracking */
-  .dropdown-toggle.responsive .nav-drop_h {
-    font-size: 25px !important;
-    font-weight: 700 !important;
-    color: #ffffff !important;
-    line-height: 1.25 !important;
-    letter-spacing: -0.025em !important;
-    pointer-events: none !important;
-    flex: 1 !important;
-  }
-
-  /* Apple SF-Style Trailing Chevron Icon */
-  .dropdown-toggle.responsive .nav-drop-icon {
-    width: 20px !important;
-    height: 20px !important;
-    min-width: 20px !important;
-    opacity: 0.65 !important;
-    pointer-events: none !important;
-    flex-shrink: 0 !important;
-    filter: brightness(0) invert(1) !important;
-    transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.2s ease !important;
-  }
-
-  /* Chevron 180° rotation on expansion */
-  .nav-drop.mobile-expanded .dropdown-toggle.responsive .nav-drop-icon,
-  .dropdown-toggle.responsive.w--open .nav-drop-icon {
-    transform: rotate(180deg) !important;
-    opacity: 1 !important;
-  }
-
-  /* Hairline divider below header when expanded */
-  .nav-drop.mobile-expanded .dropdown-toggle.responsive {
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08) !important;
-  }
-
-  /* Neutralize nested <a> inside toggles */
+  /* Neutralize nested <a> inside Services / Pricing toggles */
   .dropdown-toggle.responsive a.link-block-5 {
     display: flex !important;
     align-items: center !important;
     flex: 1 !important;
+    width: auto !important;
+    height: auto !important;
     text-decoration: none !important;
     color: inherit !important;
     pointer-events: none !important;
@@ -331,25 +342,59 @@ body.mobile-nav-open {
     border: none !important;
   }
 
-  /* Direct links (e.g. "Our work") styled identically with Large Title */
+  /* Apple HIG Large Title Scale: 24px, Bold, -0.025em tracking */
+  .dropdown-toggle.responsive .nav-drop_h,
   .nav-link.responsive {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.025em !important;
+    pointer-events: none !important;
+    flex: 1 !important;
+    display: block !important;
+  }
+
+  /* Trailing Chevron */
+  .dropdown-toggle.responsive .nav-drop-icon {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    opacity: 0.65 !important;
+    pointer-events: none !important;
+    flex-shrink: 0 !important;
+    filter: brightness(0) invert(1) !important;
+    transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.2s ease !important;
+  }
+
+  /* Chevron 180° rotation on expansion */
+  .nav-drop.mobile-expanded .dropdown-toggle.responsive .nav-drop-icon,
+  .dropdown-toggle.responsive.w--open .nav-drop-icon {
+    transform: rotate(180deg) !important;
+    opacity: 1 !important;
+  }
+
+  .nav-drop.mobile-expanded .dropdown-toggle.responsive {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  /* Direct links (e.g. "Our work") styled as full-height card */
+  .nav-link.responsive {
+    width: 100% !important;
+    min-height: 60px !important;
+    height: auto !important;
+    padding: 16px 20px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    width: 100% !important;
-    min-height: 64px !important;
-    padding: 16px 20px !important;
-    font-size: 25px !important;
-    font-weight: 700 !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
-    border-radius: 20px !important;
+    margin: 0 !important;
+    border-radius: 18px !important;
     background: rgba(255, 255, 255, 0.04) !important;
     border: 1px solid rgba(255, 255, 255, 0.09) !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
     box-sizing: border-box !important;
-    letter-spacing: -0.025em !important;
-    line-height: 1.25 !important;
+    text-decoration: none !important;
+    flex-shrink: 0 !important;
     transition: background 0.15s ease, transform 0.15s ease !important;
     -webkit-tap-highlight-color: transparent !important;
   }
@@ -375,7 +420,7 @@ body.mobile-nav-open {
 }
 
 /* --------------------------------------------------------------------------
-   4. Sub-Menu Accordion Disclosure & Inset Rows
+   4. Accordion Content: NO LONG TEXT, Compact Apple Rows
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   .nav-drop-list.new.w-dropdown-list {
@@ -391,17 +436,17 @@ body.mobile-nav-open {
     padding: 0 !important;
     margin: 0 !important;
     box-sizing: border-box !important;
-    transition: max-height 0.42s cubic-bezier(0.32, 0.72, 0, 1),
-                opacity 0.28s ease,
-                padding 0.35s ease !important;
+    transition: max-height 0.38s cubic-bezier(0.32, 0.72, 0, 1),
+                opacity 0.25s ease,
+                padding 0.3s ease !important;
   }
 
   /* Expanded State */
   .nav-drop.mobile-expanded .nav-drop-list.new.w-dropdown-list,
   .nav-drop-list.new.w-dropdown-list.w--open {
-    max-height: 2600px !important;
+    max-height: 2200px !important;
     opacity: 1 !important;
-    padding: 8px 12px 16px 12px !important;
+    padding: 8px 12px 14px 12px !important;
     overflow: visible !important;
   }
 
@@ -409,16 +454,14 @@ body.mobile-nav-open {
   .nav-drop-list-content-manual {
     display: flex !important;
     flex-direction: column !important;
-    gap: 6px !important;
+    gap: 4px !important;
     width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
     background: transparent !important;
-    box-shadow: none !important;
     border: none !important;
   }
 
-  /* Collapse multi-column grids into single clean vertical stack */
   .grid-2,
   .link-wrapper-nav-drop,
   .link-wrapper-nav-drop-resources-2,
@@ -432,78 +475,73 @@ body.mobile-nav-open {
   .services-navbar-content-wrapper {
     display: flex !important;
     flex-direction: column !important;
-    gap: 6px !important;
+    gap: 4px !important;
     width: 100% !important;
   }
 
-  /* Hide desktop tab switchers */
   .tab-services-navbar .nav-tab {
     display: none !important;
   }
 
   .tab-services-navbar .wrapper-btn.nav {
     width: 100% !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
   }
 
-  /* Apple HIG Section Subheadline: Uppercase, 11px, subtle tracking */
+  /* Category Subheads */
   .text-caps.is-navbar,
   .tab-services-navbar {
     font-size: 11px !important;
     letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
-    color: rgba(255, 255, 255, 0.45) !important;
-    padding: 14px 8px 4px 8px !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    padding: 10px 8px 4px 8px !important;
     font-weight: 700 !important;
   }
 
-  /* Hairline separator between sub-sections */
   .nav-drop_mobile-divider {
     width: 100% !important;
     height: 0.5px !important;
     background: rgba(255, 255, 255, 0.08) !important;
-    margin: 10px 0 6px 0 !important;
+    margin: 8px 0 4px 0 !important;
     border: none !important;
   }
 
-  /* Sub-item Link Row (Apple Inset Detail Row) */
+  /* Compact Sub-Item Row: Icon + Title Only */
   .link-nav-drop {
     display: flex !important;
     align-items: center !important;
-    gap: 14px !important;
-    min-height: 52px !important;
-    padding: 11px 12px !important;
-    border-radius: 14px !important;
-    background: rgba(255, 255, 255, 0.025) !important;
-    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    gap: 12px !important;
+    min-height: 46px !important;
+    padding: 8px 12px !important;
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid transparent !important;
     text-decoration: none !important;
     color: #ffffff !important;
-    transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease !important;
+    transition: background 0.15s ease !important;
     -webkit-tap-highlight-color: transparent !important;
   }
 
   .link-nav-drop:active {
     background: rgba(255, 255, 255, 0.08) !important;
-    border-color: rgba(255, 255, 255, 0.12) !important;
-    transform: scale(0.99) !important;
   }
 
-  /* Apple Squircle Thumbnail Icon */
+  /* Squircle Icon */
   .image-nav-drop,
   .icon-nav-drop {
-    width: 38px !important;
-    height: 38px !important;
-    min-width: 38px !important;
-    border-radius: 10px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    border-radius: 8px !important;
     object-fit: cover !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
     flex-shrink: 0 !important;
   }
 
   .image-nav-drop.for-whom {
     object-fit: contain !important;
     background: rgba(255, 255, 255, 0.04) !important;
-    padding: 4px !important;
+    padding: 3px !important;
   }
 
   .heading_text-wrapper-drop {
@@ -511,27 +549,23 @@ body.mobile-nav-open {
     flex-direction: column !important;
     flex: 1 !important;
     min-width: 0 !important;
+    justify-content: center !important;
   }
 
-  /* Apple Headline Style */
+  /* Clean Title */
   .heading-16-120 {
-    font-size: 16px !important;
+    font-size: 15px !important;
     font-weight: 600 !important;
     color: #ffffff !important;
     line-height: 1.3 !important;
     letter-spacing: -0.01em !important;
   }
 
-  /* Apple Footnote/Subtext Description */
+  /* STRICTLY HIDE LONG PARAGRAPHS ON MOBILE */
   .heading_text-wrapper-drop .text-14-150 {
-    display: block !important;
-    font-size: 13px !important;
-    color: rgba(255, 255, 255, 0.55) !important;
-    line-height: 1.35 !important;
-    margin-top: 2px !important;
+    display: none !important;
   }
 
-  /* Hide heavy desktop gif video autoplay in mobile accordion */
   .gif-navbar {
     display: none !important;
   }
@@ -540,9 +574,9 @@ body.mobile-nav-open {
   .glowing-wrapper-button.fill.small,
   .glowing-wrapper-button.fill.white-transparent {
     width: 100% !important;
-    margin-top: 8px !important;
-    padding: 12px 18px !important;
-    font-size: 14px !important;
+    margin-top: 6px !important;
+    padding: 10px 16px !important;
+    font-size: 13px !important;
     font-weight: 600 !important;
     justify-content: center !important;
     border-radius: 999px !important;
@@ -550,19 +584,19 @@ body.mobile-nav-open {
   }
 
   .link-nav-mobile {
-    margin-top: 8px !important;
-    padding: 10px 12px !important;
+    margin-top: 6px !important;
+    padding: 8px 10px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     text-decoration: none !important;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     background: rgba(255, 0, 142, 0.08) !important;
   }
 }
 
 /* --------------------------------------------------------------------------
-   5. Sticky Bottom Action Bar (Thumb Zone)
+   5. Sticky Bottom Action Bar
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   .wrapper-btn-tablet {
@@ -573,11 +607,10 @@ body.mobile-nav-open {
     width: 100% !important;
     min-width: unset !important;
     margin: 0 !important;
-    padding: 16px 16px calc(16px + env(safe-area-inset-bottom, 8px)) 16px !important;
+    padding: 14px 16px calc(14px + env(safe-area-inset-bottom, 8px)) 16px !important;
     box-sizing: border-box !important;
     z-index: 99995 !important;
 
-    /* Apple-style smooth frosted gradient blur */
     background: linear-gradient(
       to bottom,
       rgba(8, 6, 16, 0) 0%,
@@ -589,7 +622,7 @@ body.mobile-nav-open {
 
     display: flex !important;
     flex-direction: row !important;
-    gap: 12px !important;
+    gap: 10px !important;
     align-items: stretch !important;
   }
 
@@ -601,10 +634,10 @@ body.mobile-nav-open {
 
   .wrapper-btn-tablet .glowing-wrapper-button {
     width: 100% !important;
-    min-height: 48px !important;
+    min-height: 46px !important;
     flex: 1 !important;
-    padding: 14px 14px !important;
-    font-size: 15px !important;
+    padding: 12px 14px !important;
+    font-size: 14px !important;
     font-weight: 600 !important;
     letter-spacing: -0.01em !important;
     border-radius: 999px !important;
@@ -634,31 +667,38 @@ body.mobile-nav-open {
   }
 
   .nav-menu_list {
-    padding-top: 84px !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
-    padding-bottom: 124px !important;
+    padding-top: 80px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-bottom: 120px !important;
+    gap: 10px !important;
   }
 
   .dropdown-toggle.responsive .nav-drop_h,
   .nav-link.responsive {
-    font-size: 22px !important;
+    font-size: 21px !important;
+  }
+
+  .nav-drop.w-dropdown,
+  .nav-link.responsive {
+    min-height: 56px !important;
+    border-radius: 16px !important;
   }
 
   .dropdown-toggle.responsive.w-dropdown-toggle,
   .nav-link.responsive {
-    min-height: 58px !important;
+    min-height: 56px !important;
     padding: 14px 16px !important;
   }
 
   .wrapper-btn-tablet {
-    padding-left: 12px !important;
-    padding-right: 12px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
     gap: 8px !important;
   }
 
   .wrapper-btn-tablet .glowing-wrapper-button {
-    font-size: 14px !important;
-    padding: 13px 8px !important;
+    font-size: 13px !important;
+    padding: 11px 8px !important;
   }
 }
