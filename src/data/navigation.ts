@@ -20,7 +20,8 @@ export interface NavItem {
 export const NAVIGATION_DATA: NavItem[] = [
   {
     title: "For whom",
-    parentLabel: "View all industries",
+    href: "/for-whom",
+    parentLabel: "View all industries & scales",
     sections: [
       {
         title: "By Scale",

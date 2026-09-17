@@ -55,7 +55,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                       <Link
                         href={item.href || "#"}
                         onClick={onClose}
-                        className="flex items-center w-full py-3.5 text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] transition-colors"
+                        className="flex items-center w-full py-3.5 text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] no-underline hover:no-underline transition-colors"
                       >
                         <span>{item.title}</span>
                       </Link>
@@ -66,19 +66,39 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                 // Accordion disclosure item (e.g. "Services", "For whom", "Resources", "Pricing")
                 return (
                   <div key={item.title} className="py-1.5">
-                    <button
-                      type="button"
-                      onClick={() => toggleAccordion(item.title)}
-                      aria-expanded={isExpanded}
-                      className="flex w-full items-center justify-between py-3.5 text-left text-[24px] font-semibold tracking-tight text-white hover:text-white/90 focus:outline-none transition-colors"
-                    >
-                      <span>{item.title}</span>
-                      <ChevronDown
-                        className={`h-5 w-5 text-white/50 transition-transform duration-300 ease-out ${
-                          isExpanded ? "rotate-180 text-[#ff4dcb]" : ""
-                        }`}
-                      />
-                    </button>
+                    <div className="flex w-full items-center justify-between">
+                      {item.href ? (
+                        <Link
+                          href={item.href}
+                          onClick={onClose}
+                          className="flex-1 py-3.5 text-left text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] no-underline hover:no-underline transition-colors"
+                        >
+                          <span>{item.title}</span>
+                        </Link>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => toggleAccordion(item.title)}
+                          className="flex-1 py-3.5 text-left text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] transition-colors focus:outline-none"
+                        >
+                          <span>{item.title}</span>
+                        </button>
+                      )}
+
+                      <button
+                        type="button"
+                        onClick={() => toggleAccordion(item.title)}
+                        aria-expanded={isExpanded}
+                        aria-label={`Toggle ${item.title} sub-menu`}
+                        className="p-3.5 -mr-2 text-white/50 hover:text-white active:text-[#ff4dcb] focus:outline-none transition-colors"
+                      >
+                        <ChevronDown
+                          className={`h-6 w-6 transition-transform duration-300 ease-out ${
+                            isExpanded ? "rotate-180 text-[#ff4dcb]" : ""
+                          }`}
+                        />
+                      </button>
+                    </div>
 
                     <AnimatePresence initial={false}>
                       {isExpanded && (
@@ -95,7 +115,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                               <Link
                                 href={item.href}
                                 onClick={onClose}
-                                className="flex items-center justify-between px-3.5 py-3 rounded-xl bg-gradient-to-r from-[#ff008e]/15 to-[#ff4dcb]/10 border border-[#ff008e]/25 text-[#ff4dcb] hover:bg-[#ff008e]/20 transition-all group"
+                                className="flex items-center justify-between px-3.5 py-3 rounded-xl bg-gradient-to-r from-[#ff008e]/15 to-[#ff4dcb]/10 border border-[#ff008e]/25 text-[#ff4dcb] hover:bg-[#ff008e]/20 no-underline hover:no-underline transition-all group"
                               >
                                 <span className="text-[17px] font-semibold tracking-wide">
                                   {item.parentLabel}
@@ -123,7 +143,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                                     key={sub.title}
                                     href={sub.href}
                                     onClick={onClose}
-                                    className="flex items-center w-full rounded-xl px-3 py-3 text-[19px] font-medium text-white/90 hover:text-white hover:bg-white/[0.06] active:bg-white/[0.1] active:text-[#ff4dcb] transition-all"
+                                    className="flex items-center w-full rounded-xl px-3 py-3 text-[19px] font-medium text-white/90 hover:text-white hover:bg-white/[0.06] active:bg-white/[0.1] active:text-[#ff4dcb] no-underline hover:no-underline transition-all"
                                   >
                                     <span>{sub.title}</span>
                                   </Link>

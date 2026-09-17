@@ -48,7 +48,7 @@ export function Navbar() {
                     <Link
                       key={item.title}
                       href={item.href || "#"}
-                      className="px-3 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/[0.06] transition-all duration-200"
+                      className="px-3 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/[0.06] no-underline hover:no-underline transition-all duration-200"
                     >
                       {item.title}
                     </Link>
@@ -62,17 +62,31 @@ export function Navbar() {
                     onMouseEnter={() => setActiveDropdown(item.title)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <button
-                      type="button"
-                      className="flex items-center gap-1 px-3 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/[0.06] transition-all duration-200 focus:outline-none"
-                    >
-                      <span>{item.title}</span>
-                      <ChevronDown
-                        className={`h-3.5 w-3.5 opacity-60 transition-transform duration-200 ${
-                          activeDropdown === item.title ? "rotate-180 opacity-100" : ""
-                        }`}
-                      />
-                    </button>
+                    {item.href ? (
+                      <Link
+                        href={item.href}
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/[0.06] no-underline hover:no-underline transition-all duration-200 focus:outline-none"
+                      >
+                        <span>{item.title}</span>
+                        <ChevronDown
+                          className={`h-3.5 w-3.5 opacity-60 transition-transform duration-200 ${
+                            activeDropdown === item.title ? "rotate-180 opacity-100" : ""
+                          }`}
+                        />
+                      </Link>
+                    ) : (
+                      <button
+                        type="button"
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/[0.06] transition-all duration-200 focus:outline-none"
+                      >
+                        <span>{item.title}</span>
+                        <ChevronDown
+                          className={`h-3.5 w-3.5 opacity-60 transition-transform duration-200 ${
+                            activeDropdown === item.title ? "rotate-180 opacity-100" : ""
+                          }`}
+                        />
+                      </button>
+                    )}
 
                     <AnimatePresence>
                       {activeDropdown === item.title && (
@@ -88,7 +102,7 @@ export function Navbar() {
                             <div className="mb-2 pb-2 border-b border-white/[0.08]">
                               <Link
                                 href={item.href}
-                                className="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-[#ff4dcb] hover:bg-white/[0.06] transition-colors"
+                                className="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-[#ff4dcb] hover:bg-white/[0.06] no-underline hover:no-underline transition-colors"
                               >
                                 <span>{item.parentLabel}</span>
                                 <span className="text-sm">→</span>
