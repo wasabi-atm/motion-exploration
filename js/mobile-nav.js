@@ -1,6 +1,9 @@
 /**
- * Motion The Agency — Mobile Navigation Controller
- * Provides seamless accordion interactions, prevents accidental page jumps, and manages body scroll lock.
+ * Motion The Agency — Apple HIG Inspired Mobile Navigation Controller
+ * Features:
+ * - Mutually exclusive smooth accordion disclosures
+ * - Synchronized Webflow state & body scroll freeze
+ * - Native iOS-style tap responsiveness & auto-scroll into view
  */
 
 (function () {
@@ -34,7 +37,7 @@
       }
     }
 
-    // Synchronize with Webflow's class changes via MutationObserver
+    // Synchronize with Webflow's class mutations
     const observer = new MutationObserver(function (mutations) {
       if (!isMobile()) return;
       mutations.forEach(function (mutation) {
@@ -77,13 +80,13 @@
       toggle.addEventListener('click', function (e) {
         if (!isMobile()) return;
 
-        // Stop accidental navigation from nested <a> inside toggle (e.g. Services / Pricing)
+        // Prevent navigation from nested link tags inside header (e.g. Services / Pricing)
         e.preventDefault();
         e.stopPropagation();
 
         const wasExpanded = dropdown.classList.contains('mobile-expanded');
 
-        // Close other dropdowns for a clean accordion flow
+        // Close all other dropdowns for pure accordion behavior
         dropdowns.forEach(function (other) {
           if (other !== dropdown) {
             other.classList.remove('mobile-expanded');
@@ -98,11 +101,23 @@
         } else {
           dropdown.classList.add('mobile-expanded');
           if (list) list.classList.add('w--open');
+
+          // Smoothly scroll the newly opened accordion into view if needed
+          setTimeout(function () {
+            const scrollContainer = navbar.querySelector('.nav-menu_list');
+            if (scrollContainer) {
+              const dropdownRect = dropdown.getBoundingClientRect();
+              const containerRect = scrollContainer.getBoundingClientRect();
+              if (dropdownRect.top < containerRect.top + 70) {
+                dropdown.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }
+          }, 120);
         }
       });
     });
 
-    // Close mobile menu when navigating through an internal link
+    // Close mobile menu when an internal destination link is tapped
     const internalLinks = navMenu.querySelectorAll('a:not(.dropdown-toggle):not(.link-block-5)');
     internalLinks.forEach(function (link) {
       link.addEventListener('click', function () {
@@ -119,7 +134,7 @@
       }
     });
 
-    // Handle screen resize
+    // Reset on window resize to desktop
     window.addEventListener('resize', function () {
       if (!isMobile() && document.body.classList.contains('mobile-nav-open')) {
         toggleMenu(true);

@@ -1,12 +1,16 @@
 /* ==========================================================================
-   Motion The Agency — Mobile Navigation v2
-   Philosophy: The mobile menu IS the desktop capsule, just expanded vertically.
-   Same radial-gradient surfaces, same border language, same glowing CTAs.
+   Motion The Agency — Apple HIG Inspired Mobile Navigation
+   Design Language:
+   - Apple Human Interface Guidelines (Large Title 25px/700, -0.025em tracking)
+   - Inset Grouped Card Architecture (20px border radius, subtle hairline borders)
+   - iOS Ultra-Thin Frosted Glass Materials (backdrop-filter: blur(40px) saturate(190%))
+   - Smooth Accordion Spring Physics (cubic-bezier(0.32, 0.72, 0, 1))
+   - Ergonomic Thumb Zone (44pt+ touch targets, sticky bottom action pill bar)
    Scoped strictly to <= 991px.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   0. Body Scroll Lock (global, no media query needed)
+   0. Body Scroll Lock
    -------------------------------------------------------------------------- */
 body.mobile-nav-open {
   overflow: hidden !important;
@@ -14,13 +18,12 @@ body.mobile-nav-open {
 }
 
 /* --------------------------------------------------------------------------
-   1. Floating Capsule Bar (the always-visible header pill)
+   1. Floating Header Capsule Bar
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
-  /* The outer navbar becomes a transparent anchor — inner pill carries the style */
   .navbar.capsule {
     position: fixed !important;
-    top: 14px !important;
+    top: 12px !important;
     left: 12px !important;
     right: 12px !important;
     width: auto !important;
@@ -35,25 +38,26 @@ body.mobile-nav-open {
     z-index: 99999 !important;
   }
 
-  /* Inner pill — this is the visible floating capsule */
+  /* Inner pill — Apple-grade frosted capsule */
   .wrapper-navbar {
-    background: radial-gradient(circle, #0f0b1e 0%, #0a0614 60%, #110928 100%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    background: rgba(15, 11, 30, 0.82) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+    backdrop-filter: blur(25px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
     border-radius: 999px !important;
-    padding: 10px 10px 10px 18px !important;
+    padding: 8px 10px 8px 18px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
     box-sizing: border-box !important;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(255, 255, 255, 0.06) inset !important;
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.55), inset 0 0 0 0.5px rgba(255, 255, 255, 0.08) !important;
     transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
   }
 
-  /* Subtle pink glow on the pill when menu is open */
   body.mobile-nav-open .wrapper-navbar {
-    border-color: rgba(255, 0, 142, 0.22) !important;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6), 0 0 22px rgba(255, 0, 142, 0.09) !important;
+    border-color: rgba(255, 0, 142, 0.28) !important;
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.65), 0 0 24px rgba(255, 0, 142, 0.12) !important;
   }
 
   .group-1-nav.responsive {
@@ -74,12 +78,12 @@ body.mobile-nav-open {
   }
 
   .logo-img {
-    width: 110px !important;
+    width: 112px !important;
     height: auto !important;
     padding-bottom: 0 !important;
   }
 
-  /* Right side: hide the small "Get free sample" button, keep only hamburger */
+  /* Hide pill inline CTAs on mobile, keep clean header */
   .w-layout-hflex.flex-h._12.padding-right-12 > .glowing-wrapper {
     display: none !important;
   }
@@ -88,34 +92,38 @@ body.mobile-nav-open {
     gap: 0 !important;
   }
 
-  /* Hamburger button */
+  /* Hamburger / Close circular button */
   .menu-button.w-nav-button {
-    width: 42px !important;
-    height: 42px !important;
-    min-width: 42px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     padding: 0 !important;
     border-radius: 999px !important;
-    background: rgba(255, 255, 255, 0.07) !important;
-    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
     cursor: pointer !important;
     -webkit-tap-highlight-color: transparent !important;
-    transition: background 0.2s ease, border-color 0.2s ease !important;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease !important;
     z-index: 2 !important;
     box-sizing: border-box !important;
   }
 
-  body.mobile-nav-open .menu-button.w-nav-button {
-    background: rgba(255, 0, 142, 0.14) !important;
-    border-color: rgba(255, 0, 142, 0.32) !important;
+  .menu-button.w-nav-button:active {
+    transform: scale(0.94) !important;
   }
 
-  /* Burger bars */
+  body.mobile-nav-open .menu-button.w-nav-button {
+    background: rgba(255, 0, 142, 0.16) !important;
+    border-color: rgba(255, 0, 142, 0.38) !important;
+  }
+
+  /* Burger morphing into X */
   .burger-3 {
     width: 18px !important;
-    height: 12px !important;
+    height: 13px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -127,15 +135,15 @@ body.mobile-nav-open {
   .b3-middlebar-base {
     display: block !important;
     width: 100% !important;
-    height: 1.5px !important;
+    height: 2px !important;
     background: #ffffff !important;
     border-radius: 2px !important;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease !important;
+    transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.2s ease !important;
     transform-origin: center !important;
   }
 
   body.mobile-nav-open .b3-bar1 {
-    transform: translateY(5.25px) rotate(45deg) !important;
+    transform: translateY(5.5px) rotate(45deg) !important;
   }
 
   body.mobile-nav-open .b3-middlebar-base,
@@ -146,17 +154,16 @@ body.mobile-nav-open {
   }
 
   body.mobile-nav-open .b3-bar3 {
-    transform: translateY(-5.25px) rotate(-45deg) !important;
+    transform: translateY(-5.5px) rotate(-45deg) !important;
   }
 
-  /* Hide the desktop-only button pair */
   .wrapper-btn.is-hide {
     display: none !important;
   }
 }
 
 /* --------------------------------------------------------------------------
-   2. Full-Screen Menu Panel
+   2. Full-Screen Backdrop (Apple Ultra-Thin Material)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   .nav-menu.responsive.w-nav-menu {
@@ -167,8 +174,10 @@ body.mobile-nav-open {
     max-height: 100dvh !important;
     z-index: 99990 !important;
 
-    /* Same brand gradient as desktop .wrapper-navbar */
-    background: radial-gradient(ellipse at 50% 0%, #1c1038 0%, #0e0822 35%, #080610 70%) !important;
+    /* Apple-style deep blur material */
+    background: rgba(8, 6, 16, 0.86) !important;
+    -webkit-backdrop-filter: blur(40px) saturate(190%) !important;
+    backdrop-filter: blur(40px) saturate(190%) !important;
 
     display: flex !important;
     flex-direction: column !important;
@@ -180,11 +189,11 @@ body.mobile-nav-open {
     /* Closed state */
     opacity: 0 !important;
     pointer-events: none !important;
-    transform: translateY(-16px) !important;
+    transform: scale(0.98) translateY(-10px) !important;
     visibility: hidden !important;
-    transition: opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
-                visibility 0s linear 0.28s !important;
+    transition: opacity 0.32s cubic-bezier(0.32, 0.72, 0, 1),
+                transform 0.32s cubic-bezier(0.32, 0.72, 0, 1),
+                visibility 0s linear 0.32s !important;
   }
 
   /* Open state */
@@ -192,19 +201,17 @@ body.mobile-nav-open {
   .nav-menu.responsive.w-nav-menu.w--open {
     opacity: 1 !important;
     pointer-events: auto !important;
-    transform: translateY(0) !important;
+    transform: scale(1) translateY(0) !important;
     visibility: visible !important;
-    transition: opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    transition: opacity 0.32s cubic-bezier(0.32, 0.72, 0, 1),
+                transform 0.32s cubic-bezier(0.32, 0.72, 0, 1),
                 visibility 0s linear 0s !important;
   }
 
-  /* Remove the Webflow sticky gradient overlay */
   .nav-menu_overlay-top {
     display: none !important;
   }
 
-  /* Inner layout: column flex to push CTA bar to bottom */
   .nav-content.responsive {
     display: flex !important;
     flex-direction: column !important;
@@ -213,74 +220,51 @@ body.mobile-nav-open {
     overflow: hidden !important;
   }
 
-  /* Scrollable list: top padding clears the floating pill */
-  .nav-menu_list.responsive {
+  /* Scrollable Inset Grouped List */
+  .nav-menu_list {
     flex: 1 1 auto !important;
     width: 100% !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
     -webkit-overflow-scrolling: touch !important;
-    /* top pad = pill top(14) + pill height(~62) + breathing room(20) */
-    padding: 100px 14px 24px 14px !important;
+    /* Clearance: 88px top for floating capsule, 128px bottom for sticky action bar */
+    padding: 88px 16px 132px 16px !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 5px !important;
+    gap: 10px !important;
     box-sizing: border-box !important;
   }
 }
 
 /* --------------------------------------------------------------------------
-   3. Dropdown Container
+   3. Apple HIG Large Title Accordion Headers & Cards
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
+  /* Inset Grouped Card */
   .nav-drop.w-dropdown {
     width: 100% !important;
     display: block !important;
     position: static !important;
     margin: 0 !important;
-    border-radius: 14px !important;
-    background: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid rgba(255, 255, 255, 0.07) !important;
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
     overflow: hidden !important;
-    transition: background 0.2s ease, border-color 0.2s ease !important;
+    transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
   }
 
   .nav-drop.w-dropdown.mobile-expanded {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border-color: rgba(255, 255, 255, 0.14) !important;
+    background: rgba(255, 255, 255, 0.065) !important;
+    border-color: rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45) !important;
   }
 
-  /* Direct link rows (non-dropdown items) */
-  .nav-link.responsive {
-    display: flex !important;
-    align-items: center !important;
-    width: 100% !important;
-    padding: 15px 16px !important;
-    font-size: 16px !important;
-    font-weight: 600 !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
-    border-radius: 14px !important;
-    background: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid rgba(255, 255, 255, 0.07) !important;
-    box-sizing: border-box !important;
-    letter-spacing: -0.01em !important;
-    transition: background 0.15s ease !important;
-    -webkit-tap-highlight-color: transparent !important;
-  }
-
-  .nav-link.responsive:active {
-    background: rgba(255, 255, 255, 0.09) !important;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   4. Dropdown Toggle Header Row
-   -------------------------------------------------------------------------- */
-@media screen and (max-width: 991px) {
+  /* Top-Level Header Row */
   .dropdown-toggle.responsive.w-dropdown-toggle {
     width: 100% !important;
-    padding: 15px 16px !important;
+    min-height: 64px !important;
+    padding: 16px 20px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
@@ -291,41 +275,49 @@ body.mobile-nav-open {
     background: transparent !important;
     border: none !important;
     gap: 12px !important;
+    transition: background 0.15s ease !important;
   }
 
+  .dropdown-toggle.responsive.w-dropdown-toggle:active {
+    background: rgba(255, 255, 255, 0.06) !important;
+  }
+
+  /* Apple HIG Large Title: 25px, Bold, -0.025em tracking */
   .dropdown-toggle.responsive .nav-drop_h {
-    font-size: 16px !important;
-    font-weight: 600 !important;
+    font-size: 25px !important;
+    font-weight: 700 !important;
     color: #ffffff !important;
-    line-height: 1.2 !important;
-    letter-spacing: -0.01em !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.025em !important;
     pointer-events: none !important;
     flex: 1 !important;
   }
 
-  /* Arrow icon */
+  /* Apple SF-Style Trailing Chevron Icon */
   .dropdown-toggle.responsive .nav-drop-icon {
-    width: 16px !important;
-    height: 16px !important;
-    min-width: 16px !important;
-    opacity: 0.45 !important;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    opacity: 0.65 !important;
     pointer-events: none !important;
     flex-shrink: 0 !important;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease !important;
+    filter: brightness(0) invert(1) !important;
+    transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.2s ease !important;
   }
 
+  /* Chevron 180° rotation on expansion */
   .nav-drop.mobile-expanded .dropdown-toggle.responsive .nav-drop-icon,
   .dropdown-toggle.responsive.w--open .nav-drop-icon {
     transform: rotate(180deg) !important;
-    opacity: 0.85 !important;
+    opacity: 1 !important;
   }
 
-  /* Divider line when expanded */
+  /* Hairline divider below header when expanded */
   .nav-drop.mobile-expanded .dropdown-toggle.responsive {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08) !important;
   }
 
-  /* Neutralize nested <a> links inside toggles (Services / Pricing) */
+  /* Neutralize nested <a> inside toggles */
   .dropdown-toggle.responsive a.link-block-5 {
     display: flex !important;
     align-items: center !important;
@@ -338,10 +330,52 @@ body.mobile-nav-open {
     background: transparent !important;
     border: none !important;
   }
+
+  /* Direct links (e.g. "Our work") styled identically with Large Title */
+  .nav-link.responsive {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    min-height: 64px !important;
+    padding: 16px 20px !important;
+    font-size: 25px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+    box-sizing: border-box !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.25 !important;
+    transition: background 0.15s ease, transform 0.15s ease !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  .nav-link.responsive:after {
+    content: "→" !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    opacity: 0.55 !important;
+    color: #ffffff !important;
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+  }
+
+  .nav-link.responsive:active {
+    background: rgba(255, 255, 255, 0.08) !important;
+    transform: scale(0.99) !important;
+  }
+
+  .nav-link.responsive:active:after {
+    transform: translateX(4px) !important;
+    opacity: 0.9 !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   5. Sub-Menu Accordion Panel
+   4. Sub-Menu Accordion Disclosure & Inset Rows
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   .nav-drop-list.new.w-dropdown-list {
@@ -357,17 +391,17 @@ body.mobile-nav-open {
     padding: 0 !important;
     margin: 0 !important;
     box-sizing: border-box !important;
-    transition: max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.25s ease,
-                padding 0.3s ease !important;
+    transition: max-height 0.42s cubic-bezier(0.32, 0.72, 0, 1),
+                opacity 0.28s ease,
+                padding 0.35s ease !important;
   }
 
-  /* Expanded sub-menu */
+  /* Expanded State */
   .nav-drop.mobile-expanded .nav-drop-list.new.w-dropdown-list,
   .nav-drop-list.new.w-dropdown-list.w--open {
-    max-height: 2200px !important;
+    max-height: 2600px !important;
     opacity: 1 !important;
-    padding: 8px 10px 12px 10px !important;
+    padding: 8px 12px 16px 12px !important;
     overflow: visible !important;
   }
 
@@ -375,7 +409,7 @@ body.mobile-nav-open {
   .nav-drop-list-content-manual {
     display: flex !important;
     flex-direction: column !important;
-    gap: 4px !important;
+    gap: 6px !important;
     width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -384,7 +418,7 @@ body.mobile-nav-open {
     border: none !important;
   }
 
-  /* Collapse desktop multi-column layouts to single column */
+  /* Collapse multi-column grids into single clean vertical stack */
   .grid-2,
   .link-wrapper-nav-drop,
   .link-wrapper-nav-drop-resources-2,
@@ -398,73 +432,78 @@ body.mobile-nav-open {
   .services-navbar-content-wrapper {
     display: flex !important;
     flex-direction: column !important;
-    gap: 4px !important;
+    gap: 6px !important;
     width: 100% !important;
   }
 
-  /* Hide desktop tab-switcher buttons in Services */
+  /* Hide desktop tab switchers */
   .tab-services-navbar .nav-tab {
     display: none !important;
   }
 
   .tab-services-navbar .wrapper-btn.nav {
     width: 100% !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 8px !important;
   }
 
-  /* Category section headers */
+  /* Apple HIG Section Subheadline: Uppercase, 11px, subtle tracking */
   .text-caps.is-navbar,
   .tab-services-navbar {
-    font-size: 10px !important;
-    letter-spacing: 0.1em !important;
+    font-size: 11px !important;
+    letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
-    color: rgba(255, 255, 255, 0.33) !important;
-    padding: 10px 6px 6px !important;
+    color: rgba(255, 255, 255, 0.45) !important;
+    padding: 14px 8px 4px 8px !important;
     font-weight: 700 !important;
   }
 
-  /* Horizontal dividers */
+  /* Hairline separator between sub-sections */
   .nav-drop_mobile-divider {
     width: 100% !important;
-    height: 1px !important;
-    background: rgba(255, 255, 255, 0.06) !important;
-    margin: 6px 0 !important;
+    height: 0.5px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    margin: 10px 0 6px 0 !important;
     border: none !important;
   }
 
-  /* Individual sub-item link */
+  /* Sub-item Link Row (Apple Inset Detail Row) */
   .link-nav-drop {
     display: flex !important;
     align-items: center !important;
-    gap: 11px !important;
-    padding: 9px 10px !important;
-    border-radius: 10px !important;
-    background: rgba(255, 255, 255, 0.02) !important;
-    border: 1px solid transparent !important;
+    gap: 14px !important;
+    min-height: 52px !important;
+    padding: 11px 12px !important;
+    border-radius: 14px !important;
+    background: rgba(255, 255, 255, 0.025) !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
     text-decoration: none !important;
     color: #ffffff !important;
-    transition: background 0.15s ease, border-color 0.15s ease !important;
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease !important;
     -webkit-tap-highlight-color: transparent !important;
   }
 
   .link-nav-drop:active {
-    background: rgba(255, 255, 255, 0.07) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    transform: scale(0.99) !important;
   }
 
-  /* Thumbnail icon */
+  /* Apple Squircle Thumbnail Icon */
   .image-nav-drop,
   .icon-nav-drop {
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
-    border-radius: 7px !important;
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    border-radius: 10px !important;
     object-fit: cover !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
     flex-shrink: 0 !important;
   }
 
   .image-nav-drop.for-whom {
     object-fit: contain !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    padding: 4px !important;
   }
 
   .heading_text-wrapper-drop {
@@ -474,39 +513,56 @@ body.mobile-nav-open {
     min-width: 0 !important;
   }
 
+  /* Apple Headline Style */
   .heading-16-120 {
-    font-size: 14px !important;
+    font-size: 16px !important;
     font-weight: 600 !important;
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #ffffff !important;
     line-height: 1.3 !important;
+    letter-spacing: -0.01em !important;
   }
 
-  /* Hide paragraph descriptions — keep items compact */
+  /* Apple Footnote/Subtext Description */
   .heading_text-wrapper-drop .text-14-150 {
-    display: none !important;
+    display: block !important;
+    font-size: 13px !important;
+    color: rgba(255, 255, 255, 0.55) !important;
+    line-height: 1.35 !important;
+    margin-top: 2px !important;
   }
 
-  /* Hide autoplay video previews */
+  /* Hide heavy desktop gif video autoplay in mobile accordion */
   .gif-navbar {
     display: none !important;
   }
 
-  /* "View all" / "Compare all plans" CTA buttons inside sub-menus */
+  /* "See all services" & "Compare all plans" Action Buttons */
   .glowing-wrapper-button.fill.small,
   .glowing-wrapper-button.fill.white-transparent {
     width: 100% !important;
-    margin-top: 6px !important;
-    padding: 10px 16px !important;
-    font-size: 13px !important;
+    margin-top: 8px !important;
+    padding: 12px 18px !important;
+    font-size: 14px !important;
     font-weight: 600 !important;
     justify-content: center !important;
     border-radius: 999px !important;
     box-sizing: border-box !important;
   }
+
+  .link-nav-mobile {
+    margin-top: 8px !important;
+    padding: 10px 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-decoration: none !important;
+    border-radius: 10px !important;
+    background: rgba(255, 0, 142, 0.08) !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   6. Sticky Bottom CTA Bar
+   5. Sticky Bottom Action Bar (Thumb Zone)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   .wrapper-btn-tablet {
@@ -517,58 +573,58 @@ body.mobile-nav-open {
     width: 100% !important;
     min-width: unset !important;
     margin: 0 !important;
-    padding: 18px 14px calc(18px + env(safe-area-inset-bottom, 8px)) 14px !important;
+    padding: 16px 16px calc(16px + env(safe-area-inset-bottom, 8px)) 16px !important;
     box-sizing: border-box !important;
     z-index: 99995 !important;
 
-    /* Gradient fade matching the menu bg */
+    /* Apple-style smooth frosted gradient blur */
     background: linear-gradient(
       to bottom,
       rgba(8, 6, 16, 0) 0%,
       rgba(8, 6, 16, 0.88) 28%,
       #080610 100%
     ) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    backdrop-filter: blur(12px) !important;
 
     display: flex !important;
     flex-direction: row !important;
-    gap: 10px !important;
+    gap: 12px !important;
     align-items: stretch !important;
   }
 
-  /* Glowing wrapper fills its half */
   .wrapper-btn-tablet > .glowing-wrapper {
     flex: 1 !important;
     display: flex !important;
     flex-direction: column !important;
   }
 
-  /* The pill button */
   .wrapper-btn-tablet .glowing-wrapper-button {
     width: 100% !important;
+    min-height: 48px !important;
     flex: 1 !important;
-    padding: 13px 12px !important;
-    font-size: 14px !important;
+    padding: 14px 14px !important;
+    font-size: 15px !important;
     font-weight: 600 !important;
+    letter-spacing: -0.01em !important;
     border-radius: 999px !important;
     justify-content: center !important;
     text-align: center !important;
     white-space: nowrap !important;
   }
 
-  /* Glowing border radius fix */
   .wrapper-btn-tablet .glowing-wrapper-borders-masker,
   .wrapper-btn-tablet .glowing-wrapper-borders {
     border-radius: 999px !important;
   }
 
-  /* Hide older fallback buttons */
   .wrapper-btn.hide-desk {
     display: none !important;
   }
 }
 
 /* --------------------------------------------------------------------------
-   7. 479px refinements
+   6. Compact Phone Refinements (<479px)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 479px) {
   .navbar.capsule {
@@ -577,19 +633,32 @@ body.mobile-nav-open {
     right: 8px !important;
   }
 
-  .nav-menu_list.responsive {
-    padding-top: 94px !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+  .nav-menu_list {
+    padding-top: 84px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    padding-bottom: 124px !important;
+  }
+
+  .dropdown-toggle.responsive .nav-drop_h,
+  .nav-link.responsive {
+    font-size: 22px !important;
+  }
+
+  .dropdown-toggle.responsive.w-dropdown-toggle,
+  .nav-link.responsive {
+    min-height: 58px !important;
+    padding: 14px 16px !important;
   }
 
   .wrapper-btn-tablet {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    gap: 8px !important;
   }
 
   .wrapper-btn-tablet .glowing-wrapper-button {
-    font-size: 13px !important;
-    padding: 12px 8px !important;
+    font-size: 14px !important;
+    padding: 13px 8px !important;
   }
 }
