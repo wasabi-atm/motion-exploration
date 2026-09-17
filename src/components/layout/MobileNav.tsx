@@ -51,11 +51,11 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                 // Direct page link (e.g. "Our work"): NO chevron, NO arrow icon, pure Superside style
                 if (!hasSubsections) {
                   return (
-                    <div key={item.title} className="py-1.5">
+                    <div key={item.title} className="py-1">
                       <Link
                         href={item.href || "#"}
                         onClick={onClose}
-                        className="flex items-center w-full py-3.5 text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] no-underline hover:no-underline transition-colors"
+                        className="flex items-center w-full py-4 min-h-[52px] text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] no-underline hover:no-underline active:opacity-80 transition-all"
                       >
                         <span>{item.title}</span>
                       </Link>
@@ -65,13 +65,13 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
                 // Accordion disclosure item (e.g. "Services", "For whom", "Resources", "Pricing")
                 return (
-                  <div key={item.title} className="py-1.5">
+                  <div key={item.title} className="py-1">
                     <div className="flex w-full items-center justify-between">
                       {item.href ? (
                         <Link
                           href={item.href}
                           onClick={onClose}
-                          className="flex-1 py-3.5 text-left text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] no-underline hover:no-underline transition-colors"
+                          className="flex-1 py-4 min-h-[52px] flex items-center text-left text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] no-underline hover:no-underline active:opacity-80 transition-all"
                         >
                           <span>{item.title}</span>
                         </Link>
@@ -79,7 +79,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                         <button
                           type="button"
                           onClick={() => toggleAccordion(item.title)}
-                          className="flex-1 py-3.5 text-left text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] transition-colors focus:outline-none"
+                          className="flex-1 py-4 min-h-[52px] flex items-center text-left text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] active:opacity-80 transition-all focus:outline-none"
                         >
                           <span>{item.title}</span>
                         </button>
@@ -90,7 +90,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                         onClick={() => toggleAccordion(item.title)}
                         aria-expanded={isExpanded}
                         aria-label={`Toggle ${item.title} sub-menu`}
-                        className="p-3.5 -mr-2 text-white/50 hover:text-white active:text-[#ff4dcb] focus:outline-none transition-colors"
+                        className="min-w-[52px] min-h-[52px] p-3 -mr-2 flex items-center justify-center text-white/50 hover:text-white active:text-[#ff4dcb] active:scale-95 focus:outline-none transition-all"
                       >
                         <ChevronDown
                           className={`h-6 w-6 transition-transform duration-300 ease-out ${
@@ -115,7 +115,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                               <Link
                                 href={item.href}
                                 onClick={onClose}
-                                className="flex items-center justify-between px-3.5 py-3 rounded-xl bg-gradient-to-r from-[#ff008e]/15 to-[#ff4dcb]/10 border border-[#ff008e]/25 text-[#ff4dcb] hover:bg-[#ff008e]/20 no-underline hover:no-underline transition-all group"
+                                className="flex items-center justify-between px-4 py-3.5 min-h-[50px] rounded-xl bg-gradient-to-r from-[#ff008e]/15 to-[#ff4dcb]/10 border border-[#ff008e]/25 text-[#ff4dcb] hover:bg-[#ff008e]/20 active:opacity-90 no-underline hover:no-underline transition-all group"
                               >
                                 <span className="text-[17px] font-semibold tracking-wide">
                                   {item.parentLabel}
@@ -131,19 +131,19 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                             <div key={section.title} className="mb-4 last:mb-0">
                               {/* Eyebrow text: ONLY rendered when multiple sections exist (suppressed on monolith datasets) */}
                               {item.sections && item.sections.length > 1 && (
-                                <div className="text-[12px] font-bold tracking-wider uppercase text-white/40 px-3 py-2 mt-1 mb-0.5">
+                                <div className="text-[12px] font-bold tracking-wider uppercase text-white/40 px-3.5 py-2 mt-1 mb-0.5">
                                   {section.title}
                                 </div>
                               )}
 
                               {/* Sub-item rows: Large, clean text without icons or descriptions */}
-                              <div className="flex flex-col gap-0.5">
+                              <div className="flex flex-col gap-1">
                                 {section.items.map((sub) => (
                                   <Link
                                     key={sub.title}
                                     href={sub.href}
                                     onClick={onClose}
-                                    className="flex items-center w-full rounded-xl px-3 py-3 text-[19px] font-medium text-white/90 hover:text-white hover:bg-white/[0.06] active:bg-white/[0.1] active:text-[#ff4dcb] no-underline hover:no-underline transition-all"
+                                    className="flex items-center w-full rounded-xl px-3.5 py-3.5 min-h-[48px] text-[19px] font-medium text-white/90 hover:text-white hover:bg-white/[0.06] active:bg-white/[0.1] active:text-[#ff4dcb] no-underline hover:no-underline transition-all"
                                   >
                                     <span>{sub.title}</span>
                                   </Link>

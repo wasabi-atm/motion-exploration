@@ -25,17 +25,35 @@ export function Navbar() {
         {/* Capsule Navigation Bar */}
         <div className="pt-2 sm:pt-3 px-3 sm:px-6">
           <div className="mx-auto max-w-6xl glass-pill rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between pointer-events-auto transition-all duration-300">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 flex-shrink-0 z-10">
-              <Image
-                src="/images/Icon-with-White-Text.avif"
-                alt="Motion The Agency Logo"
-                width={115}
-                height={32}
-                priority
-                style={{ width: "auto" }}
-                className="h-7 sm:h-8 w-auto object-contain"
-              />
+            {/* Logo: On mobile (<lg), show only the standalone pink "M" icon. On desktop (lg+), show full logo with text */}
+            <Link
+              href="/"
+              className="flex items-center gap-2 flex-shrink-0 z-10 p-1.5 -ml-1.5 rounded-full hover:opacity-90 active:scale-95 transition-all focus:outline-none"
+              aria-label="Motion The Agency Home"
+            >
+              {/* Mobile mark: Only "M" without "Motion" text */}
+              <div className="block lg:hidden">
+                <Image
+                  src="/images/motion-m-logo.png"
+                  alt="Motion Logo"
+                  width={34}
+                  height={34}
+                  priority
+                  className="h-8 w-8 object-contain"
+                />
+              </div>
+              {/* Desktop logo: Full "Motion" logo with white text */}
+              <div className="hidden lg:block">
+                <Image
+                  src="/images/Icon-with-White-Text.avif"
+                  alt="Motion The Agency Logo"
+                  width={115}
+                  height={32}
+                  priority
+                  style={{ width: "auto" }}
+                  className="h-8 w-auto object-contain"
+                />
+              </div>
             </Link>
 
             {/* Desktop Navigation Menu */}
@@ -48,7 +66,7 @@ export function Navbar() {
                     <Link
                       key={item.title}
                       href={item.href || "#"}
-                      className="px-3 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/[0.06] no-underline hover:no-underline transition-all duration-200"
+                      className="px-3.5 py-2 rounded-full text-white/80 hover:text-white hover:bg-white/[0.06] no-underline hover:no-underline transition-all duration-200"
                     >
                       {item.title}
                     </Link>
@@ -65,7 +83,7 @@ export function Navbar() {
                     {item.href ? (
                       <Link
                         href={item.href}
-                        className="flex items-center gap-1 px-3 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/[0.06] no-underline hover:no-underline transition-all duration-200 focus:outline-none"
+                        className="flex items-center gap-1.5 px-3.5 py-2 rounded-full text-white/80 hover:text-white hover:bg-white/[0.06] no-underline hover:no-underline transition-all duration-200 focus:outline-none"
                       >
                         <span>{item.title}</span>
                         <ChevronDown
@@ -77,7 +95,7 @@ export function Navbar() {
                     ) : (
                       <button
                         type="button"
-                        className="flex items-center gap-1 px-3 py-1.5 rounded-full text-white/80 hover:text-white hover:bg-white/[0.06] transition-all duration-200 focus:outline-none"
+                        className="flex items-center gap-1.5 px-3.5 py-2 rounded-full text-white/80 hover:text-white hover:bg-white/[0.06] transition-all duration-200 focus:outline-none"
                       >
                         <span>{item.title}</span>
                         <ChevronDown
@@ -168,16 +186,16 @@ export function Navbar() {
               </GlowingButton>
             </div>
 
-            {/* Mobile Right: Pink Hamburger Toggle morphing to X */}
+            {/* Mobile Right: Pink Hamburger Toggle morphing to X with generous tap area */}
             <div className="flex items-center gap-2 lg:hidden">
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen((prev) => !prev)}
                 aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                 aria-expanded={mobileMenuOpen}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.08] border border-white/[0.14] hover:border-[#ff008e]/50 text-white active:scale-95 transition-all"
+                className="flex h-11 w-11 sm:h-12 sm:w-12 min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-white/[0.08] border border-white/[0.14] hover:border-[#ff008e]/50 text-white active:scale-95 transition-all focus:outline-none"
               >
-                <div className="relative flex flex-col justify-center items-center w-5 h-4">
+                <div className="relative flex flex-col justify-center items-center w-5 h-4 pointer-events-none">
                   {/* Top Bar */}
                   <span
                     className={`absolute h-[2.5px] w-5 rounded-full bg-gradient-to-r from-[#ff008e] to-[#ff4dcb] transition-all duration-300 ease-in-out ${
