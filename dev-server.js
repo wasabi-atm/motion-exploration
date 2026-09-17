@@ -108,12 +108,16 @@ function serveFile(req, res, filePath, stat) {
         return res.end('500 Internal Server Error');
       }
       let html = content;
+      let injectContent = LIVE_RELOAD_SCRIPT;
+      if (!html.includes('mobile-nav.js')) {
+        injectContent += '\n<script src="/js/mobile-nav.js" type="text/javascript"></script>\n';
+      }
       if (html.includes('</body>')) {
-        html = html.replace('</body>', `${LIVE_RELOAD_SCRIPT}\n</body>`);
+        html = html.replace('</body>', `${injectContent}\n</body>`);
       } else if (html.includes('</html>')) {
-        html = html.replace('</html>', `${LIVE_RELOAD_SCRIPT}\n</html>`);
+        html = html.replace('</html>', `${injectContent}\n</html>`);
       } else {
-        html += LIVE_RELOAD_SCRIPT;
+        html += injectContent;
       }
       res.writeHead(200, {
         'Content-Type': contentType,

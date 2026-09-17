@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-base: #080610;
+  --bg-surface-1: #0a0814;
+  --bg-surface-2: #0f0b1d;
+  --bg-surface-card: #140d24;
+  --pink: #ff008e;
+  --pink-light: #ff4dcb;
+  --purple: #581de3;
+  --purple-light: #726eff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: #ffffff;
+  font-family: Switzer, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom glowing rotating border button system */
+.glowing-wrapper {
+  position: relative;
+  display: inline-flex;
+  border-radius: 9999px;
+  overflow: hidden;
+  padding: 1px;
+}
+
+.glowing-wrapper-borders-masker {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glowing-wrapper-borders {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 400%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(255, 0, 142, 0) 0deg,
+    rgba(255, 0, 142, 0.9) 60deg,
+    rgba(255, 77, 203, 1) 120deg,
+    rgba(114, 110, 255, 0.8) 180deg,
+    rgba(255, 0, 142, 0) 240deg
+  );
+  animation: borderTurn 3.5s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+.glowing-wrapper.white-border .glowing-wrapper-borders {
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(255, 255, 255, 0) 0deg,
+    rgba(255, 255, 255, 0.8) 80deg,
+    rgba(255, 255, 255, 0) 160deg
+  );
+}
+
+@keyframes borderTurn {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.glowing-button-inner {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: radial-gradient(circle at center, #180e2b 0%, #0c0818 100%);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glowing-button-inner:hover {
+  background: radial-gradient(circle at center, #241442 0%, #120c24 100%);
+  box-shadow: 0 0 20px rgba(255, 0, 142, 0.2);
+}
+
+/* Glassmorphism utility */
+.glass-pill {
+  background: radial-gradient(circle, #0f0b1e 0%, #0a0614 60%, #110928 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), inset 0 0 0 0.5px rgba(255, 255, 255, 0.06);
+}
+
+/* Spotlights on cards */
+.spotlight-card {
+  position: relative;
+  background: rgba(20, 13, 36, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.spotlight-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
