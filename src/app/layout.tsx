@@ -55,13 +55,11 @@ export default function RootLayout({
           type="text/javascript"
         />
         <script
-          src="https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/js/webflow.schunk.2b2e882ef943b171.js"
+          src="https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/js/webflow.a1f0c833.682be516eec0704d.js"
           type="text/javascript"
         />
-        <script
-          src="https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/js/webflow.6a72df8ceca18b62.js"
-          type="text/javascript"
-        />
+        <script src="/js/flowbitz.umd.js" type="text/javascript" />
+        <script src="/js/lottie.min.js" type="text/javascript" />
         <script src="/js/mobile-nav.js" type="text/javascript" />
         <script src="/js/live-scripts.js" type="text/javascript" />
       </body>

@@ -116,3 +116,23 @@ body {
   border-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
 }
+
+/* Lottie container & responsive animation sizing */
+.lottie-hide-responsive {
+  width: 100%;
+  display: block;
+}
+
+.lottie-hide-responsive svg,
+.lottie-hide-responsive canvas {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+  .lottie-hide-responsive {
+    display: none !important;
+  }
+}
+
