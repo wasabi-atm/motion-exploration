@@ -23,7 +23,30 @@ export const NAVIGATION_DATA: NavItem[] = [
     parentLabel: "View all industries",
     sections: [
       {
-        title: "Industries",
+        title: "By Scale",
+        items: [
+          {
+            title: "Startup",
+            description: "Crafting stories that power your startup journey.",
+            href: "/for-whom/startup.html",
+            icon: "/images/startup-icon.avif",
+          },
+          {
+            title: "Scaleup",
+            description: "Creative support that scales from first raise to enterprise.",
+            href: "/for-whom/scaleup.html",
+            icon: "/images/scaleupMenuIcon.avif",
+          },
+          {
+            title: "Enterprise",
+            description: "Scalable creative solutions for volume and consistency.",
+            href: "/for-whom/enterprise.html",
+            icon: "/images/enterprise-icon.avif",
+          },
+        ],
+      },
+      {
+        title: "By Industry",
         items: [
           {
             title: "B2B",
@@ -60,24 +83,6 @@ export const NAVIGATION_DATA: NavItem[] = [
             description: "Innovative visuals bringing blockchain ideas to life.",
             href: "/for-whom/web3.html",
             icon: "/images/web-3-icon.svg",
-          },
-          {
-            title: "Startup",
-            description: "Crafting stories that power your startup journey.",
-            href: "/for-whom/startup.html",
-            icon: "/images/startup-icon.avif",
-          },
-          {
-            title: "Scaleup",
-            description: "Creative support that scales from first raise to enterprise.",
-            href: "/for-whom/scaleup.html",
-            icon: "/images/scaleupMenuIcon.avif",
-          },
-          {
-            title: "Enterprise",
-            description: "Scalable creative solutions for volume and consistency.",
-            href: "/for-whom/enterprise.html",
-            icon: "/images/enterprise-icon.avif",
           },
         ],
       },
