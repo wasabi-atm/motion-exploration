@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { NAVIGATION_DATA, NavItem } from "@/data/navigation";
@@ -52,11 +51,11 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                 // Direct page link (e.g. "Our work"): NO chevron, NO arrow icon, pure Superside style
                 if (!hasSubsections) {
                   return (
-                    <div key={item.title} className="py-2">
+                    <div key={item.title} className="py-1.5">
                       <Link
                         href={item.href || "#"}
                         onClick={onClose}
-                        className="flex items-center w-full py-3.5 text-[22px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] transition-colors"
+                        className="flex items-center w-full py-3.5 text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] transition-colors"
                       >
                         <span>{item.title}</span>
                       </Link>
@@ -66,12 +65,12 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
                 // Accordion disclosure item (e.g. "Services", "For whom", "Resources", "Pricing")
                 return (
-                  <div key={item.title} className="py-2">
+                  <div key={item.title} className="py-1.5">
                     <button
                       type="button"
                       onClick={() => toggleAccordion(item.title)}
                       aria-expanded={isExpanded}
-                      className="flex w-full items-center justify-between py-3.5 text-left text-[22px] font-semibold tracking-tight text-white hover:text-white/90 focus:outline-none transition-colors"
+                      className="flex w-full items-center justify-between py-3.5 text-left text-[24px] font-semibold tracking-tight text-white hover:text-white/90 focus:outline-none transition-colors"
                     >
                       <span>{item.title}</span>
                       <ChevronDown
@@ -96,12 +95,12 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                               <Link
                                 href={item.href}
                                 onClick={onClose}
-                                className="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-[#ff008e]/15 to-[#ff4dcb]/10 border border-[#ff008e]/25 text-[#ff4dcb] hover:bg-[#ff008e]/20 transition-all group"
+                                className="flex items-center justify-between px-3.5 py-3 rounded-xl bg-gradient-to-r from-[#ff008e]/15 to-[#ff4dcb]/10 border border-[#ff008e]/25 text-[#ff4dcb] hover:bg-[#ff008e]/20 transition-all group"
                               >
-                                <span className="text-sm font-semibold tracking-wide">
+                                <span className="text-[17px] font-semibold tracking-wide">
                                   {item.parentLabel}
                                 </span>
-                                <span className="text-base font-bold transition-transform group-hover:translate-x-1">
+                                <span className="text-lg font-bold transition-transform group-hover:translate-x-1">
                                   →
                                 </span>
                               </Link>
@@ -112,41 +111,21 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                             <div key={section.title} className="mb-4 last:mb-0">
                               {/* Eyebrow text: ONLY rendered when multiple sections exist (suppressed on monolith datasets) */}
                               {item.sections && item.sections.length > 1 && (
-                                <div className="text-[11px] font-bold tracking-wider uppercase text-white/40 px-2 py-1 mb-1">
+                                <div className="text-[12px] font-bold tracking-wider uppercase text-white/40 px-3 py-2 mt-1 mb-0.5">
                                   {section.title}
                                 </div>
                               )}
 
-                              {/* Sub-item rows (Apple HIG clean rows) */}
-                              <div className="flex flex-col gap-1">
+                              {/* Sub-item rows: Large, clean text without icons or descriptions */}
+                              <div className="flex flex-col gap-0.5">
                                 {section.items.map((sub) => (
                                   <Link
                                     key={sub.title}
                                     href={sub.href}
                                     onClick={onClose}
-                                    className="flex items-center gap-3.5 rounded-xl px-2.5 py-2.5 hover:bg-white/[0.05] active:bg-white/[0.08] transition-colors group"
+                                    className="flex items-center w-full rounded-xl px-3 py-3 text-[19px] font-medium text-white/90 hover:text-white hover:bg-white/[0.06] active:bg-white/[0.1] active:text-[#ff4dcb] transition-all"
                                   >
-                                    {sub.icon && (
-                                      <div className="h-10 w-10 relative flex-shrink-0 overflow-hidden rounded-xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center">
-                                        <Image
-                                          src={sub.icon}
-                                          alt={sub.title}
-                                          width={40}
-                                          height={40}
-                                          className="object-contain p-1.5 group-hover:scale-105 transition-transform"
-                                        />
-                                      </div>
-                                    )}
-                                    <div className="flex-1 min-w-0">
-                                      <div className="text-[15px] font-semibold text-white group-hover:text-[#ff4dcb] transition-colors">
-                                        {sub.title}
-                                      </div>
-                                      {sub.description && (
-                                        <div className="text-xs text-white/60 line-clamp-1 mt-0.5">
-                                          {sub.description}
-                                        </div>
-                                      )}
-                                    </div>
+                                    <span>{sub.title}</span>
                                   </Link>
                                 ))}
                               </div>
