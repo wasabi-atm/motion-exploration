@@ -6,7 +6,6 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { NAVIGATION_DATA, NavItem } from "@/data/navigation";
-import { GlowingButton } from "@/components/ui/GlowingButton";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { NavBanner } from "@/components/layout/NavBanner";
 
@@ -176,18 +175,25 @@ export function Navbar() {
               })}
             </nav>
 
-            {/* Desktop Right CTAs */}
-            <div className="hidden lg:flex items-center gap-3">
-              <GlowingButton href="/contact-us.html" variant="white" size="sm">
-                Book a call
-              </GlowingButton>
-              <GlowingButton href="/get-free-sample.html" variant="gradient" size="sm">
-                Get free sample
-              </GlowingButton>
+            {/* Desktop Right CTA: Prominent Pink "Book a Call" only */}
+            <div className="hidden lg:flex items-center">
+              <Link
+                href="/contact-us.html"
+                className="relative inline-flex items-center justify-center px-6 py-2.5 rounded-full text-[15px] font-bold text-white tracking-tight bg-gradient-to-r from-[#ff008e] via-[#ff007a] to-[#ff4dcb] shadow-[0_0_24px_rgba(255,0,142,0.55)] hover:shadow-[0_0_36px_rgba(255,0,142,0.85)] hover:scale-[1.03] active:scale-[0.98] border border-white/20 transition-all duration-200 no-underline hover:no-underline"
+              >
+                <span>Book a Call</span>
+              </Link>
             </div>
 
-            {/* Mobile Right: Pink Hamburger Toggle morphing to X with generous tap area */}
-            <div className="flex items-center gap-2 lg:hidden">
+            {/* Mobile Right: Prominent Pink "Book a Call" CTA + Pink Hamburger */}
+            <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
+              <Link
+                href="/contact-us.html"
+                className="relative inline-flex items-center justify-center px-3.5 py-2 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold text-white tracking-tight bg-gradient-to-r from-[#ff008e] via-[#ff007a] to-[#ff4dcb] shadow-[0_0_18px_rgba(255,0,142,0.5)] hover:shadow-[0_0_26px_rgba(255,0,142,0.75)] active:scale-95 border border-white/20 transition-all duration-200 no-underline hover:no-underline"
+              >
+                <span>Book a Call</span>
+              </Link>
+
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen((prev) => !prev)}

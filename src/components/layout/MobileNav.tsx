@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { NAVIGATION_DATA, NavItem } from "@/data/navigation";
-import { GlowingButton } from "@/components/ui/GlowingButton";
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -160,26 +159,15 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
             </nav>
           </div>
 
-          {/* Sticky Bottom CTA Bar */}
-          <div className="fixed bottom-0 inset-x-0 z-50 flex gap-3 p-4 bg-[#080610]/90 backdrop-blur-xl border-t border-white/[0.08]">
-            <GlowingButton
+          {/* Sticky Bottom CTA Bar: Prominent Pink "Book a Call" only */}
+          <div className="fixed bottom-0 inset-x-0 z-50 p-4 bg-[#080610]/95 backdrop-blur-xl border-t border-white/[0.08]">
+            <Link
               href="/contact-us.html"
-              variant="white"
-              size="md"
-              fullWidth
               onClick={onClose}
+              className="flex items-center justify-center w-full py-4 px-6 rounded-full text-[17px] font-bold tracking-tight text-white bg-gradient-to-r from-[#ff008e] via-[#ff007a] to-[#ff4dcb] shadow-[0_0_28px_rgba(255,0,142,0.6)] hover:shadow-[0_0_40px_rgba(255,0,142,0.85)] border border-white/20 active:scale-[0.98] transition-all duration-200 no-underline hover:no-underline"
             >
-              Book a call
-            </GlowingButton>
-            <GlowingButton
-              href="/get-free-sample.html"
-              variant="gradient"
-              size="md"
-              fullWidth
-              onClick={onClose}
-            >
-              Get free sample
-            </GlowingButton>
+              <span>Book a Call</span>
+            </Link>
           </div>
         </motion.div>
       )}
