@@ -147,9 +147,10 @@ a, a:hover, a:focus, a:active {
 }
 
 /* ==========================================================================
-   Mobile Horizontal Scroll with Peek
-   - Replaces vertical stacks on mobile with sleek horizontal snap carousels
-   - Applies ~84% card width + 16px gap to peek ~15% of the next card
+   Mobile Full-Bleed Horizontal Scroll with Peek
+   - Bleeds edge-to-edge across the screen (negative margin breakout)
+   - Eliminates parent container clipping so peek cards reach the screen edge
+   - Snaps smoothly to 20px padding alignment with scroll-padding-inline
    - Targets: Services (.bottom-services), What to Expect (.expect-cards-scroll),
      and Workflow / Powerful systems (.progress-content)
    ========================================================================== */
@@ -160,6 +161,43 @@ a, a:hover, a:focus, a:active {
 }
 
 @media screen and (max-width: 767px) {
+  /* 1. Prevent parent wrappers from clipping the horizontal scroll */
+  .tabs-content.w-tab-content,
+  .w-tab-content,
+  .w-tab-pane,
+  .wrapper-services,
+  .expect-wrapper,
+  .grogress-wrapper,
+  .investor-grid {
+    overflow: visible !important;
+  }
+
+  /* 2. Shared full-bleed scroll container properties */
+  .bottom-services,
+  .expect-cards-scroll,
+  .progress-content {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-padding-left: 20px !important;
+    scroll-padding-right: 20px !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 16px !important;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 12px !important;
+    padding-bottom: 24px !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(255, 0, 142, 0.4) transparent !important;
+    width: calc(100% + 40px) !important;
+    align-self: stretch !important;
+  }
+
   /* Shared horizontal scrollbar styling */
   .bottom-services::-webkit-scrollbar,
   .expect-cards-scroll::-webkit-scrollbar,
@@ -180,30 +218,23 @@ a, a:hover, a:focus, a:active {
     border-radius: 4px;
   }
 
+  /* Ensure end spacing is preserved when scrolled to the last card */
+  .bottom-services::after,
+  .expect-cards-scroll::after,
+  .progress-content::after {
+    content: "" !important;
+    flex: 0 0 4px !important;
+    min-width: 4px !important;
+  }
+
   /* --------------------------------------------------------------------------
      1. Services Section (.bottom-services)
      -------------------------------------------------------------------------- */
-  .bottom-services {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-    gap: 16px !important;
-    padding-bottom: 16px !important;
-    padding-right: 20px !important;
-    scrollbar-width: thin !important;
-    scrollbar-color: rgba(255, 0, 142, 0.4) transparent !important;
-    width: 100% !important;
-  }
-
   .bottom-services > .card-contaiiner {
-    flex: 0 0 84% !important;
-    width: 84% !important;
-    max-width: 84% !important;
-    min-width: 84% !important;
+    flex: 0 0 80% !important;
+    width: 80% !important;
+    max-width: 80% !important;
+    min-width: 80% !important;
     scroll-snap-align: start !important;
     scroll-snap-stop: normal !important;
     height: auto !important;
@@ -224,7 +255,6 @@ a, a:hover, a:focus, a:active {
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
-    overflow: hidden !important;
   }
 
   .bottom-services > .card-contaiiner .video-card-visual {
@@ -249,27 +279,11 @@ a, a:hover, a:focus, a:active {
     width: 100% !important;
   }
 
-  .expect-cards-scroll {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-    gap: 16px !important;
-    padding-bottom: 16px !important;
-    padding-right: 20px !important;
-    scrollbar-width: thin !important;
-    scrollbar-color: rgba(255, 0, 142, 0.4) transparent !important;
-    width: 100% !important;
-  }
-
   .expect-cards-scroll > .card-contaiiner {
-    flex: 0 0 84% !important;
-    width: 84% !important;
-    max-width: 84% !important;
-    min-width: 84% !important;
+    flex: 0 0 80% !important;
+    width: 80% !important;
+    max-width: 80% !important;
+    min-width: 80% !important;
     scroll-snap-align: start !important;
     scroll-snap-stop: normal !important;
     height: auto !important;
@@ -289,7 +303,6 @@ a, a:hover, a:focus, a:active {
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
-    overflow: hidden !important;
   }
 
   .expect-cards-scroll > .card-contaiiner .img-main-card-why-2 {
@@ -302,28 +315,11 @@ a, a:hover, a:focus, a:active {
   /* --------------------------------------------------------------------------
      3. Workflow / Powerful Systems Section (.progress-content)
      -------------------------------------------------------------------------- */
-  .progress-content {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-    gap: 16px !important;
-    padding-bottom: 16px !important;
-    padding-right: 20px !important;
-    scrollbar-width: thin !important;
-    scrollbar-color: rgba(255, 0, 142, 0.4) transparent !important;
-    width: 100% !important;
-    align-self: stretch !important;
-  }
-
   .progress-content > .card-contaiiner {
-    flex: 0 0 84% !important;
-    width: 84% !important;
-    max-width: 84% !important;
-    min-width: 84% !important;
+    flex: 0 0 80% !important;
+    width: 80% !important;
+    max-width: 80% !important;
+    min-width: 80% !important;
     scroll-snap-align: start !important;
     scroll-snap-stop: normal !important;
     height: auto !important;
