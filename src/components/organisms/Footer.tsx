@@ -103,7 +103,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/contact-us" className="text-[#ff4dcb] hover:underline">
+                <Link href="/contact-us" className="text-[#ff4dcb] hover:text-white transition-colors">
                   Book an Intro Call →
                 </Link>
               </li>

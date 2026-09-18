@@ -17,17 +17,33 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  max-width: 100vw;
+  overflow-x: clip !important;
+}
+
 body {
   background-color: var(--bg-base);
   color: #ffffff;
   font-family: Switzer, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a, a:hover, a:focus, a:active {
-  text-decoration: none;
+/* Eliminate underline and visual noise across all clickable components */
+a,
+a:hover,
+a:focus,
+a:active,
+button,
+.link,
+.footer-link,
+.w-inline-block,
+.heading_text-wrapper-drop,
+.text-button-contact,
+.dynamic-breadcrumb__link {
+  text-decoration: none !important;
 }
 
 /* Custom glowing rotating border button system */

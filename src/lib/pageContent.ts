@@ -44,6 +44,39 @@ function stripLegacyNav(html: string): string {
 }
 
 /**
+ * Remove legacy Webflow footer from page HTML so unified Footer organism renders cleanly
+ */
+function stripLegacyFooter(html: string): string {
+  const match = html.match(/<section[^>]*class="[^"]*section-footer[^"]*"[^>]*>/i);
+  if (!match || match.index === undefined) return html;
+
+  let depth = 0;
+  const start = match.index;
+  const tagRegex = /<\/?section\b[^>]*>/gi;
+  tagRegex.lastIndex = start;
+  let m: RegExpExecArray | null;
+  let end = -1;
+
+  while ((m = tagRegex.exec(html)) !== null) {
+    if (m[0].startsWith("</")) {
+      depth--;
+      if (depth === 0) {
+        end = m.index + m[0].length;
+        break;
+      }
+    } else if (!m[0].endsWith("/>")) {
+      depth++;
+    }
+  }
+
+  if (end !== -1) {
+    return html.slice(0, start) + html.slice(end);
+  }
+
+  return html;
+}
+
+/**
  * Normalize asset URLs and internal links
  */
 function normalizeContent(html: string): string {
@@ -125,8 +158,9 @@ export function getPageContent(slug: string[]): ProcessedPage | null {
   const bodyMatch = rawHtml.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
   let bodyHtml = bodyMatch ? bodyMatch[1] : rawHtml;
 
-  // Strip legacy navbar
+  // Strip legacy navbar and footer
   bodyHtml = stripLegacyNav(bodyHtml);
+  bodyHtml = stripLegacyFooter(bodyHtml);
 
   // Normalize assets and links
   bodyHtml = normalizeContent(bodyHtml);

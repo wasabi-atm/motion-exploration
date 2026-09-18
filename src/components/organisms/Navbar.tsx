@@ -18,15 +18,15 @@ export function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 inset-x-0 z-50 pointer-events-none">
+      <header className="fixed top-0 inset-x-0 z-50 pointer-events-none w-full max-w-full">
         {/* Top Announcement Banner (Desktop only) */}
         <div className="pointer-events-auto">
           <NavBanner />
         </div>
 
         {/* Capsule Navigation Bar */}
-        <div className="pt-2 sm:pt-3 px-3 sm:px-6">
-          <GlassPill className="mx-auto max-w-6xl px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between pointer-events-auto transition-all duration-300">
+        <div className="pt-2 sm:pt-3 px-3 sm:px-6 w-full max-w-full">
+          <GlassPill className="w-full mx-auto max-w-6xl px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between pointer-events-auto transition-all duration-300">
             {/* Logo: Atomic component with standalone "M" on mobile and full logo on desktop */}
             <Logo />
 
@@ -150,24 +150,24 @@ export function Navbar() {
             </nav>
 
             {/* Desktop Right CTA: Prominent Pink "Book a Call" only */}
-            <div className="hidden lg:flex items-center">
+            <div className="hidden lg:flex items-center flex-shrink-0">
               <Button
                 variant="primary"
                 size="sm"
                 href="/contact-us"
-                className="px-6 py-2.5 text-[15px] font-bold tracking-tight shadow-[0_0_24px_rgba(255,0,142,0.55)] hover:shadow-[0_0_36px_rgba(255,0,142,0.85)] hover:scale-[1.03] active:scale-[0.98]"
+                className="px-6 py-2.5 text-[15px] font-bold tracking-tight whitespace-nowrap shadow-[0_0_24px_rgba(255,0,142,0.55)] hover:shadow-[0_0_36px_rgba(255,0,142,0.85)] hover:scale-[1.03] active:scale-[0.98]"
               >
                 Book a Call
               </Button>
             </div>
 
             {/* Mobile Right: Prominent Pink "Book a Call" CTA + Pink Hamburger */}
-            <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
+            <div className="flex items-center gap-2 sm:gap-3 lg:hidden flex-shrink-0">
               <Button
                 variant="primary"
                 size="sm"
                 href="/contact-us"
-                className="px-3.5 py-2 sm:px-4 sm:py-2 text-xs sm:text-sm font-bold tracking-tight shadow-[0_0_18px_rgba(255,0,142,0.5)] hover:shadow-[0_0_26px_rgba(255,0,142,0.75)] active:scale-95"
+                className="px-3.5 py-2 sm:px-4 sm:py-2 text-xs sm:text-sm font-bold tracking-tight whitespace-nowrap shadow-[0_0_18px_rgba(255,0,142,0.5)] hover:shadow-[0_0_26px_rgba(255,0,142,0.75)] active:scale-95"
               >
                 Book a Call
               </Button>

@@ -74,9 +74,11 @@ const industries = [
 
 export default function ForWhomPage() {
   return (
-    <main className="min-h-screen bg-[#080610] text-white pt-36 sm:pt-44 pb-28">
-      {/* Background ambient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-tr from-[#ff008e]/15 via-[#581de3]/20 to-transparent blur-[160px] pointer-events-none -z-10" />
+    <main className="relative min-h-screen bg-[#080610] text-white pt-36 sm:pt-44 pb-28 overflow-x-clip w-full max-w-full">
+      {/* Background ambient glow - properly constrained within screen boundaries */}
+      <div className="absolute inset-x-0 top-0 h-[500px] overflow-hidden pointer-events-none -z-10">
+        <div className="mx-auto w-[800px] max-w-full h-[500px] bg-gradient-to-tr from-[#ff008e]/15 via-[#581de3]/20 to-transparent blur-[160px]" />
+      </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Hero Banner */}
