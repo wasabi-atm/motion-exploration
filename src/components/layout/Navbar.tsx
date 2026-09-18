@@ -29,30 +29,27 @@ export function Navbar() {
               href="/"
               className="flex items-center gap-2 flex-shrink-0 z-10 p-1.5 -ml-1.5 rounded-full hover:opacity-90 active:scale-95 transition-all focus:outline-none"
               aria-label="Motion The Agency Home"
+              suppressHydrationWarning
             >
               {/* Mobile mark: Only "M" without "Motion" text */}
-              <div className="block lg:hidden">
-                <Image
-                  src="/images/motion-m-logo.png"
-                  alt="Motion Logo"
-                  width={34}
-                  height={34}
-                  priority
-                  className="h-8 w-8 object-contain"
-                />
-              </div>
+              <Image
+                src="/images/motion-m-logo.png"
+                alt="Motion Logo"
+                width={34}
+                height={34}
+                priority
+                className="h-8 w-8 object-contain lg:!hidden"
+              />
               {/* Desktop logo: Full "Motion" logo with white text */}
-              <div className="hidden lg:block">
-                <Image
-                  src="/images/Icon-with-White-Text.avif"
-                  alt="Motion The Agency Logo"
-                  width={115}
-                  height={32}
-                  priority
-                  style={{ width: "auto" }}
-                  className="h-8 w-auto object-contain"
-                />
-              </div>
+              <Image
+                src="/images/Icon-with-White-Text.avif"
+                alt="Motion The Agency Logo"
+                width={115}
+                height={32}
+                priority
+                style={{ width: "auto" }}
+                className="!hidden lg:!inline-block h-8 w-auto object-contain"
+              />
             </Link>
 
             {/* Desktop Navigation Menu */}
