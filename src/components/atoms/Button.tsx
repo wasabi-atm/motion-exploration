@@ -41,7 +41,7 @@ export function Button({
 
   if (href) {
     return (
-      <Link href={href} className={combinedStyles}>
+      <Link href={href} className={combinedStyles} suppressHydrationWarning>
         {children}
         {icon && <span className="flex-shrink-0">{icon}</span>}
       </Link>

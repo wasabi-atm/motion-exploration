@@ -57,6 +57,7 @@ export function Navbar() {
                     {item.href ? (
                       <Link
                         href={item.href}
+                        suppressHydrationWarning
                         className="flex items-center gap-1.5 px-3.5 py-2 rounded-full text-white/80 hover:text-white hover:bg-white/[0.06] no-underline hover:no-underline transition-all duration-200 focus:outline-none"
                       >
                         <span>{item.title}</span>
@@ -94,6 +95,7 @@ export function Navbar() {
                             <div className="mb-2 pb-2 border-b border-white/[0.08]">
                               <Link
                                 href={item.href}
+                                suppressHydrationWarning
                                 className="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-[#ff4dcb] hover:bg-white/[0.06] no-underline hover:no-underline transition-colors"
                               >
                                 <span>{item.parentLabel}</span>
@@ -114,6 +116,7 @@ export function Navbar() {
                                   <Link
                                     key={sub.title}
                                     href={sub.href}
+                                    suppressHydrationWarning
                                     className="flex items-start gap-3 rounded-xl p-2.5 hover:bg-white/[0.06] transition-colors group"
                                   >
                                     {sub.icon && (

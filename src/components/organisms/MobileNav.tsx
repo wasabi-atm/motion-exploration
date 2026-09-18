@@ -54,6 +54,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                       <Link
                         href={item.href || "#"}
                         onClick={onClose}
+                        suppressHydrationWarning
                         className="flex items-center w-full py-4 min-h-[52px] text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] no-underline hover:no-underline active:opacity-80 transition-all"
                       >
                         <span>{item.title}</span>
@@ -70,6 +71,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                         <Link
                           href={item.href}
                           onClick={onClose}
+                          suppressHydrationWarning
                           className="flex-1 py-4 min-h-[52px] flex items-center text-left text-[24px] font-semibold tracking-tight text-white hover:text-[#ff4dcb] no-underline hover:no-underline active:opacity-80 transition-all"
                         >
                           <span>{item.title}</span>
@@ -121,6 +123,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                                     key={sub.title}
                                     href={sub.href}
                                     onClick={onClose}
+                                    suppressHydrationWarning
                                     className="flex items-center justify-between py-2.5 px-3 rounded-xl text-base font-medium text-white/80 hover:text-white hover:bg-white/[0.06] active:bg-white/[0.1] no-underline hover:no-underline transition-colors"
                                   >
                                     <span>{sub.title}</span>
