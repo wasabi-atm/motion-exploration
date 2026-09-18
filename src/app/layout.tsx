@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
+import { GSAPAnimationManager } from "@/components/animation/GSAPAnimationManager";
 
 export const metadata: Metadata = {
   title: "Motion Graphics & Design Agency | Free Video Sample",
@@ -47,6 +48,7 @@ export default function RootLayout({
         />
       </head>
       <body className="body" suppressHydrationWarning>
+        <GSAPAnimationManager />
         <Navbar />
         {children}
 
