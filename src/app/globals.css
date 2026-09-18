@@ -146,3 +146,134 @@ a, a:hover, a:focus, a:active {
   }
 }
 
+/* ==========================================================================
+   Mobile Vertical Scroll with Peek
+   - Keeps sections compact on mobile while revealing next cards as a peek
+   ========================================================================== */
+
+/* Desktop: passthrough grid items for What to Expect cards */
+.expect-cards-scroll {
+  display: contents;
+}
+
+@media screen and (max-width: 767px) {
+  /* 1. Services Section (.bottom-services) */
+  .bottom-services {
+    display: flex !important;
+    flex-direction: column !important;
+    max-height: 520px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    scroll-snap-type: y mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 16px !important;
+    padding-bottom: 24px !important;
+    padding-right: 4px !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(255, 0, 142, 0.4) transparent !important;
+  }
+
+  .bottom-services::-webkit-scrollbar {
+    width: 4px;
+  }
+  .bottom-services::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .bottom-services::-webkit-scrollbar-thumb {
+    background: rgba(255, 0, 142, 0.4);
+    border-radius: 4px;
+  }
+
+  .bottom-services > .card-contaiiner {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    height: 420px !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: normal !important;
+  }
+
+  .bottom-services > .card-contaiiner > .card,
+  .bottom-services > .card-contaiiner > a.card {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+
+  .bottom-services > .card-contaiiner .card-content {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+
+  .bottom-services > .card-contaiiner .video-card-visual {
+    flex: 0 0 auto !important;
+    max-height: 220px !important;
+    width: 100% !important;
+  }
+
+  .bottom-services > .card-contaiiner .image-11 {
+    flex: 0 0 auto !important;
+    max-height: 220px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+  }
+
+  /* 2. What to Expect Section (.expect-cards-scroll) */
+  .expect-cards-scroll {
+    display: flex !important;
+    flex-direction: column !important;
+    max-height: 480px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    scroll-snap-type: y mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 16px !important;
+    padding-bottom: 24px !important;
+    padding-right: 4px !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(255, 0, 142, 0.4) transparent !important;
+  }
+
+  .expect-cards-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+  .expect-cards-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .expect-cards-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 0, 142, 0.4);
+    border-radius: 4px;
+  }
+
+  .expect-cards-scroll > .card-contaiiner {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    height: 380px !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: normal !important;
+  }
+
+  .expect-cards-scroll > .card-contaiiner > .card {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+
+  .expect-cards-scroll > .card-contaiiner .card-content {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+
+  .expect-cards-scroll > .card-contaiiner .img-main-card-why-2 {
+    flex: 0 0 auto !important;
+    max-height: 200px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+  }
+}
+

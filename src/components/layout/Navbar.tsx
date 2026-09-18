@@ -199,7 +199,7 @@ export function Navbar() {
                 onClick={() => setMobileMenuOpen((prev) => !prev)}
                 aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                 aria-expanded={mobileMenuOpen}
-                className="flex h-11 w-11 sm:h-12 sm:w-12 min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-white/[0.08] border border-white/[0.14] hover:border-[#ff008e]/50 text-white active:scale-95 transition-all focus:outline-none"
+                className="flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center p-2 text-white active:scale-90 transition-all focus:outline-none"
               >
                 <div className="relative flex flex-col justify-center items-center w-5 h-4 pointer-events-none">
                   {/* Top Bar */}
