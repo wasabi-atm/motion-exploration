@@ -44,11 +44,9 @@ const config: Config = {
           "sans-serif",
         ],
         serif: [
-          "Playfair Display",
+          '"Instrument Serif"',
           "Instrument Serif",
           "Georgia",
-          "Cambria",
-          "Times New Roman",
           "serif",
         ],
       },
