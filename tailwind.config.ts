@@ -21,9 +21,16 @@ const config: Config = {
           purple: "#581de3",
           "purple-light": "#726eff",
         },
-        border: {
-          subtle: "rgba(255, 255, 255, 0.10)",
-          hover: "rgba(255, 255, 255, 0.25)",
+        editorial: {
+          bg: "#faf8fc",
+          canvas: "#ffffff",
+          surface: "#f5f0fa",
+          ink: "#0e0a20",
+          muted: "#5e5a73",
+          border: "#eae3f2",
+          purple: "#581de3",
+          pink: "#ff008e",
+          "pink-light": "#ff4dcb",
         },
       },
       fontFamily: {
@@ -35,6 +42,14 @@ const config: Config = {
           "Segoe UI",
           "Roboto",
           "sans-serif",
+        ],
+        serif: [
+          "Playfair Display",
+          "Instrument Serif",
+          "Georgia",
+          "Cambria",
+          "Times New Roman",
+          "serif",
         ],
       },
       animation: {
