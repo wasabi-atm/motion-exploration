@@ -4,39 +4,17 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  async rewrites() {
+  async redirects() {
     return [
       {
         source: "/index.html",
         destination: "/",
+        permanent: true,
       },
       {
-        source: "/services/:slug",
-        destination: "/services/:slug.html",
-      },
-      {
-        source: "/for-whom/:slug",
-        destination: "/for-whom/:slug.html",
-      },
-      {
-        source: "/customer-stories/:slug",
-        destination: "/customer-stories/:slug.html",
-      },
-      {
-        source: "/resources/:slug",
-        destination: "/resources/:slug.html",
-      },
-      {
-        source: "/pricing/:slug",
-        destination: "/pricing/:slug.html",
-      },
-      {
-        source: "/legal/:slug",
-        destination: "/legal/:slug.html",
-      },
-      {
-        source: "/:slug",
-        destination: "/:slug.html",
+        source: "/:path*.html",
+        destination: "/:path*",
+        permanent: true,
       },
     ];
   },

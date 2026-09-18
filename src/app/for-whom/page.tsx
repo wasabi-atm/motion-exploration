@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { GlowingButton } from "@/components/ui/GlowingButton";
-import { Badge } from "@/components/ui/Badge";
+import { GlowingButton } from "@/components/atoms/GlowingButton";
+import { Badge } from "@/components/atoms/Badge";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,19 +16,19 @@ const scales = [
   {
     title: "Startup",
     description: "Crafting impactful visual stories and product explainers that power your initial launch and seed rounds.",
-    href: "/for-whom/startup.html",
+    href: "/for-whom/startup",
     icon: "/images/startup-icon.avif",
   },
   {
     title: "Scaleup",
     description: "Creative support that scales with your growth, from Series A to expansion, managing high-volume campaigns.",
-    href: "/for-whom/scaleup.html",
+    href: "/for-whom/scaleup",
     icon: "/images/scaleupMenuIcon.avif",
   },
   {
     title: "Enterprise",
     description: "Scalable creative solutions that help large-scale enterprise teams maintain strict brand consistency and global quality.",
-    href: "/for-whom/enterprise.html",
+    href: "/for-whom/enterprise",
     icon: "/images/enterprise-icon.avif",
   },
 ];
@@ -37,37 +37,37 @@ const industries = [
   {
     title: "B2B",
     description: "Professional animations that clearly communicate business value and accelerate enterprise sales cycles.",
-    href: "/for-whom/b2b.html",
+    href: "/for-whom/b2b",
     icon: "/images/B2B-1.avif",
   },
   {
     title: "SaaS",
     description: "Clear, impactful product walkthroughs and feature previews that reduce churn and boost user onboarding.",
-    href: "/for-whom/saas.html",
+    href: "/for-whom/saas",
     icon: "/images/Showcase-1-3.avif",
   },
   {
     title: "AI",
     description: "Captivating visuals and diagrammatic animations that make complex algorithms and neural workflows instantly intuitive.",
-    href: "/for-whom/ai.html",
+    href: "/for-whom/ai",
     icon: "/images/AI.avif",
   },
   {
     title: "Tech",
     description: "Cutting-edge 3D motion and UI micro-interactions designed to showcase innovation and inspire tech leaders.",
-    href: "/for-whom/tech.html",
+    href: "/for-whom/tech",
     icon: "/images/Showcase-1.avif",
   },
   {
     title: "Marketing",
     description: "Scroll-stopping video creative engineered for performance marketing, social ads, and paid conversion funnels.",
-    href: "/for-whom/marketing.html",
+    href: "/for-whom/marketing",
     icon: "/images/Marketing.avif",
   },
   {
     title: "Web3",
     description: "Futuristic visual storytelling that brings decentralized protocols, cryptographic proofs, and blockchain ecosystems to life.",
-    href: "/for-whom/web3.html",
+    href: "/for-whom/web3",
     icon: "/images/web-3-icon.svg",
   },
 ];
@@ -186,10 +186,10 @@ export default function ForWhomPage() {
             Book a 15-minute discovery call with our creative directors or request a complimentary custom video sample.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <GlowingButton href="/get-free-sample.html" variant="gradient" size="lg">
+            <GlowingButton href="/get-free-sample" variant="gradient" size="lg">
               Get free sample
             </GlowingButton>
-            <GlowingButton href="/contact-us.html" variant="white" size="lg">
+            <GlowingButton href="/contact-us" variant="white" size="lg">
               Book a call
             </GlowingButton>
           </div>
