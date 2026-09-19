@@ -72,12 +72,15 @@ export function EditorialReviews() {
     <section className="py-24 sm:py-32 bg-[#faf8fc] relative border-t border-[#eae2f2]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-50 border border-purple-100 text-xs font-mono font-bold text-[#581de3] uppercase tracking-wider mb-4">
             Testimonials
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#0e0a20]">
-            See what our <span className="font-serif italic font-normal text-[#581de3]">clients say.</span>
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#0e0a20]">
+            See what our{" "}
+            <span className="font-instrument italic font-normal text-[#581de3]">
+              clients say.
+            </span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#5e5a73] leading-relaxed">
             We work with teams of varying sizes all across the world. A large majority of our work supports the marketing function of high-growth tech & SaaS businesses, with videos also used across product, HR, and sales.
@@ -108,16 +111,16 @@ export function EditorialReviews() {
           </div>
         </div>
 
-        {/* Real Client Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {/* Real Client Testimonials in Compact 3x2 Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
           {CLIENT_TESTIMONIALS.map((testi) => (
             <div
               key={testi.name}
-              className="group rounded-3xl bg-white border border-[#eae2f2] p-6 sm:p-8 shadow-[0_15px_35px_rgba(35,22,81,0.04)] hover:border-[#581de3]/40 flex flex-col justify-between transition-all duration-300"
+              className="group rounded-3xl bg-white border border-[#eae2f2] p-5 sm:p-6 shadow-[0_12px_30px_rgba(35,22,81,0.03)] hover:shadow-[0_18px_40px_rgba(88,29,227,0.07)] hover:border-[#581de3]/40 flex flex-col justify-between transition-all duration-300"
             >
               <div>
-                {/* YouTube Video Player Embed */}
-                <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-[#0e0a20] mb-6 shadow-inner">
+                {/* YouTube Video Player Embed (Light Porcelain Container - Zero dark bloat) */}
+                <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-[#faf7fd] border border-[#eae2f2] mb-4 shadow-sm">
                   <iframe
                     src={`https://www.youtube.com/embed/${testi.videoId}?controls=1&rel=0&modestbranding=1`}
                     title={`${testi.name} - Testimonial`}
@@ -128,18 +131,18 @@ export function EditorialReviews() {
                   />
                 </div>
 
-                <div className="flex items-center gap-1 text-amber-400 mb-4">
+                <div className="flex items-center gap-1 text-amber-400 mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-3.5 h-3.5 fill-current" />
                   ))}
                 </div>
 
-                <p className="font-serif italic text-base sm:text-lg text-[#140e36] leading-snug">
+                <p className="font-instrument italic text-base sm:text-lg text-[#140e36] leading-snug">
                   &ldquo;{testi.quote}&rdquo;
                 </p>
               </div>
 
-              <div className="mt-6 pt-5 border-t border-[#eae2f2] flex items-center justify-between">
+              <div className="mt-5 pt-4 border-t border-[#eae2f2] flex items-center justify-between">
                 <div>
                   <div className="font-bold text-sm text-[#0e0a20]">{testi.name}</div>
                   <div className="text-xs text-[#706a85] mt-0.5">{testi.role}</div>

@@ -4,7 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.font-instrument {
+.font-instrument,
+.font-serif,
+[class*="font-instrument"],
+[class*="font-serif"] {
   font-family: "Instrument Serif", Georgia, serif !important;
 }
 

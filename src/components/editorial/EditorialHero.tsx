@@ -20,7 +20,6 @@ import {
   Eraser,
   Pen,
 } from "lucide-react";
-import { LottiePlayer } from "./LottiePlayer";
 
 export function EditorialHero() {
   return (
@@ -142,114 +141,133 @@ export function EditorialHero() {
             </div>
           </div>
 
-          {/* Right Column: Floating Design Studio Canvas (Exact Replica of Reference) */}
+          {/* Right Column: Floating Design Studio Canvas (Exact Replica of Reference Artwork) */}
           <div className="lg:col-span-5 relative">
-            {/* Floating Dark Editing Toolbar (floating directly above canvas) */}
+            {/* Floating Studio Editing Toolbar */}
             <motion.div
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 rounded-lg bg-[#0e0b1f] text-white/80 shadow-[0_18px_40px_rgba(14,11,31,0.35)] border border-white/10 mb-3 select-none text-xs"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-1.5 rounded-xl bg-white/95 backdrop-blur-md text-[#120d2c] shadow-[0_12px_30px_rgba(35,22,81,0.08)] border border-[#e6dbf0] mb-3 select-none text-xs"
             >
               {/* Blue active cursor tool */}
-              <div className="bg-[#2563eb] text-white p-1 rounded">
+              <div className="bg-[#2563eb] text-white p-1 rounded-md shadow-sm">
                 <MousePointer2 className="w-3 h-3" />
               </div>
-              <div className="p-1 hover:text-white transition-colors cursor-pointer">
+              <div className="p-1 text-[#6b6480] hover:text-[#120d2c] transition-colors cursor-pointer">
                 <Hand className="w-3 h-3" />
               </div>
-              <div className="p-1 hover:text-white transition-colors cursor-pointer">
+              <div className="p-1 text-[#6b6480] hover:text-[#120d2c] transition-colors cursor-pointer">
                 <Search className="w-3 h-3" />
               </div>
-              <div className="p-1 hover:text-white transition-colors cursor-pointer">
+              <div className="p-1 text-[#6b6480] hover:text-[#120d2c] transition-colors cursor-pointer">
                 <Crop className="w-3 h-3" />
               </div>
-              <div className="p-1 hover:text-white transition-colors cursor-pointer">
+              <div className="p-1 text-[#6b6480] hover:text-[#120d2c] transition-colors cursor-pointer">
                 <RotateCw className="w-3 h-3" />
               </div>
-              <div className="h-3.5 w-[1px] bg-white/20 mx-0.5" />
+              <div className="h-3.5 w-[1px] bg-[#e6dbf0] mx-0.5" />
               {/* Active 3D box tool with cursor pointer hovering on it (from reference) */}
-              <div className="relative p-1 text-[#ff4dcb] cursor-pointer">
+              <div className="relative p-1 text-[#ff008e] cursor-pointer">
                 <Box className="w-3.5 h-3.5" />
                 <span className="absolute -top-1 -right-2 pointer-events-none">
                   <svg
-                    className="w-3.5 h-3.5 fill-white text-black drop-shadow"
+                    className="w-3.5 h-3.5 fill-[#120d2c] text-[#120d2c] drop-shadow"
                     viewBox="0 0 24 24"
                   >
                     <path d="M3 3l7 18 3-7 7-3L3 3z" />
                   </svg>
                 </span>
               </div>
-              <div className="p-1 hover:text-white transition-colors cursor-pointer">
+              <div className="p-1 text-[#6b6480] hover:text-[#120d2c] transition-colors cursor-pointer">
                 <Type className="w-3 h-3" />
               </div>
-              <div className="p-1 hover:text-white transition-colors cursor-pointer">
+              <div className="p-1 text-[#6b6480] hover:text-[#120d2c] transition-colors cursor-pointer">
                 <Pen className="w-3 h-3" />
               </div>
-              <div className="p-1 hover:text-white transition-colors cursor-pointer">
+              <div className="p-1 text-[#6b6480] hover:text-[#120d2c] transition-colors cursor-pointer">
                 <Stamp className="w-3 h-3" />
               </div>
-              <div className="p-1 hover:text-white transition-colors cursor-pointer">
+              <div className="p-1 text-[#6b6480] hover:text-[#120d2c] transition-colors cursor-pointer">
                 <Eraser className="w-3 h-3" />
               </div>
-              <div className="p-1 hover:text-white transition-colors cursor-pointer">
+              <div className="p-1 text-[#6b6480] hover:text-[#120d2c] transition-colors cursor-pointer">
                 <PenTool className="w-3 h-3" />
               </div>
             </motion.div>
 
-            {/* Studio Canvas Frame Container */}
-            <div className="relative rounded-2xl bg-white border border-[#e6dbf0] p-4 shadow-[0_25px_65px_rgba(35,22,81,0.08)] overflow-visible">
-              {/* Lottie Animation Canvas */}
-              <div className="relative rounded-xl overflow-hidden bg-[#0c081a] aspect-[16/10] flex items-center justify-center shadow-inner">
-                <LottiePlayer
-                  src="/documents/Homepage---Hero-Illustration-v2.json"
-                  className="w-full h-full object-contain"
-                  loop
-                  autoplay
-                />
-              </div>
+            {/* Studio Canvas Frame: Luminous white card with soft top glow, exactly matching reference artwork */}
+            <div className="relative rounded-3xl bg-white border border-[#e6dbf0] p-6 sm:p-8 shadow-[0_25px_65px_rgba(35,22,81,0.08)] overflow-hidden">
+              {/* Soft ambient inner glow from reference */}
+              <div className="absolute top-0 inset-x-0 h-44 bg-gradient-to-b from-pink-50/70 via-purple-50/30 to-transparent pointer-events-none" />
 
-              {/* The Proof Card: "2500+ videos produced and counting..." (Exactly as in reference) */}
-              <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
-                <div>
-                  <div className="font-instrument text-4xl sm:text-5xl font-normal text-[#120d2c] leading-none">
-                    2500+
-                  </div>
-                  <div className="font-sans font-bold text-sm sm:text-base text-[#120d2c] tracking-tight mt-1">
-                    videos produced{" "}
-                    <span className="font-instrument italic font-normal text-[#581de3]">
-                      and counting...
-                    </span>
-                  </div>
-                  {/* Pink scribble brush underline (from reference) */}
-                  <svg
-                    className="w-40 sm:w-48 h-2 text-[#ff008e] mt-1"
-                    viewBox="0 0 160 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2 5C45 2 110 3 158 6"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                    />
-                  </svg>
+              {/* Fanned out green proof badges (top-right from reference) */}
+              <div className="absolute top-6 right-6 z-10 hidden sm:flex items-center pointer-events-none select-none">
+                <div className="bg-[#a4d485] text-[#133008] text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-sm transform -rotate-6 border border-white">
+                  2500+
                 </div>
-
-                {/* Stacked green proof badges fanning out (from reference) */}
-                <div className="relative flex items-center">
-                  <div className="bg-[#8ec26f] text-[#133008] text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-sm transform rotate-6 border border-white">
-                    2500+
-                  </div>
-                  <div className="bg-[#a4d485] text-[#133008] text-[10px] font-bold px-2.5 py-1.5 rounded-lg shadow-sm transform -rotate-3 -ml-3 border border-white">
-                    vids
-                  </div>
+                <div className="bg-[#8ec26f] text-[#133008] text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-sm transform rotate-6 -ml-3 border border-white">
+                  2500+ videos produced
                 </div>
               </div>
+
+              {/* Centerpiece Proof Typography (From Reference Artwork) */}
+              <div className="relative z-10 pt-4 pb-6 text-center sm:text-left">
+                <div className="font-instrument italic font-normal text-6xl sm:text-7xl lg:text-8xl text-[#140e36] leading-none tracking-tight">
+                  2500+
+                </div>
+                <div className="text-xl sm:text-2xl font-black text-[#140e36] tracking-tight mt-2 flex flex-wrap items-baseline gap-1.5 justify-center sm:justify-start">
+                  <span>videos produced</span>
+                  <span className="font-instrument italic font-normal text-[#581de3]">
+                    and counting...
+                  </span>
+                </div>
+                {/* Authentic pink scribble vector from reference */}
+                <svg
+                  className="w-48 sm:w-56 h-3 text-[#ff008e] mt-1.5 mx-auto sm:mx-0"
+                  viewBox="0 0 160 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 5C45 2 110 3 158 6"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </div>
+
+              {/* Motion Showcase Filmstrip Grid (From Reference Artwork) */}
+              <div className="relative z-10 mt-4 grid grid-cols-3 gap-2.5 opacity-90">
+                <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-[#faf7fd] border border-[#eae2f2] shadow-sm">
+                  <img
+                    src="/images/cover-component.avif"
+                    alt="Primer Case Study"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-[#faf7fd] border border-[#eae2f2] shadow-sm">
+                  <img
+                    src="/images/obrizum-section-cover.avif"
+                    alt="Obrizum Case Study"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-[#faf7fd] border border-[#eae2f2] shadow-sm">
+                  <img
+                    src="/images/cover-mirakl-component.avif"
+                    alt="Mirakl Case Study"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Bottom gentle gradient fade overlay */}
+              <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
 
               {/* Floating M4A Audio Badge (bottom-left from reference) */}
-              <div className="absolute -bottom-6 -left-5 z-20 hidden sm:flex items-center gap-2.5 px-3 py-2 rounded-xl bg-white border border-[#e4d8ee] shadow-[0_12px_28px_rgba(35,22,81,0.1)]">
+              <div className="absolute -bottom-3 -left-2 z-20 hidden sm:flex items-center gap-2.5 px-3 py-2 rounded-xl bg-white border border-[#e4d8ee] shadow-[0_12px_28px_rgba(35,22,81,0.12)]">
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#581de3] to-[#7f78ff] flex items-center justify-center text-white text-sm shadow">
                   🎵
                 </div>
@@ -260,7 +278,7 @@ export function EditorialHero() {
               </div>
 
               {/* Floating "✨ Effects" Tag with Cursor (top-right from reference) */}
-              <div className="absolute -top-4 -right-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-[#e4d8ee] shadow-[0_10px_24px_rgba(35,22,81,0.1)] text-xs font-bold text-[#0e0a20] select-none">
+              <div className="absolute top-2 -right-2 z-20 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#e4d8ee] shadow-[0_10px_24px_rgba(35,22,81,0.12)] text-xs font-bold text-[#0e0a20] select-none">
                 <Sparkles className="w-3.5 h-3.5 text-[#ff008e]" />
                 <span>Effects</span>
                 <MousePointer2 className="w-3.5 h-3.5 fill-[#120d2c] text-[#120d2c] ml-0.5" />

@@ -60,7 +60,11 @@ export function EditorialWorkShowcase() {
               Customer Stories
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#0e0a20]">
-              Selected <span className="font-serif italic font-normal text-[#581de3]">Motion</span> Works.
+              Selected{" "}
+              <span className="font-instrument italic font-normal text-[#581de3]">
+                Motion
+              </span>{" "}
+              Works.
             </h2>
             <p className="mt-4 text-base sm:text-lg text-[#5e5a73] max-w-2xl leading-relaxed">
               Real projects delivered for fast-moving startups and enterprise brands. Many of these case studies are long-running partnerships that have helped clients launch, raise investment, or accelerate growth.
@@ -86,7 +90,7 @@ export function EditorialWorkShowcase() {
             className="group block rounded-3xl bg-[#faf7fd] hover:bg-white border border-[#eae2f2] hover:border-[#581de3]/40 overflow-hidden shadow-[0_20px_50px_rgba(35,22,81,0.05)] hover:shadow-[0_25px_65px_rgba(88,29,227,0.12)] transition-all duration-300"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-10">
-              <div className="lg:col-span-7 relative rounded-2xl overflow-hidden aspect-[16/10] bg-[#0e0a20]">
+              <div className="lg:col-span-7 relative rounded-2xl overflow-hidden aspect-[16/10] bg-[#faf7fd] border border-[#eae2f2]">
                 <video
                   src={FEATURED_STORIES[0].video}
                   poster={FEATURED_STORIES[0].poster}
@@ -96,7 +100,7 @@ export function EditorialWorkShowcase() {
                   playsInline
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-4 left-4 bg-[#140e36]/90 backdrop-blur-md text-white text-xs font-mono font-bold px-3 py-1.5 rounded-full border border-white/10">
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-[#140e36] text-xs font-mono font-bold px-3 py-1.5 rounded-full border border-[#eae2f2] shadow-sm">
                   {FEATURED_STORIES[0].metric}
                 </div>
               </div>
@@ -138,13 +142,13 @@ export function EditorialWorkShowcase() {
                 suppressHydrationWarning
                 className="group flex flex-col rounded-3xl bg-[#faf7fd] hover:bg-white border border-[#eae2f2] hover:border-[#581de3]/40 overflow-hidden shadow-[0_15px_40px_rgba(35,22,81,0.04)] hover:shadow-[0_20px_50px_rgba(88,29,227,0.1)] transition-all duration-300"
               >
-                <div className="relative aspect-[16/10] bg-[#0e0a20] overflow-hidden">
+                <div className="relative aspect-[16/10] bg-[#faf7fd] border-b border-[#eae2f2] overflow-hidden">
                   <img
                     src={story.image}
                     alt={story.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 left-4 bg-[#140e36]/90 backdrop-blur-md text-white text-xs font-mono font-bold px-3 py-1.5 rounded-full border border-white/10">
+                  <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-[#140e36] text-xs font-mono font-bold px-3 py-1.5 rounded-full border border-[#eae2f2] shadow-sm">
                     {story.metric}
                   </div>
                 </div>

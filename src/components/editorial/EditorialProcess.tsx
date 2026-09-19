@@ -58,7 +58,7 @@ export function EditorialProcess() {
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#0e0a20]">
             Powerful systems for{" "}
-            <span className="font-serif italic font-normal text-[#581de3]">
+            <span className="font-instrument italic font-normal text-[#581de3]">
               effective workflow.
             </span>
           </h2>
@@ -78,7 +78,7 @@ export function EditorialProcess() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-serif text-5xl sm:text-6xl font-normal text-[#140e36]">
+                    <span className="font-instrument italic text-5xl sm:text-6xl font-normal text-[#140e36]">
                       {step.num}
                     </span>
                     <span className="text-[10px] font-mono font-bold text-[#581de3] bg-purple-50 border border-purple-100 px-3 py-1 rounded-full">
@@ -93,7 +93,7 @@ export function EditorialProcess() {
                     {step.description}
                   </p>
 
-                  <div className="mt-6 relative rounded-2xl overflow-hidden aspect-[16/10] bg-[#140e36]/5 border border-[#eae2f2]">
+                  <div className="mt-6 relative rounded-2xl overflow-hidden aspect-[16/10] bg-[#faf7fd] border border-[#eae2f2]">
                     <img
                       src={step.image}
                       alt={step.title}

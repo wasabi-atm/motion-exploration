@@ -41,7 +41,7 @@ export function EditorialMetrics() {
               }`}
             >
               <div>
-                <div className="font-serif text-5xl sm:text-6xl font-normal text-[#140e36] tracking-tight">
+                <div className="font-instrument italic text-5xl sm:text-6xl font-normal text-[#140e36] tracking-tight">
                   {stat.value}
                 </div>
                 <div className="text-base font-bold text-[#581de3] mt-3">

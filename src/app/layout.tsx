@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -41,16 +42,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
           rel="stylesheet"
         />
-        <script
-          src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
-          type="text/javascript"
-        />
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `WebFont.load({ google: { families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Inter:300,400,500,600,700","Poppins:300,400,500,600,700","Work Sans:300,400,500,600,700","Playfair Display:400,400italic,600,700,700italic","Instrument Serif:400,400italic"] }});`,
-          }}
-        />
       </head>
       <body className="body" suppressHydrationWarning>
         <GSAPAnimationManager />
@@ -58,17 +49,17 @@ export default function RootLayout({
         {children}
         <Footer />
 
-        {/* Production Webflow & jQuery runtime */}
-        <script
+        {/* Production Webflow & jQuery runtime using Next.js Script */}
+        <Script
           src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66ebfb6ec8f20d5eda50eb34"
-          type="text/javascript"
+          strategy="afterInteractive"
         />
-        <script
+        <Script
           src="https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/js/webflow.a1f0c833.682be516eec0704d.js"
-          type="text/javascript"
+          strategy="afterInteractive"
         />
-        <script src="/js/flowbitz.umd.js" type="text/javascript" />
-        <script src="/js/live-scripts.js" type="text/javascript" />
+        <Script src="/js/flowbitz.umd.js" strategy="afterInteractive" />
+        <Script src="/js/live-scripts.js" strategy="afterInteractive" />
       </body>
     </html>
   );

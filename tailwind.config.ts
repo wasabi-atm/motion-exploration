@@ -49,6 +49,12 @@ const config: Config = {
           "Georgia",
           "serif",
         ],
+        instrument: [
+          '"Instrument Serif"',
+          "Instrument Serif",
+          "Georgia",
+          "serif",
+        ],
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",

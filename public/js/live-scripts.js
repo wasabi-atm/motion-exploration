@@ -583,16 +583,19 @@ window.addEventListener('load', function() {
 
 (function(a,b,c,d){window.fetch("https://www.g2.com/products/motion-the-agency/rating_schema.json").then(e=>e.json()).then(f=>{c=a.createElement(b);c.type="application/ld+json";c.text=JSON.stringify(f);d=a.getElementsByTagName(b)[0];d.parentNode.insertBefore(c,d);});})(document,"script");
 
-document.getElementById("cards").onmousemove = (e) => {
-  for (const card of document.getElementsByClassName("card")) {
-    const rect = card.getBoundingClientRect(),
-      x = e.clientX - rect.left,
-      y = e.clientY - rect.top;
+const cardsEl = document.getElementById("cards");
+if (cardsEl) {
+  cardsEl.onmousemove = (e) => {
+    for (const card of document.getElementsByClassName("card")) {
+      const rect = card.getBoundingClientRect(),
+        x = e.clientX - rect.left,
+        y = e.clientY - rect.top;
 
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
-  }
-};
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    }
+  };
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const widgets = document.querySelectorAll(".js-clutch");
