@@ -2,8 +2,15 @@
   "name": "motion-the-agency",
   "version": "1.0.0",
   "description": "Motion The Agency website",
+  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "node dev-server.js",
-    "start": "node dev-server.js"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^7.3.5"
   }
 }

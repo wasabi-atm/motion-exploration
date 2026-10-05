@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title={"Search Results"}
+  wfPage="692d723d5988c81ef2a00576"
+  ogTitle={"Search Results"}
+  twitterTitle={"Search Results"}
+  robots={"noindex"}
+  canonical={"https://www.motiontheagency.com/search"}
+>
+  <Fragment slot="head">
+<meta name="robots" content="noindex">
+  </Fragment>
+<div class="w-container">
+    <h1>Search results</h1>
+    <form action="/search" class="w-form"><label for="search">Search</label><input class="w-input" maxlength="256" name="query" placeholder="Search…" type="search" id="search" required=""><input type="submit" class="w-button" value="Search"></form>
+  </div>
+</BaseLayout>

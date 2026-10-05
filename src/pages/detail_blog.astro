@@ -1,0 +1,993 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NavBanner from '../components/NavBanner.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout
+  title={""}
+  wfPage="670fae109cfe94e7e7f7e472"
+  bodyClass={"body overflow-visible"}
+  description={""}
+  ogTitle={""}
+  ogDescription={""}
+  ogImage={""}
+  twitterTitle={""}
+  twitterDescription={""}
+  twitterImage={""}
+  ogType={"website"}
+  twitterCard={"summary_large_image"}
+  canonical={"https://www.motiontheagency.com/detail_blog"}
+>
+  <Fragment slot="head">
+<!--  [Attributes by Finsweet] Social Share  -->
+<script is:inline defer="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-socialshare@1/socialshare.js"></script>
+<!--  [Attributes by Finsweet] Table of Contents  -->
+<script is:inline defer="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-toc@1/toc.js"></script>
+<style is:inline>
+.w-richtext h6 a {
+  color: #FFFFFF;
+</style>
+<script is:inline src="https://cdn.jsdelivr.net/npm/flowbitz@latest/dist/flowbitz.umd.js"></script>
+<style is:inline>
+/* Show tooltip only when wrapper has data-tooltip */
+.author-role-wrapper[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 0;        /* align to top-right */
+  bottom: 100%;    /* place tooltip above, not below */
+  margin-bottom: 6px;
+  padding: 6px 8px;
+  max-width: 280px;
+  background: #ffffff;
+  color: #6229e6;
+  font-size: 11px;
+  line-height: 1.4;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  white-space: normal;
+  z-index: 999;
+}
+</style>
+<style is:inline>
+/* ===============================
+   FIX BLOG BANNER INSIDE RICH TEXT
+   =============================== */
+.w-richtext .blog-banner .flex-v-24,
+.w-richtext .blog-banner .gap-12,
+.w-richtext .blog-banner .flex-v-4 {
+  display: flex !important;
+  flex-direction: column !important;
+}
+/* Re-apply intended spacing */
+.w-richtext .blog-banner .flex-v-24 { gap: 24px !important; }
+.w-richtext .blog-banner .gap-12   { gap: 12px !important; }
+.w-richtext .blog-banner .flex-v-4 { gap: 4px !important; }
+/* Restore flex + gap utilities inside blog content */
+/* Kill rich text typography side-effects */
+.w-richtext .blog-banner * {
+  margin: 0;
+}
+/* Fix CTA link color + underline hijack */
+.w-richtext .blog-banner a.blog-banner-cta {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+</style>
+<!--  CMS ARTICLES CUSTOM COMPONENTS STYLING */  -->
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap">
+<style is:inline>
+ /* =========================
+   TABLE (ORIGINAL FORMAT)
+========================= */
+#mt-table-embed,
+#mt-table-embed * {
+  box-sizing: border-box;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  filter: none !important;
+  color: inherit;
+}
+#mt-table-embed {
+  --bg: #ffffff;
+  --text: #333333;
+  --border: #dcdcdc;
+  --hover: #f9f9ff;
+  --gradA: #581DE3;
+  --gradB: #726EFF;
+  --radius: 12px;
+  --shadow: 0 2px 6px rgba(0,0,0,0.08);
+  --font: "Switzer", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  --fs: 18px;
+  --head-w: 500;
+  --pad: 14px 18px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  isolation: isolate;
+  background: transparent;
+  overflow: hidden;
+  color-scheme: light;
+}
+#mt-table-embed .wrap {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+#mt-table-embed table {
+  width: 100%;
+  min-width: 720px; /* key fix: prevents squeezed mobile columns */
+  border-spacing: 0;
+  border-collapse: separate;
+  background: var(--bg);
+  font-family: var(--font);
+  font-size: var(--fs);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  overflow: hidden;
+  table-layout: auto; /* key fix: lets columns breathe */
+}
+#mt-table-embed th,
+#mt-table-embed td {
+  border: 1px solid var(--border);
+  padding: var(--pad);
+  vertical-align: top;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+#mt-table-embed thead th {
+  background: linear-gradient(45deg, var(--gradA), var(--gradB));
+  color: #fff;
+  font-weight: var(--head-w);
+  text-align: left;
+  line-height: 1.25;
+  white-space: nowrap; /* prevents header letters stacking */
+}
+#mt-table-embed tbody td {
+  background: #fff;
+  color: var(--text);
+}
+#mt-table-embed tbody tr:hover {
+  background: var(--hover);
+}
+#mt-table-embed thead tr:first-child th:first-child {
+  border-top-left-radius: var(--radius);
+}
+#mt-table-embed thead tr:first-child th:last-child {
+  border-top-right-radius: var(--radius);
+}
+#mt-table-embed tbody tr:last-child td:first-child {
+  border-bottom-left-radius: var(--radius);
+}
+#mt-table-embed tbody tr:last-child td:last-child {
+  border-bottom-right-radius: var(--radius);
+}
+#mt-table-embed .wrap::-webkit-scrollbar {
+  height: 8px;
+}
+#mt-table-embed .wrap::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 8px;
+}
+/* Mobile: slightly smaller text and padding, still scrollable */
+@media (max-width: 767px) {
+  #mt-table-embed {
+    --fs: 15px;
+    --pad: 12px 14px;
+  }
+  #mt-table-embed table {
+    min-width: 760px;
+  }
+}
+</style>
+<style is:inline>
+  /* =========================
+     FAQ (ORIGINAL FORMAT)
+  ========================= */
+  #mt-faq, #mt-faq * {
+    box-sizing: border-box;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+    filter: none !important;
+  }
+  #mt-faq {
+    --text: #080610;
+    --muted: #4b5563;
+    --border: #dcdcdc;
+    --radius: 12px;
+    --shadow: 0 6px 16px rgba(0,0,0,0.06);
+    --font: "Switzer", ui-sans-serif, system-ui;
+    --gradA: #581DE3;
+    --gradB: #726EFF;
+    --item-grad: linear-gradient(90deg, rgba(88,29,227,0.06), rgba(114,110,255,0.08));
+    --q-size: 18px;
+    --a-size: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: var(--font);
+    color: var(--text);
+  }
+  #mt-faq .wrap {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #fff;
+    box-shadow: var(--shadow);
+  }
+  #mt-faq .q {
+    width: 100%;
+    padding: 18px 22px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background: var(--item-grad);
+    border: 0;
+    color: var(--text);
+    font-size: var(--q-size);
+    font-weight: 500;
+    text-align: left;
+  }
+  #mt-faq .q:hover {
+    background: linear-gradient(90deg, rgba(88,29,227,0.10), rgba(114,110,255,0.12));
+  }
+  #mt-faq .item + .item .q {
+    border-top: 1px solid var(--border);
+  }
+  #mt-faq .icon {
+    font-size: 24px;
+    font-weight: 600;
+    width: 26px;
+    text-align: center;
+    line-height: 1;
+    background: linear-gradient(45deg, var(--gradA), var(--gradB));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #mt-faq .a {
+    background: #fff;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 22px;
+    transition: max-height .3s ease;
+  }
+  #mt-faq .inner {
+    padding: 14px 0 20px 0;
+    font-size: var(--a-size);
+    color: var(--muted);
+  }
+  #mt-faq .inner p { margin: 0 0 12px; }
+  #mt-faq .inner ul { margin: 8px 0 0 20px; }
+  #mt-faq .inner li { margin: 6px 0; }
+</style>
+  </Fragment>
+<NavBanner />
+  <div class="page-wrapper overflow-visible">
+    <div id="cards" class="main-wrapper overflow-show">
+      <section data-w-id="b977fcb1-9a9e-7558-b561-24b1bf41cc51" class="section-hero padding-bottom-140 no-bg">
+        <div id="banner-trigger" class="nav_banner-trigger"></div>
+        <div class="w-layout-blockcontainer container-1280 height-100 w-container">
+          <div class="gap-60-hero">
+            <div class="gap-76">
+              <div class="wrapper-hero _1fr add-space">
+                <div class="left-hero max-w-580">
+                  <div class="gap-4">
+                    <div class="crumb">
+                      <a href="#" class="crumb-link"></a>
+                      <div class="crumb-link">/</div>
+                      <div class="w-dyn-list">
+                        <div role="list" class="w-dyn-items">
+                          <div role="listitem" class="w-dyn-item">
+                            <a href="#" class="crumb-link"></a>
+                          </div>
+                        </div>
+                        <div class="w-dyn-empty">
+                          <div>No items found.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blog-title w-dyn-bind-empty w-richtext"></div>
+                  </div>
+                  <div class="blog-inner-author">
+                    <div class="authors-list-wrapper w-dyn-list">
+                      <div role="list" class="authors-list w-dyn-items">
+                        <div role="listitem" class="authors-item w-dyn-item">
+                          <a href="#" class="name-wrapper w-inline-block">
+                            <div class="author-name w-dyn-bind-empty"></div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="empty-state left-align w-dyn-empty">
+                        <div>No items found.</div>
+                      </div>
+                    </div>
+                    <div class="author_date-blog">
+                      <div class="text-14-150 opacity-80 large w-dyn-bind-empty"></div>
+                      <div class="text-14-150 opacity-80 large">・</div>
+                      <div class="text-14-150 opacity-80 large w-dyn-bind-empty"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="w-node-b977fcb1-9a9e-7558-b561-24b1bf41cc62-e7f7e472" class="right-hero center-align"><img src="/images/gfe-hero.avif" loading="eager" alt="" class="image-hero radius-15 w-dyn-bind-empty"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-gradient-2 bottom"></div>
+      </section>
+      <section id="contact" class="section-blog bg-white">
+        <div class="container-1280">
+          <div class="blog-inner-wrapper">
+            <div class="blog-inner-left-side">
+              <div class="blog-inner-stiky">
+                <div class="share-block">
+                  <div class="text-14-150 dark-color center">Share this post</div>
+                  <div class="w-layout-grid share-grid">
+                    <a copy-button="" href="#" class="share-link w-inline-block">
+                      <div copy-icon="" class="icon-embed-xsmall w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9999 7.66008V8.00008C21.0007 9.06616 20.576 10.0885 19.8199 10.84L16.9999 13.67C16.4738 14.1911 15.6261 14.1911 15.1 13.67L15 13.56C14.8094 13.3656 14.8094 13.0544 15 12.86L18.4399 9.42006C18.807 9.03938 19.0083 8.52883 18.9999 8.00008V7.66008C19.0003 7.12705 18.788 6.61589 18.4099 6.2401L17.7599 5.59011C17.3841 5.21207 16.873 4.99969 16.3399 5.00011H15.9999C15.4669 4.99969 14.9558 5.21207 14.58 5.59011L11.14 9.00007C10.9456 9.19064 10.6344 9.19064 10.44 9.00007L10.33 8.89007C9.8089 8.36394 9.8089 7.51623 10.33 6.99009L13.16 4.15012C13.9165 3.40505 14.9382 2.99133 15.9999 3.00014H16.3399C17.4011 2.9993 18.4191 3.42018 19.1699 4.17012L19.8299 4.83012C20.5798 5.5809 21.0007 6.59891 20.9999 7.66008ZM8.64993 13.94L13.9399 8.65008C14.0338 8.55543 14.1616 8.50218 14.2949 8.50218C14.4282 8.50218 14.556 8.55543 14.6499 8.65008L15.3499 9.35007C15.4445 9.44395 15.4978 9.57175 15.4978 9.70507C15.4978 9.83839 15.4445 9.96618 15.3499 10.0601L10.0599 15.35C9.96604 15.4447 9.83824 15.4979 9.70492 15.4979C9.57161 15.4979 9.44381 15.4447 9.34993 15.35L8.64993 14.65C8.55528 14.5561 8.50204 14.4283 8.50204 14.295C8.50204 14.1617 8.55528 14.0339 8.64993 13.94ZM13.5599 15C13.3655 14.8094 13.0543 14.8094 12.8599 15L9.42993 18.41C9.0517 18.7905 8.53645 19.003 7.99995 18.9999H7.65995C7.12691 19.0004 6.61576 18.788 6.23997 18.41L5.58997 17.76C5.21194 17.3842 4.99956 16.873 4.99998 16.34V16C4.99956 15.4669 5.21194 14.9558 5.58997 14.58L9.00993 11.14C9.2005 10.9456 9.2005 10.6345 9.00993 10.44L8.89993 10.33C8.3738 9.80894 7.52609 9.80894 6.99996 10.33L4.17999 13.16C3.42392 13.9116 2.99916 14.9339 3 16V16.35C3.00182 17.4077 3.42249 18.4216 4.16999 19.1699L4.82998 19.8299C5.58076 20.5799 6.59878 21.0008 7.65995 20.9999H7.99995C9.05338 21.0061 10.0667 20.5964 10.8199 19.8599L13.6699 17.01C14.191 16.4838 14.191 15.6361 13.6699 15.11L13.5599 15Z" fill="url(#paint0_linear_3379_12832)"></path>
+                          <defs>
+                            <lineargradient id="paint0_linear_3379_12832" x1="3" y1="12" x2="20.9999" y2="12" gradientunits="userSpaceOnUse">
+                              <stop stop-color="#581DE3"></stop>
+                              <stop offset="1" stop-color="#726EFF"></stop>
+                            </lineargradient>
+                          </defs>
+                        </svg></div>
+                      <div copy-text="" class="copy-text"> </div>
+                    </a>
+                    <a fs-socialshare-element="linkedin" href="#" class="share-link w-inline-block">
+                      <div class="icon-embed-xsmall w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3ZM8 18C8.27614 18 8.5 17.7761 8.5 17.5V10.5C8.5 10.2239 8.27614 10 8 10H6.5C6.22386 10 6 10.2239 6 10.5V17.5C6 17.7761 6.22386 18 6.5 18H8ZM7.25 9C6.42157 9 5.75 8.32843 5.75 7.5C5.75 6.67157 6.42157 6 7.25 6C8.07843 6 8.75 6.67157 8.75 7.5C8.75 8.32843 8.07843 9 7.25 9ZM17.5 18C17.7761 18 18 17.7761 18 17.5V12.9C18.0325 11.3108 16.8576 9.95452 15.28 9.76C14.177 9.65925 13.1083 10.1744 12.5 11.1V10.5C12.5 10.2239 12.2761 10 12 10H10.5C10.2239 10 10 10.2239 10 10.5V17.5C10 17.7761 10.2239 18 10.5 18H12C12.2761 18 12.5 17.7761 12.5 17.5V13.75C12.5 12.9216 13.1716 12.25 14 12.25C14.8284 12.25 15.5 12.9216 15.5 13.75V17.5C15.5 17.7761 15.7239 18 16 18H17.5Z" fill="url(#paint0_linear_3379_12834)"></path>
+                          <defs>
+                            <lineargradient id="paint0_linear_3379_12834" x1="3" y1="12" x2="21" y2="12" gradientunits="userSpaceOnUse">
+                              <stop stop-color="#581DE3"></stop>
+                              <stop offset="1" stop-color="#726EFF"></stop>
+                            </lineargradient>
+                          </defs>
+                        </svg></div>
+                    </a>
+                    <a fs-socialshare-element="twitter" href="#" class="share-link w-inline-block">
+                      <div class="icon-embed-xsmall w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_3402_3259)">
+                            <path d="M4 4L15.733 20H20L8.267 4H4Z" stroke="url(#paint0_linear_3402_3259)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4 20L10.768 13.232M13.228 10.772L20 4" stroke="url(#paint1_linear_3402_3259)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </g>
+                          <defs>
+                            <lineargradient id="paint0_linear_3402_3259" x1="4" y1="12" x2="20" y2="12" gradientunits="userSpaceOnUse">
+                              <stop stop-color="#581DE3"></stop>
+                              <stop offset="1" stop-color="#726EFF"></stop>
+                            </lineargradient>
+                            <lineargradient id="paint1_linear_3402_3259" x1="4" y1="12" x2="20" y2="12" gradientunits="userSpaceOnUse">
+                              <stop stop-color="#581DE3"></stop>
+                              <stop offset="1" stop-color="#726EFF"></stop>
+                            </lineargradient>
+                            <clippath id="clip0_3402_3259">
+                              <rect width="24" height="24" fill="white"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                    </a>
+                    <a fs-socialshare-element="facebook" href="#" class="share-link w-inline-block">
+                      <div class="icon-embed-xsmall w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16.5 6H13.5C12.9477 6 12.5 6.44772 12.5 7V10H16.5C16.6137 9.99748 16.7216 10.0504 16.7892 10.1419C16.8568 10.2334 16.8758 10.352 16.84 10.46L16.1 12.66C16.0318 12.8619 15.8431 12.9984 15.63 13H12.5V20.5C12.5 20.7761 12.2761 21 12 21H9.5C9.22386 21 9 20.7761 9 20.5V13H7.5C7.22386 13 7 12.7761 7 12.5V10.5C7 10.2239 7.22386 10 7.5 10H9V7C9 4.79086 10.7909 3 13 3H16.5C16.7761 3 17 3.22386 17 3.5V5.5C17 5.77614 16.7761 6 16.5 6Z" fill="url(#paint0_linear_3379_12838)"></path>
+                          <defs>
+                            <lineargradient id="paint0_linear_3379_12838" x1="7" y1="12" x2="17" y2="12" gradientunits="userSpaceOnUse">
+                              <stop stop-color="#581DE3"></stop>
+                              <stop offset="1" stop-color="#726EFF"></stop>
+                            </lineargradient>
+                          </defs>
+                        </svg></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="card light">
+                  <div class="card-content-toc light">
+                    <div class="toc-title">
+                      <p class="text-caps dark-color">table of content</p>
+                    </div>
+                    <div class="w-layout-vflex flex-v _0">
+                      <div class="toc_link-wrapper">
+                        <a fs-toc-element="link" href="#" class="toc_link dark-color">Text Link</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-_5ff1a896-6044-0621-884d-1e12247eafee-e7f7e472" class="blog-inner-right-side">
+              <div fs-toc-offsettop="130px" fs-toc-element="contents" class="rich-text-light w-dyn-bind-empty w-richtext"></div>
+              <div class="blog-inner-info">
+                <div class="author-desc-wrapper w-dyn-list">
+                  <div role="list" class="author-desc-list w-dyn-items">
+                    <div id="w-node-_6ec73484-6a6c-8d69-ad1b-1ae546d0074b-e7f7e472" role="listitem" class="author-desc-item w-dyn-item">
+                      <div class="card fit-content transparent">
+                        <div class="card-content-author-desc">
+                          <div class="pricing-hero-image_text vertical size-100">
+                            <div class="image-wrapper-hero_wrapper horizontal"><img src="/images/Aly-Slater---FutureFit.avif" loading="lazy" alt="" class="author-img _48 w-dyn-bind-empty">
+                              <div class="w-layout-hflex flex-v _4">
+                                <p class="h4 gradient-pink w-dyn-bind-empty"></p>
+                                <div wb-tooltip-max-width="320px" wb-component="tooltip-text" wb-tooltip-background="#ffffff" wb-tooltip-color="#6229e6" class="author-role-wrapper">
+                                  <p class="author-role-text w-dyn-bind-empty"></p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="text-wrapper-hero-pricing">
+                              <p class="text-14-150 opacity-80 dark w-dyn-bind-empty"></p>
+                            </div>
+                          </div>
+                          <a href="#" class="link-arrow-top w-inline-block">
+                            <div class="text-14-150 weight-medium">View profile</div><img src="/images/icon-arrow-right-top-gradient-purple.svg" loading="lazy" alt="" class="ic-20x20">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-dyn-empty">
+                    <div>No items found.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="blog-inner-widget">
+              <div class="blog-inner-stiky widget">
+                <div class="card-contaiiner--cost-calculator blog">
+                  <div class="cost-calculator-widget-blog">
+                    <div class="card-our-work-img top-padding"><img src="/images/cost-cal-widget.avif" loading="lazy" sizes="(max-width: 1080px) 100vw, 1080px" srcset="/images/cost-cal-widget-p-500.png 500w, /images/cost-cal-widget.avif 1080w" alt="Video cost calculator" class="blog-widget-image"></div>
+                    <div class="card-our-work-content">
+                      <div class="gap-4">
+                        <div class="text-18-semibold">Estimate your video cost ✨</div>
+                        <p class="text-12-150">In just a few questions, get a tailored estimate for your next video project.</p>
+                      </div>
+                      <div data-w-id="d3199d11-fd52-38ee-7b9c-84a1efa3f130" class="glowing-wrapper glowing-wrapper-active gradient cyan fill">
+                        <div class="glowing-wrapper-borders-masker">
+                          <div style="opacity:0" class="glowing-wrapper-borders"></div>
+                        </div>
+                        <a href="/resources/video-cost-calculator" class="glowing-wrapper-button fill w-inline-block">
+                          <div class="text-block rel black">Try cost calculator</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-cta-blog2">
+        <div class="line-gradient-2"></div><img src="/images/Frame-1707478540_2.avif" loading="lazy" sizes="(max-width: 2401px) 100vw, 2401px" srcset="/images/Frame-1707478540_2Frame-1707478540.avif 500w, /images/Frame-1707478540_2.avif 2401w" alt="" class="image-purpose-3">
+        <div class="w-layout-blockcontainer container-1280 w-container">
+          <div class="blog-wrapper">
+            <div class="cms-blog-button gap-40">
+              <div class="heading-button-blog">
+                <p class="h3">Related articles</p>
+                <div data-w-id="1e4cbeb1-9b57-801b-ec4d-83b38d4082be" class="glowing-wrapper glowing-wrapper-active">
+                  <div class="button-css w-embed">
+                    <style is:inline>
+ * {
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     font-smoothing: antialiased;
+     text-rendering: optimizeLegibility;
+}
+  html { font-size: calc(0.625rem + 0.41666666666666663vw); }
+  @media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
+  @media screen and (max-width:1440px) { html { font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); } }
+  @media screen and (max-width:479px) { html { font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); } }
+.glowing-wrapper-button:after {
+	background: radial-gradient(85% 120% at 50% 120%, rgba(255, 255, 255, .24) 0%, rgba(255, 255, 255, 0) 100%);
+	border-radius: 999px;
+	content: "";
+	height: calc(100% + 4px);
+	left: -2px;
+	opacity: 0;
+	position: absolute;
+	top: -2px;
+	transition: 1s all;
+	width: calc(100% + 4px)
+}
+.glowing-wrapper-button:hover:after {
+	opacity: .7
+}
+.glowing-wrapper-active .glowing-wrapper-animations,
+.glowing-wrapper-active .glowing-wrapper-borders-masker {
+	opacity: 1
+}
+.glowing-wrapper-animations:before,
+.glowing-wrapper-borders:before {
+	content: "";
+	float: left;
+	padding-top: 100%
+}
+.glowing-wrapper-animations:after,
+.glowing-wrapper-borders:after {
+	clear: both;
+	content: "";
+	display: block
+}
+.glowing-wrapper-animations {
+	pointer-events: none;
+}
+.glowing-wrapper-animations * {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%
+}
+.glowing-wrapper-borders,
+.glowing-wrapper-glow,
+.glowing-wrapper-mask {
+	animation: borderTurn 2.5s infinite linear;
+	background-image: conic-gradient(from 0 at 50% 50%, rgba(255, 255, 255, .5) 0deg, rgba(255, 255, 255, 0) 60deg, rgba(255, 255, 255, 0) 310deg, rgba(255, 255, 255, .5) 360deg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover
+}
+.glowing-wrapper-mask-wrapper {
+	-webkit-mask: url("data:image/svg+xml,url('data:image/svg+xml,%253Csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%253E%253Crect width='28' height='24' fill='black'/%253E%253C/svg%253E%250A');");
+	mask: url("data:image/svg+xml,url('data:image/svg+xml,%253Csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%253E%253Crect width='28' height='24' fill='black'/%253E%253C/svg%253E%250A');");
+	mask-repeat: repeat;
+	-webkit-mask-size: auto;
+	mask-size: auto
+}
+.glowing-wrapper-borders {
+	animation-name: borderTurnWithTranslate
+}
+.glowing-wrapper-borders-masker {
+	content: "";
+	inset: 0;
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask-composite: xor;
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	pointer-events: none;
+}
+@keyframes borderTurn {
+	0% {
+		transform: rotate(0)
+	}
+	to {
+		transform: rotate(360deg)
+	}
+}
+@keyframes borderTurnWithTranslate {
+	0% {
+		transform: translate(-50%, -50%) rotate(0)
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(360deg)
+	}
+}
+                    </style>
+                  </div>
+                  <div class="glowing-wrapper-borders-masker">
+                    <div style="opacity:0" class="glowing-wrapper-borders"></div>
+                  </div>
+                  <a href="#" class="glowing-wrapper-button w-inline-block">
+                    <div class="text-block rel">View all</div><img src="/images/tabler_arrow-up.svg" loading="lazy" alt="right arrow icon
+" class="ic-20x20">
+                  </a>
+                </div>
+              </div>
+              <div class="w-dyn-list">
+                <div fs-cmsfilter-element="list" role="list" class="collection-list w-dyn-items">
+                  <div role="listitem" class="collection-item w-dyn-item">
+                    <div class="card-contaiiner fill">
+                      <a href="#" class="card w-inline-block">
+                        <div class="card-content"><img alt="" loading="lazy" src="/images/Frame-1707478606.avif" class="img-main-blog w-dyn-bind-empty">
+                          <div class="text-wrapper-card-blog">
+                            <div class="gap-16-blog">
+                              <div fs-cmsfilter-field="category" class="text-14-150 text-color-purple w-dyn-bind-empty"></div>
+                              <div class="h4 w-dyn-bind-empty"></div>
+                            </div>
+                            <div class="author-description-blog">
+                              <p class="text-16-150 opacity-80 w-dyn-bind-empty"></p>
+                              <div class="author_date-blog">
+                                <div class="text-14-150 opacity-80 w-dyn-bind-empty"></div>
+                                <div class="text-14-150 opacity-80">・</div>
+                                <div class="text-14-150 opacity-80 w-dyn-bind-empty"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-dyn-empty">
+                  <div>No items found.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><img src="/images/Frame-1707478801_1.avif" loading="lazy" sizes="(max-width: 1351px) 100vw, 1351px" srcset="/images/Frame-1707478801_1-p-500.png 500w, /images/Frame-1707478801_1-p-800.png 800w, /images/Frame-1707478801_1.avif 1351w" alt="A woman holding a tennis racquet on top of a tennis court" class="image-purpose-4">
+      </section>
+      <div class="section-blog-recommendation">
+        <div class="image-wrapper-blog"><img src="/images/Frame-1707478673_1.avif" loading="lazy" sizes="(max-width: 3576px) 100vw, 3576px" srcset="/images/Frame-1707478673_1-p-500.png 500w, /images/Frame-1707478673_1-p-800.png 800w, /images/Frame-1707478673_1-p-1080.png 1080w, /images/Frame-1707478673_1-p-1600.png 1600w, /images/Frame-1707478673_1-p-2000.png 2000w, /images/Frame-1707478673_1.avif 3576w" alt="A group of three giraffe standing next to each other" class="image-blog-gradient"></div>
+        <div class="w-layout-blockcontainer container-1280 w-container">
+          <div class="wrapper-process">
+            <div class="contact-card">
+              <div class="contact-wrapper">
+                <div class="contact-content">
+                  <div class="gap-12 center">
+                    <p class="text-caps weight-regular">Contact Us</p>
+                    <p class="h2">Ready to elevate your brand? Contact us for your <br><span class="span">Free Custom Video Sample</span></p>
+                  </div>
+                  <div class="wrap-btn-price">
+                    <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient">
+                      <div class="glowing-wrapper-borders-masker">
+                        <div class="glowing-wrapper-borders"></div>
+                      </div>
+                      <a href="/get-free-sample" class="glowing-wrapper-button w-inline-block">
+                        <div class="text-block rel align-center-middle">Get free sample</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div id="w-node-e71ca5b3-b19c-c4c0-4a04-9188bc5ca1d8-e7f7e472" class="contact-image-wrapper"><img loading="lazy" src="/images/contact-img_1.avif" alt="A smart phone with a credit card next to it" class="img-100 img-tabs"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+      <div class="css">
+        <div class="button-css w-embed">
+          <style is:inline>
+ * {
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     font-smoothing: antialiased;
+     text-rendering: optimizeLegibility;
+}
+  html { font-size: calc(0.625rem + 0.41666666666666663vw); }
+  @media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
+  @media screen and (max-width:1440px) { html { font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); } }
+  @media screen and (max-width:479px) { html { font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); } }
+.glowing-wrapper-button:after {
+	background: radial-gradient(85% 120% at 50% 120%, rgba(255, 255, 255, .24) 0%, rgba(255, 255, 255, 0) 100%);
+	border-radius: 999px;
+	content: "";
+	height: calc(100% + 4px);
+	left: -2px;
+	opacity: 0;
+	position: absolute;
+	top: -2px;
+	transition: 1s all;
+	width: calc(100% + 4px)
+}
+.glowing-wrapper-button:hover:after {
+	opacity: .7
+}
+.glowing-wrapper-active .glowing-wrapper-animations,
+.glowing-wrapper-active .glowing-wrapper-borders-masker {
+	opacity: 1
+}
+.glowing-wrapper-animations:before,
+.glowing-wrapper-borders:before {
+	content: "";
+	float: left;
+	padding-top: 100%
+}
+.glowing-wrapper-animations:after,
+.glowing-wrapper-borders:after {
+	clear: both;
+	content: "";
+	display: block
+}
+.glowing-wrapper-animations {
+	pointer-events: none;
+}
+.glowing-wrapper-animations * {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%
+}
+.glowing-wrapper-borders,
+.glowing-wrapper-glow,
+.glowing-wrapper-mask {
+	animation: borderTurn 2.5s infinite linear;
+	background-image: conic-gradient(from 0 at 50% 50%, rgba(255, 255, 255, .5) 0deg, rgba(255, 255, 255, 0) 60deg, rgba(255, 255, 255, 0) 310deg, rgba(255, 255, 255, .5) 360deg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover
+}
+.glowing-wrapper-mask-wrapper {
+	-webkit-mask: url("data:image/svg+xml,url('data:image/svg+xml,%253Csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%253E%253Crect width='28' height='24' fill='black'/%253E%253C/svg%253E%250A');");
+	mask: url("data:image/svg+xml,url('data:image/svg+xml,%253Csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%253E%253Crect width='28' height='24' fill='black'/%253E%253C/svg%253E%250A');");
+	mask-repeat: repeat;
+	-webkit-mask-size: auto;
+	mask-size: auto
+}
+.glowing-wrapper-borders {
+	animation-name: borderTurnWithTranslate
+}
+.glowing-wrapper-borders-masker {
+	content: "";
+	inset: 0;
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask-composite: xor;
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	pointer-events: none;
+}
+@keyframes borderTurn {
+	0% {
+		transform: rotate(0)
+	}
+	to {
+		transform: rotate(360deg)
+	}
+}
+@keyframes borderTurnWithTranslate {
+	0% {
+		transform: translate(-50%, -50%) rotate(0)
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(360deg)
+	}
+}
+</style>
+        </div>
+        <div class="custom-styles w-embed">
+          <style is:inline>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+        :root {
+            --bg-color: rgb(20, 20, 20);
+            --card-color: rgb(23, 23, 23);
+        }
+        .hero {
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.1), rgba(255, 255, 255, 0));
+        }
+        #cards:hover > .card::after {
+            opacity: 1;
+        }
+        .card:hover::before {
+            opacity: 1;
+        }
+        .card::before,
+        .card::after {
+            border-radius: inherit;
+            content: "";
+            height: 100%;
+            left: 0px;
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            transition: opacity 500ms;
+            width: 100%;
+        }
+        .card::before {
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
+            z-index: 3;
+            pointer-events: none;
+        }
+        .card::after {
+            background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.4), transparent 40%);
+            z-index: 1;
+            pointer-events: none;
+        }
+        .card > .card-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            z-index: 2;
+        }
+        .rich-text a{
+        	color: white !important;
+        }
+        .rich-text p{
+        	color: rgba(255, 255, 255, 0.8);
+					font-size: 20px;
+          line-height: 150%;
+        }
+         .rich-text ul,
+         .rich-text ol {
+              font-size: 20px;
+          		line-height: 150%;
+              color: rgba(255, 255, 255, 0.8);
+          }
+        @media (max-width: 768px) {
+          .rich-text p {
+            font-size: 16px; /* Smaller font size for smaller screens */
+            }
+           .rich-text ul,
+           .rich-text ol {
+                font-size: 16px;
+                line-height: 150%;
+            }
+				}
+        .rich-text h1, h2, h3{
+    			margin-top: 48px;
+          margin-bottom: 12px;
+				}
+        .rich-text h4, h5, h6{
+         	margin-top: 20px;
+          margin-bottom: 8px;
+         }
+    }
+</style>
+        </div>
+        <div class="code-embed-2 w-embed w-script">
+          <script is:inline>
+document.getElementById("cards").onmousemove = (e) => {
+  for (const card of document.getElementsByClassName("card")) {
+    const rect = card.getBoundingClientRect(),
+      x = e.clientX - rect.left,
+      y = e.clientY - rect.top;
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  }
+};
+</script>
+        </div>
+        <div class="global-style w-embed">
+          <style is:inline>
+.card_glow_background {
+	width: calc(100% + 12px);
+  height: calc(100% + 12px);
+}
+.card_glow_background._2 {
+	left : calc(-100% - 24px); 
+}
+.card_glow_background._3 {
+	top : calc(-100% - 24px);
+}
+.card_glow_background._4 {
+	left : calc(-100% - 24px);
+  top : calc(-100% - 24px);
+}
+</style>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-embed"></div>
+  <Fragment slot="scripts">
+<!--  copy link button  -->
+  <script is:inline>
+var $temp = $("<input>");
+var $url = $(location).attr('href');
+$('[copy-button]').on('click', function() {
+	$("body").append($temp);
+  $temp.val($url).select();
+  document.execCommand("copy");
+  $temp.remove();
+  $("[copy-text]").text("copied");
+  $("[copy-icon]").css('display', 'none');
+  setTimeout(function() {
+      $("[copy-text]").text(" ");
+      $("[copy-icon]").css('display', 'block');
+  }, 1000);
+});
+</script>
+  <script is:inline>
+  document.addEventListener("DOMContentLoaded", function() {
+    const richTextImages = document.querySelectorAll('.w-richtext img');
+    richTextImages.forEach(function(img) {
+      img.removeAttribute('loading');
+    });
+  });
+</script>
+  <script is:inline>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".authors-list-wrapper").forEach(function(wrapper) {
+    const links = Array.from(wrapper.querySelectorAll(".name-wrapper"));
+    const count = links.length;
+    if (count <= 1) return;
+    links.forEach(function(link, index) {
+      if (index === count - 1) return;
+      const sep = document.createElement("span");
+      if (count === 2) {
+        // A & B
+        if (index === 0) {
+          sep.textContent = " & ";
+          sep.style.marginLeft = "8px"; // <-- add space before &
+        }
+      } else {
+        // A, B & C
+        if (index < count - 2) {
+          sep.textContent = ", ";
+        } else {
+          sep.textContent = " & ";
+          sep.style.marginLeft = "8px"; // <-- add space before &
+        }
+      }
+      link.after(sep);
+    });
+  });
+});
+</script>
+  <script is:inline>
+document.addEventListener("DOMContentLoaded", function() {
+  const items = document.querySelectorAll('.author-role-wrapper');
+  items.forEach(function(wrapper) {
+    const text = wrapper.querySelector('.author-role-text');
+    if (!text) return;
+    const fullText = text.textContent.trim();
+    const isTruncated = text.scrollWidth > text.clientWidth;
+    if (isTruncated) {
+      wrapper.setAttribute("data-tooltip", fullText);
+    } else {
+      wrapper.removeAttribute("data-tooltip");
+    }
+  });
+});
+</script>
+  <!--  FAQ Component  -->
+  <script is:inline>
+(function () {
+  function setOpen(item, open) {
+    const panel = item.querySelector('.a');
+    const icon = item.querySelector('.icon');
+    if (!panel || !icon) return;
+    if (open) {
+      item.classList.add('open');
+      panel.style.setProperty('max-height', panel.scrollHeight + 'px');
+      icon.textContent = '−';
+    } else {
+      item.classList.remove('open');
+      panel.style.setProperty('max-height', '0px');
+      icon.textContent = '+';
+    }
+  }
+  // Works even for CMS-injected content because it's delegated
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('#mt-faq .q');
+    if (!btn) return;
+    const root = btn.closest('#mt-faq');
+    const item = btn.closest('.item');
+    if (!root || !item) return;
+    const isOpen = item.classList.contains('open');
+    // Close siblings (same behavior as your original)
+    root.querySelectorAll('.item.open').forEach(function (i) {
+      if (i !== item) setOpen(i, false);
+    });
+    setOpen(item, !isOpen);
+  });
+  // Keep height correct on resize
+  window.addEventListener('resize', function () {
+    document.querySelectorAll('#mt-faq .item.open').forEach(function (item) {
+      const panel = item.querySelector('.a');
+      if (panel) panel.style.setProperty('max-height', panel.scrollHeight + 'px');
+    });
+  });
+})();
+</script>
+  <style is:inline>
+/* Desktop only */
+@media (min-width: 768px) {
+  .author-desc-list .author-desc-item.last-span-2 {
+    grid-column: span 2 !important;
+  }
+}
+/* Mobile fallback */
+@media (max-width: 767px) {
+  .author-desc-list .author-desc-item.last-span-2 {
+    grid-column: auto !important;
+  }
+}
+</style>
+  <script is:inline>
+document.addEventListener("DOMContentLoaded", function() {
+  const items = document.querySelectorAll(".author-desc-list .author-desc-item");
+  if (items.length % 2 !== 0) {
+    // Add a special class to the last item
+    items[items.length - 1].classList.add("last-span-2");
+  }
+});
+</script>
+  </Fragment>
+</BaseLayout>
