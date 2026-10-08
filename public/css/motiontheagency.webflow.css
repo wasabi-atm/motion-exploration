@@ -4759,6 +4759,7 @@ figcaption {
 
 .card-contaiiner {
   flex: 1;
+  color: ;
 }
 
 .card-contaiiner._1 {
@@ -14643,7 +14644,7 @@ figcaption {
 .identity-wrapper {
   grid-column-gap: 32px;
   grid-row-gap: 32px;
-  background-image: linear-gradient(#231c3b00 60%, #231c3b), radial-gradient(circle at 100% -15%, #140d24, #0a0814 53%);
+  background-image: linear-gradient(#231c3b00 60%, #231c3b 100%), radial-gradient(circle at 100% -15%, #140d24, #0a0814 53%);
   border: 1px solid #ffffff0d;
   border-radius: 16px;
   flex: 0 auto;

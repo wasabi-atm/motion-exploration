@@ -8,7 +8,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "postinstall": "node -e \"const fs=require('fs'),p='node_modules/astro/astro.js';if(fs.existsSync('node_modules/astro/bin/astro.mjs'))fs.writeFileSync(p,\\\"if(process.argv.includes('dev')&&!process.argv.includes('--force'))process.argv.push('--force');\\\\nimport './bin/astro.mjs';\\\\n\\\")\""
   },
   "dependencies": {
     "astro": "^7.3.5"
