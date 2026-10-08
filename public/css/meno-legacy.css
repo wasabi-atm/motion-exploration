@@ -4534,3 +4534,9 @@ figcaption {
   font-style: normal;
   font-display: swap;
 }
+.nav-link {
+  box-sizing: border-box;
+}
+.card {
+  padding-left: 0;
+}
