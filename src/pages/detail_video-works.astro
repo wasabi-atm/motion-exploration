@@ -1,10 +1,20 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/theme.css';
+import { BaseLayout, Embed } from 'meno-astro/components';
+
+const meta = {
+  "title": "Motion The Agency",
+  "description": "",
+  "htmlAttributes": {
+    "data-wf-page": "68b01b866a34ea7448d50e22",
+    "data-wf-site": "66ebfb6ec8f20d5eda50eb34"
+  },
+  "customCode": {
+    "head": ""
+  }
+};
+
 ---
-<BaseLayout
-  title={"Motion The Agency"}
-  wfPage="68b01b866a34ea7448d50e22"
-  canonical={"https://www.motiontheagency.com/detail_video-works"}
->
+<BaseLayout meta={meta}>
 
 </BaseLayout>

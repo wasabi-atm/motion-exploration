@@ -1,471 +1,24 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/theme.css';
+import { BaseLayout, Embed } from 'meno-astro/components';
 import NavBanner from '../components/NavBanner.astro';
 import Footer from '../components/Footer.astro';
----
-<BaseLayout
-  title={""}
-  wfPage="670fae109cfe94e7e7f7e472"
-  bodyClass={"body overflow-visible"}
-  description={""}
-  ogTitle={""}
-  ogDescription={""}
-  ogImage={""}
-  twitterTitle={""}
-  twitterDescription={""}
-  twitterImage={""}
-  ogType={"website"}
-  twitterCard={"summary_large_image"}
-  canonical={"https://www.motiontheagency.com/detail_blog"}
->
-  <Fragment slot="head">
-<!--  [Attributes by Finsweet] Social Share  -->
-<script is:inline defer="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-socialshare@1/socialshare.js"></script>
-<!--  [Attributes by Finsweet] Table of Contents  -->
-<script is:inline defer="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-toc@1/toc.js"></script>
-<style is:inline>
-.w-richtext h6 a {
-  color: #FFFFFF;
-</style>
-<script is:inline src="https://cdn.jsdelivr.net/npm/flowbitz@latest/dist/flowbitz.umd.js"></script>
-<style is:inline>
-/* Show tooltip only when wrapper has data-tooltip */
-.author-role-wrapper[data-tooltip]:hover::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  right: 0;        /* align to top-right */
-  bottom: 100%;    /* place tooltip above, not below */
-  margin-bottom: 6px;
-  padding: 6px 8px;
-  max-width: 280px;
-  background: #ffffff;
-  color: #6229e6;
-  font-size: 11px;
-  line-height: 1.4;
-  border-radius: 6px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  white-space: normal;
-  z-index: 999;
-}
-</style>
-<style is:inline>
-/* ===============================
-   FIX BLOG BANNER INSIDE RICH TEXT
-   =============================== */
-.w-richtext .blog-banner .flex-v-24,
-.w-richtext .blog-banner .gap-12,
-.w-richtext .blog-banner .flex-v-4 {
-  display: flex !important;
-  flex-direction: column !important;
-}
-/* Re-apply intended spacing */
-.w-richtext .blog-banner .flex-v-24 { gap: 24px !important; }
-.w-richtext .blog-banner .gap-12   { gap: 12px !important; }
-.w-richtext .blog-banner .flex-v-4 { gap: 4px !important; }
-/* Restore flex + gap utilities inside blog content */
-/* Kill rich text typography side-effects */
-.w-richtext .blog-banner * {
-  margin: 0;
-}
-/* Fix CTA link color + underline hijack */
-.w-richtext .blog-banner a.blog-banner-cta {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-</style>
-<!--  CMS ARTICLES CUSTOM COMPONENTS STYLING */  -->
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap">
-<style is:inline>
- /* =========================
-   TABLE (ORIGINAL FORMAT)
-========================= */
-#mt-table-embed,
-#mt-table-embed * {
-  box-sizing: border-box;
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  filter: none !important;
-  color: inherit;
-}
-#mt-table-embed {
-  --bg: #ffffff;
-  --text: #333333;
-  --border: #dcdcdc;
-  --hover: #f9f9ff;
-  --gradA: #581DE3;
-  --gradB: #726EFF;
-  --radius: 12px;
-  --shadow: 0 2px 6px rgba(0,0,0,0.08);
-  --font: "Switzer", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
-  --fs: 18px;
-  --head-w: 500;
-  --pad: 14px 18px;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  isolation: isolate;
-  background: transparent;
-  overflow: hidden;
-  color-scheme: light;
-}
-#mt-table-embed .wrap {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-#mt-table-embed table {
-  width: 100%;
-  min-width: 720px; /* key fix: prevents squeezed mobile columns */
-  border-spacing: 0;
-  border-collapse: separate;
-  background: var(--bg);
-  font-family: var(--font);
-  font-size: var(--fs);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-  overflow: hidden;
-  table-layout: auto; /* key fix: lets columns breathe */
-}
-#mt-table-embed th,
-#mt-table-embed td {
-  border: 1px solid var(--border);
-  padding: var(--pad);
-  vertical-align: top;
-  word-break: normal;
-  overflow-wrap: break-word;
-}
-#mt-table-embed thead th {
-  background: linear-gradient(45deg, var(--gradA), var(--gradB));
-  color: #fff;
-  font-weight: var(--head-w);
-  text-align: left;
-  line-height: 1.25;
-  white-space: nowrap; /* prevents header letters stacking */
-}
-#mt-table-embed tbody td {
-  background: #fff;
-  color: var(--text);
-}
-#mt-table-embed tbody tr:hover {
-  background: var(--hover);
-}
-#mt-table-embed thead tr:first-child th:first-child {
-  border-top-left-radius: var(--radius);
-}
-#mt-table-embed thead tr:first-child th:last-child {
-  border-top-right-radius: var(--radius);
-}
-#mt-table-embed tbody tr:last-child td:first-child {
-  border-bottom-left-radius: var(--radius);
-}
-#mt-table-embed tbody tr:last-child td:last-child {
-  border-bottom-right-radius: var(--radius);
-}
-#mt-table-embed .wrap::-webkit-scrollbar {
-  height: 8px;
-}
-#mt-table-embed .wrap::-webkit-scrollbar-thumb {
-  background: #ddd;
-  border-radius: 8px;
-}
-/* Mobile: slightly smaller text and padding, still scrollable */
-@media (max-width: 767px) {
-  #mt-table-embed {
-    --fs: 15px;
-    --pad: 12px 14px;
+
+const meta = {
+  "title": "Motion The Agency",
+  "description": "",
+  "htmlAttributes": {
+    "data-wf-page": "670fae109cfe94e7e7f7e472",
+    "data-wf-site": "66ebfb6ec8f20d5eda50eb34"
+  },
+  "ogType": "website",
+  "customCode": {
+    "head": "\n<!--  [Attributes by Finsweet] Social Share  -->\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-socialshare@1/socialshare.js\"></script>\n<!--  [Attributes by Finsweet] Table of Contents  -->\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-toc@1/toc.js\"></script>\n<style>\n.w-richtext h6 a {\n  color: #FFFFFF;\n</style>\n<script src=\"https://cdn.jsdelivr.net/npm/flowbitz@latest/dist/flowbitz.umd.js\"></script>\n<style>\n/* Show tooltip only when wrapper has data-tooltip */\n.author-role-wrapper[data-tooltip]:hover::after {\n  content: attr(data-tooltip);\n  position: absolute;\n  right: 0;        /* align to top-right */\n  bottom: 100%;    /* place tooltip above, not below */\n  margin-bottom: 6px;\n  padding: 6px 8px;\n  max-width: 280px;\n  background: #ffffff;\n  color: #6229e6;\n  font-size: 11px;\n  line-height: 1.4;\n  border-radius: 6px;\n  box-shadow: 0 8px 20px rgba(0,0,0,0.15);\n  white-space: normal;\n  z-index: 999;\n}\n</style>\n<style>\n/* ===============================\n   FIX BLOG BANNER INSIDE RICH TEXT\n   =============================== */\n.w-richtext .blog-banner .flex-v-24,\n.w-richtext .blog-banner .gap-12,\n.w-richtext .blog-banner .flex-v-4 {\n  display: flex !important;\n  flex-direction: column !important;\n}\n/* Re-apply intended spacing */\n.w-richtext .blog-banner .flex-v-24 { gap: 24px !important; }\n.w-richtext .blog-banner .gap-12   { gap: 12px !important; }\n.w-richtext .blog-banner .flex-v-4 { gap: 4px !important; }\n/* Restore flex + gap utilities inside blog content */\n/* Kill rich text typography side-effects */\n.w-richtext .blog-banner * {\n  margin: 0;\n}\n/* Fix CTA link color + underline hijack */\n.w-richtext .blog-banner a.blog-banner-cta {\n  color: inherit !important;\n  text-decoration: none !important;\n}\n</style>\n<!--  CMS ARTICLES CUSTOM COMPONENTS STYLING */  -->\n<link rel=\"stylesheet\" href=\"https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap\">\n<style>\n /* =========================\n   TABLE (ORIGINAL FORMAT)\n========================= */\n#mt-table-embed,\n#mt-table-embed * {\n  box-sizing: border-box;\n  opacity: 1 !important;\n  mix-blend-mode: normal !important;\n  filter: none !important;\n  color: inherit;\n}\n#mt-table-embed {\n  --bg: #ffffff;\n  --text: #333333;\n  --border: #dcdcdc;\n  --hover: #f9f9ff;\n  --gradA: #581DE3;\n  --gradB: #726EFF;\n  --radius: 12px;\n  --shadow: 0 2px 6px rgba(0,0,0,0.08);\n  --font: \"Switzer\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\";\n  --fs: 18px;\n  --head-w: 500;\n  --pad: 14px 18px;\n  width: 100%;\n  max-width: 100%;\n  min-width: 0;\n  isolation: isolate;\n  background: transparent;\n  overflow: hidden;\n  color-scheme: light;\n}\n#mt-table-embed .wrap {\n  width: 100%;\n  max-width: 100%;\n  min-width: 0;\n  overflow-x: auto;\n  overflow-y: hidden;\n  -webkit-overflow-scrolling: touch;\n}\n#mt-table-embed table {\n  width: 100%;\n  min-width: 720px; /* key fix: prevents squeezed mobile columns */\n  border-spacing: 0;\n  border-collapse: separate;\n  background: var(--bg);\n  font-family: var(--font);\n  font-size: var(--fs);\n  box-shadow: var(--shadow);\n  border-radius: var(--radius);\n  overflow: hidden;\n  table-layout: auto; /* key fix: lets columns breathe */\n}\n#mt-table-embed th,\n#mt-table-embed td {\n  border: 1px solid var(--border);\n  padding: var(--pad);\n  vertical-align: top;\n  word-break: normal;\n  overflow-wrap: break-word;\n}\n#mt-table-embed thead th {\n  background: linear-gradient(45deg, var(--gradA), var(--gradB));\n  color: #fff;\n  font-weight: var(--head-w);\n  text-align: left;\n  line-height: 1.25;\n  white-space: nowrap; /* prevents header letters stacking */\n}\n#mt-table-embed tbody td {\n  background: #fff;\n  color: var(--text);\n}\n#mt-table-embed tbody tr:hover {\n  background: var(--hover);\n}\n#mt-table-embed thead tr:first-child th:first-child {\n  border-top-left-radius: var(--radius);\n}\n#mt-table-embed thead tr:first-child th:last-child {\n  border-top-right-radius: var(--radius);\n}\n#mt-table-embed tbody tr:last-child td:first-child {\n  border-bottom-left-radius: var(--radius);\n}\n#mt-table-embed tbody tr:last-child td:last-child {\n  border-bottom-right-radius: var(--radius);\n}\n#mt-table-embed .wrap::-webkit-scrollbar {\n  height: 8px;\n}\n#mt-table-embed .wrap::-webkit-scrollbar-thumb {\n  background: #ddd;\n  border-radius: 8px;\n}\n/* Mobile: slightly smaller text and padding, still scrollable */\n@media (max-width: 767px) {\n  #mt-table-embed {\n    --fs: 15px;\n    --pad: 12px 14px;\n  }\n  #mt-table-embed table {\n    min-width: 760px;\n  }\n}\n</style>\n<style>\n  /* =========================\n     FAQ (ORIGINAL FORMAT)\n  ========================= */\n  #mt-faq, #mt-faq * {\n    box-sizing: border-box;\n    opacity: 1 !important;\n    mix-blend-mode: normal !important;\n    filter: none !important;\n  }\n  #mt-faq {\n    --text: #080610;\n    --muted: #4b5563;\n    --border: #dcdcdc;\n    --radius: 12px;\n    --shadow: 0 6px 16px rgba(0,0,0,0.06);\n    --font: \"Switzer\", ui-sans-serif, system-ui;\n    --gradA: #581DE3;\n    --gradB: #726EFF;\n    --item-grad: linear-gradient(90deg, rgba(88,29,227,0.06), rgba(114,110,255,0.08));\n    --q-size: 18px;\n    --a-size: 16px;\n    max-width: 1100px;\n    margin: 0 auto;\n    font-family: var(--font);\n    color: var(--text);\n  }\n  #mt-faq .wrap {\n    border: 1px solid var(--border);\n    border-radius: var(--radius);\n    overflow: hidden;\n    background: #fff;\n    box-shadow: var(--shadow);\n  }\n  #mt-faq .q {\n    width: 100%;\n    padding: 18px 22px;\n    cursor: pointer;\n    display: grid;\n    grid-template-columns: 1fr auto;\n    align-items: center;\n    background: var(--item-grad);\n    border: 0;\n    color: var(--text);\n    font-size: var(--q-size);\n    font-weight: 500;\n    text-align: left;\n  }\n  #mt-faq .q:hover {\n    background: linear-gradient(90deg, rgba(88,29,227,0.10), rgba(114,110,255,0.12));\n  }\n  #mt-faq .item + .item .q {\n    border-top: 1px solid var(--border);\n  }\n  #mt-faq .icon {\n    font-size: 24px;\n    font-weight: 600;\n    width: 26px;\n    text-align: center;\n    line-height: 1;\n    background: linear-gradient(45deg, var(--gradA), var(--gradB));\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n  }\n  #mt-faq .a {\n    background: #fff;\n    max-height: 0;\n    overflow: hidden;\n    padding: 0 22px;\n    transition: max-height .3s ease;\n  }\n  #mt-faq .inner {\n    padding: 14px 0 20px 0;\n    font-size: var(--a-size);\n    color: var(--muted);\n  }\n  #mt-faq .inner p { margin: 0 0 12px; }\n  #mt-faq .inner ul { margin: 8px 0 0 20px; }\n  #mt-faq .inner li { margin: 6px 0; }\n</style>\n  <meta name=\"twitter:card\" content=\"summary_large_image\">",
+    "bodyEnd": "\n<!--  copy link button  -->\n  <script>\nvar $temp = $(\"<input>\");\nvar $url = $(location).attr('href');\n$('[copy-button]').on('click', function() {\n\t$(\"body\").append($temp);\n  $temp.val($url).select();\n  document.execCommand(\"copy\");\n  $temp.remove();\n  $(\"[copy-text]\").text(\"copied\");\n  $(\"[copy-icon]\").css('display', 'none');\n  setTimeout(function() {\n      $(\"[copy-text]\").text(\" \");\n      $(\"[copy-icon]\").css('display', 'block');\n  }, 1000);\n});\n</script>\n  <script>\n  document.addEventListener(\"DOMContentLoaded\", function() {\n    const richTextImages = document.querySelectorAll('.w-richtext img');\n    richTextImages.forEach(function(img) {\n      img.removeAttribute('loading');\n    });\n  });\n</script>\n  <script>\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n  document.querySelectorAll(\".authors-list-wrapper\").forEach(function(wrapper) {\n    const links = Array.from(wrapper.querySelectorAll(\".name-wrapper\"));\n    const count = links.length;\n    if (count <= 1) return;\n    links.forEach(function(link, index) {\n      if (index === count - 1) return;\n      const sep = document.createElement(\"span\");\n      if (count === 2) {\n        // A & B\n        if (index === 0) {\n          sep.textContent = \" & \";\n          sep.style.marginLeft = \"8px\"; // <-- add space before &\n        }\n      } else {\n        // A, B & C\n        if (index < count - 2) {\n          sep.textContent = \", \";\n        } else {\n          sep.textContent = \" & \";\n          sep.style.marginLeft = \"8px\"; // <-- add space before &\n        }\n      }\n      link.after(sep);\n    });\n  });\n});\n</script>\n  <script>\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n  const items = document.querySelectorAll('.author-role-wrapper');\n  items.forEach(function(wrapper) {\n    const text = wrapper.querySelector('.author-role-text');\n    if (!text) return;\n    const fullText = text.textContent.trim();\n    const isTruncated = text.scrollWidth > text.clientWidth;\n    if (isTruncated) {\n      wrapper.setAttribute(\"data-tooltip\", fullText);\n    } else {\n      wrapper.removeAttribute(\"data-tooltip\");\n    }\n  });\n});\n</script>\n  <!--  FAQ Component  -->\n  <script>\n(function () {\n  function setOpen(item, open) {\n    const panel = item.querySelector('.a');\n    const icon = item.querySelector('.icon');\n    if (!panel || !icon) return;\n    if (open) {\n      item.classList.add('open');\n      panel.style.setProperty('max-height', panel.scrollHeight + 'px');\n      icon.textContent = '−';\n    } else {\n      item.classList.remove('open');\n      panel.style.setProperty('max-height', '0px');\n      icon.textContent = '+';\n    }\n  }\n  // Works even for CMS-injected content because it's delegated\n  document.addEventListener('click', function (e) {\n    const btn = e.target.closest('#mt-faq .q');\n    if (!btn) return;\n    const root = btn.closest('#mt-faq');\n    const item = btn.closest('.item');\n    if (!root || !item) return;\n    const isOpen = item.classList.contains('open');\n    // Close siblings (same behavior as your original)\n    root.querySelectorAll('.item.open').forEach(function (i) {\n      if (i !== item) setOpen(i, false);\n    });\n    setOpen(item, !isOpen);\n  });\n  // Keep height correct on resize\n  window.addEventListener('resize', function () {\n    document.querySelectorAll('#mt-faq .item.open').forEach(function (item) {\n      const panel = item.querySelector('.a');\n      if (panel) panel.style.setProperty('max-height', panel.scrollHeight + 'px');\n    });\n  });\n})();\n</script>\n  <style>\n/* Desktop only */\n@media (min-width: 768px) {\n  .author-desc-list .author-desc-item.last-span-2 {\n    grid-column: span 2 !important;\n  }\n}\n/* Mobile fallback */\n@media (max-width: 767px) {\n  .author-desc-list .author-desc-item.last-span-2 {\n    grid-column: auto !important;\n  }\n}\n</style>\n  <script>\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n  const items = document.querySelectorAll(\".author-desc-list .author-desc-item\");\n  if (items.length % 2 !== 0) {\n    // Add a special class to the last item\n    items[items.length - 1].classList.add(\"last-span-2\");\n  }\n});\n</script>\n  ",
+    "bodyStart": "<script>document.body.className=\"body overflow-visible\";</script>"
   }
-  #mt-table-embed table {
-    min-width: 760px;
-  }
-}
-</style>
-<style is:inline>
-  /* =========================
-     FAQ (ORIGINAL FORMAT)
-  ========================= */
-  #mt-faq, #mt-faq * {
-    box-sizing: border-box;
-    opacity: 1 !important;
-    mix-blend-mode: normal !important;
-    filter: none !important;
-  }
-  #mt-faq {
-    --text: #080610;
-    --muted: #4b5563;
-    --border: #dcdcdc;
-    --radius: 12px;
-    --shadow: 0 6px 16px rgba(0,0,0,0.06);
-    --font: "Switzer", ui-sans-serif, system-ui;
-    --gradA: #581DE3;
-    --gradB: #726EFF;
-    --item-grad: linear-gradient(90deg, rgba(88,29,227,0.06), rgba(114,110,255,0.08));
-    --q-size: 18px;
-    --a-size: 16px;
-    max-width: 1100px;
-    margin: 0 auto;
-    font-family: var(--font);
-    color: var(--text);
-  }
-  #mt-faq .wrap {
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-    background: #fff;
-    box-shadow: var(--shadow);
-  }
-  #mt-faq .q {
-    width: 100%;
-    padding: 18px 22px;
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    background: var(--item-grad);
-    border: 0;
-    color: var(--text);
-    font-size: var(--q-size);
-    font-weight: 500;
-    text-align: left;
-  }
-  #mt-faq .q:hover {
-    background: linear-gradient(90deg, rgba(88,29,227,0.10), rgba(114,110,255,0.12));
-  }
-  #mt-faq .item + .item .q {
-    border-top: 1px solid var(--border);
-  }
-  #mt-faq .icon {
-    font-size: 24px;
-    font-weight: 600;
-    width: 26px;
-    text-align: center;
-    line-height: 1;
-    background: linear-gradient(45deg, var(--gradA), var(--gradB));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  #mt-faq .a {
-    background: #fff;
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 22px;
-    transition: max-height .3s ease;
-  }
-  #mt-faq .inner {
-    padding: 14px 0 20px 0;
-    font-size: var(--a-size);
-    color: var(--muted);
-  }
-  #mt-faq .inner p { margin: 0 0 12px; }
-  #mt-faq .inner ul { margin: 8px 0 0 20px; }
-  #mt-faq .inner li { margin: 6px 0; }
-</style>
-  </Fragment>
-<NavBanner />
-  <div class="page-wrapper overflow-visible">
-    <div id="cards" class="main-wrapper overflow-show">
-      <section data-w-id="b977fcb1-9a9e-7558-b561-24b1bf41cc51" class="section-hero padding-bottom-140 no-bg">
-        <div id="banner-trigger" class="nav_banner-trigger"></div>
-        <div class="w-layout-blockcontainer container-1280 height-100 w-container">
-          <div class="gap-60-hero">
-            <div class="gap-76">
-              <div class="wrapper-hero _1fr add-space">
-                <div class="left-hero max-w-580">
-                  <div class="gap-4">
-                    <div class="crumb">
-                      <a href="#" class="crumb-link"></a>
-                      <div class="crumb-link">/</div>
-                      <div class="w-dyn-list">
-                        <div role="list" class="w-dyn-items">
-                          <div role="listitem" class="w-dyn-item">
-                            <a href="#" class="crumb-link"></a>
-                          </div>
-                        </div>
-                        <div class="w-dyn-empty">
-                          <div>No items found.</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="blog-title w-dyn-bind-empty w-richtext"></div>
-                  </div>
-                  <div class="blog-inner-author">
-                    <div class="authors-list-wrapper w-dyn-list">
-                      <div role="list" class="authors-list w-dyn-items">
-                        <div role="listitem" class="authors-item w-dyn-item">
-                          <a href="#" class="name-wrapper w-inline-block">
-                            <div class="author-name w-dyn-bind-empty"></div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="empty-state left-align w-dyn-empty">
-                        <div>No items found.</div>
-                      </div>
-                    </div>
-                    <div class="author_date-blog">
-                      <div class="text-14-150 opacity-80 large w-dyn-bind-empty"></div>
-                      <div class="text-14-150 opacity-80 large">・</div>
-                      <div class="text-14-150 opacity-80 large w-dyn-bind-empty"></div>
-                    </div>
-                  </div>
-                </div>
-                <div id="w-node-b977fcb1-9a9e-7558-b561-24b1bf41cc62-e7f7e472" class="right-hero center-align"><img src="/images/gfe-hero.avif" loading="eager" alt="" class="image-hero radius-15 w-dyn-bind-empty"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="line-gradient-2 bottom"></div>
-      </section>
-      <section id="contact" class="section-blog bg-white">
-        <div class="container-1280">
-          <div class="blog-inner-wrapper">
-            <div class="blog-inner-left-side">
-              <div class="blog-inner-stiky">
-                <div class="share-block">
-                  <div class="text-14-150 dark-color center">Share this post</div>
-                  <div class="w-layout-grid share-grid">
-                    <a copy-button="" href="#" class="share-link w-inline-block">
-                      <div copy-icon="" class="icon-embed-xsmall w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9999 7.66008V8.00008C21.0007 9.06616 20.576 10.0885 19.8199 10.84L16.9999 13.67C16.4738 14.1911 15.6261 14.1911 15.1 13.67L15 13.56C14.8094 13.3656 14.8094 13.0544 15 12.86L18.4399 9.42006C18.807 9.03938 19.0083 8.52883 18.9999 8.00008V7.66008C19.0003 7.12705 18.788 6.61589 18.4099 6.2401L17.7599 5.59011C17.3841 5.21207 16.873 4.99969 16.3399 5.00011H15.9999C15.4669 4.99969 14.9558 5.21207 14.58 5.59011L11.14 9.00007C10.9456 9.19064 10.6344 9.19064 10.44 9.00007L10.33 8.89007C9.8089 8.36394 9.8089 7.51623 10.33 6.99009L13.16 4.15012C13.9165 3.40505 14.9382 2.99133 15.9999 3.00014H16.3399C17.4011 2.9993 18.4191 3.42018 19.1699 4.17012L19.8299 4.83012C20.5798 5.5809 21.0007 6.59891 20.9999 7.66008ZM8.64993 13.94L13.9399 8.65008C14.0338 8.55543 14.1616 8.50218 14.2949 8.50218C14.4282 8.50218 14.556 8.55543 14.6499 8.65008L15.3499 9.35007C15.4445 9.44395 15.4978 9.57175 15.4978 9.70507C15.4978 9.83839 15.4445 9.96618 15.3499 10.0601L10.0599 15.35C9.96604 15.4447 9.83824 15.4979 9.70492 15.4979C9.57161 15.4979 9.44381 15.4447 9.34993 15.35L8.64993 14.65C8.55528 14.5561 8.50204 14.4283 8.50204 14.295C8.50204 14.1617 8.55528 14.0339 8.64993 13.94ZM13.5599 15C13.3655 14.8094 13.0543 14.8094 12.8599 15L9.42993 18.41C9.0517 18.7905 8.53645 19.003 7.99995 18.9999H7.65995C7.12691 19.0004 6.61576 18.788 6.23997 18.41L5.58997 17.76C5.21194 17.3842 4.99956 16.873 4.99998 16.34V16C4.99956 15.4669 5.21194 14.9558 5.58997 14.58L9.00993 11.14C9.2005 10.9456 9.2005 10.6345 9.00993 10.44L8.89993 10.33C8.3738 9.80894 7.52609 9.80894 6.99996 10.33L4.17999 13.16C3.42392 13.9116 2.99916 14.9339 3 16V16.35C3.00182 17.4077 3.42249 18.4216 4.16999 19.1699L4.82998 19.8299C5.58076 20.5799 6.59878 21.0008 7.65995 20.9999H7.99995C9.05338 21.0061 10.0667 20.5964 10.8199 19.8599L13.6699 17.01C14.191 16.4838 14.191 15.6361 13.6699 15.11L13.5599 15Z" fill="url(#paint0_linear_3379_12832)"></path>
-                          <defs>
-                            <lineargradient id="paint0_linear_3379_12832" x1="3" y1="12" x2="20.9999" y2="12" gradientunits="userSpaceOnUse">
-                              <stop stop-color="#581DE3"></stop>
-                              <stop offset="1" stop-color="#726EFF"></stop>
-                            </lineargradient>
-                          </defs>
-                        </svg></div>
-                      <div copy-text="" class="copy-text"> </div>
-                    </a>
-                    <a fs-socialshare-element="linkedin" href="#" class="share-link w-inline-block">
-                      <div class="icon-embed-xsmall w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3ZM8 18C8.27614 18 8.5 17.7761 8.5 17.5V10.5C8.5 10.2239 8.27614 10 8 10H6.5C6.22386 10 6 10.2239 6 10.5V17.5C6 17.7761 6.22386 18 6.5 18H8ZM7.25 9C6.42157 9 5.75 8.32843 5.75 7.5C5.75 6.67157 6.42157 6 7.25 6C8.07843 6 8.75 6.67157 8.75 7.5C8.75 8.32843 8.07843 9 7.25 9ZM17.5 18C17.7761 18 18 17.7761 18 17.5V12.9C18.0325 11.3108 16.8576 9.95452 15.28 9.76C14.177 9.65925 13.1083 10.1744 12.5 11.1V10.5C12.5 10.2239 12.2761 10 12 10H10.5C10.2239 10 10 10.2239 10 10.5V17.5C10 17.7761 10.2239 18 10.5 18H12C12.2761 18 12.5 17.7761 12.5 17.5V13.75C12.5 12.9216 13.1716 12.25 14 12.25C14.8284 12.25 15.5 12.9216 15.5 13.75V17.5C15.5 17.7761 15.7239 18 16 18H17.5Z" fill="url(#paint0_linear_3379_12834)"></path>
-                          <defs>
-                            <lineargradient id="paint0_linear_3379_12834" x1="3" y1="12" x2="21" y2="12" gradientunits="userSpaceOnUse">
-                              <stop stop-color="#581DE3"></stop>
-                              <stop offset="1" stop-color="#726EFF"></stop>
-                            </lineargradient>
-                          </defs>
-                        </svg></div>
-                    </a>
-                    <a fs-socialshare-element="twitter" href="#" class="share-link w-inline-block">
-                      <div class="icon-embed-xsmall w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g clip-path="url(#clip0_3402_3259)">
-                            <path d="M4 4L15.733 20H20L8.267 4H4Z" stroke="url(#paint0_linear_3402_3259)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M4 20L10.768 13.232M13.228 10.772L20 4" stroke="url(#paint1_linear_3402_3259)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </g>
-                          <defs>
-                            <lineargradient id="paint0_linear_3402_3259" x1="4" y1="12" x2="20" y2="12" gradientunits="userSpaceOnUse">
-                              <stop stop-color="#581DE3"></stop>
-                              <stop offset="1" stop-color="#726EFF"></stop>
-                            </lineargradient>
-                            <lineargradient id="paint1_linear_3402_3259" x1="4" y1="12" x2="20" y2="12" gradientunits="userSpaceOnUse">
-                              <stop stop-color="#581DE3"></stop>
-                              <stop offset="1" stop-color="#726EFF"></stop>
-                            </lineargradient>
-                            <clippath id="clip0_3402_3259">
-                              <rect width="24" height="24" fill="white"></rect>
-                            </clippath>
-                          </defs>
-                        </svg></div>
-                    </a>
-                    <a fs-socialshare-element="facebook" href="#" class="share-link w-inline-block">
-                      <div class="icon-embed-xsmall w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M16.5 6H13.5C12.9477 6 12.5 6.44772 12.5 7V10H16.5C16.6137 9.99748 16.7216 10.0504 16.7892 10.1419C16.8568 10.2334 16.8758 10.352 16.84 10.46L16.1 12.66C16.0318 12.8619 15.8431 12.9984 15.63 13H12.5V20.5C12.5 20.7761 12.2761 21 12 21H9.5C9.22386 21 9 20.7761 9 20.5V13H7.5C7.22386 13 7 12.7761 7 12.5V10.5C7 10.2239 7.22386 10 7.5 10H9V7C9 4.79086 10.7909 3 13 3H16.5C16.7761 3 17 3.22386 17 3.5V5.5C17 5.77614 16.7761 6 16.5 6Z" fill="url(#paint0_linear_3379_12838)"></path>
-                          <defs>
-                            <lineargradient id="paint0_linear_3379_12838" x1="7" y1="12" x2="17" y2="12" gradientunits="userSpaceOnUse">
-                              <stop stop-color="#581DE3"></stop>
-                              <stop offset="1" stop-color="#726EFF"></stop>
-                            </lineargradient>
-                          </defs>
-                        </svg></div>
-                    </a>
-                  </div>
-                </div>
-                <div class="card light">
-                  <div class="card-content-toc light">
-                    <div class="toc-title">
-                      <p class="text-caps dark-color">table of content</p>
-                    </div>
-                    <div class="w-layout-vflex flex-v _0">
-                      <div class="toc_link-wrapper">
-                        <a fs-toc-element="link" href="#" class="toc_link dark-color">Text Link</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="w-node-_5ff1a896-6044-0621-884d-1e12247eafee-e7f7e472" class="blog-inner-right-side">
-              <div fs-toc-offsettop="130px" fs-toc-element="contents" class="rich-text-light w-dyn-bind-empty w-richtext"></div>
-              <div class="blog-inner-info">
-                <div class="author-desc-wrapper w-dyn-list">
-                  <div role="list" class="author-desc-list w-dyn-items">
-                    <div id="w-node-_6ec73484-6a6c-8d69-ad1b-1ae546d0074b-e7f7e472" role="listitem" class="author-desc-item w-dyn-item">
-                      <div class="card fit-content transparent">
-                        <div class="card-content-author-desc">
-                          <div class="pricing-hero-image_text vertical size-100">
-                            <div class="image-wrapper-hero_wrapper horizontal"><img src="/images/Aly-Slater---FutureFit.avif" loading="lazy" alt="" class="author-img _48 w-dyn-bind-empty">
-                              <div class="w-layout-hflex flex-v _4">
-                                <p class="h4 gradient-pink w-dyn-bind-empty"></p>
-                                <div wb-tooltip-max-width="320px" wb-component="tooltip-text" wb-tooltip-background="#ffffff" wb-tooltip-color="#6229e6" class="author-role-wrapper">
-                                  <p class="author-role-text w-dyn-bind-empty"></p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="text-wrapper-hero-pricing">
-                              <p class="text-14-150 opacity-80 dark w-dyn-bind-empty"></p>
-                            </div>
-                          </div>
-                          <a href="#" class="link-arrow-top w-inline-block">
-                            <div class="text-14-150 weight-medium">View profile</div><img src="/images/icon-arrow-right-top-gradient-purple.svg" loading="lazy" alt="" class="ic-20x20">
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="w-dyn-empty">
-                    <div>No items found.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="blog-inner-widget">
-              <div class="blog-inner-stiky widget">
-                <div class="card-contaiiner--cost-calculator blog">
-                  <div class="cost-calculator-widget-blog">
-                    <div class="card-our-work-img top-padding"><img src="/images/cost-cal-widget.avif" loading="lazy" sizes="(max-width: 1080px) 100vw, 1080px" srcset="/images/cost-cal-widget-p-500.png 500w, /images/cost-cal-widget.avif 1080w" alt="Video cost calculator" class="blog-widget-image"></div>
-                    <div class="card-our-work-content">
-                      <div class="gap-4">
-                        <div class="text-18-semibold">Estimate your video cost ✨</div>
-                        <p class="text-12-150">In just a few questions, get a tailored estimate for your next video project.</p>
-                      </div>
-                      <div data-w-id="d3199d11-fd52-38ee-7b9c-84a1efa3f130" class="glowing-wrapper glowing-wrapper-active gradient cyan fill">
-                        <div class="glowing-wrapper-borders-masker">
-                          <div style="opacity:0" class="glowing-wrapper-borders"></div>
-                        </div>
-                        <a href="/resources/video-cost-calculator" class="glowing-wrapper-button fill w-inline-block">
-                          <div class="text-block rel black">Try cost calculator</div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-cta-blog2">
-        <div class="line-gradient-2"></div><img src="/images/Frame-1707478540_2.avif" loading="lazy" sizes="(max-width: 2401px) 100vw, 2401px" srcset="/images/Frame-1707478540_2Frame-1707478540.avif 500w, /images/Frame-1707478540_2.avif 2401w" alt="" class="image-purpose-3">
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="blog-wrapper">
-            <div class="cms-blog-button gap-40">
-              <div class="heading-button-blog">
-                <p class="h3">Related articles</p>
-                <div data-w-id="1e4cbeb1-9b57-801b-ec4d-83b38d4082be" class="glowing-wrapper glowing-wrapper-active">
-                  <div class="button-css w-embed">
-                    <style is:inline>
+};
+const __embed0 = `<style>
  * {
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
@@ -562,82 +115,8 @@ import Footer from '../components/Footer.astro';
 		transform: translate(-50%, -50%) rotate(360deg)
 	}
 }
-                    </style>
-                  </div>
-                  <div class="glowing-wrapper-borders-masker">
-                    <div style="opacity:0" class="glowing-wrapper-borders"></div>
-                  </div>
-                  <a href="#" class="glowing-wrapper-button w-inline-block">
-                    <div class="text-block rel">View all</div><img src="/images/tabler_arrow-up.svg" loading="lazy" alt="right arrow icon
-" class="ic-20x20">
-                  </a>
-                </div>
-              </div>
-              <div class="w-dyn-list">
-                <div fs-cmsfilter-element="list" role="list" class="collection-list w-dyn-items">
-                  <div role="listitem" class="collection-item w-dyn-item">
-                    <div class="card-contaiiner fill">
-                      <a href="#" class="card w-inline-block">
-                        <div class="card-content"><img alt="" loading="lazy" src="/images/Frame-1707478606.avif" class="img-main-blog w-dyn-bind-empty">
-                          <div class="text-wrapper-card-blog">
-                            <div class="gap-16-blog">
-                              <div fs-cmsfilter-field="category" class="text-14-150 text-color-purple w-dyn-bind-empty"></div>
-                              <div class="h4 w-dyn-bind-empty"></div>
-                            </div>
-                            <div class="author-description-blog">
-                              <p class="text-16-150 opacity-80 w-dyn-bind-empty"></p>
-                              <div class="author_date-blog">
-                                <div class="text-14-150 opacity-80 w-dyn-bind-empty"></div>
-                                <div class="text-14-150 opacity-80">・</div>
-                                <div class="text-14-150 opacity-80 w-dyn-bind-empty"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-dyn-empty">
-                  <div>No items found.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><img src="/images/Frame-1707478801_1.avif" loading="lazy" sizes="(max-width: 1351px) 100vw, 1351px" srcset="/images/Frame-1707478801_1-p-500.png 500w, /images/Frame-1707478801_1-p-800.png 800w, /images/Frame-1707478801_1.avif 1351w" alt="A woman holding a tennis racquet on top of a tennis court" class="image-purpose-4">
-      </section>
-      <div class="section-blog-recommendation">
-        <div class="image-wrapper-blog"><img src="/images/Frame-1707478673_1.avif" loading="lazy" sizes="(max-width: 3576px) 100vw, 3576px" srcset="/images/Frame-1707478673_1-p-500.png 500w, /images/Frame-1707478673_1-p-800.png 800w, /images/Frame-1707478673_1-p-1080.png 1080w, /images/Frame-1707478673_1-p-1600.png 1600w, /images/Frame-1707478673_1-p-2000.png 2000w, /images/Frame-1707478673_1.avif 3576w" alt="A group of three giraffe standing next to each other" class="image-blog-gradient"></div>
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="wrapper-process">
-            <div class="contact-card">
-              <div class="contact-wrapper">
-                <div class="contact-content">
-                  <div class="gap-12 center">
-                    <p class="text-caps weight-regular">Contact Us</p>
-                    <p class="h2">Ready to elevate your brand? Contact us for your <br><span class="span">Free Custom Video Sample</span></p>
-                  </div>
-                  <div class="wrap-btn-price">
-                    <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient">
-                      <div class="glowing-wrapper-borders-masker">
-                        <div class="glowing-wrapper-borders"></div>
-                      </div>
-                      <a href="/get-free-sample" class="glowing-wrapper-button w-inline-block">
-                        <div class="text-block rel align-center-middle">Get free sample</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div id="w-node-e71ca5b3-b19c-c4c0-4a04-9188bc5ca1d8-e7f7e472" class="contact-image-wrapper"><img loading="lazy" src="/images/contact-img_1.avif" alt="A smart phone with a credit card next to it" class="img-100 img-tabs"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-      <div class="css">
-        <div class="button-css w-embed">
-          <style is:inline>
+                    </style>`;
+const __embed1 = `<style>
  * {
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
@@ -734,10 +213,8 @@ import Footer from '../components/Footer.astro';
 		transform: translate(-50%, -50%) rotate(360deg)
 	}
 }
-</style>
-        </div>
-        <div class="custom-styles w-embed">
-          <style is:inline>
+</style>`;
+const __embed2 = `<style>
         * {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -818,29 +295,25 @@ import Footer from '../components/Footer.astro';
           margin-bottom: 8px;
          }
     }
-</style>
-        </div>
-        <div class="code-embed-2 w-embed w-script">
-          <script is:inline>
+</style>`;
+const __embed3 = `<script>
 document.getElementById("cards").onmousemove = (e) => {
   for (const card of document.getElementsByClassName("card")) {
     const rect = card.getBoundingClientRect(),
       x = e.clientX - rect.left,
       y = e.clientY - rect.top;
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
+    card.style.setProperty("--mouse-x", \`\${x}px\`);
+    card.style.setProperty("--mouse-y", \`\${y}px\`);
   }
 };
-</script>
-        </div>
-        <div class="global-style w-embed">
-          <style is:inline>
+</script>`;
+const __embed4 = `<style>
 .card_glow_background {
 	width: calc(100% + 12px);
   height: calc(100% + 12px);
 }
 .card_glow_background._2 {
-	left : calc(-100% - 24px); 
+	left : calc(-100% - 24px);
 }
 .card_glow_background._3 {
 	top : calc(-100% - 24px);
@@ -849,145 +322,303 @@ document.getElementById("cards").onmousemove = (e) => {
 	left : calc(-100% - 24px);
   top : calc(-100% - 24px);
 }
-</style>
+</style>`;
+---
+<BaseLayout meta={meta}>
+<div data-meno-label="Page content" class="body overflow-visible min-h-screen [color:#fff] [background-color:#080610] [overflow-x:hidden] [overflow:visible]">
+
+<NavBanner />
+  <div class="page-wrapper overflow-visible [color:#fff] [overflow-x:hidden] [overflow:visible]">
+    <div id="cards" class="main-wrapper overflow-show [z-index:0] [color:#fff] [background-color:#080610] [max-width:none] [position:relative] [overflow-x:hidden] [overflow:visible]">
+      <section data-w-id="b977fcb1-9a9e-7558-b561-24b1bf41cc51" class="section-hero padding-bottom-140 no-bg [background-image:url('../images/Hero_1.avif')] [background-position:0_100%] [background-repeat:no-repeat] [background-size:cover] [background-attachment:scroll] [padding-top:220px] [padding-bottom:140px] [position:relative] [overflow:hidden] max-lg:[background-position:50%] max-lg:[background-size:cover] max-lg:[padding-top:80px] max-lg:[padding-bottom:40px] max-sm:[padding-top:80px] max-sm:[padding-bottom:40px]">
+        <div id="banner-trigger" class="nav_banner-trigger [pointer-events:none] [border:1px_solid_#0000] [width:100%] [height:240px] [position:absolute] [top:0] [bottom:auto]"></div>
+        <div class="w-layout-blockcontainer container-1280 height-100 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] [height:100%] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="gap-60-hero [grid-column-gap:20px] [grid-row-gap:20px] [flex-flow:column] [justify-content:flex-start] [align-items:center] [height:100%] [display:flex] max-landscape:[grid-column-gap:32px] max-landscape:[grid-row-gap:32px]">
+            <div class="gap-76 [grid-column-gap:70px] [grid-row-gap:70px] [flex-flow:column] [width:100%] [display:flex] max-landscape:[grid-column-gap:60px] max-landscape:[grid-row-gap:60px]">
+              <div class="wrapper-hero _1fr add-space [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [display:grid] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[flex-flow:column-reverse_wrap] max-lg:[justify-content:flex-end] max-lg:[align-items:center] max-lg:[display:flex] max-landscape:[grid-column-gap:30px] max-landscape:[grid-row-gap:30px]">
+                <div class="left-hero max-w-580 [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [justify-content:center] [max-width:580px] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px] max-lg:[text-align:center] max-lg:[order:1] max-lg:[align-items:center] max-lg:[max-width:100%] max-lg:[margin-left:auto] max-lg:[margin-right:auto] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px]">
+                  <div class="gap-4 [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] max-lg:[justify-content:flex-start] max-lg:[align-items:center]">
+                    <div class="crumb [grid-column-gap:4px] [grid-row-gap:4px] [text-align:left] [justify-content:flex-start] [align-items:center] [display:flex] max-lg:[text-align:left] max-lg:[justify-content:center] max-lg:[align-items:center]">
+                      <a href="#" class="crumb-link [color:var(--white)] [font-family:Switzer,_sans-serif] [font-size:16px] [line-height:120%] [text-decoration:none]"></a>
+                      <div class="crumb-link [color:var(--white)] [font-family:Switzer,_sans-serif] [font-size:16px] [line-height:120%] [text-decoration:none]">/</div>
+                      <div class="w-dyn-list">
+                        <div role="list" class="w-dyn-items">
+                          <div role="listitem" class="w-dyn-item">
+                            <a href="#" class="crumb-link [color:var(--white)] [font-family:Switzer,_sans-serif] [font-size:16px] [line-height:120%] [text-decoration:none]"></a>
+                          </div>
+                        </div>
+                        <div class="w-dyn-empty [padding:10px] [background-color:#dddddd]">
+                          <div>No items found.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blog-title w-dyn-bind-empty w-richtext [font-family:Switzer,_sans-serif] max-lg:[margin-top:0] max-lg:[padding-top:0]"></div>
+                  </div>
+                  <div class="blog-inner-author [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [display:flex] max-lg:[align-items:center]">
+                    <div class="authors-list-wrapper w-dyn-list">
+                      <div role="list" class="authors-list w-dyn-items [grid-column-gap:8px] [grid-row-gap:8px] [display:flex]">
+                        <div role="listitem" class="authors-item w-dyn-item">
+                          <a href="#" class="name-wrapper w-inline-block [max-width:100%] [display:inline-block] [color:#fff] [text-decoration:none]">
+                            <div class="author-name w-dyn-bind-empty [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]"></div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="empty-state left-align w-dyn-empty [padding:10px] [background-color:#ddd0] [color:var(--untitled-ui--primary600)] [text-align:left] [flex-flow:column] [justify-content:center] [align-self:flex-start] [align-items:flex-start] [display:flex] max-lg:[text-align:left]">
+                        <div>No items found.</div>
+                      </div>
+                    </div>
+                    <div class="author_date-blog [grid-column-gap:4px] [grid-row-gap:4px] [margin-top:auto] [display:flex]">
+                      <div class="text-14-150 opacity-80 large w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]"></div>
+                      <div class="text-14-150 opacity-80 large [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">・</div>
+                      <div class="text-14-150 opacity-80 large w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="w-node-b977fcb1-9a9e-7558-b561-24b1bf41cc62-e7f7e472" class="right-hero center-align [border-radius:12px] [position:relative] max-lg:[width:100%] max-lg:[position:static] max-lg:[left:0] max-lg:[justify-content:center] max-lg:[align-items:center] max-lg:[display:flex]"><img data-meno-optimize="false" src="/images/gfe-hero.avif" loading="eager" alt="" class="image-hero radius-15 w-dyn-bind-empty [width:100%] [border-radius:15px]" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-gradient-2 bottom [background-image:linear-gradient(90deg,_#60537700,_#605377_50%,_#60537700)] [width:100%] [height:4px] [position:absolute] [inset:0_0%_auto] [top:auto] [bottom:0]"></div>
+      </section>
+      <section id="contact" class="section-blog bg-white [justify-content:center] [align-items:flex-start] [width:100%] [max-width:none] [padding-top:80px] [padding-bottom:80px] [display:flex] [position:static] [overflow:visible] [color:#f5f5f5] [background-color:#fff] max-lg:[padding-top:0] max-lg:[padding-bottom:40px] max-landscape:[padding-top:40px] max-landscape:[padding-bottom:40px] max-sm:[padding-top:0] max-sm:[padding-bottom:60px] max-sm:[overflow:hidden]">
+        <div class="container-1280 [width:100%] [max-width:1360px] [margin-left:auto] [margin-right:auto] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[margin-top:0] max-lg:[padding:40px] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px] max-sm:[padding-top:40px]">
+          <div class="blog-inner-wrapper [grid-column-gap:48px] [grid-row-gap:48px] [flex-flow:row] [grid-template-rows:auto] [grid-template-columns:.75fr_2.5fr_1fr] [grid-auto-columns:1fr] [align-content:stretch] [align-items:stretch] [width:100%] [margin-left:0] [margin-right:0] [display:grid] [position:static] max-lg:[grid-column-gap:40px] max-lg:[grid-row-gap:40px] max-lg:[flex-flow:column] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:.75fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:flex] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px] max-sm:[align-items:stretch]">
+            <div class="blog-inner-left-side [aspect-ratio:auto] [align-items:flex-start] [height:auto] [display:inline-flex] [position:relative] max-lg:[align-self:stretch] max-landscape:[align-self:stretch]">
+              <div class="blog-inner-stiky [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [align-items:flex-start] [margin-left:auto] [margin-right:auto] [display:inline-flex] [position:sticky] [top:160px] max-lg:[width:100%] max-landscape:[grid-column-gap:28px] max-landscape:[grid-row-gap:28px]">
+                <div class="share-block [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] max-lg:[align-self:center] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px] max-landscape:[order:-1] max-landscape:[justify-content:flex-start] max-landscape:[align-items:center] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px] max-sm:[flex-flow:column] max-sm:[flex:1]">
+                  <div class="text-14-150 dark-color center [letter-spacing:.2px] [white-space:normal] [margin-bottom:8px] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [color:#3d1f80] [text-align:left] [margin-top:8px] [padding-bottom:0] [padding-left:24px] [padding-right:24px] [padding:0] max-landscape:[font-size:13px] max-lg:[align-self:center]">Share this post</div>
+                  <div class="w-layout-grid share-grid [display:grid] [grid-auto-columns:max-content] [grid-template-columns:max-content] [grid-template-rows:auto] [grid-row-gap:8px] [grid-column-gap:8px] [grid-auto-flow:column] [justify-items:start]">
+                    <a copy-button="" href="#" class="share-link w-inline-block [max-width:100%] [display:flex] [width:40px] [height:40px] [color:var(--white)] [background-color:#726eff0d] [border:1px_solid_#581de3] [border-radius:50%] [justify-content:center] [align-items:center] [padding:8px] [transition:color_.2s] [position:relative] hover:[color:#f06]">
+                      <div copy-icon="" class="icon-embed-xsmall w-embed [flex-direction:column] [justify-content:center] [align-items:center] [width:24px] [height:24px] [display:flex]"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9999 7.66008V8.00008C21.0007 9.06616 20.576 10.0885 19.8199 10.84L16.9999 13.67C16.4738 14.1911 15.6261 14.1911 15.1 13.67L15 13.56C14.8094 13.3656 14.8094 13.0544 15 12.86L18.4399 9.42006C18.807 9.03938 19.0083 8.52883 18.9999 8.00008V7.66008C19.0003 7.12705 18.788 6.61589 18.4099 6.2401L17.7599 5.59011C17.3841 5.21207 16.873 4.99969 16.3399 5.00011H15.9999C15.4669 4.99969 14.9558 5.21207 14.58 5.59011L11.14 9.00007C10.9456 9.19064 10.6344 9.19064 10.44 9.00007L10.33 8.89007C9.8089 8.36394 9.8089 7.51623 10.33 6.99009L13.16 4.15012C13.9165 3.40505 14.9382 2.99133 15.9999 3.00014H16.3399C17.4011 2.9993 18.4191 3.42018 19.1699 4.17012L19.8299 4.83012C20.5798 5.5809 21.0007 6.59891 20.9999 7.66008ZM8.64993 13.94L13.9399 8.65008C14.0338 8.55543 14.1616 8.50218 14.2949 8.50218C14.4282 8.50218 14.556 8.55543 14.6499 8.65008L15.3499 9.35007C15.4445 9.44395 15.4978 9.57175 15.4978 9.70507C15.4978 9.83839 15.4445 9.96618 15.3499 10.0601L10.0599 15.35C9.96604 15.4447 9.83824 15.4979 9.70492 15.4979C9.57161 15.4979 9.44381 15.4447 9.34993 15.35L8.64993 14.65C8.55528 14.5561 8.50204 14.4283 8.50204 14.295C8.50204 14.1617 8.55528 14.0339 8.64993 13.94ZM13.5599 15C13.3655 14.8094 13.0543 14.8094 12.8599 15L9.42993 18.41C9.0517 18.7905 8.53645 19.003 7.99995 18.9999H7.65995C7.12691 19.0004 6.61576 18.788 6.23997 18.41L5.58997 17.76C5.21194 17.3842 4.99956 16.873 4.99998 16.34V16C4.99956 15.4669 5.21194 14.9558 5.58997 14.58L9.00993 11.14C9.2005 10.9456 9.2005 10.6345 9.00993 10.44L8.89993 10.33C8.3738 9.80894 7.52609 9.80894 6.99996 10.33L4.17999 13.16C3.42392 13.9116 2.99916 14.9339 3 16V16.35C3.00182 17.4077 3.42249 18.4216 4.16999 19.1699L4.82998 19.8299C5.58076 20.5799 6.59878 21.0008 7.65995 20.9999H7.99995C9.05338 21.0061 10.0667 20.5964 10.8199 19.8599L13.6699 17.01C14.191 16.4838 14.191 15.6361 13.6699 15.11L13.5599 15Z" fill="url(#paint0_linear_3379_12832)"></path>
+                          <defs>
+                            <lineargradient id="paint0_linear_3379_12832" x1="3" y1="12" x2="20.9999" y2="12" gradientunits="userSpaceOnUse">
+                              <stop stop-color="#581DE3"></stop>
+                              <stop offset="1" stop-color="#726EFF"></stop>
+                            </lineargradient>
+                          </defs>
+                        </svg></div>
+                      <div copy-text="" class="copy-text [position:absolute] [inset:auto_0%_auto_auto]"> </div>
+                    </a>
+                    <a fs-socialshare-element="linkedin" href="#" class="share-link w-inline-block [max-width:100%] [display:flex] [width:40px] [height:40px] [color:var(--white)] [background-color:#726eff0d] [border:1px_solid_#581de3] [border-radius:50%] [justify-content:center] [align-items:center] [padding:8px] [transition:color_.2s] [position:relative] hover:[color:#f06]">
+                      <div class="icon-embed-xsmall w-embed [flex-direction:column] [justify-content:center] [align-items:center] [width:24px] [height:24px] [display:flex]"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3ZM8 18C8.27614 18 8.5 17.7761 8.5 17.5V10.5C8.5 10.2239 8.27614 10 8 10H6.5C6.22386 10 6 10.2239 6 10.5V17.5C6 17.7761 6.22386 18 6.5 18H8ZM7.25 9C6.42157 9 5.75 8.32843 5.75 7.5C5.75 6.67157 6.42157 6 7.25 6C8.07843 6 8.75 6.67157 8.75 7.5C8.75 8.32843 8.07843 9 7.25 9ZM17.5 18C17.7761 18 18 17.7761 18 17.5V12.9C18.0325 11.3108 16.8576 9.95452 15.28 9.76C14.177 9.65925 13.1083 10.1744 12.5 11.1V10.5C12.5 10.2239 12.2761 10 12 10H10.5C10.2239 10 10 10.2239 10 10.5V17.5C10 17.7761 10.2239 18 10.5 18H12C12.2761 18 12.5 17.7761 12.5 17.5V13.75C12.5 12.9216 13.1716 12.25 14 12.25C14.8284 12.25 15.5 12.9216 15.5 13.75V17.5C15.5 17.7761 15.7239 18 16 18H17.5Z" fill="url(#paint0_linear_3379_12834)"></path>
+                          <defs>
+                            <lineargradient id="paint0_linear_3379_12834" x1="3" y1="12" x2="21" y2="12" gradientunits="userSpaceOnUse">
+                              <stop stop-color="#581DE3"></stop>
+                              <stop offset="1" stop-color="#726EFF"></stop>
+                            </lineargradient>
+                          </defs>
+                        </svg></div>
+                    </a>
+                    <a fs-socialshare-element="twitter" href="#" class="share-link w-inline-block [max-width:100%] [display:flex] [width:40px] [height:40px] [color:var(--white)] [background-color:#726eff0d] [border:1px_solid_#581de3] [border-radius:50%] [justify-content:center] [align-items:center] [padding:8px] [transition:color_.2s] [position:relative] hover:[color:#f06]">
+                      <div class="icon-embed-xsmall w-embed [flex-direction:column] [justify-content:center] [align-items:center] [width:24px] [height:24px] [display:flex]"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_3402_3259)">
+                            <path d="M4 4L15.733 20H20L8.267 4H4Z" stroke="url(#paint0_linear_3402_3259)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4 20L10.768 13.232M13.228 10.772L20 4" stroke="url(#paint1_linear_3402_3259)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </g>
+                          <defs>
+                            <lineargradient id="paint0_linear_3402_3259" x1="4" y1="12" x2="20" y2="12" gradientunits="userSpaceOnUse">
+                              <stop stop-color="#581DE3"></stop>
+                              <stop offset="1" stop-color="#726EFF"></stop>
+                            </lineargradient>
+                            <lineargradient id="paint1_linear_3402_3259" x1="4" y1="12" x2="20" y2="12" gradientunits="userSpaceOnUse">
+                              <stop stop-color="#581DE3"></stop>
+                              <stop offset="1" stop-color="#726EFF"></stop>
+                            </lineargradient>
+                            <clippath id="clip0_3402_3259">
+                              <rect width="24" height="24" fill="white"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                    </a>
+                    <a fs-socialshare-element="facebook" href="#" class="share-link w-inline-block [max-width:100%] [display:flex] [width:40px] [height:40px] [color:var(--white)] [background-color:#726eff0d] [border:1px_solid_#581de3] [border-radius:50%] [justify-content:center] [align-items:center] [padding:8px] [transition:color_.2s] [position:relative] hover:[color:#f06]">
+                      <div class="icon-embed-xsmall w-embed [flex-direction:column] [justify-content:center] [align-items:center] [width:24px] [height:24px] [display:flex]"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16.5 6H13.5C12.9477 6 12.5 6.44772 12.5 7V10H16.5C16.6137 9.99748 16.7216 10.0504 16.7892 10.1419C16.8568 10.2334 16.8758 10.352 16.84 10.46L16.1 12.66C16.0318 12.8619 15.8431 12.9984 15.63 13H12.5V20.5C12.5 20.7761 12.2761 21 12 21H9.5C9.22386 21 9 20.7761 9 20.5V13H7.5C7.22386 13 7 12.7761 7 12.5V10.5C7 10.2239 7.22386 10 7.5 10H9V7C9 4.79086 10.7909 3 13 3H16.5C16.7761 3 17 3.22386 17 3.5V5.5C17 5.77614 16.7761 6 16.5 6Z" fill="url(#paint0_linear_3379_12838)"></path>
+                          <defs>
+                            <lineargradient id="paint0_linear_3379_12838" x1="7" y1="12" x2="17" y2="12" gradientunits="userSpaceOnUse">
+                              <stop stop-color="#581DE3"></stop>
+                              <stop offset="1" stop-color="#726EFF"></stop>
+                            </lineargradient>
+                          </defs>
+                        </svg></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="card light [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:none] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content-toc light [grid-column-gap:12px] [grid-row-gap:12px] [opacity:1] [background-color:#0a081400] [border-radius:13px] [flex-flow:column] [justify-content:flex-start] [align-items:flex-start] [width:100%] [height:100%] [padding:0] [display:flex] max-lg:[padding:32px] max-landscape:[padding:24px]">
+                    <div class="toc-title [margin-bottom:8px]">
+                      <p class="text-caps dark-color [color:#0e0b15] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px]">table of content</p>
+                    </div>
+                    <div class="w-layout-vflex flex-v _0 [flex-direction:column] [align-items:flex-start] [display:flex] [grid-column-gap:0px] [grid-row-gap:0px] [justify-content:flex-start] [width:100%] [max-height:60vh] [overflow:auto] max-lg:[width:100%] max-lg:[height:100%]">
+                      <div class="toc_link-wrapper [border-left:3px_solid_#581de3] [width:100%] [padding-top:0] [padding-bottom:0] [padding-left:0]">
+                        <a fs-toc-element="link" href="#" class="toc_link dark-color [color:#0e0b15] [font-family:Switzer,_sans-serif] [font-size:14px] [line-height:150%] [text-decoration:none] [transition:color_.2s] [padding:4px_4px_4px_16px] [display:block]">Text Link</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-_5ff1a896-6044-0621-884d-1e12247eafee-e7f7e472" class="blog-inner-right-side [max-width:696.469px] max-lg:[order:9999] max-lg:[max-width:none]">
+              <div fs-toc-offsettop="130px" fs-toc-element="contents" class="rich-text-light w-dyn-bind-empty w-richtext"></div>
+              <div class="blog-inner-info [grid-column-gap:16px] [grid-row-gap:16px] [border:0_solid_#0e0b15] [border-top:1px_solid_#ff008e3d] [border-left-color:#0e0b1599] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [justify-content:space-between] [margin-top:32px] [padding-top:32px] [display:flex] max-landscape:[flex-flow:column] max-sm:[grid-column-gap:32px] max-sm:[grid-row-gap:32px] max-sm:[flex-flow:wrap] max-sm:[grid-template-columns:1fr]">
+                <div class="author-desc-wrapper w-dyn-list [width:100%]">
+                  <div role="list" class="author-desc-list w-dyn-items [grid-column-gap:16px] [grid-row-gap:16px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [width:100%] [display:grid] max-lg:[flex-flow:column] max-sm:[grid-template-columns:1fr]">
+                    <div id="w-node-_6ec73484-6a6c-8d69-ad1b-1ae546d0074b-e7f7e472" role="listitem" class="author-desc-item w-dyn-item">
+                      <div class="card fit-content transparent [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:none] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:flex-start] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] [border-width:0] max-lg:[border-radius:16px]">
+                        <div class="card-content-author-desc [grid-column-gap:24px] [grid-row-gap:24px] [opacity:1] [cursor:auto] [background-image:url('../images/author-bg2.avif')] [background-position:50%] [background-repeat:no-repeat] [background-size:cover] [background-attachment:scroll] [border:1px_solid_#ff4dcb29] [border-radius:13px] [flex-flow:column] [justify-content:space-between] [align-items:flex-start] [width:100%] [height:100%] [padding:20px] [display:flex] max-landscape:[padding:12px] max-sm:[grid-column-gap:24px] max-sm:[grid-row-gap:24px] max-sm:[padding:12px]">
+                          <div class="pricing-hero-image_text vertical size-100 [grid-column-gap:16px] [grid-row-gap:16px] [align-items:flex-start] [padding-top:8px] [padding-bottom:0] [display:flex] [flex-flow:column] [justify-content:flex-start] [width:100%] [height:auto] max-lg:[text-align:left]">
+                            <div class="image-wrapper-hero_wrapper horizontal [display:flex] [position:relative] [grid-column-gap:16px] [grid-row-gap:16px] [justify-content:flex-start] [align-items:center]"><img data-meno-optimize="false" src="/images/Aly-Slater---FutureFit.avif" loading="lazy" alt="" class="author-img _48 w-dyn-bind-empty [border-radius:50%] [min-width:48px] [max-width:48%] [min-height:48px] [max-height:48px] [overflow:hidden] max-sm:[width:42px] max-sm:[height:42px]" />
+                              <div class="w-layout-hflex flex-v _4 [flex-direction:row] [align-items:flex-start] [display:flex] [grid-column-gap:4px] [grid-row-gap:4px] [justify-content:center] [flex-flow:column] max-lg:[width:100%] max-lg:[height:100%]">
+                                <p class="h4 gradient-pink w-dyn-bind-empty [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff008e,_#ff4dcb)] [-webkit-background-clip:text] [background-clip:text] max-sm:[font-size:18px]"></p>
+                                <div wb-tooltip-max-width="320px" wb-component="tooltip-text" wb-tooltip-background="#ffffff" wb-tooltip-color="#6229e6" class="author-role-wrapper [position:relative]">
+                                  <p class="author-role-text w-dyn-bind-empty [width:212px] [color:var(--untitled-ui--primary700)] [letter-spacing:2px] [text-transform:uppercase] [text-overflow:ellipsis] [white-space:nowrap] [font-family:Switzer,_sans-serif] [font-size:12px] [font-weight:400] [line-height:150%] [text-decoration:none] [overflow:hidden] max-landscape:[font-size:12px] max-sm:[font-size:10px]"></p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="text-wrapper-hero-pricing [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [display:flex]">
+                              <p class="text-14-150 opacity-80 dark w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] [color:var(--untitled-ui--gray800)] max-landscape:[font-size:13px] max-lg:[font-size:13px]"></p>
+                            </div>
+                          </div>
+                          <a href="#" class="link-arrow-top w-inline-block [max-width:100%] [display:inline-flex] [grid-column-gap:4px] [grid-row-gap:4px] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff008e,_#ff4dcb)] [-webkit-background-clip:text] [background-clip:text] [justify-content:flex-start] [align-self:baseline] [align-items:flex-start] [padding-top:8px] [padding-bottom:8px] [text-decoration:none]">
+                            <div class="text-14-150 weight-medium [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:500] [line-height:150%] max-landscape:[font-size:13px]">View profile</div><img data-meno-optimize="false" src="/images/icon-arrow-right-top-gradient-purple.svg" loading="lazy" alt="" class="ic-20x20 [width:20px] [height:20px]" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-dyn-empty [padding:10px] [background-color:#dddddd]">
+                    <div>No items found.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="blog-inner-widget [aspect-ratio:auto] [align-items:flex-start] [height:auto] [display:inline-flex] [position:relative] max-lg:[order:9999] max-lg:[align-self:stretch] max-landscape:[align-self:stretch]">
+              <div class="blog-inner-stiky widget [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [align-items:flex-start] [margin-left:auto] [margin-right:auto] [display:inline-flex] [position:sticky] [top:160px] max-lg:[width:100%] max-lg:[grid-column-gap:40px] max-lg:[grid-row-gap:40px] max-lg:[grid-template-rows:auto] max-lg:[grid-template-columns:1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:grid] max-landscape:[grid-column-gap:24px] max-landscape:[grid-row-gap:24px] max-sm:[grid-column-gap:24px] max-sm:[grid-row-gap:24px] max-sm:[grid-template-columns:1fr]">
+                <div class="card-contaiiner--cost-calculator blog [justify-content:space-between] [align-items:stretch] [display:block] [position:relative] [height:auto] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-sm:[height:auto] max-sm:[min-height:auto] max-sm:[max-height:none]">
+                  <div class="cost-calculator-widget-blog [z-index:auto] [background-image:url('../images/cost-bg_1.avif')] [background-position:50%] [background-repeat:no-repeat] [background-size:cover] [border:0_solid_#ffffff1a] [border-radius:16px] [flex-flow:column] [flex:0_auto] [order:0] [justify-content:flex-start] [height:auto] [padding:0] [transition:all_.2s] [display:flex] [position:static] [overflow:hidden] [box-shadow:0_20px_70px_8px_#ff008e4d] max-lg:[height:auto] max-lg:[min-height:auto] max-lg:[padding:0] max-sm:[background-position:50%] max-sm:[min-height:auto] max-sm:[padding:0]">
+                    <div class="card-our-work-img top-padding [justify-content:center] [align-items:center] [width:100%] [padding:12px_0_0] [display:flex]"><img data-meno-optimize="false" src="/images/cost-cal-widget.avif" loading="lazy" sizes="(max-width: 1080px) 100vw, 1080px" srcset="/images/cost-cal-widget-p-500.png 500w, /images/cost-cal-widget.avif 1080w" alt="Video cost calculator" class="blog-widget-image [height:160px]" /></div>
+                    <div class="card-our-work-content [grid-column-gap:20px] [grid-row-gap:20px] [text-align:center] [flex-flow:column] [justify-content:flex-start] [align-items:center] [width:100%] [padding:16px] [display:flex]">
+                      <div class="gap-4 [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] max-lg:[justify-content:flex-start] max-lg:[align-items:center]">
+                        <div class="text-18-semibold [font-family:Switzer,_sans-serif] [font-size:18px] [font-weight:600] [line-height:120%] max-landscape:[font-size:16px] max-sm:[font-size:14px]">Estimate your video cost ✨</div>
+                        <p class="text-12-150 [font-family:Switzer,_sans-serif] [font-size:12px] [line-height:150%]">In just a few questions, get a tailored estimate for your next video project.</p>
+                      </div>
+                      <div data-w-id="d3199d11-fd52-38ee-7b9c-84a1efa3f130" class="glowing-wrapper glowing-wrapper-active gradient cyan fill [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] [background-image:linear-gradient(#726eff,_#581de3)] [-webkit-text-fill-color:inherit] [-webkit-background-clip:text] [background-clip:border-box] [align-self:center] [width:100%] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)] max-sm:[width:fit-content]">
+                        <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                          <div class="glowing-wrapper-borders [opacity:0] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+                        </div>
+                        <a href="/resources/video-cost-calculator" class="glowing-wrapper-button fill w-inline-block [max-width:100%] [display:inline-flex] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [color:#fff] [letter-spacing:-.01em] [background-color:#3898ec00] [border:1px_solid_#ffffff1a] [border-radius:62.5rem] [justify-content:center] [align-items:center] [padding:12px_24px] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:500] [line-height:1.42] [text-decoration:none] [position:relative] [width:100%] max-lg:[width:100%] max-sm:[width:100%]">
+                          <div class="text-block rel black [color:var(--white)] [text-decoration:none] [z-index:2] [position:relative] max-sm:[text-align:center] max-sm:[font-size:13px] max-sm:[line-height:120%]">Try cost calculator</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-cta-blog2 [justify-content:center] [padding-top:120px] [padding-bottom:80px] [display:flex] [position:relative] [overflow:hidden] max-lg:[padding-top:80px] max-lg:[padding-bottom:40px] max-landscape:[padding-bottom:40px]">
+        <div class="line-gradient-2 [background-image:linear-gradient(90deg,_#60537700,_#605377_50%,_#60537700)] [width:100%] [height:4px] [position:absolute] [inset:0_0%_auto]"></div><img data-meno-optimize="false" src="/images/Frame-1707478540_2.avif" loading="lazy" sizes="(max-width: 2401px) 100vw, 2401px" srcset="/images/Frame-1707478540_2Frame-1707478540.avif 500w, /images/Frame-1707478540_2.avif 2401w" alt="" class="image-purpose-3 [z-index:-1] [pointer-events:none] [min-width:1400px] [position:absolute] [inset:0%_auto_auto]" />
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="blog-wrapper [grid-column-gap:80px] [grid-row-gap:80px] [flex-flow:column] [width:100%] [display:flex] max-landscape:[grid-column-gap:40px] max-landscape:[grid-row-gap:40px]">
+            <div class="cms-blog-button gap-40 [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [display:flex] [align-self:stretch] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px]">
+              <div class="heading-button-blog [justify-content:space-between] [align-items:center] [display:flex] max-sm:[justify-content:space-between] max-sm:[align-items:flex-end]">
+                <p class="h3 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px]">Related articles</p>
+                <div data-w-id="1e4cbeb1-9b57-801b-ec4d-83b38d4082be" class="glowing-wrapper glowing-wrapper-active [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] max-sm:[width:fit-content]">
+                  <div class="button-css w-embed [display:none]">
+                    <Embed html={__embed0} />
+                  </div>
+                  <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                    <div class="glowing-wrapper-borders [opacity:0] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+                  </div>
+                  <a href="#" class="glowing-wrapper-button w-inline-block [max-width:100%] [display:inline-flex] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [color:#fff] [letter-spacing:-.01em] [background-color:#3898ec00] [border:1px_solid_#ffffff1a] [border-radius:62.5rem] [justify-content:center] [align-items:center] [padding:12px_24px] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:500] [line-height:1.42] [text-decoration:none] [position:relative] max-lg:[width:100%] max-sm:[width:100%]">
+                    <div class="text-block rel [color:var(--white)] [text-decoration:none] [z-index:2] [position:relative] max-sm:[text-align:center] max-sm:[font-size:13px] max-sm:[line-height:120%]">View all</div><img data-meno-optimize="false" src="/images/tabler_arrow-up.svg" loading="lazy" alt="right arrow icon
+" class="ic-20x20 [width:20px] [height:20px]" />
+                  </a>
+                </div>
+              </div>
+              <div class="w-dyn-list">
+                <div fs-cmsfilter-element="list" role="list" class="collection-list w-dyn-items [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr_1fr] [grid-auto-columns:1fr] [display:grid] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[flex-flow:wrap] max-lg:[grid-template-rows:auto] max-lg:[grid-template-columns:1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:grid] max-lg:[overflow:auto] max-landscape:[grid-template-columns:1fr] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px] max-sm:[flex-flow:column]">
+                  <div role="listitem" class="collection-item w-dyn-item max-lg:[min-width:400px] max-landscape:[min-width:340px] max-sm:[min-width:320px]">
+                    <div class="card-contaiiner fill [flex:1] [color:] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814)] [border:0_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [justify-content:flex-start] [height:100%] [display:flex] [position:relative] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex] max-sm:[width:100%]">
+                      <a href="#" class="card w-inline-block [max-width:100%] [display:flex] [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [position:relative] max-lg:[border-radius:16px]">
+                        <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]"><img data-meno-optimize="false" alt="" loading="lazy" src="/images/Frame-1707478606.avif" class="img-main-blog w-dyn-bind-empty [object-fit:cover] [border-radius:12px] [width:100%] [height:auto] max-lg:[width:100%]" />
+                          <div class="text-wrapper-card-blog [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [align-items:flex-start] [height:100%] [padding:24px_24px_32px] [display:flex]">
+                            <div class="gap-16-blog [z-index:111] [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [align-items:flex-start] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px] max-lg:[width:100%] max-landscape:[grid-column-gap:16px] max-landscape:[grid-row-gap:16px]">
+                              <div fs-cmsfilter-field="category" class="text-14-150 text-color-purple w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [color:#726eff] max-landscape:[font-size:13px]"></div>
+                              <div class="h4 w-dyn-bind-empty [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] max-sm:[font-size:18px]"></div>
+                            </div>
+                            <div class="author-description-blog [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [height:100%] [display:flex]">
+                              <p class="text-16-150 opacity-80 w-dyn-bind-empty [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [opacity:.8] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]"></p>
+                              <div class="author_date-blog [grid-column-gap:4px] [grid-row-gap:4px] [margin-top:auto] [display:flex]">
+                                <div class="text-14-150 opacity-80 w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]"></div>
+                                <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">・</div>
+                                <div class="text-14-150 opacity-80 w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-dyn-empty [padding:10px] [background-color:#dddddd]">
+                  <div>No items found.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><img data-meno-optimize="false" src="/images/Frame-1707478801_1.avif" loading="lazy" sizes="(max-width: 1351px) 100vw, 1351px" srcset="/images/Frame-1707478801_1-p-500.png 500w, /images/Frame-1707478801_1-p-800.png 800w, /images/Frame-1707478801_1.avif 1351w" alt="A woman holding a tennis racquet on top of a tennis court" class="image-purpose-4 [z-index:-1] [pointer-events:none] [width:810px] [position:absolute] [inset:auto_-15%_-16%_auto] max-sm:[z-index:-1] max-sm:[width:400px] max-sm:[bottom:44%] max-sm:[right:0%]" />
+      </section>
+      <div class="section-blog-recommendation [background-color:#080610] [justify-content:center] [align-items:center] [width:100%] [max-width:none] [padding-top:80px] [padding-bottom:80px] [display:flex] [position:relative] [overflow:clip] max-lg:[padding-top:0] max-lg:[padding-bottom:40px] max-landscape:[padding-top:40px] max-landscape:[padding-bottom:40px] max-sm:[padding-top:0] max-sm:[padding-bottom:60px] max-sm:[overflow:hidden]">
+        <div class="image-wrapper-blog [pointer-events:none] [justify-content:center] [align-items:flex-start] [display:flex] [position:absolute] [inset:0%_0%_auto]"><img data-meno-optimize="false" src="/images/Frame-1707478673_1.avif" loading="lazy" sizes="(max-width: 3576px) 100vw, 3576px" srcset="/images/Frame-1707478673_1-p-500.png 500w, /images/Frame-1707478673_1-p-800.png 800w, /images/Frame-1707478673_1-p-1080.png 1080w, /images/Frame-1707478673_1-p-1600.png 1600w, /images/Frame-1707478673_1-p-2000.png 2000w, /images/Frame-1707478673_1.avif 3576w" alt="A group of three giraffe standing next to each other" class="image-blog-gradient [pointer-events:none] [min-width:1400px] [position:absolute] [bottom:auto]" /></div>
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="wrapper-process [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [display:flex] max-landscape:[grid-column-gap:40px] max-landscape:[grid-row-gap:40px] max-sm:[grid-column-gap:32px] max-sm:[grid-row-gap:32px]">
+            <div class="contact-card [background-image:url('../images/offer-bg_1.avif')] [background-position:50%] [background-size:cover] [border:1px_solid_#ffffff1a] [border-radius:20px] [height:500px] [padding:0_0_0_64px] [transition:all_.2s] [overflow:hidden] max-lg:[height:auto] max-lg:[padding:24px] max-sm:[padding-bottom:16px] max-sm:[padding-left:16px] max-sm:[padding-right:16px]">
+              <div class="contact-wrapper [grid-column-gap:84px] [grid-row-gap:84px] [flex-flow:row] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [align-content:center] [height:100%] [display:grid] max-lg:[grid-column-gap:16px] max-lg:[grid-row-gap:16px] max-lg:[flex-flow:column] max-lg:[display:flex]">
+                <div class="contact-content [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [justify-content:center] [align-items:stretch] [padding-top:64px] [padding-bottom:64px] [display:flex] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[order:1] max-lg:[padding-top:32px] max-lg:[padding-bottom:0] max-sm:[padding-top:0]">
+                  <div class="gap-12 center [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] max-lg:[text-align:center] max-lg:[justify-content:flex-start] max-lg:[align-items:center]">
+                    <p class="text-caps weight-regular [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative]">Contact Us</p>
+                    <p class="h2 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px]">Ready to elevate your brand? Contact us for your <br /><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">Free Custom Video Sample</span></p>
+                  </div>
+                  <div class="wrap-btn-price [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] [align-items:center] [padding-top:12px] [padding-bottom:12px] [display:flex] max-lg:[flex-flow:column] max-lg:[justify-content:center] max-lg:[align-items:center] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-sm:[text-align:center] max-sm:[flex-flow:column] max-sm:[justify-content:flex-start] max-sm:[align-items:center]">
+                    <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] [background-image:linear-gradient(90deg,_#ff008e,_#ff4dcb)] [-webkit-text-fill-color:inherit] [-webkit-background-clip:text] [background-clip:border-box] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)] max-sm:[width:fit-content]">
+                      <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                        <div class="glowing-wrapper-borders [opacity:1] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+                      </div>
+                      <a href="/get-free-sample" class="glowing-wrapper-button w-inline-block [max-width:100%] [display:inline-flex] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [color:#fff] [letter-spacing:-.01em] [background-color:#3898ec00] [border:1px_solid_#ffffff1a] [border-radius:62.5rem] [justify-content:center] [align-items:center] [padding:12px_24px] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:500] [line-height:1.42] [text-decoration:none] [position:relative] max-lg:[width:100%] max-sm:[width:100%]">
+                        <div class="text-block rel align-center-middle [color:var(--white)] [text-decoration:none] [z-index:2] [position:relative] [text-align:center] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[display:flex] max-sm:[text-align:center] max-sm:[font-size:13px] max-sm:[line-height:120%]">Get free sample</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div id="w-node-e71ca5b3-b19c-c4c0-4a04-9188bc5ca1d8-e7f7e472" class="contact-image-wrapper [width:100%] [padding-right:60px] [overflow:hidden] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:1fr_1fr] max-sm:[grid-auto-columns:1fr] max-sm:[justify-content:flex-start] max-sm:[width:100%] max-sm:[display:flex] max-sm:[overflow:hidden]"><img data-meno-optimize="false" loading="lazy" src="/images/contact-img_1.avif" alt="A smart phone with a credit card next to it" class="img-100 img-tabs [border-bottom-right-radius:12px] [border-bottom-left-radius:12px] [width:100%] [min-width:111%] [min-height:1rem] max-lg:[width:100%] max-lg:[min-width:100%] max-lg:[margin-bottom:12px] max-landscape:[min-width:100%] max-sm:[width:114%] max-sm:[min-width:114%]" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+      <div class="css [display:none]">
+        <div class="button-css w-embed [display:none]">
+          <Embed html={__embed1} />
+        </div>
+        <div class="custom-styles w-embed [display:none]">
+          <Embed html={__embed2} />
+        </div>
+        <div class="code-embed-2 w-embed w-script [display:none]">
+          <Embed html={__embed3} />
+        </div>
+        <div class="global-style w-embed [display:none]">
+          <Embed html={__embed4} />
         </div>
       </div>
     </div>
   </div>
   <div class="w-embed"></div>
-  <Fragment slot="scripts">
-<!--  copy link button  -->
-  <script is:inline>
-var $temp = $("<input>");
-var $url = $(location).attr('href');
-$('[copy-button]').on('click', function() {
-	$("body").append($temp);
-  $temp.val($url).select();
-  document.execCommand("copy");
-  $temp.remove();
-  $("[copy-text]").text("copied");
-  $("[copy-icon]").css('display', 'none');
-  setTimeout(function() {
-      $("[copy-text]").text(" ");
-      $("[copy-icon]").css('display', 'block');
-  }, 1000);
-});
-</script>
-  <script is:inline>
-  document.addEventListener("DOMContentLoaded", function() {
-    const richTextImages = document.querySelectorAll('.w-richtext img');
-    richTextImages.forEach(function(img) {
-      img.removeAttribute('loading');
-    });
-  });
-</script>
-  <script is:inline>
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll(".authors-list-wrapper").forEach(function(wrapper) {
-    const links = Array.from(wrapper.querySelectorAll(".name-wrapper"));
-    const count = links.length;
-    if (count <= 1) return;
-    links.forEach(function(link, index) {
-      if (index === count - 1) return;
-      const sep = document.createElement("span");
-      if (count === 2) {
-        // A & B
-        if (index === 0) {
-          sep.textContent = " & ";
-          sep.style.marginLeft = "8px"; // <-- add space before &
-        }
-      } else {
-        // A, B & C
-        if (index < count - 2) {
-          sep.textContent = ", ";
-        } else {
-          sep.textContent = " & ";
-          sep.style.marginLeft = "8px"; // <-- add space before &
-        }
-      }
-      link.after(sep);
-    });
-  });
-});
-</script>
-  <script is:inline>
-document.addEventListener("DOMContentLoaded", function() {
-  const items = document.querySelectorAll('.author-role-wrapper');
-  items.forEach(function(wrapper) {
-    const text = wrapper.querySelector('.author-role-text');
-    if (!text) return;
-    const fullText = text.textContent.trim();
-    const isTruncated = text.scrollWidth > text.clientWidth;
-    if (isTruncated) {
-      wrapper.setAttribute("data-tooltip", fullText);
-    } else {
-      wrapper.removeAttribute("data-tooltip");
-    }
-  });
-});
-</script>
-  <!--  FAQ Component  -->
-  <script is:inline>
-(function () {
-  function setOpen(item, open) {
-    const panel = item.querySelector('.a');
-    const icon = item.querySelector('.icon');
-    if (!panel || !icon) return;
-    if (open) {
-      item.classList.add('open');
-      panel.style.setProperty('max-height', panel.scrollHeight + 'px');
-      icon.textContent = '−';
-    } else {
-      item.classList.remove('open');
-      panel.style.setProperty('max-height', '0px');
-      icon.textContent = '+';
-    }
-  }
-  // Works even for CMS-injected content because it's delegated
-  document.addEventListener('click', function (e) {
-    const btn = e.target.closest('#mt-faq .q');
-    if (!btn) return;
-    const root = btn.closest('#mt-faq');
-    const item = btn.closest('.item');
-    if (!root || !item) return;
-    const isOpen = item.classList.contains('open');
-    // Close siblings (same behavior as your original)
-    root.querySelectorAll('.item.open').forEach(function (i) {
-      if (i !== item) setOpen(i, false);
-    });
-    setOpen(item, !isOpen);
-  });
-  // Keep height correct on resize
-  window.addEventListener('resize', function () {
-    document.querySelectorAll('#mt-faq .item.open').forEach(function (item) {
-      const panel = item.querySelector('.a');
-      if (panel) panel.style.setProperty('max-height', panel.scrollHeight + 'px');
-    });
-  });
-})();
-</script>
-  <style is:inline>
-/* Desktop only */
-@media (min-width: 768px) {
-  .author-desc-list .author-desc-item.last-span-2 {
-    grid-column: span 2 !important;
-  }
-}
-/* Mobile fallback */
-@media (max-width: 767px) {
-  .author-desc-list .author-desc-item.last-span-2 {
-    grid-column: auto !important;
-  }
-}
-</style>
-  <script is:inline>
-document.addEventListener("DOMContentLoaded", function() {
-  const items = document.querySelectorAll(".author-desc-list .author-desc-item");
-  if (items.length % 2 !== 0) {
-    // Add a special class to the last item
-    items[items.length - 1].classList.add("last-span-2");
-  }
-});
-</script>
-  </Fragment>
+
+</div>
 </BaseLayout>

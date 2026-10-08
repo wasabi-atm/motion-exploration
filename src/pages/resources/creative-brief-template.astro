@@ -1,584 +1,26 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/theme.css';
+import { BaseLayout, Embed } from 'meno-astro/components';
 import NavBanner from '../../components/NavBanner.astro';
 import Footer from '../../components/Footer.astro';
----
-<BaseLayout
-  title={"Free Video Brief Template | Simplify Your Workflow"}
-  wfPage="674881f4873a39cc9a4b8358"
-  bodyClass={"body"}
-  description={"Free video creative brief template. Save time, align your team, and set your video project up for success from day one."}
-  ogTitle={"Free Video Brief Template | Simplify Your Workflow"}
-  ogDescription={"Free video creative brief template. Save time, align your team, and set your video project up for success from day one."}
-  ogImage={"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670694d04b4cfd54b92c5529_Frame%20273.png"}
-  twitterTitle={"Free Video Brief Template | Simplify Your Workflow"}
-  twitterDescription={"Free video creative brief template. Save time, align your team, and set your video project up for success from day one."}
-  twitterImage={"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670694d04b4cfd54b92c5529_Frame%20273.png"}
-  ogType={"website"}
-  twitterCard={"summary_large_image"}
-  canonical={"https://www.motiontheagency.com/resources/creative-brief-template"}
->
-  <Fragment slot="head">
-<!--  [Attributes by Finsweet] CMS Slider  -->
-<script is:inline async="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js"></script>
-<!--  [Attributes by Finsweet] Custom Form Select  -->
-<script is:inline defer="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-selectcustom@1/selectcustom.js"></script>
-<script is:inline type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://www.motiontheagency.com/resources/creative-brief-template",
-      "url": "https://www.motiontheagency.com/resources/creative-brief-template",
-      "name": "Free Creative Brief Template for Video Projects | Motion The Agency",
-      "description": "Download our free creative brief template to streamline your video production process. Designed by Motion The Agency for marketers, SaaS, and creative teams worldwide.",
-      "inLanguage": "en-US",
-      "isPartOf": { "@id": "https://www.motiontheagency.com/#website" },
-      "breadcrumb": { "@id": "https://www.motiontheagency.com/resources/creative-brief-template#breadcrumb" },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://cdn.motiontheagency.com/creative-brief-template/cover.jpg",
-        "width": 1200,
-        "height": 630
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.motiontheagency.com/resources/creative-brief-template#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.motiontheagency.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Resources",
-          "item": "https://www.motiontheagency.com/resources"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Creative Brief Template",
-          "item": "https://www.motiontheagency.com/resources/creative-brief-template"
-        }
-      ]
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://www.motiontheagency.com/#organization",
-      "name": "Motion The Agency",
-      "url": "https://www.motiontheagency.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ebfe7ccb344ea14e764cd7_Link%20%E2%86%92%20cropped-motion-logo-png-04-1-1024x293.png.avif",
-        "width": 1024,
-        "height": 293
-      },
-      "image": "https://cdn.motiontheagency.com/assets/og-image-motion.jpg",
-      "email": "hello@motiontheagency.com",
-      "telephone": "+44 203 984 7787",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "42-44 Bishopsgate",
-        "addressLocality": "London",
-        "postalCode": "EC2N 4AH",
-        "addressCountry": "GB"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/motion-the-agency",
-        "https://www.youtube.com/@motiontheagency",
-        "https://clutch.co/profile/motion-agency-0"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "reviewCount": "25"
-      }
-    },
-    {
-      "@type": "CreativeWork",
-      "@id": "https://www.motiontheagency.com/resources/creative-brief-template#creativework",
-      "name": "Free Creative Brief Template for Video Production",
-      "headline": "Your free guide to video brief excellence",
-      "description": "Download our proven creative brief template designed to help teams define clear goals, communicate effectively, and deliver high-quality video results.",
-      "author": { "@id": "https://www.motiontheagency.com/#organization" },
-      "publisher": { "@id": "https://www.motiontheagency.com/#organization" },
-      "thumbnailUrl": "https://cdn.motiontheagency.com/creative-brief-template/cover.jpg",
-      "inLanguage": "en-US",
-      "fileFormat": "application/pdf",
-      "datePublished": "2025-08-12",
-      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
-      "educationalUse": [
-        "Creative Brief",
-        "Video Planning",
-        "Marketing Resource"
-      ],
-      "isAccessibleForFree": true,
-      "about": [
-        "Creative Brief",
-        "Video Production",
-        "Marketing Template"
-      ]
-    },
-    {
-      "@type": "HowTo",
-      "@id": "https://www.motiontheagency.com/resources/creative-brief-template#howto",
-      "name": "How to use the creative brief template effectively",
-      "description": "Follow these steps to complete your creative video brief and align your production team for success.",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "position": 1,
-          "name": "Download the free template",
-          "text": "Fill out the form above to receive your copy of the video brief template."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 2,
-          "name": "Review key sections",
-          "text": "Use the provided examples as inspiration and review each section carefully."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 3,
-          "name": "Share with your team",
-          "text": "Collaborate with stakeholders to ensure alignment on project goals."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 4,
-          "name": "Refine and finalize",
-          "text": "Make adjustments based on team feedback and finalize your creative brief."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 5,
-          "name": "Use throughout production",
-          "text": "Keep the template as your central document for video project management."
-        }
-      ],
-      "supply": {
-        "@type": "HowToSupply",
-        "name": "Creative brief template (PDF)"
-      },
-      "tool": {
-        "@type": "HowToTool",
-        "name": "Google Docs or Notion"
-      },
-      "estimatedCost": {
-        "@type": "MonetaryAmount",
-        "currency": "GBP",
-        "value": "0"
-      },
-      "totalTime": "PT30M"
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.motiontheagency.com/resources/creative-brief-template#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a video creative brief?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A video creative brief is a document that outlines the key elements of your video project, including goals, target audience, key messages, and stylistic preferences. It serves as a roadmap for your video production team and ensures everyone is aligned on the project's vision."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why should I use this template?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A template streamlines the process of creating a comprehensive brief, ensuring you don't miss any crucial details. It saves time, improves communication with your production team, and ultimately leads to a more successful video project."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What types of videos can this template be used for?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "While our template is designed with animated explainer videos in mind, it's versatile enough to be adapted for various video types, including promotional videos, product demos, and corporate videos."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does it take to complete the template?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The time can vary depending on your project's complexity and how much information you have ready. On average, it takes about 30–60 minutes to fill out the template thoroughly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I share this template with others?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, you're welcome to share this template within your organization or with clients. However, we kindly ask that you don't redistribute it publicly or claim it as your own work."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is the template updated regularly?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we periodically review and update our template to ensure it remains aligned with industry best practices and our clients' evolving needs."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "SpeakableSpecification",
-      "xpath": [
-        "/html/head/title",
-        "/html/body//h1"
-      ]
-    }
-  ]
-}
-</script>
-  </Fragment>
-<div class="page-wrapper">
-    <NavBanner />
-    <div id="cards" class="main-wrapper">
-      <section data-w-id="e870b645-7926-91eb-624c-e4356dfac346" class="section-hero">
-        <div id="banner-trigger" class="nav_banner-trigger"></div>
-        <div class="w-layout-blockcontainer container-1280 height-100 w-container">
-          <div class="gap-60-hero">
-            <div class="gap-76">
-              <div class="wrapper-hero fr-1-15">
-                <div class="left-hero max-w-580">
-                  <div class="gap-4">
-                    <h1 class="text-caps weight-regular">Free Video Creative Brief Template</h1>
-                    <h2 class="h1"><span class="span">Your free guide to<br>‍</span>video brief excellence</h2>
-                  </div>
-                  <div class="text-16-150 color-white-80">Are you ready to create an impactful animated explainer video? Our free video creative brief template, developed by Motion The Agency, has proven effective for our clients, providing clarity and professionalism. Whether you&#x27;re a marketing professional or a business owner, this guide will streamline your video production process.</div><img src="/images/brief-img_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/brief-img_1brief-img.avif 500w, /images/brief-img_1.avif 990w" alt="A screen shot of motion the agency website">
-                </div>
-                <div id="w-node-_3cd5a31f-7c8a-fb7f-77ca-f0bbf10c008a-9a4b8358" class="right-hero">
-                  <div class="form-block w-form">
-                    <form id="wf-form-Creative-Brief" name="wf-form-Creative-Brief" data-name="Creative Brief" redirect="/resources/download-creative-brief" data-redirect="/resources/download-creative-brief" method="get" data-webflow-hubspot-api-form-url="https://hubspotonwebflow.com/api/forms/d650784e-b372-4f1a-8c76-d2aa392ced90" class="form gap-20" data-wf-page-id="674881f4873a39cc9a4b8358" data-wf-element-id="bc0cbec2-b01b-5bb7-e182-c615b76f880e">
-                      <div class="form-title">
-                        <p class="text-caps weight-regular">Free Download</p>
-                        <h3 class="h3 large">How to create killer video creative brief</h3>
-                        <div class="text-16-150">Get your free guide to crafting compelling video briefs that drive results – download now!</div>
-                      </div>
-                      <div class="field-grid margin-bot-8">
-                        <div class="text-field-contact"><label for="First-Name-5" class="text-14-150 opacity-80">First name<span class="red-text">*</span></label><input class="field-contact w-input" data-wfhsfieldname="FormTextInput-2" maxlength="256" name="First-Name" data-name="First Name" placeholder="Your first name..." type="text" id="First-Name-5" required=""></div>
-                        <div class="text-field-contact"><label for="Last-Name-5" class="text-14-150 opacity-80">Last name<span class="red-text">*</span></label><input class="field-contact w-input" data-wfhsfieldname="FormTextInput-3" maxlength="256" name="Last-Name" data-name="Last Name" placeholder="Your last name..." type="text" id="Last-Name-5" required=""></div>
-                      </div>
-                      <div class="text-field-contact margin-bot-8"><label for="Email-5" class="text-14-150 opacity-80">Work Email<span class="red-text">*</span></label><input class="field-contact w-input" ms-code-business-email="" data-wfhsfieldname="FormTextInput-4" maxlength="256" name="Email" data-name="Email" placeholder="Work email address..." type="email" id="Email-5" required=""></div>
-                      <div class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key"></div>
-                      <div class="text-button-contact gap-20">
-                        <div class="text-12-150 opacity-50">By clicking submit, you consent to receive email communications about Motion&#x27;s products and services. You agree to our Terms of Service and acknowledge that your data will be processed in accordance with our Privacy Policy. You may opt out at any time.</div>
-                        <div class="glowing-wrapper glowing-wrapper-active gradient">
-                          <div class="glowing-wrapper-borders-masker">
-                            <div class="glowing-wrapper-borders"></div>
-                          </div><input type="submit" data-wait="Please wait..." class="glowing-wrapper-button-copy w-button" value="Submit &amp; download">
-                        </div>
-                      </div><input type="hidden" name="hutk" value=""><input type="hidden" name="ipAddress" value=""><input type="hidden" name="pageUri" value=""><input type="hidden" name="pageId" value=""><input type="hidden" name="pageName" value="">
-                    </form>
-                    <div class="success-form w-form-done">
-                      <div>Thank you! Your submission has been received!</div>
-                    </div>
-                    <div class="w-form-fail">
-                      <div>Oops! Something went wrong while submitting the form.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-important">
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="wrapper-important">
-            <div class="top-request">
-              <div class="left-top-request">
-                <div class="gap-4">
-                  <p class="text-caps weight-regular">why it important</p>
-                  <h2 class="h2"><span class="span">Why you need<br></span>our brief template</h2>
-                </div>
-                <div class="text-16-150 opacity-80 max-535">Maximize your video&#x27;s impact and minimize miscommunication with our proven creative brief template.</div>
-              </div>
-            </div>
-            <div class="bottom_request">
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-28-purpose height-auto"><img src="/images/Frame-1707478606_8.avif" loading="lazy" alt="A screenshot of a user&#x27;s profile on a mobile device" class="img-purpose">
-                      <div class="gap-20-center-purpose is-24">
-                        <div class="text-14-150 opacity-80">Ensures clear communication between you and your video production team.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-24-purpose"><img src="/images/Frame-17074786062_2.avif" loading="lazy" alt="A cell phone with a message bubble on the screen" class="img-purpose">
-                      <div class="gap-20-center-purpose is-24">
-                        <div class="text-14-150 opacity-80">Saves time by defining all crucial aspects of your video project.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-28-purpose height-auto"><img src="/images/Frame-17074786063_2.avif" loading="lazy" alt="A purple cup sitting on top of a black device" class="img-purpose">
-                      <div class="gap-20-center-purpose is-24">
-                        <div class="text-14-150 opacity-80">Enhances the quality of your final video by setting clear expectations.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-28-purpose height-auto"><img src="/images/Frame-17074786064_2.avif" loading="lazy" alt="A computer keyboard with a blue light on it" class="img-purpose">
-                      <div class="gap-20-center-purpose is-24">
-                        <div class="text-14-150 opacity-80">Provides a professional framework used by industry experts.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-inside">
-        <div class="w-layout-blockcontainer container-1280 overflow-hide w-container">
-          <div class="inside-wrapper">
-            <div class="inside-header">
-              <div class="gap-4">
-                <p class="text-caps weight-regular">WHAT INSIDE</p>
-                <h2 class="h2"><span class="span">What&#x27;s inside our template</span></h2>
-              </div>
-              <p class="text-16-150 opacity-80 max-535">Our comprehensive template covers seven essential aspects of a video creative brief:</p>
-              <div class="image-wrapper"><img src="/images/Star-BG.avif" loading="lazy" alt="purple blur background" class="image-10"></div>
-            </div>
-            <div class="inside-grid">
-              <div class="card-contaiiner">
-                <div class="card"><img src="/images/Bento-Card-Vol-2_1.avif" loading="lazy" alt="A computer screen with a button that says your brand" class="inside-image">
-                  <div class="tag-wrapper is-big">
-                    <div class="tag">
-                      <h3 class="text-16-150">Overview of messages</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card"><img src="/images/Bento-Card-Vol-3_1.avif" loading="lazy" alt="A computer screen with a play button on it" class="inside-image">
-                  <div class="tag-wrapper is-big">
-                    <div class="tag">
-                      <h3 class="text-16-150">Communication channel</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="w-node-_13975d19-7531-3202-ff07-fa804f3f374f-9a4b8358" class="card-contaiiner">
-                <div class="card"><img src="/images/Bento-Card-Vol-22_1.avif" loading="lazy" alt="A screenshot of a clock showing the time" class="inside-image">
-                  <div class="tag-wrapper is-big">
-                    <div class="tag">
-                      <h3 class="text-16-150">Deadline</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card"><img src="/images/Bento-Card-Vol-25_1.avif" loading="lazy" alt="A picture of a projector in a dark room" class="inside-image">
-                  <div class="tag-wrapper is-big">
-                    <div class="tag">
-                      <h3 class="text-16-150">Duration</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card"><img src="/images/Bento-Card-Vol-26_1.avif" loading="lazy" alt="A bunch of balls floating in the air" class="inside-image">
-                  <div class="tag-wrapper is-big">
-                    <div class="tag">
-                      <h3 class="text-16-150">Reference</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card"><img src="/images/Bento-Card-Vol-23_1.avif" loading="lazy" alt="A cell phone with the time displayed on the screen" class="inside-image">
-                  <div class="tag-wrapper is-big">
-                    <div class="tag">
-                      <h3 class="text-16-150">Aspect Ratio</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="w-node-_5e8464de-913c-911a-ac7e-a063693d9bdd-9a4b8358" class="card-contaiiner">
-                <div class="card"><img src="/images/Bento-Card-Vol-24_1.avif" loading="lazy" alt="A cell phone with a sound equalizer next to it" class="inside-image">
-                  <div class="tag-wrapper is-big">
-                    <div class="tag">
-                      <h3 class="text-16-150">VO (Voiceover) or No VO Needed</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><img src="/images/Frame-1707478781.avif" loading="lazy" sizes="(max-width: 1351px) 100vw, 1351px, 100vw" srcset="/images/Frame-1707478781-p-500.png 500w, /images/Frame-1707478781-p-800.png 800w, /images/Frame-1707478781.avif 1351w" alt="A man holding a tennis racquet on top of a tennis court" class="image-why_shoose-2"><img src="/images/Frame-1707478540_2.avif" loading="lazy" sizes="(max-width: 2401px) 100vw, 2401px, 100vw" srcset="/images/Frame-1707478540_2Frame-1707478540.avif 500w, /images/Frame-1707478540_2.avif 2401w" alt="" class="image-purpose-3">
-        <div class="line-gradient-2"></div>
-      </section>
-      <section class="section-out padding-bottom-30">
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="wrapper-out mobile-gap-60">
-            <div class="left-out">
-              <div class="gap-16">
-                <div class="gap-4-out">
-                  <p class="text-caps weight-regular">how to</p>
-                  <h2 class="h2 left"><span class="span">How to use the template </span>step-by-step guide:</h2>
-                </div>
-                <div class="text-16-150 color-white-80 left">Follow our simple six-step process to create a comprehensive video brief that will guide your project to success.</div>
-                <div class="list-wrapper">
-                  <div class="list-item">
-                    <div class="list-mark">
-                      <div>1</div>
-                    </div>
-                    <div class="text-16-150 color-white-80 left">Download our free template</div>
-                  </div>
-                  <div class="list-item">
-                    <div class="list-mark">
-                      <div>2<br></div>
-                    </div>
-                    <div class="text-16-150 color-white-80 left">Fill in each of the seven sections with your project details</div>
-                  </div>
-                  <div class="list-item">
-                    <div class="list-mark">
-                      <div>3</div>
-                    </div>
-                    <div class="text-16-150 color-white-80 left">Use the provided examples as inspiration</div>
-                  </div>
-                  <div class="list-item">
-                    <div class="list-mark">
-                      <div>4</div>
-                    </div>
-                    <div class="text-16-150 color-white-80 left">Share with your team and stakeholders for feedback</div>
-                  </div>
-                  <div class="list-item">
-                    <div class="list-mark">
-                      <div>5</div>
-                    </div>
-                    <div class="text-16-150 color-white-80 left">Refine and finalize your brief</div>
-                  </div>
-                  <div class="list-item">
-                    <div class="list-mark">
-                      <div>6</div>
-                    </div>
-                    <div class="text-16-150 color-white-80 left">Use it as a roadmap throughout your video production process</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="right-out"><img src="/images/Illustration-brig_1.avif" loading="lazy" alt="A diagram of the different types of buttons"></div>
-          </div>
-        </div>
-        <div class="image-bg-wrapper-out"><img src="/images/Frame-1707478673_2.avif" loading="lazy" sizes="(max-width: 1601px) 100vw, 1601px, 100vw" srcset="/images/Frame-1707478673_2-p-500.png 500w, /images/Frame-1707478673_2-p-800.png 800w, /images/Frame-1707478673_2-p-1080.png 1080w, /images/Frame-1707478673_2.avif 1601w" alt="A man holding a tennis racquet on top of a tennis court" class="image-out-bg"></div>
-      </section>
-      <section class="section-faq">
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="faq-wrapper">
-            <div class="left_side-faq">
-              <div class="header-faq">
-                <div class="text_heading-faq">
-                  <p class="text-caps weight-regular">Frequently asked questions</p>
-                  <div class="max-w-400">
-                    <h2 class="h2"><span class="span">Got Questions?</span> We&#x27;ve got answers</h2>
-                  </div>
-                </div>
-                <p class="text-14-150 opacity-80">We want to make sure you feel confident that our service is right for you. Here we’ve looked to address some commonly asked questions. If you have any more specific questions, don’t hesitate to get in touch with a member of the team.</p>
-              </div><img src="/images/Frame-1707478606_4.avif" loading="lazy" alt="An abstract digital interface featuring a dark theme with various input fields, a progress bar, and a question mark icon, suggesting a user-friendly design for a software application." class="image-faq">
-            </div>
-            <div class="right_side-faq">
-              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c6fe7" class="dropdown-faq w-dropdown">
-                <div class="dropdown-top w-dropdown-toggle">
-                  <div class="text-14-150">What is a video creative brief?</div>
-                  <div data-is-ix2-target="1" class="ic-plus-faq" data-w-id="77047380-cda2-6192-4995-cd70f47c6feb" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
-                </div>
-                <nav class="dropdown-list-faq w-dropdown-list">
-                  <div class="wrapper-text-faq">
-                    <p class="text-14-150 opacity-80">A video creative brief is a document that outlines the key elements of your video project, including goals, target audience, key messages, and stylistic preferences. It serves as a roadmap for your video production team and ensures everyone is aligned on the project&#x27;s vision.</p>
-                  </div>
-                </nav>
-              </div>
-              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c6ff0" class="dropdown-faq w-dropdown">
-                <div class="dropdown-top w-dropdown-toggle">
-                  <div class="text-14-150">Why do I need a creative brief template?</div>
-                  <div data-is-ix2-target="1" class="ic-plus-faq" data-w-id="77047380-cda2-6192-4995-cd70f47c6ff4" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
-                </div>
-                <nav class="dropdown-list-faq w-dropdown-list">
-                  <div class="wrapper-text-faq">
-                    <p class="text-14-150 opacity-80">A template streamlines the process of creating a comprehensive brief, ensuring you don&#x27;t miss any crucial details. It saves time, improves communication with your production team, and ultimately leads to a more successful video project.</p>
-                  </div>
-                </nav>
-              </div>
-              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c6ff9" class="dropdown-faq w-dropdown">
-                <div class="dropdown-top w-dropdown-toggle">
-                  <div class="text-14-150">Is this template suitable for all types of video projects?</div>
-                  <div data-is-ix2-target="1" class="ic-plus-faq" data-w-id="77047380-cda2-6192-4995-cd70f47c6ffd" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
-                </div>
-                <nav class="dropdown-list-faq w-dropdown-list">
-                  <div class="wrapper-text-faq">
-                    <p class="text-14-150 opacity-80">While our template is designed with animated explainer videos in mind, it&#x27;s versatile enough to be adapted for various video types, including promotional videos, product demos, and corporate videos.</p>
-                  </div>
-                </nav>
-              </div>
-              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c7002" class="dropdown-faq w-dropdown">
-                <div class="dropdown-top w-dropdown-toggle">
-                  <div class="text-14-150">How long does it typically take to complete the brief?</div>
-                  <div data-is-ix2-target="1" class="ic-plus-faq" data-w-id="77047380-cda2-6192-4995-cd70f47c7006" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
-                </div>
-                <nav class="dropdown-list-faq w-dropdown-list">
-                  <div class="wrapper-text-faq">
-                    <p class="text-14-150 opacity-80">The time can vary depending on your project&#x27;s complexity and how much information you have ready. On average, it takes about 30-60 minutes to fill out the template thoroughly.</p>
-                  </div>
-                </nav>
-              </div>
-              <div data-delay="0" data-hover="false" data-w-id="d247d60a-ae3e-2fc9-afb4-0f1a8da50548" class="dropdown-faq w-dropdown">
-                <div class="dropdown-top w-dropdown-toggle">
-                  <div class="text-14-150">Can I share this template with my team or clients?</div>
-                  <div data-is-ix2-target="1" class="ic-plus-faq" data-w-id="d247d60a-ae3e-2fc9-afb4-0f1a8da5054c" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
-                </div>
-                <nav class="dropdown-list-faq w-dropdown-list">
-                  <div class="wrapper-text-faq">
-                    <p class="text-14-150 opacity-80">Yes, you&#x27;re welcome to share this template within your organization or with clients. However, we kindly ask that you don&#x27;t redistribute it publicly or claim it as your own work.</p>
-                  </div>
-                </nav>
-              </div>
-              <div data-delay="0" data-hover="false" data-w-id="b3493af1-2821-4537-67e3-9da873f469c4" class="dropdown-faq w-dropdown">
-                <div class="dropdown-top w-dropdown-toggle">
-                  <div class="text-14-150">Is the template regularly updated?</div>
-                  <div data-is-ix2-target="1" class="ic-plus-faq" data-w-id="b3493af1-2821-4537-67e3-9da873f469c8" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
-                </div>
-                <nav class="dropdown-list-faq w-dropdown-list">
-                  <div class="wrapper-text-faq">
-                    <p class="text-14-150 opacity-80">Yes, we periodically review and update our template to ensure it remains aligned with industry best practices and our clients&#x27; evolving needs.</p>
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <Footer />
-      <div class="css">
-        <div class="button-css w-embed">
-          <style is:inline>
+
+const meta = {
+  "title": "Free Video Brief Template | Simplify Your Workflow",
+  "description": "Free video creative brief template. Save time, align your team, and set your video project up for success from day one.",
+  "htmlAttributes": {
+    "data-wf-page": "674881f4873a39cc9a4b8358",
+    "data-wf-site": "66ebfb6ec8f20d5eda50eb34"
+  },
+  "ogTitle": "Free Video Brief Template | Simplify Your Workflow",
+  "ogDescription": "Free video creative brief template. Save time, align your team, and set your video project up for success from day one.",
+  "ogImage": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670694d04b4cfd54b92c5529_Frame%20273.png",
+  "ogType": "website",
+  "customCode": {
+    "head": "\n<!--  [Attributes by Finsweet] CMS Slider  -->\n<script async=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js\"></script>\n<!--  [Attributes by Finsweet] Custom Form Select  -->\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-selectcustom@1/selectcustom.js\"></script>\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://www.motiontheagency.com/resources/creative-brief-template\",\n      \"url\": \"https://www.motiontheagency.com/resources/creative-brief-template\",\n      \"name\": \"Free Creative Brief Template for Video Projects | Motion The Agency\",\n      \"description\": \"Download our free creative brief template to streamline your video production process. Designed by Motion The Agency for marketers, SaaS, and creative teams worldwide.\",\n      \"inLanguage\": \"en-US\",\n      \"isPartOf\": { \"@id\": \"https://www.motiontheagency.com/#website\" },\n      \"breadcrumb\": { \"@id\": \"https://www.motiontheagency.com/resources/creative-brief-template#breadcrumb\" },\n      \"primaryImageOfPage\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.motiontheagency.com/creative-brief-template/cover.jpg\",\n        \"width\": 1200,\n        \"height\": 630\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://www.motiontheagency.com/resources/creative-brief-template#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://www.motiontheagency.com/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Resources\",\n          \"item\": \"https://www.motiontheagency.com/resources\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"Creative Brief Template\",\n          \"item\": \"https://www.motiontheagency.com/resources/creative-brief-template\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Organization\",\n      \"@id\": \"https://www.motiontheagency.com/#organization\",\n      \"name\": \"Motion The Agency\",\n      \"url\": \"https://www.motiontheagency.com/\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ebfe7ccb344ea14e764cd7_Link%20%E2%86%92%20cropped-motion-logo-png-04-1-1024x293.png.avif\",\n        \"width\": 1024,\n        \"height\": 293\n      },\n      \"image\": \"https://cdn.motiontheagency.com/assets/og-image-motion.jpg\",\n      \"email\": \"hello@motiontheagency.com\",\n      \"telephone\": \"+44 203 984 7787\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"42-44 Bishopsgate\",\n        \"addressLocality\": \"London\",\n        \"postalCode\": \"EC2N 4AH\",\n        \"addressCountry\": \"GB\"\n      },\n      \"sameAs\": [\n        \"https://www.linkedin.com/company/motion-the-agency\",\n        \"https://www.youtube.com/@motiontheagency\",\n        \"https://clutch.co/profile/motion-agency-0\"\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": \"5\",\n        \"bestRating\": \"5\",\n        \"reviewCount\": \"25\"\n      }\n    },\n    {\n      \"@type\": \"CreativeWork\",\n      \"@id\": \"https://www.motiontheagency.com/resources/creative-brief-template#creativework\",\n      \"name\": \"Free Creative Brief Template for Video Production\",\n      \"headline\": \"Your free guide to video brief excellence\",\n      \"description\": \"Download our proven creative brief template designed to help teams define clear goals, communicate effectively, and deliver high-quality video results.\",\n      \"author\": { \"@id\": \"https://www.motiontheagency.com/#organization\" },\n      \"publisher\": { \"@id\": \"https://www.motiontheagency.com/#organization\" },\n      \"thumbnailUrl\": \"https://cdn.motiontheagency.com/creative-brief-template/cover.jpg\",\n      \"inLanguage\": \"en-US\",\n      \"fileFormat\": \"application/pdf\",\n      \"datePublished\": \"2025-08-12\",\n      \"license\": \"https://creativecommons.org/licenses/by-nc/4.0/\",\n      \"educationalUse\": [\n        \"Creative Brief\",\n        \"Video Planning\",\n        \"Marketing Resource\"\n      ],\n      \"isAccessibleForFree\": true,\n      \"about\": [\n        \"Creative Brief\",\n        \"Video Production\",\n        \"Marketing Template\"\n      ]\n    },\n    {\n      \"@type\": \"HowTo\",\n      \"@id\": \"https://www.motiontheagency.com/resources/creative-brief-template#howto\",\n      \"name\": \"How to use the creative brief template effectively\",\n      \"description\": \"Follow these steps to complete your creative video brief and align your production team for success.\",\n      \"step\": [\n        {\n          \"@type\": \"HowToStep\",\n          \"position\": 1,\n          \"name\": \"Download the free template\",\n          \"text\": \"Fill out the form above to receive your copy of the video brief template.\"\n        },\n        {\n          \"@type\": \"HowToStep\",\n          \"position\": 2,\n          \"name\": \"Review key sections\",\n          \"text\": \"Use the provided examples as inspiration and review each section carefully.\"\n        },\n        {\n          \"@type\": \"HowToStep\",\n          \"position\": 3,\n          \"name\": \"Share with your team\",\n          \"text\": \"Collaborate with stakeholders to ensure alignment on project goals.\"\n        },\n        {\n          \"@type\": \"HowToStep\",\n          \"position\": 4,\n          \"name\": \"Refine and finalize\",\n          \"text\": \"Make adjustments based on team feedback and finalize your creative brief.\"\n        },\n        {\n          \"@type\": \"HowToStep\",\n          \"position\": 5,\n          \"name\": \"Use throughout production\",\n          \"text\": \"Keep the template as your central document for video project management.\"\n        }\n      ],\n      \"supply\": {\n        \"@type\": \"HowToSupply\",\n        \"name\": \"Creative brief template (PDF)\"\n      },\n      \"tool\": {\n        \"@type\": \"HowToTool\",\n        \"name\": \"Google Docs or Notion\"\n      },\n      \"estimatedCost\": {\n        \"@type\": \"MonetaryAmount\",\n        \"currency\": \"GBP\",\n        \"value\": \"0\"\n      },\n      \"totalTime\": \"PT30M\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://www.motiontheagency.com/resources/creative-brief-template#faq\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is a video creative brief?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"A video creative brief is a document that outlines the key elements of your video project, including goals, target audience, key messages, and stylistic preferences. It serves as a roadmap for your video production team and ensures everyone is aligned on the project's vision.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why should I use this template?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"A template streamlines the process of creating a comprehensive brief, ensuring you don't miss any crucial details. It saves time, improves communication with your production team, and ultimately leads to a more successful video project.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What types of videos can this template be used for?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"While our template is designed with animated explainer videos in mind, it's versatile enough to be adapted for various video types, including promotional videos, product demos, and corporate videos.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How long does it take to complete the template?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"The time can vary depending on your project's complexity and how much information you have ready. On average, it takes about 30–60 minutes to fill out the template thoroughly.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can I share this template with others?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Yes, you're welcome to share this template within your organization or with clients. However, we kindly ask that you don't redistribute it publicly or claim it as your own work.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Is the template updated regularly?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Yes, we periodically review and update our template to ensure it remains aligned with industry best practices and our clients' evolving needs.\"\n          }\n        }\n      ]\n    },\n    {\n      \"@type\": \"SpeakableSpecification\",\n      \"xpath\": [\n        \"/html/head/title\",\n        \"/html/body//h1\"\n      ]\n    }\n  ]\n}\n</script>\n  <meta name=\"twitter:title\" content=\"Free Video Brief Template | Simplify Your Workflow\">\n<meta name=\"twitter:description\" content=\"Free video creative brief template. Save time, align your team, and set your video project up for success from day one.\">\n<meta name=\"twitter:image\" content=\"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670694d04b4cfd54b92c5529_Frame%20273.png\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">",
+    "bodyStart": "<script>document.body.className=\"body\";</script>"
+  }
+};
+const __embed0 = `<style>
  * {
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
@@ -675,10 +117,8 @@ import Footer from '../../components/Footer.astro';
 		transform: translate(-50%, -50%) rotate(360deg)
 	}
 }
-</style>
-        </div>
-        <div class="custom-styles w-embed">
-          <style is:inline>
+</style>`;
+const __embed1 = `<style>
         * {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -726,29 +166,25 @@ import Footer from '../../components/Footer.astro';
             z-index: 2;
         }
     }
-</style>
-        </div>
-        <div class="code-embed-2 w-embed w-script">
-          <script is:inline>
+</style>`;
+const __embed2 = `<script>
 document.getElementById("cards").onmousemove = (e) => {
   for (const card of document.getElementsByClassName("card")) {
     const rect = card.getBoundingClientRect(),
       x = e.clientX - rect.left,
       y = e.clientY - rect.top;
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
+    card.style.setProperty("--mouse-x", \`\${x}px\`);
+    card.style.setProperty("--mouse-y", \`\${y}px\`);
   }
 };
-</script>
-        </div>
-        <div class="global-style w-embed">
-          <style is:inline>
+</script>`;
+const __embed3 = `<style>
 .card_glow_background {
 	width: calc(100% + 12px);
   height: calc(100% + 12px);
 }
 .card_glow_background._2 {
-	left : calc(-100% - 24px); 
+	left : calc(-100% - 24px);
 }
 .card_glow_background._3 {
 	top : calc(-100% - 24px);
@@ -757,9 +193,360 @@ document.getElementById("cards").onmousemove = (e) => {
 	left : calc(-100% - 24px);
   top : calc(-100% - 24px);
 }
-</style>
+</style>`;
+---
+<BaseLayout meta={meta}>
+<div data-meno-label="Page content" class="body min-h-screen [color:#fff] [background-color:#080610] [overflow-x:hidden]">
+
+<div class="page-wrapper [color:#fff] [overflow-x:hidden]">
+    <NavBanner />
+    <div id="cards" class="main-wrapper [z-index:0] [color:#fff] [background-color:#080610] [max-width:none] [position:relative] [overflow-x:hidden]">
+      <section data-w-id="e870b645-7926-91eb-624c-e4356dfac346" class="section-hero [background-image:url('../images/Hero_1.avif')] [background-position:0_100%] [background-repeat:no-repeat] [background-size:cover] [background-attachment:scroll] [padding-top:220px] [padding-bottom:40px] max-lg:[background-position:0%] max-lg:[background-size:cover] max-lg:[padding-top:80px] max-sm:[padding-top:80px] max-sm:[padding-bottom:20px]">
+        <div id="banner-trigger" class="nav_banner-trigger [pointer-events:none] [border:1px_solid_#0000] [width:100%] [height:240px] [position:absolute] [top:0] [bottom:auto]"></div>
+        <div class="w-layout-blockcontainer container-1280 height-100 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] [height:100%] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="gap-60-hero [grid-column-gap:20px] [grid-row-gap:20px] [flex-flow:column] [justify-content:flex-start] [align-items:center] [height:100%] [display:flex] max-landscape:[grid-column-gap:32px] max-landscape:[grid-row-gap:32px]">
+            <div class="gap-76 [grid-column-gap:70px] [grid-row-gap:70px] [flex-flow:column] [width:100%] [display:flex] max-landscape:[grid-column-gap:60px] max-landscape:[grid-row-gap:60px]">
+              <div class="wrapper-hero fr-1-15 [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1.15fr_1fr] [grid-auto-columns:1fr] [display:grid] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[flex-flow:column] max-lg:[justify-content:flex-end] max-lg:[align-items:center] max-lg:[display:flex] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px]">
+                <div class="left-hero max-w-580 [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [justify-content:center] [max-width:580px] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px] max-lg:[text-align:center] max-lg:[order:1] max-lg:[align-items:center] max-lg:[max-width:100%] max-lg:[margin-left:auto] max-lg:[margin-right:auto] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px]">
+                  <div class="gap-4 [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] max-lg:[justify-content:flex-start] max-lg:[align-items:center]">
+                    <h1 class="text-caps weight-regular [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative]">Free Video Creative Brief Template</h1>
+                    <h2 class="h1 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [padding-right:0] [font-family:Switzer,_sans-serif] [font-size:48px] [font-weight:600] [line-height:120%] max-lg:[font-size:44px] max-landscape:[font-size:38px] max-sm:[font-size:28px] max-sm:[font-weight:600]"><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">Your free guide to<br />‍</span>video brief excellence</h2>
+                  </div>
+                  <div class="text-16-150 color-white-80 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:center] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">Are you ready to create an impactful animated explainer video? Our free video creative brief template, developed by Motion The Agency, has proven effective for our clients, providing clarity and professionalism. Whether you&#x27;re a marketing professional or a business owner, this guide will streamline your video production process.</div><img src="/images/brief-img_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/brief-img_1brief-img.avif 500w, /images/brief-img_1.avif 990w" alt="A screen shot of motion the agency website" />
+                </div>
+                <div id="w-node-_3cd5a31f-7c8a-fb7f-77ca-f0bbf10c008a-9a4b8358" class="right-hero [border-radius:12px] [position:relative] max-lg:[width:100%] max-lg:[position:static] max-lg:[left:0]">
+                  <div class="form-block w-form [margin:0_0_15px] [background-image:linear-gradient(45deg,_#0a0814cc_47%,_#140d24cc)] [border:1px_solid_#ffffff1a] [border-radius:12px] [margin-bottom:0] [padding:40px] [position:relative] [overflow:hidden] max-sm:[padding:24px]">
+                    <form id="wf-form-Creative-Brief" name="wf-form-Creative-Brief" data-name="Creative Brief" redirect="/resources/download-creative-brief" data-redirect="/resources/download-creative-brief" method="get" data-webflow-hubspot-api-form-url="https://hubspotonwebflow.com/api/forms/d650784e-b372-4f1a-8c76-d2aa392ced90" class="form gap-20 [grid-column-gap:20px] [grid-row-gap:20px] [flex-flow:column] [display:flex] max-sm:[grid-column-gap:24px] max-sm:[grid-row-gap:24px]" data-wf-page-id="674881f4873a39cc9a4b8358" data-wf-element-id="bc0cbec2-b01b-5bb7-e182-c615b76f880e">
+                      <div class="form-title [grid-column-gap:8px] [grid-row-gap:8px] [flex-flow:column] [display:flex]">
+                        <p class="text-caps weight-regular [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative]">Free Download</p>
+                        <h3 class="h3 large [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:24px]">How to create killer video creative brief</h3>
+                        <div class="text-16-150 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Get your free guide to crafting compelling video briefs that drive results – download now!</div>
+                      </div>
+                      <div class="field-grid margin-bot-8 [grid-column-gap:20px] [grid-row-gap:20px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [display:grid] [margin-bottom:8px] max-sm:[grid-column-gap:24px] max-sm:[grid-row-gap:24px] max-sm:[grid-template-columns:1fr]">
+                        <div class="text-field-contact [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:12px] [display:flex]"><label for="First-Name-5" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">First name<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label><input class="field-contact w-input [display:block] [width:100%] [height:48px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#191922] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:24px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" data-wfhsfieldname="FormTextInput-2" maxlength="256" name="First-Name" data-name="First Name" placeholder="Your first name..." type="text" id="First-Name-5" required="" /></div>
+                        <div class="text-field-contact [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:12px] [display:flex]"><label for="Last-Name-5" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Last name<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label><input class="field-contact w-input [display:block] [width:100%] [height:48px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#191922] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:24px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" data-wfhsfieldname="FormTextInput-3" maxlength="256" name="Last-Name" data-name="Last Name" placeholder="Your last name..." type="text" id="Last-Name-5" required="" /></div>
+                      </div>
+                      <div class="text-field-contact margin-bot-8 [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:8px] [display:flex]"><label for="Email-5" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Work Email<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label><input class="field-contact w-input [display:block] [width:100%] [height:48px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#191922] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:24px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" ms-code-business-email="" data-wfhsfieldname="FormTextInput-4" maxlength="256" name="Email" data-name="Email" placeholder="Work email address..." type="email" id="Email-5" required="" /></div>
+                      <div class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key [margin-bottom:8px]"></div>
+                      <div class="text-button-contact gap-20 [grid-column-gap:20px] [grid-row-gap:20px] [flex-flow:column] [display:flex] [align-items:flex-start] max-sm:[grid-column-gap:24px] max-sm:[grid-row-gap:24px]">
+                        <div class="text-12-150 opacity-50 [font-family:Switzer,_sans-serif] [font-size:12px] [line-height:150%] [opacity:.5]">By clicking submit, you consent to receive email communications about Motion&#x27;s products and services. You agree to our Terms of Service and acknowledge that your data will be processed in accordance with our Privacy Policy. You may opt out at any time.</div>
+                        <div class="glowing-wrapper glowing-wrapper-active gradient [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] [background-image:linear-gradient(90deg,_#ff008e,_#ff4dcb)] [-webkit-text-fill-color:inherit] [-webkit-background-clip:text] [background-clip:border-box] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)] max-sm:[width:fit-content]">
+                          <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                            <div class="glowing-wrapper-borders [opacity:1] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+                          </div><input type="submit" data-wait="Please wait..." class="glowing-wrapper-button-copy w-button [display:inline-flex] [padding:12px_24px] [background-color:#0000] [color:#fff] [border:1px_solid_#ffffff1a] [line-height:1.42] [text-decoration:none] [cursor:pointer] [border-radius:62.5rem] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [letter-spacing:-.01em] [justify-content:center] [align-items:center] [font-size:.88rem] [position:relative] max-lg:[width:100%] max-sm:[width:100%]" value="Submit &amp; download" />
+                        </div>
+                      </div><input type="hidden" name="hutk" value="" /><input type="hidden" name="ipAddress" value="" /><input type="hidden" name="pageUri" value="" /><input type="hidden" name="pageId" value="" /><input type="hidden" name="pageName" value="" />
+                    </form>
+                    <div class="success-form w-form-done [display:none] [padding:20px] [text-align:center] [background-color:#ddd0] [background-image:none] [background-repeat:repeat] [background-size:auto] [border-radius:24px] [padding-top:32px] [padding-bottom:32px] [font-family:Switzer,_sans-serif] [font-weight:500] [line-height:150%]">
+                      <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="w-form-fail [display:none] [margin-top:10px] [padding:10px] [background-color:#ffdede]">
+                      <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-important [background-image:url('../images/2nd-Section---BG_1.avif')] [background-position:100%_0] [background-repeat:no-repeat] [background-size:cover] [padding-top:120px] [padding-bottom:120px] [position:relative] max-lg:[background-position:100%_0] max-lg:[padding-top:80px] max-lg:[padding-bottom:80px] max-landscape:[padding-top:80px] max-landscape:[padding-bottom:40px] max-sm:[padding-top:60px] max-sm:[padding-bottom:60px]">
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="wrapper-important [grid-column-gap:64px] [grid-row-gap:64px] [flex-flow:column] [display:flex] max-landscape:[grid-column-gap:32px] max-landscape:[grid-row-gap:32px]">
+            <div class="top-request [grid-column-gap:16px] [grid-row-gap:16px] [text-align:center] [grid-template-rows:auto] [grid-template-columns:1fr_1.5fr] [grid-auto-columns:1fr] [justify-content:center] [align-items:center] [display:flex] [position:relative] max-lg:[grid-column-gap:30px] max-lg:[grid-row-gap:30px] max-lg:[flex-flow:column] max-lg:[display:flex]">
+              <div class="left-top-request [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [justify-content:center] [align-items:center] [max-width:620px] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px]">
+                <div class="gap-4 [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] max-lg:[justify-content:flex-start] max-lg:[align-items:center]">
+                  <p class="text-caps weight-regular [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative]">why it important</p>
+                  <h2 class="h2 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px]"><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">Why you need<br /></span>our brief template</h2>
+                </div>
+                <div class="text-16-150 opacity-80 max-535 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [opacity:.8] [max-width:535px] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[max-width:100%] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Maximize your video&#x27;s impact and minimize miscommunication with our proven creative brief template.</div>
+              </div>
+            </div>
+            <div class="bottom_request [grid-column-gap:20px] [grid-row-gap:20px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr_1fr_1fr] [grid-auto-columns:1fr] [display:grid] max-lg:[grid-template-columns:1fr_1fr] max-landscape:[grid-template-columns:1fr]">
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-28-purpose height-auto [grid-column-gap:28px] [grid-row-gap:28px] [flex-flow:column] [width:100%] [min-height:100%] [display:flex] [justify-content:flex-start] [align-items:stretch] max-lg:[grid-column-gap:16px] max-lg:[grid-row-gap:16px] max-lg:[min-height:30vh] max-landscape:[min-height:auto] max-sm:[min-height:auto]"><img data-meno-optimize="false" src="/images/Frame-1707478606_8.avif" loading="lazy" alt="A screenshot of a user&#x27;s profile on a mobile device" class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-purpose is-24 [grid-column-gap:8px] [grid-row-gap:8px] [text-align:center] [flex-flow:column] [justify-content:flex-start] [align-self:center] [align-items:center] [padding:2px_28px_28px] [display:flex] [position:relative] [padding-bottom:20px] [padding-left:24px] [padding-right:24px] max-lg:[padding-bottom:16px] max-lg:[padding-left:16px] max-lg:[padding-right:16px] max-landscape:[padding-left:24px] max-landscape:[padding-right:24px]">
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Ensures clear communication between you and your video production team.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-24-purpose [grid-column-gap:24px] [grid-row-gap:24px] [flex-flow:column] [display:flex]"><img data-meno-optimize="false" src="/images/Frame-17074786062_2.avif" loading="lazy" alt="A cell phone with a message bubble on the screen" class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-purpose is-24 [grid-column-gap:8px] [grid-row-gap:8px] [text-align:center] [flex-flow:column] [justify-content:flex-start] [align-self:center] [align-items:center] [padding:2px_28px_28px] [display:flex] [position:relative] [padding-bottom:20px] [padding-left:24px] [padding-right:24px] max-lg:[padding-bottom:16px] max-lg:[padding-left:16px] max-lg:[padding-right:16px] max-landscape:[padding-left:24px] max-landscape:[padding-right:24px]">
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Saves time by defining all crucial aspects of your video project.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-28-purpose height-auto [grid-column-gap:28px] [grid-row-gap:28px] [flex-flow:column] [width:100%] [min-height:100%] [display:flex] [justify-content:flex-start] [align-items:stretch] max-lg:[grid-column-gap:16px] max-lg:[grid-row-gap:16px] max-lg:[min-height:30vh] max-landscape:[min-height:auto] max-sm:[min-height:auto]"><img data-meno-optimize="false" src="/images/Frame-17074786063_2.avif" loading="lazy" alt="A purple cup sitting on top of a black device" class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-purpose is-24 [grid-column-gap:8px] [grid-row-gap:8px] [text-align:center] [flex-flow:column] [justify-content:flex-start] [align-self:center] [align-items:center] [padding:2px_28px_28px] [display:flex] [position:relative] [padding-bottom:20px] [padding-left:24px] [padding-right:24px] max-lg:[padding-bottom:16px] max-lg:[padding-left:16px] max-lg:[padding-right:16px] max-landscape:[padding-left:24px] max-landscape:[padding-right:24px]">
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Enhances the quality of your final video by setting clear expectations.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-28-purpose height-auto [grid-column-gap:28px] [grid-row-gap:28px] [flex-flow:column] [width:100%] [min-height:100%] [display:flex] [justify-content:flex-start] [align-items:stretch] max-lg:[grid-column-gap:16px] max-lg:[grid-row-gap:16px] max-lg:[min-height:30vh] max-landscape:[min-height:auto] max-sm:[min-height:auto]"><img data-meno-optimize="false" src="/images/Frame-17074786064_2.avif" loading="lazy" alt="A computer keyboard with a blue light on it" class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-purpose is-24 [grid-column-gap:8px] [grid-row-gap:8px] [text-align:center] [flex-flow:column] [justify-content:flex-start] [align-self:center] [align-items:center] [padding:2px_28px_28px] [display:flex] [position:relative] [padding-bottom:20px] [padding-left:24px] [padding-right:24px] max-lg:[padding-bottom:16px] max-lg:[padding-left:16px] max-lg:[padding-right:16px] max-landscape:[padding-left:24px] max-landscape:[padding-right:24px]">
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Provides a professional framework used by industry experts.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-inside [padding-top:120px] [padding-bottom:120px] [position:relative] [overflow:hidden] max-lg:[padding-top:80px] max-lg:[padding-bottom:40px] max-landscape:[padding-bottom:20px] max-landscape:[display:none] max-sm:[padding-top:40px] max-sm:[padding-bottom:60px]">
+        <div class="w-layout-blockcontainer container-1280 overflow-hide w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] [padding-top:80px] [padding-bottom:80px] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-lg:[padding-top:120px] max-sm:[max-width:none] max-sm:[padding-top:80px] max-sm:[padding-bottom:80px] max-sm:[overflow:hidden] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="inside-wrapper [grid-column-gap:64px] [grid-row-gap:64px] [flex-flow:column] [display:flex]">
+            <div class="inside-header [grid-column-gap:16px] [grid-row-gap:16px] [text-align:center] [flex-flow:column] [justify-content:center] [align-items:center] [max-width:620px] [margin-left:auto] [margin-right:auto] [display:flex] [position:relative] max-sm:[position:relative]">
+              <div class="gap-4 [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] max-lg:[justify-content:flex-start] max-lg:[align-items:center]">
+                <p class="text-caps weight-regular [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative]">WHAT INSIDE</p>
+                <h2 class="h2 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px]"><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">What&#x27;s inside our template</span></h2>
+              </div>
+              <p class="text-16-150 opacity-80 max-535 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [opacity:.8] [max-width:535px] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[max-width:100%] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Our comprehensive template covers seven essential aspects of a video creative brief:</p>
+              <div class="image-wrapper [z-index:-1] [pointer-events:none] [justify-content:center] [align-items:center] [display:flex] [position:absolute] [inset:0%] max-lg:[justify-content:center] max-lg:[align-items:center] max-sm:[flex-flow:column] max-sm:[justify-content:center] max-sm:[align-items:center] max-sm:[display:flex] max-sm:[position:absolute] max-sm:[inset:0%]"><img data-meno-optimize="false" src="/images/Star-BG.avif" loading="lazy" alt="purple blur background" class="image-10 [pointer-events:none] [min-width:1080px] [position:absolute] max-lg:[min-width:960px] max-landscape:[min-width:640px]" /></div>
+            </div>
+            <div class="inside-grid [grid-column-gap:20px] [grid-row-gap:20px] [grid-template-rows:366px_366px_456px] [grid-template-columns:1.2fr_1.2fr_1fr] [grid-auto-columns:1fr] [display:grid] max-lg:[grid-column-gap:32px] max-lg:[grid-row-gap:32px] max-lg:[grid-template-columns:1fr_1fr] max-landscape:[grid-column-gap:32px] max-landscape:[grid-row-gap:32px] max-landscape:[flex-flow:column] max-landscape:[grid-template-columns:1fr] max-landscape:[display:flex] max-sm:[grid-column-gap:32px] max-sm:[grid-row-gap:32px] max-sm:[grid-template-rows:auto] max-sm:[grid-template-columns:1fr] max-sm:[grid-auto-columns:1fr] max-sm:[display:grid]">
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/Bento-Card-Vol-2_1.avif" loading="lazy" alt="A computer screen with a button that says your brand" class="inside-image [object-fit:cover] [width:100%] [height:100%] max-sm:[min-height:300px]" />
+                  <div class="tag-wrapper is-big [justify-content:center] [align-items:center] [padding-bottom:40px] [display:flex] [position:absolute] [inset:auto_0%_0%] max-lg:[width:50%] max-lg:[inset:auto_0%_0%_auto] max-sm:[width:100%] max-sm:[padding-bottom:28px]">
+                    <div class="tag [border-radius:20px] [padding:20px] [box-shadow:0_48px_36px_#0006,_inset_0_0_12px_#f8f8f840] max-sm:[padding:16px]">
+                      <h3 class="text-16-150 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Overview of messages</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/Bento-Card-Vol-3_1.avif" loading="lazy" alt="A computer screen with a play button on it" class="inside-image [object-fit:cover] [width:100%] [height:100%] max-sm:[min-height:300px]" />
+                  <div class="tag-wrapper is-big [justify-content:center] [align-items:center] [padding-bottom:40px] [display:flex] [position:absolute] [inset:auto_0%_0%] max-lg:[width:50%] max-lg:[inset:auto_0%_0%_auto] max-sm:[width:100%] max-sm:[padding-bottom:28px]">
+                    <div class="tag [border-radius:20px] [padding:20px] [box-shadow:0_48px_36px_#0006,_inset_0_0_12px_#f8f8f840] max-sm:[padding:16px]">
+                      <h3 class="text-16-150 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Communication channel</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="w-node-_13975d19-7531-3202-ff07-fa804f3f374f-9a4b8358" class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/Bento-Card-Vol-22_1.avif" loading="lazy" alt="A screenshot of a clock showing the time" class="inside-image [object-fit:cover] [width:100%] [height:100%] max-sm:[min-height:300px]" />
+                  <div class="tag-wrapper is-big [justify-content:center] [align-items:center] [padding-bottom:40px] [display:flex] [position:absolute] [inset:auto_0%_0%] max-lg:[width:50%] max-lg:[inset:auto_0%_0%_auto] max-sm:[width:100%] max-sm:[padding-bottom:28px]">
+                    <div class="tag [border-radius:20px] [padding:20px] [box-shadow:0_48px_36px_#0006,_inset_0_0_12px_#f8f8f840] max-sm:[padding:16px]">
+                      <h3 class="text-16-150 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Deadline</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/Bento-Card-Vol-25_1.avif" loading="lazy" alt="A picture of a projector in a dark room" class="inside-image [object-fit:cover] [width:100%] [height:100%] max-sm:[min-height:300px]" />
+                  <div class="tag-wrapper is-big [justify-content:center] [align-items:center] [padding-bottom:40px] [display:flex] [position:absolute] [inset:auto_0%_0%] max-lg:[width:50%] max-lg:[inset:auto_0%_0%_auto] max-sm:[width:100%] max-sm:[padding-bottom:28px]">
+                    <div class="tag [border-radius:20px] [padding:20px] [box-shadow:0_48px_36px_#0006,_inset_0_0_12px_#f8f8f840] max-sm:[padding:16px]">
+                      <h3 class="text-16-150 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Duration</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/Bento-Card-Vol-26_1.avif" loading="lazy" alt="A bunch of balls floating in the air" class="inside-image [object-fit:cover] [width:100%] [height:100%] max-sm:[min-height:300px]" />
+                  <div class="tag-wrapper is-big [justify-content:center] [align-items:center] [padding-bottom:40px] [display:flex] [position:absolute] [inset:auto_0%_0%] max-lg:[width:50%] max-lg:[inset:auto_0%_0%_auto] max-sm:[width:100%] max-sm:[padding-bottom:28px]">
+                    <div class="tag [border-radius:20px] [padding:20px] [box-shadow:0_48px_36px_#0006,_inset_0_0_12px_#f8f8f840] max-sm:[padding:16px]">
+                      <h3 class="text-16-150 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Reference</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/Bento-Card-Vol-23_1.avif" loading="lazy" alt="A cell phone with the time displayed on the screen" class="inside-image [object-fit:cover] [width:100%] [height:100%] max-sm:[min-height:300px]" />
+                  <div class="tag-wrapper is-big [justify-content:center] [align-items:center] [padding-bottom:40px] [display:flex] [position:absolute] [inset:auto_0%_0%] max-lg:[width:50%] max-lg:[inset:auto_0%_0%_auto] max-sm:[width:100%] max-sm:[padding-bottom:28px]">
+                    <div class="tag [border-radius:20px] [padding:20px] [box-shadow:0_48px_36px_#0006,_inset_0_0_12px_#f8f8f840] max-sm:[padding:16px]">
+                      <h3 class="text-16-150 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Aspect Ratio</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="w-node-_5e8464de-913c-911a-ac7e-a063693d9bdd-9a4b8358" class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/Bento-Card-Vol-24_1.avif" loading="lazy" alt="A cell phone with a sound equalizer next to it" class="inside-image [object-fit:cover] [width:100%] [height:100%] max-sm:[min-height:300px]" />
+                  <div class="tag-wrapper is-big [justify-content:center] [align-items:center] [padding-bottom:40px] [display:flex] [position:absolute] [inset:auto_0%_0%] max-lg:[width:50%] max-lg:[inset:auto_0%_0%_auto] max-sm:[width:100%] max-sm:[padding-bottom:28px]">
+                    <div class="tag [border-radius:20px] [padding:20px] [box-shadow:0_48px_36px_#0006,_inset_0_0_12px_#f8f8f840] max-sm:[padding:16px]">
+                      <h3 class="text-16-150 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">VO (Voiceover) or No VO Needed</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><img data-meno-optimize="false" src="/images/Frame-1707478781.avif" loading="lazy" sizes="(max-width: 1351px) 100vw, 1351px, 100vw" srcset="/images/Frame-1707478781-p-500.png 500w, /images/Frame-1707478781-p-800.png 800w, /images/Frame-1707478781.avif 1351w" alt="A man holding a tennis racquet on top of a tennis court" class="image-why_shoose-2 [z-index:-1] [pointer-events:none] [max-width:894px] [position:absolute] [inset:33%_-16%_auto_auto] max-lg:[display:none]" /><img data-meno-optimize="false" src="/images/Frame-1707478540_2.avif" loading="lazy" sizes="(max-width: 2401px) 100vw, 2401px, 100vw" srcset="/images/Frame-1707478540_2Frame-1707478540.avif 500w, /images/Frame-1707478540_2.avif 2401w" alt="" class="image-purpose-3 [z-index:-1] [pointer-events:none] [min-width:1400px] [position:absolute] [inset:0%_auto_auto]" />
+        <div class="line-gradient-2 [background-image:linear-gradient(90deg,_#60537700,_#605377_50%,_#60537700)] [width:100%] [height:4px] [position:absolute] [inset:0_0%_auto]"></div>
+      </section>
+      <section class="section-out padding-bottom-30 [padding-top:40px] [padding-bottom:80px] max-lg:[background-position:100%_0] max-lg:[padding-top:40px] max-lg:[padding-bottom:40px] max-landscape:[background-position:100%] max-landscape:[padding-top:40px] max-sm:[padding-top:20px] max-sm:[padding-bottom:20px]">
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="wrapper-out mobile-gap-60 [grid-column-gap:80px] [grid-row-gap:80px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [place-items:center_stretch] [display:grid] max-lg:[grid-column-gap:60px] max-lg:[grid-row-gap:60px] max-lg:[flex-flow:column] max-lg:[display:flex] max-landscape:[grid-column-gap:40px] max-landscape:[grid-row-gap:40px] max-sm:[grid-column-gap:20px] max-sm:[grid-row-gap:20px]">
+            <div class="left-out [border-radius:12px] [overflow:hidden] max-lg:[order:1] max-lg:[width:100%] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[width:100%] max-landscape:[height:400px] max-landscape:[display:flex] max-landscape:[overflow:hidden] max-sm:[height:auto]">
+              <div class="gap-16 [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [max-width:600px] [display:flex] max-lg:[max-width:100%]">
+                <div class="gap-4-out [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [display:flex] max-lg:[justify-content:flex-start] max-lg:[align-items:flex-start]">
+                  <p class="text-caps weight-regular [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative]">how to</p>
+                  <h2 class="h2 left [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:left] max-sm:[font-size:28px]"><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">How to use the template </span>step-by-step guide:</h2>
+                </div>
+                <div class="text-16-150 color-white-80 left [letter-spacing:.2px] [text-wrap:pretty] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:left] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">Follow our simple six-step process to create a comprehensive video brief that will guide your project to success.</div>
+                <div class="list-wrapper [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] max-sm:[text-align:left]">
+                  <div class="list-item [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] [align-items:flex-start] [display:flex]">
+                    <div class="list-mark [background-image:url('../images/MARK.svg')] [background-position:50%] [background-size:cover] [flex:none] [justify-content:center] [align-items:center] [width:24px] [height:24px] [font-family:Switzer,_sans-serif] [font-size:8px] [display:flex]">
+                      <div>1</div>
+                    </div>
+                    <div class="text-16-150 color-white-80 left [letter-spacing:.2px] [text-wrap:pretty] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:left] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">Download our free template</div>
+                  </div>
+                  <div class="list-item [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] [align-items:flex-start] [display:flex]">
+                    <div class="list-mark [background-image:url('../images/MARK.svg')] [background-position:50%] [background-size:cover] [flex:none] [justify-content:center] [align-items:center] [width:24px] [height:24px] [font-family:Switzer,_sans-serif] [font-size:8px] [display:flex]">
+                      <div>2<br /></div>
+                    </div>
+                    <div class="text-16-150 color-white-80 left [letter-spacing:.2px] [text-wrap:pretty] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:left] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">Fill in each of the seven sections with your project details</div>
+                  </div>
+                  <div class="list-item [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] [align-items:flex-start] [display:flex]">
+                    <div class="list-mark [background-image:url('../images/MARK.svg')] [background-position:50%] [background-size:cover] [flex:none] [justify-content:center] [align-items:center] [width:24px] [height:24px] [font-family:Switzer,_sans-serif] [font-size:8px] [display:flex]">
+                      <div>3</div>
+                    </div>
+                    <div class="text-16-150 color-white-80 left [letter-spacing:.2px] [text-wrap:pretty] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:left] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">Use the provided examples as inspiration</div>
+                  </div>
+                  <div class="list-item [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] [align-items:flex-start] [display:flex]">
+                    <div class="list-mark [background-image:url('../images/MARK.svg')] [background-position:50%] [background-size:cover] [flex:none] [justify-content:center] [align-items:center] [width:24px] [height:24px] [font-family:Switzer,_sans-serif] [font-size:8px] [display:flex]">
+                      <div>4</div>
+                    </div>
+                    <div class="text-16-150 color-white-80 left [letter-spacing:.2px] [text-wrap:pretty] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:left] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">Share with your team and stakeholders for feedback</div>
+                  </div>
+                  <div class="list-item [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] [align-items:flex-start] [display:flex]">
+                    <div class="list-mark [background-image:url('../images/MARK.svg')] [background-position:50%] [background-size:cover] [flex:none] [justify-content:center] [align-items:center] [width:24px] [height:24px] [font-family:Switzer,_sans-serif] [font-size:8px] [display:flex]">
+                      <div>5</div>
+                    </div>
+                    <div class="text-16-150 color-white-80 left [letter-spacing:.2px] [text-wrap:pretty] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:left] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">Refine and finalize your brief</div>
+                  </div>
+                  <div class="list-item [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] [align-items:flex-start] [display:flex]">
+                    <div class="list-mark [background-image:url('../images/MARK.svg')] [background-position:50%] [background-size:cover] [flex:none] [justify-content:center] [align-items:center] [width:24px] [height:24px] [font-family:Switzer,_sans-serif] [font-size:8px] [display:flex]">
+                      <div>6</div>
+                    </div>
+                    <div class="text-16-150 color-white-80 left [letter-spacing:.2px] [text-wrap:pretty] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:left] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">Use it as a roadmap throughout your video production process</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right-out [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [justify-content:flex-start] [align-items:flex-start] [display:flex] max-lg:[text-align:center] max-lg:[align-items:center] max-sm:[grid-column-gap:20px] max-sm:[grid-row-gap:20px]"><img src="/images/Illustration-brig_1.avif" loading="lazy" alt="A diagram of the different types of buttons" /></div>
+          </div>
+        </div>
+        <div class="image-bg-wrapper-out [pointer-events:none] [justify-content:center] [align-items:center] [display:flex] [position:absolute] [inset:0%]"><img data-meno-optimize="false" src="/images/Frame-1707478673_2.avif" loading="lazy" sizes="(max-width: 1601px) 100vw, 1601px, 100vw" srcset="/images/Frame-1707478673_2-p-500.png 500w, /images/Frame-1707478673_2-p-800.png 800w, /images/Frame-1707478673_2-p-1080.png 1080w, /images/Frame-1707478673_2.avif 1601w" alt="A man holding a tennis racquet on top of a tennis court" class="image-out-bg [z-index:-1] [pointer-events:none] [min-width:1400px] [position:absolute]" /></div>
+      </section>
+      <section class="section-faq [background-color:#080610] [padding-top:80px] [padding-bottom:80px] max-lg:[padding-top:0] max-lg:[padding-bottom:80px] max-landscape:[padding-bottom:64px] max-sm:[padding-top:20px] max-sm:[padding-bottom:40px]">
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="faq-wrapper [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [display:grid] max-lg:[flex-flow:column] max-lg:[display:flex] max-sm:[grid-column-gap:20px] max-sm:[grid-row-gap:20px]">
+            <div class="left_side-faq [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [justify-content:flex-start] [align-items:flex-start] [display:flex]">
+              <div class="header-faq [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [max-width:540px] [display:flex] max-lg:[text-align:center] max-lg:[justify-content:flex-start] max-lg:[align-items:center] max-lg:[max-width:none] max-landscape:[justify-content:flex-start] max-landscape:[align-items:center] max-sm:[text-align:center]">
+                <div class="text_heading-faq [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [display:flex] max-lg:[text-align:center] max-lg:[justify-content:flex-start] max-lg:[align-items:center]">
+                  <p class="text-caps weight-regular [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative]">Frequently asked questions</p>
+                  <div class="max-w-400 [max-width:400px]">
+                    <h2 class="h2 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px]"><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">Got Questions?</span> We&#x27;ve got answers</h2>
+                  </div>
+                </div>
+                <p class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">We want to make sure you feel confident that our service is right for you. Here we’ve looked to address some commonly asked questions. If you have any more specific questions, don’t hesitate to get in touch with a member of the team.</p>
+              </div><img data-meno-optimize="false" src="/images/Frame-1707478606_4.avif" loading="lazy" alt="An abstract digital interface featuring a dark theme with various input fields, a progress bar, and a question mark icon, suggesting a user-friendly design for a software application." class="image-faq [object-fit:cover] [min-width:100%] max-lg:[order:-1]" />
+            </div>
+            <div class="right_side-faq [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [justify-content:center] [align-items:center] [display:flex]">
+              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c6fe7" class="dropdown-faq w-dropdown [display:inline-block] [position:relative] [text-align:left] [margin-left:auto] [margin-right:auto] [z-index:900] [cursor:pointer] [background-image:linear-gradient(75deg,_#0a0814b3,_#140d24b3)] [border:1px_solid_#ffffff1a] [border-radius:25px] [width:100%] [padding-left:20px] [padding-right:20px] max-sm:[z-index:1]">
+                <div class="dropdown-top w-dropdown-toggle [position:relative] [vertical-align:top] [text-decoration:none] [color:var(--white)] [padding:16px_0] [text-align:left] [margin-left:auto] [margin-right:auto] [white-space:nowrap] [user-select:none] [display:flex] [cursor:pointer] [padding-right:40px] [width:100%] [justify-content:space-between] [align-items:flex-start] focus:[outline:0] max-lg:[padding-bottom:16px] max-sm:[white-space:normal] max-sm:[align-items:center]">
+                  <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">What is a video creative brief?</div>
+                  <div data-is-ix2-target="1" class="ic-plus-faq [width:20px] [min-width:20px] [height:20px] [min-height:20px] max-sm:[min-width:2rem]" data-w-id="77047380-cda2-6192-4995-cd70f47c6feb" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
+                </div>
+                <nav class="dropdown-list-faq w-dropdown-list [position:static] [background:#dddddd] [display:block] [min-width:100%] [pointer-events:none] [cursor:pointer] [background-color:#0000] [overflow:hidden]">
+                  <div class="wrapper-text-faq [grid-column-gap:10px] [grid-row-gap:10px] [flex-flow:column] [padding-bottom:16px] [display:flex]">
+                    <p class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">A video creative brief is a document that outlines the key elements of your video project, including goals, target audience, key messages, and stylistic preferences. It serves as a roadmap for your video production team and ensures everyone is aligned on the project&#x27;s vision.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c6ff0" class="dropdown-faq w-dropdown [display:inline-block] [position:relative] [text-align:left] [margin-left:auto] [margin-right:auto] [z-index:900] [cursor:pointer] [background-image:linear-gradient(75deg,_#0a0814b3,_#140d24b3)] [border:1px_solid_#ffffff1a] [border-radius:25px] [width:100%] [padding-left:20px] [padding-right:20px] max-sm:[z-index:1]">
+                <div class="dropdown-top w-dropdown-toggle [position:relative] [vertical-align:top] [text-decoration:none] [color:var(--white)] [padding:16px_0] [text-align:left] [margin-left:auto] [margin-right:auto] [white-space:nowrap] [user-select:none] [display:flex] [cursor:pointer] [padding-right:40px] [width:100%] [justify-content:space-between] [align-items:flex-start] focus:[outline:0] max-lg:[padding-bottom:16px] max-sm:[white-space:normal] max-sm:[align-items:center]">
+                  <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Why do I need a creative brief template?</div>
+                  <div data-is-ix2-target="1" class="ic-plus-faq [width:20px] [min-width:20px] [height:20px] [min-height:20px] max-sm:[min-width:2rem]" data-w-id="77047380-cda2-6192-4995-cd70f47c6ff4" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
+                </div>
+                <nav class="dropdown-list-faq w-dropdown-list [position:static] [background:#dddddd] [display:block] [min-width:100%] [pointer-events:none] [cursor:pointer] [background-color:#0000] [overflow:hidden]">
+                  <div class="wrapper-text-faq [grid-column-gap:10px] [grid-row-gap:10px] [flex-flow:column] [padding-bottom:16px] [display:flex]">
+                    <p class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">A template streamlines the process of creating a comprehensive brief, ensuring you don&#x27;t miss any crucial details. It saves time, improves communication with your production team, and ultimately leads to a more successful video project.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c6ff9" class="dropdown-faq w-dropdown [display:inline-block] [position:relative] [text-align:left] [margin-left:auto] [margin-right:auto] [z-index:900] [cursor:pointer] [background-image:linear-gradient(75deg,_#0a0814b3,_#140d24b3)] [border:1px_solid_#ffffff1a] [border-radius:25px] [width:100%] [padding-left:20px] [padding-right:20px] max-sm:[z-index:1]">
+                <div class="dropdown-top w-dropdown-toggle [position:relative] [vertical-align:top] [text-decoration:none] [color:var(--white)] [padding:16px_0] [text-align:left] [margin-left:auto] [margin-right:auto] [white-space:nowrap] [user-select:none] [display:flex] [cursor:pointer] [padding-right:40px] [width:100%] [justify-content:space-between] [align-items:flex-start] focus:[outline:0] max-lg:[padding-bottom:16px] max-sm:[white-space:normal] max-sm:[align-items:center]">
+                  <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Is this template suitable for all types of video projects?</div>
+                  <div data-is-ix2-target="1" class="ic-plus-faq [width:20px] [min-width:20px] [height:20px] [min-height:20px] max-sm:[min-width:2rem]" data-w-id="77047380-cda2-6192-4995-cd70f47c6ffd" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
+                </div>
+                <nav class="dropdown-list-faq w-dropdown-list [position:static] [background:#dddddd] [display:block] [min-width:100%] [pointer-events:none] [cursor:pointer] [background-color:#0000] [overflow:hidden]">
+                  <div class="wrapper-text-faq [grid-column-gap:10px] [grid-row-gap:10px] [flex-flow:column] [padding-bottom:16px] [display:flex]">
+                    <p class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">While our template is designed with animated explainer videos in mind, it&#x27;s versatile enough to be adapted for various video types, including promotional videos, product demos, and corporate videos.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c7002" class="dropdown-faq w-dropdown [display:inline-block] [position:relative] [text-align:left] [margin-left:auto] [margin-right:auto] [z-index:900] [cursor:pointer] [background-image:linear-gradient(75deg,_#0a0814b3,_#140d24b3)] [border:1px_solid_#ffffff1a] [border-radius:25px] [width:100%] [padding-left:20px] [padding-right:20px] max-sm:[z-index:1]">
+                <div class="dropdown-top w-dropdown-toggle [position:relative] [vertical-align:top] [text-decoration:none] [color:var(--white)] [padding:16px_0] [text-align:left] [margin-left:auto] [margin-right:auto] [white-space:nowrap] [user-select:none] [display:flex] [cursor:pointer] [padding-right:40px] [width:100%] [justify-content:space-between] [align-items:flex-start] focus:[outline:0] max-lg:[padding-bottom:16px] max-sm:[white-space:normal] max-sm:[align-items:center]">
+                  <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">How long does it typically take to complete the brief?</div>
+                  <div data-is-ix2-target="1" class="ic-plus-faq [width:20px] [min-width:20px] [height:20px] [min-height:20px] max-sm:[min-width:2rem]" data-w-id="77047380-cda2-6192-4995-cd70f47c7006" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
+                </div>
+                <nav class="dropdown-list-faq w-dropdown-list [position:static] [background:#dddddd] [display:block] [min-width:100%] [pointer-events:none] [cursor:pointer] [background-color:#0000] [overflow:hidden]">
+                  <div class="wrapper-text-faq [grid-column-gap:10px] [grid-row-gap:10px] [flex-flow:column] [padding-bottom:16px] [display:flex]">
+                    <p class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">The time can vary depending on your project&#x27;s complexity and how much information you have ready. On average, it takes about 30-60 minutes to fill out the template thoroughly.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" data-w-id="d247d60a-ae3e-2fc9-afb4-0f1a8da50548" class="dropdown-faq w-dropdown [display:inline-block] [position:relative] [text-align:left] [margin-left:auto] [margin-right:auto] [z-index:900] [cursor:pointer] [background-image:linear-gradient(75deg,_#0a0814b3,_#140d24b3)] [border:1px_solid_#ffffff1a] [border-radius:25px] [width:100%] [padding-left:20px] [padding-right:20px] max-sm:[z-index:1]">
+                <div class="dropdown-top w-dropdown-toggle [position:relative] [vertical-align:top] [text-decoration:none] [color:var(--white)] [padding:16px_0] [text-align:left] [margin-left:auto] [margin-right:auto] [white-space:nowrap] [user-select:none] [display:flex] [cursor:pointer] [padding-right:40px] [width:100%] [justify-content:space-between] [align-items:flex-start] focus:[outline:0] max-lg:[padding-bottom:16px] max-sm:[white-space:normal] max-sm:[align-items:center]">
+                  <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Can I share this template with my team or clients?</div>
+                  <div data-is-ix2-target="1" class="ic-plus-faq [width:20px] [min-width:20px] [height:20px] [min-height:20px] max-sm:[min-width:2rem]" data-w-id="d247d60a-ae3e-2fc9-afb4-0f1a8da5054c" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
+                </div>
+                <nav class="dropdown-list-faq w-dropdown-list [position:static] [background:#dddddd] [display:block] [min-width:100%] [pointer-events:none] [cursor:pointer] [background-color:#0000] [overflow:hidden]">
+                  <div class="wrapper-text-faq [grid-column-gap:10px] [grid-row-gap:10px] [flex-flow:column] [padding-bottom:16px] [display:flex]">
+                    <p class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Yes, you&#x27;re welcome to share this template within your organization or with clients. However, we kindly ask that you don&#x27;t redistribute it publicly or claim it as your own work.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" data-w-id="b3493af1-2821-4537-67e3-9da873f469c4" class="dropdown-faq w-dropdown [display:inline-block] [position:relative] [text-align:left] [margin-left:auto] [margin-right:auto] [z-index:900] [cursor:pointer] [background-image:linear-gradient(75deg,_#0a0814b3,_#140d24b3)] [border:1px_solid_#ffffff1a] [border-radius:25px] [width:100%] [padding-left:20px] [padding-right:20px] max-sm:[z-index:1]">
+                <div class="dropdown-top w-dropdown-toggle [position:relative] [vertical-align:top] [text-decoration:none] [color:var(--white)] [padding:16px_0] [text-align:left] [margin-left:auto] [margin-right:auto] [white-space:nowrap] [user-select:none] [display:flex] [cursor:pointer] [padding-right:40px] [width:100%] [justify-content:space-between] [align-items:flex-start] focus:[outline:0] max-lg:[padding-bottom:16px] max-sm:[white-space:normal] max-sm:[align-items:center]">
+                  <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Is the template regularly updated?</div>
+                  <div data-is-ix2-target="1" class="ic-plus-faq [width:20px] [min-width:20px] [height:20px] [min-height:20px] max-sm:[min-width:2rem]" data-w-id="b3493af1-2821-4537-67e3-9da873f469c8" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
+                </div>
+                <nav class="dropdown-list-faq w-dropdown-list [position:static] [background:#dddddd] [display:block] [min-width:100%] [pointer-events:none] [cursor:pointer] [background-color:#0000] [overflow:hidden]">
+                  <div class="wrapper-text-faq [grid-column-gap:10px] [grid-row-gap:10px] [flex-flow:column] [padding-bottom:16px] [display:flex]">
+                    <p class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Yes, we periodically review and update our template to ensure it remains aligned with industry best practices and our clients&#x27; evolving needs.</p>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+      <div class="css [display:none]">
+        <div class="button-css w-embed [display:none]">
+          <Embed html={__embed0} />
+        </div>
+        <div class="custom-styles w-embed [display:none]">
+          <Embed html={__embed1} />
+        </div>
+        <div class="code-embed-2 w-embed w-script [display:none]">
+          <Embed html={__embed2} />
+        </div>
+        <div class="global-style w-embed [display:none]">
+          <Embed html={__embed3} />
         </div>
       </div>
     </div>
   </div>
+</div>
 </BaseLayout>

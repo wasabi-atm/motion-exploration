@@ -1,662 +1,31 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/theme.css';
+import { BaseLayout, Embed } from 'meno-astro/components';
 import NavBanner from '../../components/NavBanner.astro';
 import Footer from '../../components/Footer.astro';
----
-<BaseLayout
-  title={"Sharpish Case Study | Motion The Agency’s Creative Partnership"}
-  wfPage="67aaf0bef2cf0ebd658e7203"
-  bodyClass={"body"}
-  description={"See how Motion helped Sharpish bring their brand to life with engaging animated content. Read the full case study."}
-  ogTitle={"Sharpish Case Study | Motion The Agency’s Creative Partnership"}
-  ogDescription={"See how Motion helped Sharpish bring their brand to life with engaging animated content. Read the full case study."}
-  ogImage={"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/67640cd602bfd87616624e43_Luniate%20-%20BentoBox%2003.png"}
-  twitterTitle={"Sharpish Case Study | Motion The Agency’s Creative Partnership"}
-  twitterDescription={"See how Motion helped Sharpish bring their brand to life with engaging animated content. Read the full case study."}
-  twitterImage={"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/67640cd602bfd87616624e43_Luniate%20-%20BentoBox%2003.png"}
-  ogType={"website"}
-  twitterCard={"summary_large_image"}
-  canonical={"https://www.motiontheagency.com/customer-stories/sharpish"}
->
-  <Fragment slot="head-start">
-<script is:inline type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@id": "https://www.motiontheagency.com/#organization",
-      "@type": "Organization",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "GB",
-        "addressLocality": "London",
-        "postalCode": "EC2N 4AH",
-        "streetAddress": "42-44 Bishopsgate"
-      },
-      "alternateName": "Motion Agency",
-      "email": "hello@motiontheagency.com",
-      "foundingDate": "2019",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/6707b5de43efcae5a6bbe759_Motion%20logo%20-%20square.png"
-      },
-      "name": "Motion The Agency",
-      "numberOfEmployees": {
-        "@type": "QuantitativeValue",
-        "value": 25
-      },
-      "sameAs": [
-        "https://uk.linkedin.com/company/motion-the-agency",
-        "https://www.youtube.com/@motiontheagency",
-        "https://www.instagram.com/motion.theagency/",
-        "https://clutch.co/profile/motion-agency",
-        "https://www.designrush.com/agency/profile/motion-the-agency",
-        "https://www.g2.com/products/motion-the-agency/reviews"
-      ],
-      "telephone": "+44 20 3984 7787",
-      "url": "https://www.motiontheagency.com/"
-    },
-    {
-      "@id": "https://www.motiontheagency.com/#website",
-      "@type": "WebSite",
-      "inLanguage": "en",
-      "name": "Motion The Agency",
-      "publisher": {
-        "@id": "https://www.motiontheagency.com/#organization"
-      },
-      "url": "https://www.motiontheagency.com/"
-    },
-    {
-      "@id": "https://www.motiontheagency.com/customer-stories/sharpish#article",
-      "@type": "Article",
-      "about": {
-        "@type": "Thing",
-        "name": "Sharpish"
-      },
-      "author": {
-        "@id": "https://www.motiontheagency.com/#organization"
-      },
-      "breadcrumb": {
-        "@id": "https://www.motiontheagency.com/customer-stories/sharpish#breadcrumb"
-      },
-      "datePublished": "2025-02-11T00:00:00+00:00",
-      "description": "How Motion helped Sharpish bring their brand to life with engaging animated content.",
-      "headline": "Sharpish Case Study: A Creative Partnership",
-      "inLanguage": "en",
-      "isPartOf": {
-        "@id": "https://www.motiontheagency.com/#website"
-      },
-      "mainEntityOfPage": {
-        "@id": "https://www.motiontheagency.com/customer-stories/sharpish",
-        "@type": "WebPage"
-      },
-      "publisher": {
-        "@id": "https://www.motiontheagency.com/#organization"
-      },
-      "url": "https://www.motiontheagency.com/customer-stories/sharpish"
-    },
-    {
-      "@id": "https://www.motiontheagency.com/customer-stories/sharpish#breadcrumb",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "item": "https://www.motiontheagency.com/",
-          "name": "Home",
-          "position": 1
-        },
-        {
-          "@type": "ListItem",
-          "item": "https://www.motiontheagency.com/resources/customer-stories",
-          "name": "Customer Stories",
-          "position": 2
-        },
-        {
-          "@type": "ListItem",
-          "item": "https://www.motiontheagency.com/customer-stories/sharpish",
-          "name": "Sharpish",
-          "position": 3
-        }
-      ]
-    }
-  ]
-}
-</script>
-  </Fragment>
-  <Fragment slot="head">
-<script is:inline type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.motiontheagency.com/#org",
-      "name": "Motion The Agency",
-      "url": "https://www.motiontheagency.com",
-      "logo": {
-        "@type": "ImageObject",
-        "@id": "https://www.motiontheagency.com/#logo",
-        "url": "https://cdn.prod.website-files.com/66ed62501e0857dc6b74cf9f/66ed62501e0857dc6b74cf9f_logo.png",
-        "width": 1024,
-        "height": 293
-      },
-      "sameAs": [
-        "https://www.youtube.com/@MotionTheAgency",
-        "https://www.linkedin.com/company/motiontheagency/"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "25",
-        "bestRating": "5",
-        "worstRating": "1"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.motiontheagency.com/#website",
-      "url": "https://www.motiontheagency.com",
-      "name": "Motion The Agency",
-      "inLanguage": "en-GB",
-      "publisher": { "@id": "https://www.motiontheagency.com/#org" }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.motiontheagency.com/customer-stories/sharpish#webpage",
-      "url": "https://www.motiontheagency.com/customer-stories/sharpish",
-      "name": "Sharpish — The Short-Term Staff Recruitment Revolution | Motion The Agency",
-      "isPartOf": { "@id": "https://www.motiontheagency.com/#website" },
-      "inLanguage": "en-GB",
-      "breadcrumb": { "@id": "https://www.motiontheagency.com/customer-stories/sharpish#breadcrumb" },
-      "primaryImageOfPage": { "@id": "https://www.motiontheagency.com/customer-stories/sharpish#primaryimage" }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.motiontheagency.com/customer-stories/sharpish#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Customer Stories", "item": "https://www.motiontheagency.com/customer-stories" },
-        { "@type": "ListItem", "position": 2, "name": "Sharpish" }
-      ]
-    },
-    {
-      "@type": "ImageObject",
-      "@id": "https://www.motiontheagency.com/customer-stories/sharpish#primaryimage",
-      "url": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/67aaf28414b29db8eb1aae2d_hero%20image.avif",
-      "width": 1200,
-      "height": 675
-    },
-    {
-      "@type": "CreativeWork",
-      "@id": "https://www.motiontheagency.com/customer-stories/sharpish#creativework",
-      "name": "Sharpish: The Short-Term Staff Recruitment Revolution",
-      "description": "2D & 3D animated product explainer for Sharpish plus brand identity, app design, and website design.",
-      "url": "https://www.motiontheagency.com/customer-stories/sharpish",
-      "creator": { "@id": "https://www.motiontheagency.com/#org" },
-      "sponsor": {
-        "@type": "Organization",
-        "@id": "https://www.motiontheagency.com/customer-stories/sharpish#client",
-        "name": "Sharpish"
-      },
-      "inLanguage": "en-GB",
-      "temporalCoverage": "2022-12-01/2023-01-12",
-      "image": { "@id": "https://www.motiontheagency.com/customer-stories/sharpish#projectimage" },
-      "keywords": "Sharpish, Recruitment app, 2D animation, 3D animation, SaaS explainer, Brand identity, App design, Website design"
-    },
-    {
-      "@type": "ImageObject",
-      "@id": "https://www.motiontheagency.com/customer-stories/sharpish#projectimage",
-      "url": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/67aaf28414b29db8eb1aae2d_hero%20image.avif",
-      "width": 1200,
-      "height": 675
-    },
-    {
-      "@type": "VideoObject",
-      "@id": "https://www.motiontheagency.com/customer-stories/sharpish#video",
-      "name": "Product Explainer Video | Sharpish | 2D & 3D Animated SaaS Explainer",
-      "description": "A 2D/3D animated explainer showing Sharpish’s recruitment app and brand story.",
-      "thumbnailUrl": "https://i.ytimg.com/vi/9TJa3BTODZo/maxresdefault.jpg",
-      "uploadDate": "2023-01-12T00:00:00+00:00",
-      "duration": "PT1M30S",
-      "embedUrl": "https://www.youtube.com/embed/9TJa3BTODZo",
-      "contentUrl": "https://www.youtube.com/watch?v=9TJa3BTODZo",
-      "publisher": { "@id": "https://www.motiontheagency.com/#org" }
-    },
-    {
-      "@type": "Article",
-      "@id": "https://www.motiontheagency.com/customer-stories/sharpish#article",
-      "headline": "Sharpish — The Short-Term Staff Recruitment Revolution",
-      "about": { "@id": "https://www.motiontheagency.com/customer-stories/sharpish#creativework" },
-      "image": { "@id": "https://www.motiontheagency.com/customer-stories/sharpish#primaryimage" },
-      "author": { "@id": "https://www.motiontheagency.com/#org" },
-      "publisher": { "@id": "https://www.motiontheagency.com/#org" },
-      "inLanguage": "en-GB",
-      "mainEntityOfPage": { "@id": "https://www.motiontheagency.com/customer-stories/sharpish#webpage" }
-    }
-  ]
-}
-</script>
-  </Fragment>
-<div class="page-wrapper">
-    <NavBanner />
-    <div id="cards" class="main-wrapper">
-      <section class="section-hero case-study">
-        <div id="banner-trigger" class="nav_banner-trigger"></div>
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="wrapper-hero flex middle-align">
-            <div class="left-hero max-640">
-              <div class="gap-4">
-                <div class="w-layout-hflex flex-block-2">
-                  <a href="#" class="text-caps">Customer stories</a>
-                  <div class="text-caps">&gt;</div>
-                  <div class="text-caps">Sharpish</div>
-                </div>
-                <h1 class="h1"><span class="span-pink-2">Sharpish : </span>The short-term staff recruitment revolution</h1>
-                <div class="text-16-150 color-white-80">Sharpish.co is a dynamic and innovative website that aims to<br> revolutionize the way people access and engage with information. <br>Sharpish.co serves as a hub for a wide range of topics, providing <br>users with curated content that is both informative and entertaining. <br>As our client, we delivered not only an explainer video, but also <br>s<a href="https://www.motiontheagency.com/blog/social-media-video-production-guide" class="link-24">ocial media content</a> to help them communicate their <br>platform more effectively.</div>
-                <div class="text-16-150 color-white-80 hide">This wasn’t just about a fresh logo; it was about crafting a brand and digital presence that matched their ambition, stood out in the competitive AI space, and resonated with their target audience.</div>
-                <div class="text-16-150 color-white-80 hide">Through close collaboration and iterative feedback, we partnered with them to launch their new identity and create a powerful foundation for growth, ensuring their brand reflected their evolution and their goals as a startup.</div>
-              </div>
-              <div class="case-study-tab">
-                <div class="info-wrapper">
-                  <div class="gap-16-subscription gap-52">
-                    <div class="gap-16-subscription-2">
-                      <div class="case-study-tab-wrapper">
-                        <div class="flex-8-subscription">
-                          <div class="ic-text-subscription-2"><img src="/images/type-icon.svg" loading="lazy" alt="" class="case-study-tab-icon">
-                            <div class="text-14-150">Project type</div>
-                          </div>
-                          <div class="h3 mobile-16">Fixed price</div>
-                        </div>
-                        <div class="flex-8-subscription hide">
-                          <div class="ic-text-subscription-2"><img src="/images/cost.svg" loading="lazy" alt="" class="case-study-tab-icon">
-                            <div class="text-14-150">Project Cost</div>
-                          </div>
-                          <div class="h3 mobile-16">$19,000</div>
-                        </div>
-                        <div class="flex-8-subscription">
-                          <div class="ic-text-subscription-2"><img src="/images/time.svg" loading="lazy" alt="" class="case-study-tab-icon">
-                            <div class="text-14-150">Project timeline</div>
-                          </div>
-                          <div class="h3 mobile-16"> 3 months</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div data-w-id="a4d8dbad-85c5-de77-8404-4042222bdb2e" class="absolute-img-copy"><img src="/images/hero-image_1.avif" loading="lazy" alt="An open laptop computer sitting on top of a white table" class="image-sharpish"></div>
-          </div>
-        </div>
-      </section>
-      <section class="section-process padding-btm-80">
-        <div class="line-gradient-2"></div><img src="/images/Frame-1707478761_1.avif" loading="lazy" sizes="(max-width: 3201px) 100vw, 3201px" srcset="/images/Frame-1707478761_1Frame-1707478761.avif 800w, /images/Frame-1707478761_1.avif 3201w" alt="A black and white photo of the moon and stars" class="image-process-2">
-        <div class="w-layout-blockcontainer container-1280 m-container-purpose w-container">
-          <div class="wrapper-purpose">
-            <div class="top-purpose">
-              <div class="left-top-purpose">
-                <div class="gap-4-purpose">
-                  <div class="text-12-caps opacity-60">Project Scope</div>
-                  <div>
-                    <h2 class="h1"><span class="span-pink-2">Project overview</span></h2>
-                  </div>
-                </div>
-                <div class="text-16-150 opacity-80">Sharpish.co is a dynamic and innovative website that aims to revolutionize the way people access and engage with information. <a href="/for-whom/startup" class="link-9">Sharpish.co serves as a hub for a wide range of topics</a>, providing users with curated content that is both informative and entertaining. We supported them with a <a href="/services/2d-animation" class="link-21">2D animation</a>
-                  <a href="/services/explainer-video" class="link-22"> explainer video</a> and <a href="/services/social-media" class="link-23">social media conten</a>t to help communicate their platform in a more engaging way.<br>
-                </div>
-              </div>
-            </div>
-            <div class="card-contaiiner">
-              <div style="padding-top:56.17021276595745%" class="ai-engineer-vid w-video w-embed"><iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F9TJa3BTODZo%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9TJa3BTODZo&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F9TJa3BTODZo%2Fhqdefault.jpg&type=text%2Fhtml&schema=youtube" width="940" height="528" scrolling="no" allowfullscreen="" title="Product Explainer Video | Sharpish | 2D & 3D Animated SaaS Explainer"></iframe></div>
-            </div>
-            <div class="bottom_purpose grid-3-40">
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-28-purpose height-auto"><img src="/images/overview-1.avif" loading="lazy" alt="A black and white photo of a circular object" class="img-purpose">
-                      <div class="gap-20-center-purpose left-small">
-                        <h3 class="h3">Brand identity</h3>
-                        <div class="text-14-150 opacity-80">We offer our expertise, helping Sharpish defining their identity, and create a strong and distinctive presence that accurately reflects their values and resonates with their target audience.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-28-purpose height-auto"><img src="/images/overview-2.avif" loading="lazy" alt="A cell phone sitting on top of a table" class="img-purpose">
-                      <div class="gap-20-center-purpose left-small">
-                        <h3 class="h3">App design</h3>
-                        <div class="text-14-150 opacity-80">By collaborating closely with them to understand their vision and objectives, we help transform their ideas into tangible digital solutions that align with their mission and bring their vision to life.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-28-purpose height-auto"><img src="/images/overview-3.avif" loading="lazy" alt="A square object with a musical note on it" class="img-purpose">
-                      <div class="gap-20-center-purpose left-small">
-                        <h3 class="h3">Web design &amp; development</h3>
-                        <div class="text-14-150 opacity-80">We assist Sharpish building their website from end-to-end, where customer can easily access information about them, and establish trust and credibility for their audience.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="section-streamlined padding-btm-large">
-        <div class="w-layout-blockcontainer container-1408 w-container">
-          <div class="streamlined-wrapper">
-            <div class="top_side-streamlined">
-              <div class="gap-4-purpose">
-                <div class="text-12-caps opacity-60">Solution</div>
-                <h2 class="h1"><span class="span">Brand identity</span></h2>
-              </div><img src="/images/Why-animation-matters---shorten-3_2.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 500w, /images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 800w, /images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 1080w, /images/Why-animation-matters---shorten-3_2.avif 2402w" alt="A black and white photo of a purple light" class="image-bg-streamlined"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Frame-1707478537_2Frame-1707478537.avif 500w, /images/Frame-1707478537_2.avif 2400w" alt="A purple background with squares and dots" src="/images/Frame-1707478537_2.avif" loading="lazy" class="image-why_shoose">
-            </div>
-            <div class="gap-40">
-              <div class="w-layout-hflex flex-block-3">
-                <div class="text-14-150">Color &amp; Logo</div>
-                <div class="text-14-150">Guidelines</div>
-              </div>
-              <div class="color-wrapper">
-                <div class="card-contaiiner color">
-                  <div class="card">
-                    <div class="color-code-wrapper">
-                      <div class="color-text-wrapper">
-                        <div class="text-14-150 _12-small">#023644</div>
-                        <h3 class="h4 small">Dark Teal</h3>
-                      </div>
-                      <div class="div-block-51">
-                        <div class="div-block-50"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-contaiiner color">
-                  <div class="card">
-                    <div class="color-code-wrapper">
-                      <div class="color-text-wrapper">
-                        <div class="text-14-150 _12-small">#007B8A</div>
-                        <h3 class="h4 small">Teal Blue</h3>
-                      </div>
-                      <div class="div-block-51">
-                        <div class="div-block-50 teal"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-contaiiner color">
-                  <div class="card">
-                    <div class="color-code-wrapper">
-                      <div class="color-text-wrapper">
-                        <div class="text-14-150 _12-small">#F74889</div>
-                        <h3 class="h4 small">Polkadot Pink</h3>
-                      </div>
-                      <div class="div-block-51">
-                        <div class="div-block-50 pink"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-contaiiner color">
-                  <div class="card">
-                    <div class="color-code-wrapper">
-                      <div class="color-text-wrapper">
-                        <div class="text-14-150 _12-small">#FFFFFF</div>
-                        <h3 class="h4 small">White</h3>
-                      </div>
-                      <div class="div-block-51">
-                        <div class="div-block-50 white"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-contaiiner color">
-                  <div class="card">
-                    <div class="color-code-wrapper">
-                      <div class="color-text-wrapper">
-                        <div class="text-14-150 _12-small">#5D5D5D</div>
-                        <h3 class="h4 small">Grey</h3>
-                      </div>
-                      <div class="div-block-51">
-                        <div class="div-block-50 grey"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-contaiiner color">
-                  <div class="card">
-                    <div class="color-code-wrapper">
-                      <div class="color-text-wrapper">
-                        <div class="text-14-150 _12-small">#023644</div>
-                        <h3 class="h4 small">Dark Grey</h3>
-                      </div>
-                      <div class="div-block-51">
-                        <div class="div-block-50 dark-grey"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="_2-columns">
-              <div id="w-node-fd94a604-8eed-0604-a59c-7b44dd789e95-658e7203" class="identity-wrapper">
-                <div class="logo-container">
-                  <div class="card-contaiiner">
-                    <div class="card"><img src="/images/logo-1_1.svg" loading="eager" alt=""></div>
-                  </div>
-                  <div class="card-contaiiner">
-                    <div class="card"><img src="/images/logo-2_1.avif" loading="eager" alt="A white square with a white background"></div>
-                  </div><img src="/images/filos.avif" loading="eager" id="w-node-fd94a604-8eed-0604-a59c-7b44dd789e99-658e7203" alt="A white background with a black and white image of letters and numbers">
-                </div>
-                <div class="mini-logo-container"><img src="/images/mini-logo-1.svg" loading="eager" alt="" class="card mini-logo"><img src="/images/mini-logo-2.svg" loading="eager" alt="" class="card mini-logo"><img src="/images/mini-logo-3.svg" loading="eager" alt="" class="card mini-logo"></div>
-              </div>
-              <div id="w-node-a1921846-bc26-5412-658d-475db1f9c19a-658e7203" class="identity-wrapper-2">
-                <div class="card-contaiiner height-auto"><img src="/images/logo-right_1.avif" loading="eager" width="Auto" alt="A pink and blue logo on a white background" class="card no-fill"></div>
-                <div class="mini-logo-container align-center">
-                  <div class="card-contaiiner"><img src="/images/1_4.avif" loading="eager" alt="A white background with a pink and blue logo" class="card no-fill"></div><img src="/images/2_1.avif" loading="eager" alt="A red and pink logo on a white background" class="card no-fill"><img src="/images/3_2.avif" loading="eager" alt="A blue logo with a white background" class="card no-fill">
-                </div>
-              </div>
-            </div>
-            <div class="typo-wrapper">
-              <div class="_2-columns different-column">
-                <div>
-                  <div class="text-12-caps opacity-60">Typeface &amp; Font Weight</div>
-                  <h2 class="h2 left">Typography</h2>
-                </div>
-              </div>
-              <div class="_2-columns">
-                <div class="gap-28">
-                  <div class="gap-0">
-                    <h3 class="big-text">Aa</h3>
-                    <h3 class="h3 blinker">Blinker</h3>
-                  </div>
-                  <h2 class="h3 blinker regular large-gap">ABCDEFJHIJKLMNOPQRSTUWWXYZ<br>abcdefjhijklmnopqrstuwwxyz</h2>
-                  <div class="w-layout-hflex flex-block">
-                    <h3 class="h3 blinker regular">Regular</h3>
-                    <h3 class="h3 blinker semibold">SemiBold</h3>
-                    <h3 class="h3 blinker bold">Bold</h3>
-                    <h3 class="h3 blinker extrabold">ExtraBold</h3>
-                  </div>
-                </div>
-                <div class="gap-28">
-                  <div class="gap-0">
-                    <h3 class="big-text worksans">Aa</h3>
-                    <h3 class="h3 work-sans">Work Sans</h3>
-                  </div>
-                  <h2 class="h3 worksans regular large-gap">ABCDEFJHIJKLMNOPQRSTUWWXYZ<br>abcdefjhijklmnopqrstuwwxyz</h2>
-                  <div class="w-layout-hflex flex-block">
-                    <h3 class="h3 worksans regular">Regular</h3>
-                    <h3 class="h3 worksans medium">Medium</h3>
-                    <h3 class="h3 worksans semibold">SemiBold</h3>
-                    <h3 class="h3 worksans bold">Bold</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><img src="/images/Frame-1707478801_3.avif" loading="lazy" sizes="(max-width: 1011px) 100vw, 1011px" srcset="/images/Frame-1707478801_3-p-500.png 500w, /images/Frame-1707478801_3.avif 1011w" alt="A woman holding a tennis racquet on top of a tennis court" class="image-streamlined-2">
-        <div class="line-gradient-2"></div>
-      </div>
-      <div class="section-streamlined padding-btm-large">
-        <div class="w-layout-blockcontainer container-1408 w-container">
-          <div class="streamlined-wrapper">
-            <div class="top_side-streamlined">
-              <div class="gap-4-purpose">
-                <div class="text-12-caps opacity-60">Solution</div>
-                <h2 class="h1"><span class="span">App design</span></h2>
-              </div><img src="/images/Why-animation-matters---shorten-3_2.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 500w, /images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 800w, /images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 1080w, /images/Why-animation-matters---shorten-3_2.avif 2402w" alt="A black and white photo of a purple light" class="image-bg-streamlined"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Frame-1707478537_2Frame-1707478537.avif 500w, /images/Frame-1707478537_2.avif 2400w" alt="A purple background with squares and dots" src="/images/Frame-1707478537_2.avif" loading="lazy" class="image-why_shoose">
-            </div>
-            <div id="w-node-_88ec0328-dd59-eef5-ae5b-8355aba1bb08-658e7203" class="identity-wrapper">
-              <div class="screen-container">
-                <div data-w-id="88ec0328-dd59-eef5-ae5b-8355aba1bb0a" style="opacity:0" class="card-contaiiner">
-                  <div class="card screen-mockup"><img src="/images/screen-1_1.avif" loading="eager" alt="A group of people on a cell phone"></div>
-                </div>
-                <div data-w-id="36660938-dff8-ce26-488a-44dfc7af20d0" style="opacity:0" class="card-contaiiner">
-                  <div class="card screen-mockup"><img src="/images/screen-2_1.avif" loading="eager" alt="A cell phone with a map on it"></div>
-                </div>
-                <div data-w-id="2160f4c7-162b-a606-dcb9-33f1301767ab" style="opacity:0" class="card-contaiiner">
-                  <div class="card screen-mockup"><img src="/images/screen-3_1.avif" loading="eager" alt="A screenshot of a text message on a cell phone"></div>
-                </div>
-                <div data-w-id="60ebf6ea-aeaf-0d91-c44f-6ad0fe9f8921" style="opacity:0" class="card-contaiiner">
-                  <div class="card screen-mockup"><img src="/images/screen-4_1.avif" loading="eager" alt="A screenshot of a cell phone with a text message"></div>
-                </div>
-              </div>
-            </div>
-            <div class="web-mockup-container">
-              <div data-w-id="1b39fbc5-589a-34b3-1f5d-82702fb2d1c6" style="opacity:0" class="card-contaiiner">
-                <div class="card screen-mockup"><img src="/images/web-1_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/web-1_1web-1.avif 500w, /images/web-1_1web-1.avif 800w, /images/web-1_1.avif 1778w" alt="A screen shot of a website with a number of people on it" class="web-mockup"></div>
-              </div>
-              <div data-w-id="1b39fbc5-589a-34b3-1f5d-82702fb2d1c9" style="opacity:0" class="card-contaiiner">
-                <div class="card screen-mockup"><img src="/images/web-2_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/web-2_1web-2.avif 500w, /images/web-2_1web-2.avif 800w, /images/web-2_1.avif 1778w" alt="A screenshot of a group of people on twitter" class="web-mockup"></div>
-              </div>
-            </div>
-            <div class="web-mockup-container right-align">
-              <div data-w-id="f415831a-6c26-6381-3a74-9d12c42f21e7" style="opacity:0" class="card-contaiiner">
-                <div class="card screen-mockup"><img src="/images/web-3_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/web-3_1web-3.avif 500w, /images/web-3_1.avif 1778w" alt="A screenshot of a work safety instructions page" class="web-mockup"></div>
-              </div>
-              <div data-w-id="f415831a-6c26-6381-3a74-9d12c42f21ea" style="opacity:0" class="card-contaiiner">
-                <div class="card screen-mockup"><img src="/images/web-4_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/web-4_1web-4.avif 500w, /images/web-4_1web-4.avif 800w, /images/web-4_1.avif 1778w" alt="A computer screen with a person on it" class="web-mockup"></div>
-              </div>
-            </div>
-            <div class="web-mockup-container">
-              <div data-w-id="ff506542-c7da-f244-6a59-4c40fd201a06" style="opacity:0" class="card-contaiiner">
-                <div class="card screen-mockup"><img src="/images/web-5-_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/web-5-_1web-5-.avif 500w, /images/web-5-_1web-5-.avif 800w, /images/web-5-_1.avif 1778w" alt="" class="web-mockup"></div>
-              </div>
-              <div data-w-id="d29c7416-5c34-bfae-0d38-6119e53fee32" style="opacity:0" class="card-contaiiner">
-                <div class="card screen-mockup"><img src="/images/web-6_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/web-6_1web-6.avif 500w, /images/web-6_1.avif 1778w" alt="A screenshot of a post - a - job page" class="web-mockup"></div>
-              </div>
-            </div>
-          </div>
-        </div><img src="/images/Frame-1707478801_3.avif" loading="lazy" sizes="(max-width: 1011px) 100vw, 1011px" srcset="/images/Frame-1707478801_3-p-500.png 500w, /images/Frame-1707478801_3.avif 1011w" alt="A woman holding a tennis racquet on top of a tennis court" class="image-streamlined-2">
-        <div class="line-gradient-2"></div>
-      </div>
-      <div class="section-streamlined">
-        <div class="w-layout-blockcontainer container-1408 w-container">
-          <div class="streamlined-wrapper">
-            <div class="top_side-streamlined">
-              <div class="gap-4-purpose">
-                <div class="text-12-caps opacity-60">Solution</div>
-                <h2 class="h1"><span class="span">Website design <br>and development</span></h2>
-              </div><img src="/images/Why-animation-matters---shorten-3_2.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 500w, /images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 800w, /images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 1080w, /images/Why-animation-matters---shorten-3_2.avif 2402w" alt="A black and white photo of a purple light" class="image-bg-streamlined"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Frame-1707478537_2Frame-1707478537.avif 500w, /images/Frame-1707478537_2.avif 2400w" alt="A purple background with squares and dots" src="/images/Frame-1707478537_2.avif" loading="lazy" class="image-why_shoose">
-            </div>
-            <div class="landing-container">
-              <div data-w-id="5039c423-326a-d8a1-79ef-598d2feec36f" style="opacity:0" class="card-contaiiner">
-                <div class="card landing-mockup"><img src="/images/landing_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/landing_1landing.avif 500w, /images/landing_1landing.avif 800w, /images/landing_1landing.avif 1080w, /images/landing_1.avif 2408w" alt="Two cell phones sitting next to each other in front of a screen" class="landing-desktop"></div>
-              </div>
-              <div data-w-id="5039c423-326a-d8a1-79ef-598d2feec372" style="opacity:0" class="card-contaiiner fly">
-                <div class="card mobile-landing-mockup no-fill"><img src="/images/landing-phone_1.avif" loading="eager" alt="A screenshot of a cell phone with the text, welcome to the recruit revolution" class="phone-landing"></div>
-              </div>
-            </div>
-            <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient">
-              <div class="glowing-wrapper-borders-masker">
-                <div class="glowing-wrapper-borders"></div>
-              </div>
-              <a href="/services/web-design" class="glowing-wrapper-button w-inline-block">
-                <div class="text-block rel align-center-middle">Learn our web design service</div>
-              </a>
-            </div>
-          </div>
-        </div><img src="/images/Frame-1707478801_3.avif" loading="lazy" sizes="(max-width: 1011px) 100vw, 1011px" srcset="/images/Frame-1707478801_3-p-500.png 500w, /images/Frame-1707478801_3.avif 1011w" alt="A woman holding a tennis racquet on top of a tennis court" class="image-streamlined-2">
-        <div class="line-gradient-2"></div>
-      </div>
-      <section class="section-contact_us">
-        <div class="line-gradient-2"></div>
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div id="contact" class="contact_us-wrapper">
-            <div id="w-node-_09a077b2-0610-e7b3-11bc-758e50194b64-658e7203" class="left_side-contact_us">
-              <div class="header-contact_us">
-                <div class="text_heading-contact_us">
-                  <div class="text-12-caps opacity-60">Contact Us</div>
-                  <h2 class="h2 center-small">Ready to animate your vision? Contact us for your<br>‍<span class="span-pink-2">free video or design sample</span></h2>
-                </div>
-              </div>
-              <div class="image-wrapper-contact_us"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Frame-273_1Frame-273.avif 500w, /images/Frame-273_1.avif 1155w" alt="Mobile interface displaying a form titled &#x27;Try Out Our Service, Risk-Free!&#x27; with fields for Company Name and Work Email. Below, there is a message from &#x27;Motion The Agency&#x27; thanking the user for their trust and requesting project details. The interface also includes a video sample section labeled &#x27;10s Video Free Sample&#x27; with play, share, and save options. The design features a modern, dark theme with vibrant accents." src="/images/Frame-273_1.avif" loading="lazy" class="image-contact_us-2"></div>
-            </div>
-            <div class="right_side-contact_us">
-              <div id="contact-us" class="form-block narrow-padding w-form">
-                <form method="get" ms-code-business-email="" name="wf-form-Contact-Us-Form" data-name="Contact Us Form" id="wf-form-Contact-Us-Form" data-webflow-hubspot-api-form-url="https://hubspotonwebflow.com/api/forms/3231aa55-9f82-443a-9469-3209181a5ab4" class="form gap-20" data-wf-page-id="67aaf0bef2cf0ebd658e7203" data-wf-element-id="fa7944cc-145c-217e-5ad2-23c75414ee98">
-                  <div class="field-grid">
-                    <div class="text-field-contact"><label for="First-Name-3" class="text-14-150 opacity-80">First name<span class="red-text">*</span></label><input class="field-contact w-input" data-wfhsfieldname="FormTextInput-2" maxlength="256" name="First-Name" data-name="First Name" placeholder="Your first name..." type="text" id="First-Name-3" required=""></div>
-                    <div class="text-field-contact"><label for="Last-Name-3" class="text-14-150 opacity-80">Last name<span class="red-text">*</span></label><input class="field-contact w-input" data-wfhsfieldname="FormTextInput-3" maxlength="256" name="Last-Name" data-name="Last Name" placeholder="Your last name..." type="text" id="Last-Name-3" required=""></div>
-                  </div>
-                  <div class="text-field-contact">
-                    <div class="w-layout-vflex flex-h space-between"><label for="Email-3" class="text-14-150 opacity-80">Work Email<span class="red-text">*</span></label></div><input class="field-contact w-input" ms-code-business-email="" data-wfhsfieldname="FormTextInput-4" maxlength="256" name="Email" data-name="Email" placeholder="yourname@company.com" type="email" id="Email-3" required="">
-                  </div>
-                  <div class="text-field-contact"><label for="Company-2" class="text-14-150 opacity-80">Company<span class="red-text">*</span></label><input class="field-contact w-input" data-wfhsfieldname="FormTextInput-5" maxlength="256" name="Company-2" data-name="Company 2" placeholder="Your company name..." type="text" id="Company-2" required=""></div>
-                  <div class="text-field-contact"><label for="Message-2" class="text-14-150 opacity-80">Message<span class="red-text">*</span></label><textarea class="text-area w-input" data-wfhsfieldname="FormTextarea-6" maxlength="5000" name="Message-2" data-name="Message 2" placeholder="Describe what you want to achieve.. any additional details " id="Message-2" required=""></textarea>
-                    <div class="css-form w-embed">
-                      <style is:inline>
+
+const meta = {
+  "title": "Sharpish Case Study | Motion The Agency’s Creative Partnership",
+  "description": "See how Motion helped Sharpish bring their brand to life with engaging animated content. Read the full case study.",
+  "htmlAttributes": {
+    "data-wf-page": "67aaf0bef2cf0ebd658e7203",
+    "data-wf-site": "66ebfb6ec8f20d5eda50eb34"
+  },
+  "ogTitle": "Sharpish Case Study | Motion The Agency’s Creative Partnership",
+  "ogDescription": "See how Motion helped Sharpish bring their brand to life with engaging animated content. Read the full case study.",
+  "ogImage": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/67640cd602bfd87616624e43_Luniate%20-%20BentoBox%2003.png",
+  "ogType": "website",
+  "customCode": {
+    "head": "\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@id\": \"https://www.motiontheagency.com/#organization\",\n      \"@type\": \"Organization\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressCountry\": \"GB\",\n        \"addressLocality\": \"London\",\n        \"postalCode\": \"EC2N 4AH\",\n        \"streetAddress\": \"42-44 Bishopsgate\"\n      },\n      \"alternateName\": \"Motion Agency\",\n      \"email\": \"hello@motiontheagency.com\",\n      \"foundingDate\": \"2019\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/6707b5de43efcae5a6bbe759_Motion%20logo%20-%20square.png\"\n      },\n      \"name\": \"Motion The Agency\",\n      \"numberOfEmployees\": {\n        \"@type\": \"QuantitativeValue\",\n        \"value\": 25\n      },\n      \"sameAs\": [\n        \"https://uk.linkedin.com/company/motion-the-agency\",\n        \"https://www.youtube.com/@motiontheagency\",\n        \"https://www.instagram.com/motion.theagency/\",\n        \"https://clutch.co/profile/motion-agency\",\n        \"https://www.designrush.com/agency/profile/motion-the-agency\",\n        \"https://www.g2.com/products/motion-the-agency/reviews\"\n      ],\n      \"telephone\": \"+44 20 3984 7787\",\n      \"url\": \"https://www.motiontheagency.com/\"\n    },\n    {\n      \"@id\": \"https://www.motiontheagency.com/#website\",\n      \"@type\": \"WebSite\",\n      \"inLanguage\": \"en\",\n      \"name\": \"Motion The Agency\",\n      \"publisher\": {\n        \"@id\": \"https://www.motiontheagency.com/#organization\"\n      },\n      \"url\": \"https://www.motiontheagency.com/\"\n    },\n    {\n      \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#article\",\n      \"@type\": \"Article\",\n      \"about\": {\n        \"@type\": \"Thing\",\n        \"name\": \"Sharpish\"\n      },\n      \"author\": {\n        \"@id\": \"https://www.motiontheagency.com/#organization\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#breadcrumb\"\n      },\n      \"datePublished\": \"2025-02-11T00:00:00+00:00\",\n      \"description\": \"How Motion helped Sharpish bring their brand to life with engaging animated content.\",\n      \"headline\": \"Sharpish Case Study: A Creative Partnership\",\n      \"inLanguage\": \"en\",\n      \"isPartOf\": {\n        \"@id\": \"https://www.motiontheagency.com/#website\"\n      },\n      \"mainEntityOfPage\": {\n        \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish\",\n        \"@type\": \"WebPage\"\n      },\n      \"publisher\": {\n        \"@id\": \"https://www.motiontheagency.com/#organization\"\n      },\n      \"url\": \"https://www.motiontheagency.com/customer-stories/sharpish\"\n    },\n    {\n      \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#breadcrumb\",\n      \"@type\": \"BreadcrumbList\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"item\": \"https://www.motiontheagency.com/\",\n          \"name\": \"Home\",\n          \"position\": 1\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"item\": \"https://www.motiontheagency.com/resources/customer-stories\",\n          \"name\": \"Customer Stories\",\n          \"position\": 2\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"item\": \"https://www.motiontheagency.com/customer-stories/sharpish\",\n          \"name\": \"Sharpish\",\n          \"position\": 3\n        }\n      ]\n    }\n  ]\n}\n</script>\n  \n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Organization\",\n      \"@id\": \"https://www.motiontheagency.com/#org\",\n      \"name\": \"Motion The Agency\",\n      \"url\": \"https://www.motiontheagency.com\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"@id\": \"https://www.motiontheagency.com/#logo\",\n        \"url\": \"https://cdn.prod.website-files.com/66ed62501e0857dc6b74cf9f/66ed62501e0857dc6b74cf9f_logo.png\",\n        \"width\": 1024,\n        \"height\": 293\n      },\n      \"sameAs\": [\n        \"https://www.youtube.com/@MotionTheAgency\",\n        \"https://www.linkedin.com/company/motiontheagency/\"\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": \"5\",\n        \"reviewCount\": \"25\",\n        \"bestRating\": \"5\",\n        \"worstRating\": \"1\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://www.motiontheagency.com/#website\",\n      \"url\": \"https://www.motiontheagency.com\",\n      \"name\": \"Motion The Agency\",\n      \"inLanguage\": \"en-GB\",\n      \"publisher\": { \"@id\": \"https://www.motiontheagency.com/#org\" }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#webpage\",\n      \"url\": \"https://www.motiontheagency.com/customer-stories/sharpish\",\n      \"name\": \"Sharpish — The Short-Term Staff Recruitment Revolution | Motion The Agency\",\n      \"isPartOf\": { \"@id\": \"https://www.motiontheagency.com/#website\" },\n      \"inLanguage\": \"en-GB\",\n      \"breadcrumb\": { \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#breadcrumb\" },\n      \"primaryImageOfPage\": { \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#primaryimage\" }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#breadcrumb\",\n      \"itemListElement\": [\n        { \"@type\": \"ListItem\", \"position\": 1, \"name\": \"Customer Stories\", \"item\": \"https://www.motiontheagency.com/customer-stories\" },\n        { \"@type\": \"ListItem\", \"position\": 2, \"name\": \"Sharpish\" }\n      ]\n    },\n    {\n      \"@type\": \"ImageObject\",\n      \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#primaryimage\",\n      \"url\": \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/67aaf28414b29db8eb1aae2d_hero%20image.avif\",\n      \"width\": 1200,\n      \"height\": 675\n    },\n    {\n      \"@type\": \"CreativeWork\",\n      \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#creativework\",\n      \"name\": \"Sharpish: The Short-Term Staff Recruitment Revolution\",\n      \"description\": \"2D & 3D animated product explainer for Sharpish plus brand identity, app design, and website design.\",\n      \"url\": \"https://www.motiontheagency.com/customer-stories/sharpish\",\n      \"creator\": { \"@id\": \"https://www.motiontheagency.com/#org\" },\n      \"sponsor\": {\n        \"@type\": \"Organization\",\n        \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#client\",\n        \"name\": \"Sharpish\"\n      },\n      \"inLanguage\": \"en-GB\",\n      \"temporalCoverage\": \"2022-12-01/2023-01-12\",\n      \"image\": { \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#projectimage\" },\n      \"keywords\": \"Sharpish, Recruitment app, 2D animation, 3D animation, SaaS explainer, Brand identity, App design, Website design\"\n    },\n    {\n      \"@type\": \"ImageObject\",\n      \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#projectimage\",\n      \"url\": \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/67aaf28414b29db8eb1aae2d_hero%20image.avif\",\n      \"width\": 1200,\n      \"height\": 675\n    },\n    {\n      \"@type\": \"VideoObject\",\n      \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#video\",\n      \"name\": \"Product Explainer Video | Sharpish | 2D & 3D Animated SaaS Explainer\",\n      \"description\": \"A 2D/3D animated explainer showing Sharpish’s recruitment app and brand story.\",\n      \"thumbnailUrl\": \"https://i.ytimg.com/vi/9TJa3BTODZo/maxresdefault.jpg\",\n      \"uploadDate\": \"2023-01-12T00:00:00+00:00\",\n      \"duration\": \"PT1M30S\",\n      \"embedUrl\": \"https://www.youtube.com/embed/9TJa3BTODZo\",\n      \"contentUrl\": \"https://www.youtube.com/watch?v=9TJa3BTODZo\",\n      \"publisher\": { \"@id\": \"https://www.motiontheagency.com/#org\" }\n    },\n    {\n      \"@type\": \"Article\",\n      \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#article\",\n      \"headline\": \"Sharpish — The Short-Term Staff Recruitment Revolution\",\n      \"about\": { \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#creativework\" },\n      \"image\": { \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#primaryimage\" },\n      \"author\": { \"@id\": \"https://www.motiontheagency.com/#org\" },\n      \"publisher\": { \"@id\": \"https://www.motiontheagency.com/#org\" },\n      \"inLanguage\": \"en-GB\",\n      \"mainEntityOfPage\": { \"@id\": \"https://www.motiontheagency.com/customer-stories/sharpish#webpage\" }\n    }\n  ]\n}\n</script>\n  <meta name=\"twitter:title\" content=\"Sharpish Case Study | Motion The Agency’s Creative Partnership\">\n<meta name=\"twitter:description\" content=\"See how Motion helped Sharpish bring their brand to life with engaging animated content. Read the full case study.\">\n<meta name=\"twitter:image\" content=\"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/67640cd602bfd87616624e43_Luniate%20-%20BentoBox%2003.png\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">",
+    "bodyStart": "<script>document.body.className=\"body\";</script>"
+  }
+};
+const __embed0 = `<style>
 .text-area {
     resize: none;
 }
-</style>
-                    </div>
-                  </div>
-                  <div class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key"></div>
-                  <div class="text-button-contact">
-                    <div class="text-12-150 opacity-50">By clicking submit, you consent to receive email communications about Motion&#x27;s products and services. You agree to our Terms of Service and acknowledge that your data will be processed in accordance with our Privacy Policy. You may opt out at any time.</div>
-                    <div class="glowing-wrapper glowing-wrapper-active gradient">
-                      <div class="glowing-wrapper-borders-masker">
-                        <div class="glowing-wrapper-borders"></div>
-                      </div><input type="submit" data-wait="Please wait..." class="glowing-wrapper-button-copy w-button" value="Get free sample">
-                    </div>
-                  </div><input type="hidden" name="hutk" value=""><input type="hidden" name="ipAddress" value=""><input type="hidden" name="pageUri" value=""><input type="hidden" name="pageId" value=""><input type="hidden" name="pageName" value="">
-                </form>
-                <div class="success-form free-sample w-form-done"><img src="/images/AI-Enhanced-Analytics-1-1_1.avif" loading="lazy" sizes="(max-width: 2071px) 100vw, 2071px" srcset="/images/AI-Enhanced-Analytics-1-1_1-p-500.png 500w, /images/AI-Enhanced-Analytics-1-1_1AI-Enhanced-Analytics-1-1.avif 800w, /images/AI-Enhanced-Analytics-1-1_1.avif 2071w" alt="A black and purple hexagonal object with a check mark" class="image-21">
-                  <div class="h4 hide">Thank you! Your submission has been received!</div>
-                  <div class="thank-you-free-sample">
-                    <div class="circuit-right">
-                      <div class="lottie-animation flip" data-w-id="83766190-6895-d8a3-3e22-eb79cc2296fc" data-animation-type="lottie" data-src="/documents/circuit.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="5" data-loading="eager"></div>
-                    </div>
-                    <div class="circuit-left">
-                      <div class="lottie-animation" data-w-id="83766190-6895-d8a3-3e22-eb79cc2296fe" data-animation-type="lottie" data-src="/documents/circuit.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="5" data-loading="eager"></div>
-                    </div>
-                    <div class="div-block-17 first">
-                      <div class="header center">
-                        <h2 class="h1">Thank you!</h2>
-                        <p class="text-16-150 color-white-80">Your submission has been received.</p>
-                      </div>
-                    </div><img loading="eager" src="/images/check-thx-free-sample-graphic.avif" alt="A purple seal with a tick mark on it" class="image-23">
-                  </div><img src="/images/Gradient-Background-purple.avif" loading="eager" sizes="(max-width: 1280px) 100vw, 1280px" srcset="/images/Gradient-Background-purple-p-500.png 500w, /images/Gradient-Background-purple.avif 1280w" alt="A purple and blue background with a white background" class="image-22">
-                </div>
-                <div class="w-form-fail">
-                  <div>Oops! Something went wrong while submitting the form.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><img sizes="(max-width: 1351px) 100vw, 1351px" srcset="/images/Frame-1707478801_1-p-500.png 500w, /images/Frame-1707478801_1-p-800.png 800w, /images/Frame-1707478801_1.avif 1351w" alt="A woman holding a tennis racquet on top of a tennis court" src="/images/Frame-1707478801_1.avif" loading="lazy" class="image-contact_us-copy">
-      </section>
-      <Footer />
-      <div class="css">
-        <div class="button-css w-embed">
-          <style is:inline>
+</style>`;
+const __embed1 = `<style>
  * {
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
@@ -753,10 +122,8 @@ import Footer from '../../components/Footer.astro';
 		transform: translate(-50%, -50%) rotate(360deg)
 	}
 }
-</style>
-        </div>
-        <div class="custom-styles w-embed">
-          <style is:inline>
+</style>`;
+const __embed2 = `<style>
         * {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -803,29 +170,25 @@ import Footer from '../../components/Footer.astro';
             z-index: 2;
         }
     }
-</style>
-        </div>
-        <div class="code-embed-2 w-embed w-script">
-          <script is:inline>
+</style>`;
+const __embed3 = `<script>
 document.getElementById("cards").onmousemove = (e) => {
   for (const card of document.getElementsByClassName("card")) {
     const rect = card.getBoundingClientRect(),
       x = e.clientX - rect.left,
       y = e.clientY - rect.top;
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
+    card.style.setProperty("--mouse-x", \`\${x}px\`);
+    card.style.setProperty("--mouse-y", \`\${y}px\`);
   }
 };
-</script>
-        </div>
-        <div class="global-style w-embed">
-          <style is:inline>
+</script>`;
+const __embed4 = `<style>
 .card_glow_background {
 	width: calc(100% + 12px);
   height: calc(100% + 12px);
 }
 .card_glow_background._2 {
-	left : calc(-100% - 24px); 
+	left : calc(-100% - 24px);
 }
 .card_glow_background._3 {
 	top : calc(-100% - 24px);
@@ -834,9 +197,441 @@ document.getElementById("cards").onmousemove = (e) => {
 	left : calc(-100% - 24px);
   top : calc(-100% - 24px);
 }
-</style>
+</style>`;
+---
+<BaseLayout meta={meta}>
+<div data-meno-label="Page content" class="body min-h-screen [color:#fff] [background-color:#080610] [overflow-x:hidden]">
+
+
+<div class="page-wrapper [color:#fff] [overflow-x:hidden]">
+    <NavBanner />
+    <div id="cards" class="main-wrapper [z-index:0] [color:#fff] [background-color:#080610] [max-width:none] [position:relative] [overflow-x:hidden]">
+      <section class="section-hero case-study [background-image:url('../images/Hero_1.avif')] [background-position:0_100%] [background-repeat:no-repeat] [background-size:cover] [background-attachment:scroll] [padding-top:200px] [padding-bottom:120px] max-lg:[background-position:0%] max-lg:[background-size:cover] max-lg:[padding-top:80px] max-sm:[padding-top:80px] max-sm:[padding-bottom:40px]">
+        <div id="banner-trigger" class="nav_banner-trigger [pointer-events:none] [border:1px_solid_#0000] [width:100%] [height:240px] [position:absolute] [top:0] [bottom:auto]"></div>
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="wrapper-hero flex middle-align [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1fr_1.25fr] [grid-auto-columns:1fr] [display:flex] [position:relative] [align-items:center] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[flex-flow:column-reverse_wrap] max-lg:[justify-content:flex-end] max-lg:[align-items:center] max-lg:[display:flex] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px]">
+            <div class="left-hero max-640 [grid-column-gap:48px] [grid-row-gap:48px] [flex-flow:column] [justify-content:center] [max-width:640px] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px] max-lg:[text-align:center] max-lg:[order:1] max-lg:[align-items:center] max-lg:[max-width:100%] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px]">
+              <div class="gap-4 [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] max-lg:[justify-content:flex-start] max-lg:[align-items:center]">
+                <div class="w-layout-hflex flex-block-2 [flex-direction:row] [align-items:flex-start] [display:flex] [grid-column-gap:4px] [grid-row-gap:4px] max-sm:[text-align:center] max-sm:[flex-flow:row] max-sm:[justify-content:flex-start] max-sm:[align-items:center]">
+                  <a href="#" class="text-caps [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px]">Customer stories</a>
+                  <div class="text-caps [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px]">&gt;</div>
+                  <div class="text-caps [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px]">Sharpish</div>
+                </div>
+                <h1 class="h1 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [padding-right:0] [font-family:Switzer,_sans-serif] [font-size:48px] [font-weight:600] [line-height:120%] max-lg:[font-size:44px] max-landscape:[font-size:38px] max-sm:[font-size:28px] max-sm:[font-weight:600]"><span class="span-pink-2 [box-sizing:border-box] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_39%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text]">Sharpish : </span>The short-term staff recruitment revolution</h1>
+                <div class="text-16-150 color-white-80 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:center] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">Sharpish.co is a dynamic and innovative website that aims to<br /> revolutionize the way people access and engage with information. <br />Sharpish.co serves as a hub for a wide range of topics, providing <br />users with curated content that is both informative and entertaining. <br />As our client, we delivered not only an explainer video, but also <br />s<a href="https://www.motiontheagency.com/blog/social-media-video-production-guide" class="link-24 [color:#faf8f8cc] [text-decoration:none]">ocial media content</a> to help them communicate their <br />platform more effectively.</div>
+                <div class="text-16-150 color-white-80 hide [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [display:none] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:center] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">This wasn’t just about a fresh logo; it was about crafting a brand and digital presence that matched their ambition, stood out in the competitive AI space, and resonated with their target audience.</div>
+                <div class="text-16-150 color-white-80 hide [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [display:none] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:center] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">Through close collaboration and iterative feedback, we partnered with them to launch their new identity and create a powerful foundation for growth, ensuring their brand reflected their evolution and their goals as a startup.</div>
+              </div>
+              <div class="case-study-tab [z-index:10] [background-image:radial-gradient(circle_at_100%_0,_#140d24cc,_#0a0814cc_53%)] [border-radius:12px] [align-self:flex-start] [position:relative] [overflow:hidden] max-lg:[align-self:center]">
+                <div class="info-wrapper [z-index:4] [grid-column-gap:40px] [grid-row-gap:40px] [border:1px_solid_#ffffff1a] [border-radius:12px] [flex-flow:column] [width:auto] [height:auto] [padding:20px_40px] [display:flex] [position:relative] [overflow:hidden] max-sm:[padding-left:12px] max-sm:[padding-right:12px]">
+                  <div class="gap-16-subscription gap-52 [grid-column-gap:52px] [grid-row-gap:52px] [flex-flow:column] [display:flex] [align-self:flex-start]">
+                    <div class="gap-16-subscription-2 [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [align-self:flex-start] [display:flex] max-sm:[align-self:auto]">
+                      <div class="case-study-tab-wrapper [grid-column-gap:64px] [grid-row-gap:64px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [align-items:stretch] [padding-top:12px] [padding-bottom:12px] [display:grid] max-landscape:[grid-column-gap:24px] max-landscape:[grid-row-gap:24px] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px]">
+                        <div class="flex-8-subscription [grid-column-gap:8px] [grid-row-gap:8px] [flex-flow:column] [display:flex] max-lg:[align-items:flex-start] max-sm:[justify-content:space-between] max-sm:[align-items:center]">
+                          <div class="ic-text-subscription-2 [grid-column-gap:4px] [grid-row-gap:4px] [align-items:center] [display:flex]"><img data-meno-optimize="false" src="/images/type-icon.svg" loading="lazy" alt="" class="case-study-tab-icon [width:24px] [min-width:24px] max-sm:[width:20px] max-sm:[height:20px] max-sm:[display:none]" />
+                            <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Project type</div>
+                          </div>
+                          <div class="h3 mobile-16 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px] max-landscape:[font-size:16px]">Fixed price</div>
+                        </div>
+                        <div class="flex-8-subscription hide [grid-column-gap:8px] [grid-row-gap:8px] [flex-flow:column] [display:none] max-lg:[align-items:flex-start] max-sm:[justify-content:space-between] max-sm:[align-items:center]">
+                          <div class="ic-text-subscription-2 [grid-column-gap:4px] [grid-row-gap:4px] [align-items:center] [display:flex]"><img data-meno-optimize="false" src="/images/cost.svg" loading="lazy" alt="" class="case-study-tab-icon [width:24px] [min-width:24px] max-sm:[width:20px] max-sm:[height:20px] max-sm:[display:none]" />
+                            <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Project Cost</div>
+                          </div>
+                          <div class="h3 mobile-16 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px] max-landscape:[font-size:16px]">$19,000</div>
+                        </div>
+                        <div class="flex-8-subscription [grid-column-gap:8px] [grid-row-gap:8px] [flex-flow:column] [display:flex] max-lg:[align-items:flex-start] max-sm:[justify-content:space-between] max-sm:[align-items:center]">
+                          <div class="ic-text-subscription-2 [grid-column-gap:4px] [grid-row-gap:4px] [align-items:center] [display:flex]"><img data-meno-optimize="false" src="/images/time.svg" loading="lazy" alt="" class="case-study-tab-icon [width:24px] [min-width:24px] max-sm:[width:20px] max-sm:[height:20px] max-sm:[display:none]" />
+                            <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Project timeline</div>
+                          </div>
+                          <div class="h3 mobile-16 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px] max-landscape:[font-size:16px]"> 3 months</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-w-id="a4d8dbad-85c5-de77-8404-4042222bdb2e" class="absolute-img-copy [align-self:center] [max-width:50%] [height:auto] [margin-top:0] [margin-right:0] [position:absolute] [inset:auto_0%_auto_auto] max-lg:[order:1] max-lg:[align-self:center] max-lg:[max-width:100%] max-lg:[margin-top:0] max-lg:[margin-left:0] max-lg:[margin-right:0] max-lg:[position:static] max-sm:[margin-left:0]"><img data-meno-optimize="false" src="/images/hero-image_1.avif" loading="lazy" alt="An open laptop computer sitting on top of a white table" class="image-sharpish [aspect-ratio:auto] [width:100%] [display:inline] [position:static] max-lg:[max-width:100%] max-sm:[max-width:112%]" /></div>
+          </div>
+        </div>
+      </section>
+      <section class="section-process padding-btm-80 [justify-content:center] [padding-top:120px] [padding-bottom:80px] [display:flex] [position:relative] [overflow:hidden] max-lg:[justify-content:center] max-lg:[padding-top:64px] max-lg:[padding-bottom:20px] max-landscape:[padding-top:64px] max-landscape:[padding-bottom:40px] max-sm:[padding-top:20px] max-sm:[padding-bottom:0] max-sm:[overflow:hidden]">
+        <div class="line-gradient-2 [background-image:linear-gradient(90deg,_#60537700,_#605377_50%,_#60537700)] [width:100%] [height:4px] [position:absolute] [inset:0_0%_auto]"></div><img data-meno-optimize="false" src="/images/Frame-1707478761_1.avif" loading="lazy" sizes="(max-width: 3201px) 100vw, 3201px" srcset="/images/Frame-1707478761_1Frame-1707478761.avif 800w, /images/Frame-1707478761_1.avif 3201w" alt="A black and white photo of the moon and stars" class="image-process-2 [z-index:-1] [pointer-events:none] [width:100%] [position:absolute] [top:0%]" />
+        <div class="w-layout-blockcontainer container-1280 m-container-purpose w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:64px] max-sm:[overflow:hidden] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="wrapper-purpose [grid-column-gap:64px] [grid-row-gap:64px] [color:#f6f1f1] [flex-flow:column] [display:flex] max-lg:[grid-column-gap:32px] max-lg:[grid-row-gap:32px] max-landscape:[grid-column-gap:32px] max-landscape:[grid-row-gap:32px]">
+            <div class="top-purpose [grid-column-gap:16px] [grid-row-gap:16px] [text-align:center] [grid-template-rows:auto] [grid-template-columns:1fr_1.5fr] [grid-auto-columns:1fr] [justify-content:center] [align-items:center] [display:flex] [position:relative] max-lg:[grid-column-gap:30px] max-lg:[grid-row-gap:30px] max-lg:[flex-flow:column] max-lg:[display:flex]">
+              <div class="left-top-purpose [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [max-width:620px] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px]">
+                <div class="gap-4-purpose [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [display:flex]">
+                  <div class="text-12-caps opacity-60 [letter-spacing:6px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.6] [color:var(--white)] max-sm:[font-size:12px]">Project Scope</div>
+                  <div>
+                    <h2 class="h1 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [padding-right:0] [font-family:Switzer,_sans-serif] [font-size:48px] [font-weight:600] [line-height:120%] max-lg:[font-size:44px] max-landscape:[font-size:38px] max-sm:[font-size:28px] max-sm:[font-weight:600]"><span class="span-pink-2 [box-sizing:border-box] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_39%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text]">Project overview</span></h2>
+                  </div>
+                </div>
+                <div class="text-16-150 opacity-80 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [opacity:.8] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Sharpish.co is a dynamic and innovative website that aims to revolutionize the way people access and engage with information. <a href="/for-whom/startup" class="link-9 [color:var(--white)] [text-decoration:none]">Sharpish.co serves as a hub for a wide range of topics</a>, providing users with curated content that is both informative and entertaining. We supported them with a <a href="/services/2d-animation" class="link-21 [color:var(--white)] [text-decoration:none]">2D animation</a>
+                  <a href="/services/explainer-video" class="link-22 [color:#fffefe] [text-decoration:none]"> explainer video</a> and <a href="/services/social-media" class="link-23 [color:#fff] [text-decoration:none]">social media conten</a>t to help communicate their platform in a more engaging way.<br />
+                </div>
+              </div>
+            </div>
+            <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+              <div class="ai-engineer-vid w-video w-embed [width:100%] [position:relative] [padding:0] [box-sizing:border-box] [aspect-ratio:16_/_9] [object-fit:cover] [border-radius:20px] [overflow:hidden] [padding-top:56.17021276595745%] max-lg:[border-radius:12px]"><iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F9TJa3BTODZo%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9TJa3BTODZo&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F9TJa3BTODZo%2Fhqdefault.jpg&type=text%2Fhtml&schema=youtube" width="940" height="528" scrolling="no" allowfullscreen="" title="Product Explainer Video | Sharpish | 2D & 3D Animated SaaS Explainer"></iframe></div>
+            </div>
+            <div class="bottom_purpose grid-3-40 [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr_1fr] [grid-auto-columns:1fr] [display:grid] [width:100%] max-lg:[grid-template-columns:1fr] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[flex-flow:column] max-lg:[display:flex] max-landscape:[grid-template-columns:1fr] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px] max-sm:[flex-flow:column] max-sm:[grid-template-columns:1fr]">
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-28-purpose height-auto [grid-column-gap:28px] [grid-row-gap:28px] [flex-flow:column] [width:100%] [min-height:100%] [display:flex] [justify-content:flex-start] [align-items:stretch] max-lg:[grid-column-gap:16px] max-lg:[grid-row-gap:16px] max-lg:[min-height:30vh] max-landscape:[min-height:auto] max-sm:[min-height:auto]"><img data-meno-optimize="false" src="/images/overview-1.avif" loading="lazy" alt="A black and white photo of a circular object" class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-purpose left-small [grid-column-gap:8px] [grid-row-gap:8px] [text-align:left] [flex-flow:column] [justify-content:flex-start] [align-self:center] [align-items:flex-start] [padding:2px_28px_28px] [display:flex] [position:relative] max-lg:[padding-bottom:16px] max-lg:[padding-left:16px] max-lg:[padding-right:16px] max-landscape:[padding-left:24px] max-landscape:[padding-right:24px]">
+                        <h3 class="h3 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px]">Brand identity</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">We offer our expertise, helping Sharpish defining their identity, and create a strong and distinctive presence that accurately reflects their values and resonates with their target audience.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-28-purpose height-auto [grid-column-gap:28px] [grid-row-gap:28px] [flex-flow:column] [width:100%] [min-height:100%] [display:flex] [justify-content:flex-start] [align-items:stretch] max-lg:[grid-column-gap:16px] max-lg:[grid-row-gap:16px] max-lg:[min-height:30vh] max-landscape:[min-height:auto] max-sm:[min-height:auto]"><img data-meno-optimize="false" src="/images/overview-2.avif" loading="lazy" alt="A cell phone sitting on top of a table" class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-purpose left-small [grid-column-gap:8px] [grid-row-gap:8px] [text-align:left] [flex-flow:column] [justify-content:flex-start] [align-self:center] [align-items:flex-start] [padding:2px_28px_28px] [display:flex] [position:relative] max-lg:[padding-bottom:16px] max-lg:[padding-left:16px] max-lg:[padding-right:16px] max-landscape:[padding-left:24px] max-landscape:[padding-right:24px]">
+                        <h3 class="h3 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px]">App design</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">By collaborating closely with them to understand their vision and objectives, we help transform their ideas into tangible digital solutions that align with their mission and bring their vision to life.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-28-purpose height-auto [grid-column-gap:28px] [grid-row-gap:28px] [flex-flow:column] [width:100%] [min-height:100%] [display:flex] [justify-content:flex-start] [align-items:stretch] max-lg:[grid-column-gap:16px] max-lg:[grid-row-gap:16px] max-lg:[min-height:30vh] max-landscape:[min-height:auto] max-sm:[min-height:auto]"><img data-meno-optimize="false" src="/images/overview-3.avif" loading="lazy" alt="A square object with a musical note on it" class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-purpose left-small [grid-column-gap:8px] [grid-row-gap:8px] [text-align:left] [flex-flow:column] [justify-content:flex-start] [align-self:center] [align-items:flex-start] [padding:2px_28px_28px] [display:flex] [position:relative] max-lg:[padding-bottom:16px] max-lg:[padding-left:16px] max-lg:[padding-right:16px] max-landscape:[padding-left:24px] max-landscape:[padding-right:24px]">
+                        <h3 class="h3 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px]">Web design &amp; development</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">We assist Sharpish building their website from end-to-end, where customer can easily access information about them, and establish trust and credibility for their audience.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-streamlined padding-btm-large [padding-top:120px] [padding-bottom:120px] [position:relative] [overflow:hidden] max-lg:[padding-top:80px] max-lg:[padding-bottom:80px] max-lg:[overflow:hidden] max-landscape:[padding-top:80px] max-landscape:[padding-bottom:40px] max-sm:[padding-top:56px] max-sm:[padding-bottom:40px]">
+        <div class="w-layout-blockcontainer container-1408 w-container [margin-left:auto] [margin-right:auto] [max-width:1488px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [overflow:visible] max-lg:[max-width:728px] max-sm:[max-width:none] max-landscape:[max-width:none] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="streamlined-wrapper [grid-column-gap:64px] [grid-row-gap:64px] [flex-flow:column] [justify-content:center] [align-items:center] [display:flex] [overflow:visible] max-lg:[grid-column-gap:32px] max-lg:[grid-row-gap:32px]">
+            <div class="top_side-streamlined [grid-column-gap:12px] [grid-row-gap:12px] [text-align:center] [flex-flow:column] [justify-content:center] [align-items:center] [max-width:700px] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px]">
+              <div class="gap-4-purpose [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [display:flex]">
+                <div class="text-12-caps opacity-60 [letter-spacing:6px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.6] [color:var(--white)] max-sm:[font-size:12px]">Solution</div>
+                <h2 class="h1 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [padding-right:0] [font-family:Switzer,_sans-serif] [font-size:48px] [font-weight:600] [line-height:120%] max-lg:[font-size:44px] max-landscape:[font-size:38px] max-sm:[font-size:28px] max-sm:[font-weight:600]"><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">Brand identity</span></h2>
+              </div><img data-meno-optimize="false" src="/images/Why-animation-matters---shorten-3_2.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 500w, /images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 800w, /images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 1080w, /images/Why-animation-matters---shorten-3_2.avif 2402w" alt="A black and white photo of a purple light" class="image-bg-streamlined [z-index:-1] [pointer-events:none] [width:100%] [min-width:1400px] [position:absolute] [top:-109px] max-lg:[top:-80px]" /><img data-meno-optimize="false" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Frame-1707478537_2Frame-1707478537.avif 500w, /images/Frame-1707478537_2.avif 2400w" alt="A purple background with squares and dots" src="/images/Frame-1707478537_2.avif" loading="lazy" class="image-why_shoose [z-index:-1] [pointer-events:none] [width:100%] [position:absolute] [top:-10%] [bottom:auto] max-sm:[width:150%] max-sm:[max-width:150%] max-sm:[top:-5%]" />
+            </div>
+            <div class="gap-40 [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [align-self:stretch] [display:flex]">
+              <div class="w-layout-hflex flex-block-3 [flex-direction:row] [align-items:stretch] [display:flex] [justify-content:space-between] [align-self:stretch]">
+                <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Color &amp; Logo</div>
+                <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Guidelines</div>
+              </div>
+              <div class="color-wrapper [grid-column-gap:32px] [grid-row-gap:32px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr_1fr_1fr_1fr_1fr] [grid-auto-columns:1fr] [width:100%] [display:grid] [position:relative] max-lg:[grid-column-gap:24px] max-lg:[grid-row-gap:24px] max-lg:[flex-flow:column-reverse] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr_1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[width:100%] max-lg:[display:grid] max-sm:[grid-column-gap:8px] max-sm:[grid-row-gap:8px] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:1fr_1fr_1fr]">
+                <div class="card-contaiiner color [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex] max-sm:[height:auto]">
+                  <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                    <div class="color-code-wrapper [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-flow:column] [align-self:stretch] [display:flex] [overflow:hidden] max-sm:[flex:1] max-sm:[justify-content:space-between] max-sm:[align-items:stretch]">
+                      <div class="color-text-wrapper [padding:80px_16px_24px] max-sm:[flex-flow:column] max-sm:[flex:1] max-sm:[justify-content:flex-end] max-sm:[align-items:stretch] max-sm:[padding-top:40px] max-sm:[display:flex]">
+                        <div class="text-14-150 _12-small [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:12px]">#023644</div>
+                        <h3 class="h4 small [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] max-sm:[font-size:14px]">Dark Teal</h3>
+                      </div>
+                      <div class="div-block-51 [background-color:#ffffff0d] [padding:16px] [box-shadow:inset_0_0_12px_#ffffff1f]">
+                        <div class="div-block-50 [background-color:#023644] [border-radius:8px] [height:44px] [overflow:hidden]"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-contaiiner color [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex] max-sm:[height:auto]">
+                  <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                    <div class="color-code-wrapper [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-flow:column] [align-self:stretch] [display:flex] [overflow:hidden] max-sm:[flex:1] max-sm:[justify-content:space-between] max-sm:[align-items:stretch]">
+                      <div class="color-text-wrapper [padding:80px_16px_24px] max-sm:[flex-flow:column] max-sm:[flex:1] max-sm:[justify-content:flex-end] max-sm:[align-items:stretch] max-sm:[padding-top:40px] max-sm:[display:flex]">
+                        <div class="text-14-150 _12-small [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:12px]">#007B8A</div>
+                        <h3 class="h4 small [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] max-sm:[font-size:14px]">Teal Blue</h3>
+                      </div>
+                      <div class="div-block-51 [background-color:#ffffff0d] [padding:16px] [box-shadow:inset_0_0_12px_#ffffff1f]">
+                        <div class="div-block-50 teal [background-color:#007b8a] [border-radius:8px] [height:44px] [overflow:hidden]"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-contaiiner color [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex] max-sm:[height:auto]">
+                  <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                    <div class="color-code-wrapper [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-flow:column] [align-self:stretch] [display:flex] [overflow:hidden] max-sm:[flex:1] max-sm:[justify-content:space-between] max-sm:[align-items:stretch]">
+                      <div class="color-text-wrapper [padding:80px_16px_24px] max-sm:[flex-flow:column] max-sm:[flex:1] max-sm:[justify-content:flex-end] max-sm:[align-items:stretch] max-sm:[padding-top:40px] max-sm:[display:flex]">
+                        <div class="text-14-150 _12-small [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:12px]">#F74889</div>
+                        <h3 class="h4 small [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] max-sm:[font-size:14px]">Polkadot Pink</h3>
+                      </div>
+                      <div class="div-block-51 [background-color:#ffffff0d] [padding:16px] [box-shadow:inset_0_0_12px_#ffffff1f]">
+                        <div class="div-block-50 pink [background-color:#f74889] [border-radius:8px] [height:44px] [overflow:hidden]"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-contaiiner color [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex] max-sm:[height:auto]">
+                  <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                    <div class="color-code-wrapper [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-flow:column] [align-self:stretch] [display:flex] [overflow:hidden] max-sm:[flex:1] max-sm:[justify-content:space-between] max-sm:[align-items:stretch]">
+                      <div class="color-text-wrapper [padding:80px_16px_24px] max-sm:[flex-flow:column] max-sm:[flex:1] max-sm:[justify-content:flex-end] max-sm:[align-items:stretch] max-sm:[padding-top:40px] max-sm:[display:flex]">
+                        <div class="text-14-150 _12-small [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:12px]">#FFFFFF</div>
+                        <h3 class="h4 small [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] max-sm:[font-size:14px]">White</h3>
+                      </div>
+                      <div class="div-block-51 [background-color:#ffffff0d] [padding:16px] [box-shadow:inset_0_0_12px_#ffffff1f]">
+                        <div class="div-block-50 white [background-color:#fff] [border-radius:8px] [height:44px] [overflow:hidden]"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-contaiiner color [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex] max-sm:[height:auto]">
+                  <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                    <div class="color-code-wrapper [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-flow:column] [align-self:stretch] [display:flex] [overflow:hidden] max-sm:[flex:1] max-sm:[justify-content:space-between] max-sm:[align-items:stretch]">
+                      <div class="color-text-wrapper [padding:80px_16px_24px] max-sm:[flex-flow:column] max-sm:[flex:1] max-sm:[justify-content:flex-end] max-sm:[align-items:stretch] max-sm:[padding-top:40px] max-sm:[display:flex]">
+                        <div class="text-14-150 _12-small [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:12px]">#5D5D5D</div>
+                        <h3 class="h4 small [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] max-sm:[font-size:14px]">Grey</h3>
+                      </div>
+                      <div class="div-block-51 [background-color:#ffffff0d] [padding:16px] [box-shadow:inset_0_0_12px_#ffffff1f]">
+                        <div class="div-block-50 grey [background-color:#5d5d5d] [border-radius:8px] [height:44px] [overflow:hidden]"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-contaiiner color [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex] max-sm:[height:auto]">
+                  <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                    <div class="color-code-wrapper [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-flow:column] [align-self:stretch] [display:flex] [overflow:hidden] max-sm:[flex:1] max-sm:[justify-content:space-between] max-sm:[align-items:stretch]">
+                      <div class="color-text-wrapper [padding:80px_16px_24px] max-sm:[flex-flow:column] max-sm:[flex:1] max-sm:[justify-content:flex-end] max-sm:[align-items:stretch] max-sm:[padding-top:40px] max-sm:[display:flex]">
+                        <div class="text-14-150 _12-small [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:12px]">#023644</div>
+                        <h3 class="h4 small [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] max-sm:[font-size:14px]">Dark Grey</h3>
+                      </div>
+                      <div class="div-block-51 [background-color:#ffffff0d] [padding:16px] [box-shadow:inset_0_0_12px_#ffffff1f]">
+                        <div class="div-block-50 dark-grey [background-color:#020c11] [border-radius:8px] [height:44px] [overflow:hidden]"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="_2-columns [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [width:100%] [display:grid] [position:relative] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:auto]">
+              <div id="w-node-fd94a604-8eed-0604-a59c-7b44dd789e95-658e7203" class="identity-wrapper [grid-column-gap:32px] [grid-row-gap:32px] [background-image:linear-gradient(#231c3b00_60%,_#231c3b_100%),_radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex:0_auto] [justify-content:center] [align-self:center] [padding:40px] [display:flex] [position:relative] max-sm:[flex-flow:column]">
+                <div class="logo-container [grid-column-gap:32px] [grid-row-gap:32px] [grid-template-rows:auto_auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [align-self:stretch] [display:grid] max-sm:[grid-template-rows:auto_auto_auto] max-sm:[grid-template-columns:1fr] max-sm:[grid-auto-flow:column]">
+                  <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                    <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img src="/images/logo-1_1.svg" loading="eager" alt="" /></div>
+                  </div>
+                  <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                    <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img src="/images/logo-2_1.avif" loading="eager" alt="A white square with a white background" /></div>
+                  </div><img src="/images/filos.avif" loading="eager" id="w-node-fd94a604-8eed-0604-a59c-7b44dd789e99-658e7203" alt="A white background with a black and white image of letters and numbers" />
+                </div>
+                <div class="mini-logo-container [grid-column-gap:16px] [grid-row-gap:16px] [aspect-ratio:auto] [flex-flow:column] [grid-template-rows:auto_auto_auto] [grid-template-columns:1fr] [grid-auto-columns:1fr] [justify-content:center] [align-self:flex-start] [align-items:center] [padding-right:6px] [display:flex] [overflow:visible] max-sm:[flex-flow:row]"><img data-meno-optimize="false" src="/images/mini-logo-1.svg" loading="eager" alt="" class="card mini-logo [aspect-ratio:auto] [width:110%] [height:110%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] [max-width:110%] max-lg:[border-radius:16px]" /><img data-meno-optimize="false" src="/images/mini-logo-2.svg" loading="eager" alt="" class="card mini-logo [aspect-ratio:auto] [width:110%] [height:110%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] [max-width:110%] max-lg:[border-radius:16px]" /><img data-meno-optimize="false" src="/images/mini-logo-3.svg" loading="eager" alt="" class="card mini-logo [aspect-ratio:auto] [width:110%] [height:110%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] [max-width:110%] max-lg:[border-radius:16px]" /></div>
+              </div>
+              <div id="w-node-a1921846-bc26-5412-658d-475db1f9c19a-658e7203" class="identity-wrapper-2 [grid-column-gap:32px] [grid-row-gap:32px] [background-image:linear-gradient(#231c3b00_60%,_#231c3b),_radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex:0_auto] [justify-content:center] [align-self:center] [align-items:center] [padding:40px] [display:flex] [position:relative] max-sm:[flex-flow:column]">
+                <div class="card-contaiiner height-auto [flex:1] [color:] [height:auto] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]"><img data-meno-optimize="false" src="/images/logo-right_1.avif" loading="eager" width="Auto" alt="A pink and blue logo on a white background" class="card no-fill [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:none] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] [border-style:none] [max-width:none] max-lg:[border-radius:16px]" /></div>
+                <div class="mini-logo-container align-center [grid-column-gap:16px] [grid-row-gap:16px] [aspect-ratio:auto] [flex-flow:column] [grid-template-rows:auto_auto_auto] [grid-template-columns:1fr] [grid-auto-columns:1fr] [justify-content:center] [align-self:center] [align-items:center] [padding-right:6px] [display:flex] [overflow:visible] max-sm:[flex-flow:column]">
+                  <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]"><img data-meno-optimize="false" src="/images/1_4.avif" loading="eager" alt="A white background with a pink and blue logo" class="card no-fill [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:none] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] [border-style:none] [max-width:none] max-lg:[border-radius:16px]" /></div><img data-meno-optimize="false" src="/images/2_1.avif" loading="eager" alt="A red and pink logo on a white background" class="card no-fill [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:none] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] [border-style:none] [max-width:none] max-lg:[border-radius:16px]" /><img data-meno-optimize="false" src="/images/3_2.avif" loading="eager" alt="A blue logo with a white background" class="card no-fill [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:none] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] [border-style:none] [max-width:none] max-lg:[border-radius:16px]" />
+                </div>
+              </div>
+            </div>
+            <div class="typo-wrapper [grid-column-gap:80px] [grid-row-gap:80px] [background-image:linear-gradient(#231c3b00_60%,_#231c3b),_radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-flow:column] [flex:0_auto] [justify-content:space-between] [align-self:stretch] [padding:80px_40px] [display:flex] [position:relative] max-sm:[grid-column-gap:40px] max-sm:[grid-row-gap:40px]">
+              <div class="_2-columns different-column [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:32%_1fr] [grid-auto-columns:1fr] [width:100%] [display:grid] [position:relative] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[grid-template-rows:auto] max-lg:[grid-template-columns:1fr] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:auto]">
+                <div>
+                  <div class="text-12-caps opacity-60 [letter-spacing:6px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.6] [color:var(--white)] max-sm:[font-size:12px]">Typeface &amp; Font Weight</div>
+                  <h2 class="h2 left [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:left] max-sm:[font-size:28px]">Typography</h2>
+                </div>
+              </div>
+              <div class="_2-columns [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [width:100%] [display:grid] [position:relative] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:auto]">
+                <div class="gap-28 [grid-column-gap:28px] [grid-row-gap:28px] [flex-flow:column] [display:flex] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px] max-sm:[max-width:100%] max-sm:[overflow:hidden]">
+                  <div class="gap-0 [flex-flow:column] [display:flex] max-sm:[flex-flow:column] max-sm:[align-self:stretch]">
+                    <h3 class="big-text [flex:0_auto] [font-family:Blinker] [font-size:100px] [font-weight:600] [line-height:100%] max-sm:[align-self:baseline] max-sm:[font-size:64px]">Aa</h3>
+                    <h3 class="h3 blinker [color:#fff] [text-wrap:balance] [font-family:Blinker] [font-size:24px] [font-weight:600] [line-height:120%] [margin-top:0] [margin-bottom:0] max-lg:[font-size:22px] max-sm:[font-size:18px] max-sm:[align-self:baseline]">Blinker</h3>
+                  </div>
+                  <h2 class="h3 blinker regular large-gap [color:#fff9] [text-wrap:balance] [font-family:Blinker] [font-size:24px] [font-weight:400] [line-height:120%] [margin-top:0] [margin-bottom:0] [letter-spacing:4px] max-lg:[font-size:22px] max-sm:[font-size:18px] max-sm:[align-self:stretch] max-sm:[display:none]">ABCDEFJHIJKLMNOPQRSTUWWXYZ<br />abcdefjhijklmnopqrstuwwxyz</h2>
+                  <div class="w-layout-hflex flex-block [flex-direction:row] [align-items:center] [display:flex] [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] max-sm:[flex-flow:wrap] max-sm:[justify-content:space-between]">
+                    <h3 class="h3 blinker regular [color:#fff9] [text-wrap:balance] [font-family:Blinker] [font-size:24px] [font-weight:400] [line-height:120%] [margin-top:0] [margin-bottom:0] max-lg:[font-size:22px] max-sm:[font-size:18px] max-sm:[align-self:baseline]">Regular</h3>
+                    <h3 class="h3 blinker semibold [color:#fff9] [text-wrap:balance] [font-family:Blinker] [font-size:24px] [font-weight:600] [line-height:120%] [margin-top:0] [margin-bottom:0] max-lg:[font-size:22px] max-sm:[font-size:18px] max-sm:[align-self:baseline]">SemiBold</h3>
+                    <h3 class="h3 blinker bold [color:#fff9] [text-wrap:balance] [font-family:Blinker] [font-size:24px] [font-weight:700] [line-height:120%] [margin-top:0] [margin-bottom:0] max-lg:[font-size:22px] max-sm:[font-size:18px] max-sm:[align-self:baseline]">Bold</h3>
+                    <h3 class="h3 blinker extrabold [color:#fff9] [text-wrap:balance] [font-family:Blinker] [font-size:24px] [font-weight:900] [line-height:120%] [margin-top:0] [margin-bottom:0] max-lg:[font-size:22px] max-sm:[font-size:18px] max-sm:[align-self:baseline]">ExtraBold</h3>
+                  </div>
+                </div>
+                <div class="gap-28 [grid-column-gap:28px] [grid-row-gap:28px] [flex-flow:column] [display:flex] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px] max-sm:[max-width:100%] max-sm:[overflow:hidden]">
+                  <div class="gap-0 [flex-flow:column] [display:flex] max-sm:[flex-flow:column] max-sm:[align-self:stretch]">
+                    <h3 class="big-text worksans [flex:0_auto] [font-family:Work_Sans,_sans-serif] [font-size:100px] [font-weight:700] [line-height:100%] max-sm:[align-self:baseline] max-sm:[font-size:64px]">Aa</h3>
+                    <h3 class="h3 work-sans [color:#fff] [text-wrap:balance] [font-family:Work_Sans,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px]">Work Sans</h3>
+                  </div>
+                  <h2 class="h3 worksans regular large-gap [color:#fff9] [text-wrap:balance] [font-family:Work_Sans,_sans-serif] [font-size:24px] [font-weight:400] [line-height:120%] [margin-top:0] [margin-bottom:0] [letter-spacing:4px] max-lg:[font-size:22px] max-sm:[font-size:18px] max-sm:[display:none]">ABCDEFJHIJKLMNOPQRSTUWWXYZ<br />abcdefjhijklmnopqrstuwwxyz</h2>
+                  <div class="w-layout-hflex flex-block [flex-direction:row] [align-items:center] [display:flex] [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] max-sm:[flex-flow:wrap] max-sm:[justify-content:space-between]">
+                    <h3 class="h3 worksans regular [color:#fff9] [text-wrap:balance] [font-family:Work_Sans,_sans-serif] [font-size:24px] [font-weight:400] [line-height:120%] [margin-top:0] [margin-bottom:0] max-lg:[font-size:22px] max-sm:[font-size:18px]">Regular</h3>
+                    <h3 class="h3 worksans medium [color:#fff9] [text-wrap:balance] [font-family:Work_Sans,_sans-serif] [font-size:24px] [font-weight:500] [line-height:120%] [margin-top:0] [margin-bottom:0] max-lg:[font-size:22px] max-sm:[font-size:18px]">Medium</h3>
+                    <h3 class="h3 worksans semibold [color:#fff9] [text-wrap:balance] [font-family:Work_Sans,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] [margin-top:0] [margin-bottom:0] max-lg:[font-size:22px] max-sm:[font-size:18px]">SemiBold</h3>
+                    <h3 class="h3 worksans bold [color:#fff9] [text-wrap:balance] [font-family:Work_Sans,_sans-serif] [font-size:24px] [font-weight:700] [line-height:120%] [margin-top:0] [margin-bottom:0] max-lg:[font-size:22px] max-sm:[font-size:18px]">Bold</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><img data-meno-optimize="false" src="/images/Frame-1707478801_3.avif" loading="lazy" sizes="(max-width: 1011px) 100vw, 1011px" srcset="/images/Frame-1707478801_3-p-500.png 500w, /images/Frame-1707478801_3.avif 1011w" alt="A woman holding a tennis racquet on top of a tennis court" class="image-streamlined-2 [z-index:-1] [pointer-events:none] [max-width:643px] [position:absolute] [inset:37%_0%_auto_auto] max-sm:[max-width:400px] max-sm:[top:29%]" />
+        <div class="line-gradient-2 [background-image:linear-gradient(90deg,_#60537700,_#605377_50%,_#60537700)] [width:100%] [height:4px] [position:absolute] [inset:0_0%_auto]"></div>
+      </div>
+      <div class="section-streamlined padding-btm-large [padding-top:120px] [padding-bottom:120px] [position:relative] [overflow:hidden] max-lg:[padding-top:80px] max-lg:[padding-bottom:80px] max-lg:[overflow:hidden] max-landscape:[padding-top:80px] max-landscape:[padding-bottom:40px] max-sm:[padding-top:56px] max-sm:[padding-bottom:40px]">
+        <div class="w-layout-blockcontainer container-1408 w-container [margin-left:auto] [margin-right:auto] [max-width:1488px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [overflow:visible] max-lg:[max-width:728px] max-sm:[max-width:none] max-landscape:[max-width:none] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="streamlined-wrapper [grid-column-gap:64px] [grid-row-gap:64px] [flex-flow:column] [justify-content:center] [align-items:center] [display:flex] [overflow:visible] max-lg:[grid-column-gap:32px] max-lg:[grid-row-gap:32px]">
+            <div class="top_side-streamlined [grid-column-gap:12px] [grid-row-gap:12px] [text-align:center] [flex-flow:column] [justify-content:center] [align-items:center] [max-width:700px] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px]">
+              <div class="gap-4-purpose [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [display:flex]">
+                <div class="text-12-caps opacity-60 [letter-spacing:6px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.6] [color:var(--white)] max-sm:[font-size:12px]">Solution</div>
+                <h2 class="h1 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [padding-right:0] [font-family:Switzer,_sans-serif] [font-size:48px] [font-weight:600] [line-height:120%] max-lg:[font-size:44px] max-landscape:[font-size:38px] max-sm:[font-size:28px] max-sm:[font-weight:600]"><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">App design</span></h2>
+              </div><img data-meno-optimize="false" src="/images/Why-animation-matters---shorten-3_2.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 500w, /images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 800w, /images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 1080w, /images/Why-animation-matters---shorten-3_2.avif 2402w" alt="A black and white photo of a purple light" class="image-bg-streamlined [z-index:-1] [pointer-events:none] [width:100%] [min-width:1400px] [position:absolute] [top:-109px] max-lg:[top:-80px]" /><img data-meno-optimize="false" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Frame-1707478537_2Frame-1707478537.avif 500w, /images/Frame-1707478537_2.avif 2400w" alt="A purple background with squares and dots" src="/images/Frame-1707478537_2.avif" loading="lazy" class="image-why_shoose [z-index:-1] [pointer-events:none] [width:100%] [position:absolute] [top:-10%] [bottom:auto] max-sm:[width:150%] max-sm:[max-width:150%] max-sm:[top:-5%]" />
+            </div>
+            <div id="w-node-_88ec0328-dd59-eef5-ae5b-8355aba1bb08-658e7203" class="identity-wrapper [grid-column-gap:32px] [grid-row-gap:32px] [background-image:linear-gradient(#231c3b00_60%,_#231c3b_100%),_radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex:0_auto] [justify-content:center] [align-self:center] [padding:40px] [display:flex] [position:relative] max-sm:[flex-flow:column]">
+              <div class="screen-container [grid-column-gap:32px] [grid-row-gap:32px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr_1fr_1fr] [grid-auto-columns:1fr] [align-self:stretch] [display:grid] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr_1fr] max-sm:[grid-template-rows:auto_auto_auto_auto] max-sm:[grid-template-columns:1fr]">
+                <div data-w-id="88ec0328-dd59-eef5-ae5b-8355aba1bb0a" class="card-contaiiner [flex:1] [color:] [opacity:0] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                  <div class="card screen-mockup [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:32px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:8px] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img src="/images/screen-1_1.avif" loading="eager" alt="A group of people on a cell phone" /></div>
+                </div>
+                <div data-w-id="36660938-dff8-ce26-488a-44dfc7af20d0" class="card-contaiiner [flex:1] [color:] [opacity:0] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                  <div class="card screen-mockup [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:32px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:8px] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img src="/images/screen-2_1.avif" loading="eager" alt="A cell phone with a map on it" /></div>
+                </div>
+                <div data-w-id="2160f4c7-162b-a606-dcb9-33f1301767ab" class="card-contaiiner [flex:1] [color:] [opacity:0] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                  <div class="card screen-mockup [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:32px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:8px] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img src="/images/screen-3_1.avif" loading="eager" alt="A screenshot of a text message on a cell phone" /></div>
+                </div>
+                <div data-w-id="60ebf6ea-aeaf-0d91-c44f-6ad0fe9f8921" class="card-contaiiner [flex:1] [color:] [opacity:0] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                  <div class="card screen-mockup [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:32px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:8px] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img src="/images/screen-4_1.avif" loading="eager" alt="A screenshot of a cell phone with a text message" /></div>
+                </div>
+              </div>
+            </div>
+            <div class="web-mockup-container [grid-column-gap:20px] [grid-row-gap:20px] [align-self:flex-start] [display:flex] [position:static] max-lg:[flex-flow:column] max-sm:[flex-flow:column] max-sm:[align-self:center]">
+              <div data-w-id="1b39fbc5-589a-34b3-1f5d-82702fb2d1c6" class="card-contaiiner [flex:1] [color:] [opacity:0] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card screen-mockup [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:32px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:8px] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/web-1_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/web-1_1web-1.avif 500w, /images/web-1_1web-1.avif 800w, /images/web-1_1.avif 1778w" alt="A screen shot of a website with a number of people on it" class="web-mockup [max-width:none] [max-height:500px] max-lg:[max-width:100%] max-lg:[max-height:none] max-sm:[max-width:100%] max-sm:[max-height:none]" /></div>
+              </div>
+              <div data-w-id="1b39fbc5-589a-34b3-1f5d-82702fb2d1c9" class="card-contaiiner [flex:1] [color:] [opacity:0] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card screen-mockup [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:32px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:8px] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/web-2_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/web-2_1web-2.avif 500w, /images/web-2_1web-2.avif 800w, /images/web-2_1.avif 1778w" alt="A screenshot of a group of people on twitter" class="web-mockup [max-width:none] [max-height:500px] max-lg:[max-width:100%] max-lg:[max-height:none] max-sm:[max-width:100%] max-sm:[max-height:none]" /></div>
+              </div>
+            </div>
+            <div class="web-mockup-container right-align [grid-column-gap:20px] [grid-row-gap:20px] [align-self:flex-end] [display:flex] [position:static] max-lg:[flex-flow:column] max-sm:[flex-flow:column] max-sm:[align-self:center]">
+              <div data-w-id="f415831a-6c26-6381-3a74-9d12c42f21e7" class="card-contaiiner [flex:1] [color:] [opacity:0] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card screen-mockup [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:32px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:8px] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/web-3_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/web-3_1web-3.avif 500w, /images/web-3_1.avif 1778w" alt="A screenshot of a work safety instructions page" class="web-mockup [max-width:none] [max-height:500px] max-lg:[max-width:100%] max-lg:[max-height:none] max-sm:[max-width:100%] max-sm:[max-height:none]" /></div>
+              </div>
+              <div data-w-id="f415831a-6c26-6381-3a74-9d12c42f21ea" class="card-contaiiner [flex:1] [color:] [opacity:0] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card screen-mockup [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:32px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:8px] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/web-4_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/web-4_1web-4.avif 500w, /images/web-4_1web-4.avif 800w, /images/web-4_1.avif 1778w" alt="A computer screen with a person on it" class="web-mockup [max-width:none] [max-height:500px] max-lg:[max-width:100%] max-lg:[max-height:none] max-sm:[max-width:100%] max-sm:[max-height:none]" /></div>
+              </div>
+            </div>
+            <div class="web-mockup-container [grid-column-gap:20px] [grid-row-gap:20px] [align-self:flex-start] [display:flex] [position:static] max-lg:[flex-flow:column] max-sm:[flex-flow:column] max-sm:[align-self:center]">
+              <div data-w-id="ff506542-c7da-f244-6a59-4c40fd201a06" class="card-contaiiner [flex:1] [color:] [opacity:0] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card screen-mockup [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:32px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:8px] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/web-5-_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/web-5-_1web-5-.avif 500w, /images/web-5-_1web-5-.avif 800w, /images/web-5-_1.avif 1778w" alt="" class="web-mockup [max-width:none] [max-height:500px] max-lg:[max-width:100%] max-lg:[max-height:none] max-sm:[max-width:100%] max-sm:[max-height:none]" /></div>
+              </div>
+              <div data-w-id="d29c7416-5c34-bfae-0d38-6119e53fee32" class="card-contaiiner [flex:1] [color:] [opacity:0] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card screen-mockup [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:32px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:8px] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/web-6_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/web-6_1web-6.avif 500w, /images/web-6_1.avif 1778w" alt="A screenshot of a post - a - job page" class="web-mockup [max-width:none] [max-height:500px] max-lg:[max-width:100%] max-lg:[max-height:none] max-sm:[max-width:100%] max-sm:[max-height:none]" /></div>
+              </div>
+            </div>
+          </div>
+        </div><img data-meno-optimize="false" src="/images/Frame-1707478801_3.avif" loading="lazy" sizes="(max-width: 1011px) 100vw, 1011px" srcset="/images/Frame-1707478801_3-p-500.png 500w, /images/Frame-1707478801_3.avif 1011w" alt="A woman holding a tennis racquet on top of a tennis court" class="image-streamlined-2 [z-index:-1] [pointer-events:none] [max-width:643px] [position:absolute] [inset:37%_0%_auto_auto] max-sm:[max-width:400px] max-sm:[top:29%]" />
+        <div class="line-gradient-2 [background-image:linear-gradient(90deg,_#60537700,_#605377_50%,_#60537700)] [width:100%] [height:4px] [position:absolute] [inset:0_0%_auto]"></div>
+      </div>
+      <div class="section-streamlined [padding-top:120px] [padding-bottom:40px] [position:relative] [overflow:hidden] max-lg:[padding-top:120px] max-lg:[padding-bottom:40px] max-lg:[overflow:hidden] max-landscape:[padding-top:80px] max-landscape:[padding-bottom:40px] max-sm:[padding-top:56px] max-sm:[padding-bottom:40px]">
+        <div class="w-layout-blockcontainer container-1408 w-container [margin-left:auto] [margin-right:auto] [max-width:1488px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [overflow:visible] max-lg:[max-width:728px] max-sm:[max-width:none] max-landscape:[max-width:none] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="streamlined-wrapper [grid-column-gap:64px] [grid-row-gap:64px] [flex-flow:column] [justify-content:center] [align-items:center] [display:flex] [overflow:visible] max-lg:[grid-column-gap:32px] max-lg:[grid-row-gap:32px]">
+            <div class="top_side-streamlined [grid-column-gap:12px] [grid-row-gap:12px] [text-align:center] [flex-flow:column] [justify-content:center] [align-items:center] [max-width:700px] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px]">
+              <div class="gap-4-purpose [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [display:flex]">
+                <div class="text-12-caps opacity-60 [letter-spacing:6px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.6] [color:var(--white)] max-sm:[font-size:12px]">Solution</div>
+                <h2 class="h1 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [padding-right:0] [font-family:Switzer,_sans-serif] [font-size:48px] [font-weight:600] [line-height:120%] max-lg:[font-size:44px] max-landscape:[font-size:38px] max-sm:[font-size:28px] max-sm:[font-weight:600]"><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">Website design <br />and development</span></h2>
+              </div><img data-meno-optimize="false" src="/images/Why-animation-matters---shorten-3_2.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 500w, /images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 800w, /images/Why-animation-matters---shorten-3_2Why-animation-matters---shorten-3.avif 1080w, /images/Why-animation-matters---shorten-3_2.avif 2402w" alt="A black and white photo of a purple light" class="image-bg-streamlined [z-index:-1] [pointer-events:none] [width:100%] [min-width:1400px] [position:absolute] [top:-109px] max-lg:[top:-80px]" /><img data-meno-optimize="false" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Frame-1707478537_2Frame-1707478537.avif 500w, /images/Frame-1707478537_2.avif 2400w" alt="A purple background with squares and dots" src="/images/Frame-1707478537_2.avif" loading="lazy" class="image-why_shoose [z-index:-1] [pointer-events:none] [width:100%] [position:absolute] [top:-10%] [bottom:auto] max-sm:[width:150%] max-sm:[max-width:150%] max-sm:[top:-5%]" />
+            </div>
+            <div class="landing-container [grid-column-gap:0px] [grid-row-gap:0px] [justify-content:center] [align-self:center] [align-items:flex-end] [display:flex] [position:relative]">
+              <div data-w-id="5039c423-326a-d8a1-79ef-598d2feec36f" class="card-contaiiner [flex:1] [color:] [opacity:0] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card landing-mockup [aspect-ratio:auto] [width:90%] [height:auto] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:32px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:8px] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]"><img data-meno-optimize="false" src="/images/landing_1.avif" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/landing_1landing.avif 500w, /images/landing_1landing.avif 800w, /images/landing_1landing.avif 1080w, /images/landing_1.avif 2408w" alt="Two cell phones sitting next to each other in front of a screen" class="landing-desktop [max-width:100%]" /></div>
+              </div>
+              <div data-w-id="5039c423-326a-d8a1-79ef-598d2feec372" class="card-contaiiner fly [flex:1] [color:] [width:24%] [height:auto] [position:absolute] [right:0] [opacity:0] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card mobile-landing-mockup no-fill [aspect-ratio:auto] [width:auto] [height:auto] [color:var(--white)] [cursor:pointer] [background-image:none] [border:1px_solid_#ffffff0d] [border-radius:32px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:8px] [text-decoration:none] [display:flex] [position:relative] [border-style:none] [max-width:none] max-lg:[border-radius:16px] max-sm:[border-radius:0]"><img data-meno-optimize="false" src="/images/landing-phone_1.avif" loading="eager" alt="A screenshot of a cell phone with the text, welcome to the recruit revolution" class="phone-landing [border-radius:32px] [overflow:hidden] [box-shadow:0_24px_120px_#00000080] max-lg:[border-radius:2px] max-landscape:[border-radius:2px] max-sm:[border-radius:2px]" /></div>
+              </div>
+            </div>
+            <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] [background-image:linear-gradient(90deg,_#ff008e,_#ff4dcb)] [-webkit-text-fill-color:inherit] [-webkit-background-clip:text] [background-clip:border-box] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)] max-sm:[width:fit-content]">
+              <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                <div class="glowing-wrapper-borders [opacity:1] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+              </div>
+              <a href="/services/web-design" class="glowing-wrapper-button w-inline-block [max-width:100%] [display:inline-flex] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [color:#fff] [letter-spacing:-.01em] [background-color:#3898ec00] [border:1px_solid_#ffffff1a] [border-radius:62.5rem] [justify-content:center] [align-items:center] [padding:12px_24px] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:500] [line-height:1.42] [text-decoration:none] [position:relative] max-lg:[width:100%] max-sm:[width:100%]">
+                <div class="text-block rel align-center-middle [color:var(--white)] [text-decoration:none] [z-index:2] [position:relative] [text-align:center] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[display:flex] max-sm:[text-align:center] max-sm:[font-size:13px] max-sm:[line-height:120%]">Learn our web design service</div>
+              </a>
+            </div>
+          </div>
+        </div><img data-meno-optimize="false" src="/images/Frame-1707478801_3.avif" loading="lazy" sizes="(max-width: 1011px) 100vw, 1011px" srcset="/images/Frame-1707478801_3-p-500.png 500w, /images/Frame-1707478801_3.avif 1011w" alt="A woman holding a tennis racquet on top of a tennis court" class="image-streamlined-2 [z-index:-1] [pointer-events:none] [max-width:643px] [position:absolute] [inset:37%_0%_auto_auto] max-sm:[max-width:400px] max-sm:[top:29%]" />
+        <div class="line-gradient-2 [background-image:linear-gradient(90deg,_#60537700,_#605377_50%,_#60537700)] [width:100%] [height:4px] [position:absolute] [inset:0_0%_auto]"></div>
+      </div>
+      <section class="section-contact_us [z-index:10] [color:var(--white)] [background-image:url('../images/Frame-1707478678_2.avif')] [background-position:50%_0] [background-size:cover] [background-attachment:scroll] [padding-top:120px] [padding-bottom:120px] [position:relative] [overflow:hidden] max-lg:[background-position:50%_0] max-lg:[padding-top:40px] max-lg:[padding-bottom:40px] max-sm:[padding-top:0] max-sm:[padding-bottom:40px]">
+        <div class="line-gradient-2 [background-image:linear-gradient(90deg,_#60537700,_#605377_50%,_#60537700)] [width:100%] [height:4px] [position:absolute] [inset:0_0%_auto]"></div>
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div id="contact" class="contact_us-wrapper [z-index:1] [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:row] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [display:grid] [position:relative] max-lg:[flex-flow:column] max-lg:[display:flex]">
+            <div id="w-node-_09a077b2-0610-e7b3-11bc-758e50194b64-658e7203" class="left_side-contact_us [grid-column-gap:88px] [grid-row-gap:88px] [flex-flow:column] [display:flex] max-sm:[grid-column-gap:46px] max-sm:[grid-row-gap:46px]">
+              <div class="header-contact_us [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [display:flex] max-lg:[max-width:none]">
+                <div class="text_heading-contact_us [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] max-lg:[text-align:center] max-lg:[justify-content:center] max-lg:[align-items:center] max-landscape:[justify-content:flex-start] max-landscape:[align-items:center] max-sm:[text-align:center]">
+                  <div class="text-12-caps opacity-60 [letter-spacing:6px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.6] [color:var(--white)] max-sm:[font-size:12px]">Contact Us</div>
+                  <h2 class="h2 center-small [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-lg:[text-align:center] max-sm:[text-align:center] max-sm:[font-size:28px]">Ready to animate your vision? Contact us for your<br />‍<span class="span-pink-2 [box-sizing:border-box] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_39%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text]">free video or design sample</span></h2>
+                </div>
+              </div>
+              <div class="image-wrapper-contact_us [justify-content:flex-end] [max-width:660px] [max-height:445px] [display:flex] [overflow:hidden] max-lg:[max-width:100%] max-lg:[max-height:550px] max-lg:[display:none] max-lg:[transform:translate(-38px)] max-landscape:[max-width:100%] max-landscape:[max-height:100%] max-landscape:[transform:translate(-16px)]"><img data-meno-optimize="false" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/Frame-273_1Frame-273.avif 500w, /images/Frame-273_1.avif 1155w" alt="Mobile interface displaying a form titled &#x27;Try Out Our Service, Risk-Free!&#x27; with fields for Company Name and Work Email. Below, there is a message from &#x27;Motion The Agency&#x27; thanking the user for their trust and requesting project details. The interface also includes a video sample section labeled &#x27;10s Video Free Sample&#x27; with play, share, and save options. The design features a modern, dark theme with vibrant accents." src="/images/Frame-273_1.avif" loading="lazy" class="image-contact_us-2 [object-fit:cover] [min-width:725px] max-landscape:[min-width:100%]" /></div>
+            </div>
+            <div class="right_side-contact_us">
+              <div id="contact-us" class="form-block narrow-padding w-form [margin:0_0_15px] [background-image:linear-gradient(45deg,_#0a0814cc_47%,_#140d24cc)] [border:1px_solid_#ffffff1a] [border-radius:12px] [margin-bottom:0] [padding:32px] [position:relative] [overflow:hidden] max-sm:[padding:24px]">
+                <form method="get" ms-code-business-email="" name="wf-form-Contact-Us-Form" data-name="Contact Us Form" id="wf-form-Contact-Us-Form" data-webflow-hubspot-api-form-url="https://hubspotonwebflow.com/api/forms/3231aa55-9f82-443a-9469-3209181a5ab4" class="form gap-20 [grid-column-gap:20px] [grid-row-gap:20px] [flex-flow:column] [display:flex] max-sm:[grid-column-gap:24px] max-sm:[grid-row-gap:24px]" data-wf-page-id="67aaf0bef2cf0ebd658e7203" data-wf-element-id="fa7944cc-145c-217e-5ad2-23c75414ee98">
+                  <div class="field-grid [grid-column-gap:20px] [grid-row-gap:20px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [display:grid] max-sm:[grid-column-gap:24px] max-sm:[grid-row-gap:24px] max-sm:[grid-template-columns:1fr]">
+                    <div class="text-field-contact [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:12px] [display:flex]"><label for="First-Name-3" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">First name<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label><input class="field-contact w-input [display:block] [width:100%] [height:48px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#191922] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:24px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" data-wfhsfieldname="FormTextInput-2" maxlength="256" name="First-Name" data-name="First Name" placeholder="Your first name..." type="text" id="First-Name-3" required="" /></div>
+                    <div class="text-field-contact [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:12px] [display:flex]"><label for="Last-Name-3" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Last name<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label><input class="field-contact w-input [display:block] [width:100%] [height:48px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#191922] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:24px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" data-wfhsfieldname="FormTextInput-3" maxlength="256" name="Last-Name" data-name="Last Name" placeholder="Your last name..." type="text" id="Last-Name-3" required="" /></div>
+                  </div>
+                  <div class="text-field-contact [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:12px] [display:flex]">
+                    <div class="w-layout-vflex flex-h space-between [flex-direction:column] [align-items:flex-start] [display:flex] [grid-column-gap:8px] [grid-row-gap:8px] [align-self:auto] [flex-flow:row] [justify-content:space-between] max-lg:[grid-column-gap:40px] max-lg:[grid-row-gap:40px] max-lg:[flex-flow:wrap] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr_1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:flex] max-landscape:[grid-template-columns:1fr_1fr] max-landscape:[grid-column-gap:8px] max-landscape:[grid-row-gap:8px] max-landscape:[flex-flow:column] max-sm:[grid-column-gap:20px] max-sm:[grid-row-gap:32px] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:1fr_1fr] max-sm:[grid-auto-columns:1fr] max-sm:[display:flex]"><label for="Email-3" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Work Email<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label></div><input class="field-contact w-input [display:block] [width:100%] [height:48px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#191922] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:24px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" ms-code-business-email="" data-wfhsfieldname="FormTextInput-4" maxlength="256" name="Email" data-name="Email" placeholder="yourname@company.com" type="email" id="Email-3" required="" />
+                  </div>
+                  <div class="text-field-contact [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:12px] [display:flex]"><label for="Company-2" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Company<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label><input class="field-contact w-input [display:block] [width:100%] [height:48px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#191922] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:24px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" data-wfhsfieldname="FormTextInput-5" maxlength="256" name="Company-2" data-name="Company 2" placeholder="Your company name..." type="text" id="Company-2" required="" /></div>
+                  <div class="text-field-contact [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:12px] [display:flex]"><label for="Message-2" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Message<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label><textarea class="text-area w-input [display:block] [width:100%] [height:120px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#ffffff0d] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:12px] [min-height:120px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" data-wfhsfieldname="FormTextarea-6" maxlength="5000" name="Message-2" data-name="Message 2" placeholder="Describe what you want to achieve.. any additional details " id="Message-2" required=""></textarea>
+                    <div class="css-form w-embed [display:none]">
+                      <Embed html={__embed0} />
+                    </div>
+                  </div>
+                  <div class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key [margin-bottom:8px]"></div>
+                  <div class="text-button-contact [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [align-items:flex-start] [display:flex] max-sm:[grid-column-gap:24px] max-sm:[grid-row-gap:24px]">
+                    <div class="text-12-150 opacity-50 [font-family:Switzer,_sans-serif] [font-size:12px] [line-height:150%] [opacity:.5]">By clicking submit, you consent to receive email communications about Motion&#x27;s products and services. You agree to our Terms of Service and acknowledge that your data will be processed in accordance with our Privacy Policy. You may opt out at any time.</div>
+                    <div class="glowing-wrapper glowing-wrapper-active gradient [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] [background-image:linear-gradient(90deg,_#ff008e,_#ff4dcb)] [-webkit-text-fill-color:inherit] [-webkit-background-clip:text] [background-clip:border-box] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)] max-sm:[width:fit-content]">
+                      <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                        <div class="glowing-wrapper-borders [opacity:1] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+                      </div><input type="submit" data-wait="Please wait..." class="glowing-wrapper-button-copy w-button [display:inline-flex] [padding:12px_24px] [background-color:#0000] [color:#fff] [border:1px_solid_#ffffff1a] [line-height:1.42] [text-decoration:none] [cursor:pointer] [border-radius:62.5rem] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [letter-spacing:-.01em] [justify-content:center] [align-items:center] [font-size:.88rem] [position:relative] max-lg:[width:100%] max-sm:[width:100%]" value="Get free sample" />
+                    </div>
+                  </div><input type="hidden" name="hutk" value="" /><input type="hidden" name="ipAddress" value="" /><input type="hidden" name="pageUri" value="" /><input type="hidden" name="pageId" value="" /><input type="hidden" name="pageName" value="" />
+                </form>
+                <div class="success-form free-sample w-form-done [display:none] [padding:0] [text-align:center] [background-color:#ddd0] [background-image:none] [background-repeat:repeat] [background-size:auto] [border-radius:24px] [padding-top:32px] [padding-bottom:32px] [font-family:Switzer,_sans-serif] [font-weight:500] [line-height:150%]"><img data-meno-optimize="false" src="/images/AI-Enhanced-Analytics-1-1_1.avif" loading="lazy" sizes="(max-width: 2071px) 100vw, 2071px" srcset="/images/AI-Enhanced-Analytics-1-1_1-p-500.png 500w, /images/AI-Enhanced-Analytics-1-1_1AI-Enhanced-Analytics-1-1.avif 800w, /images/AI-Enhanced-Analytics-1-1_1.avif 2071w" alt="A black and purple hexagonal object with a check mark" class="image-21 [display:none]" />
+                  <div class="h4 hide [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] [display:none] max-sm:[font-size:18px]">Thank you! Your submission has been received!</div>
+                  <div class="thank-you-free-sample [z-index:auto] [height:auto] [box-shadow:none] [border:0_solid_#ffffff1a] [border-radius:20px] [flex-flow:column] [flex:1] [order:0] [justify-content:space-between] [padding:40px_64px] [transition:all_.2s] [display:flex] [position:static] [overflow:hidden] max-lg:[justify-content:center] max-lg:[align-items:center] max-lg:[height:auto] max-lg:[min-height:auto] max-lg:[padding:40px_24px] max-sm:[background-image:none] max-sm:[border-radius:26px] max-sm:[min-height:auto] max-sm:[padding:16px]">
+                    <div class="circuit-right [flex-flow:column] [justify-content:center] [width:40%] [height:90%] [display:flex] [position:absolute] [left:auto] [right:0] [overflow:hidden] max-sm:[justify-content:center] max-sm:[align-self:center] max-sm:[width:100%] max-sm:[height:12%] max-sm:[display:none] max-sm:[top:auto] max-sm:[bottom:0] max-sm:[right:auto]">
+                      <div class="lottie-animation flip [width:auto] [min-width:300%] [height:100%] [position:relative] [top:auto] [bottom:7%] [left:auto] [transform:rotate(180deg)] [right:110%] max-lg:[bottom:auto] max-sm:[min-width:240%] max-sm:[top:-32%] max-sm:[left:auto] max-sm:[transform:rotate(-90deg)] max-sm:[height:240%] max-sm:[bottom:100%] max-sm:[right:auto]" data-w-id="83766190-6895-d8a3-3e22-eb79cc2296fc" data-animation-type="lottie" data-src="/documents/circuit.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="5" data-loading="eager"></div>
+                    </div>
+                    <div class="circuit-left [flex-flow:column] [justify-content:center] [width:40%] [height:90%] [display:flex] [position:absolute] [left:0] [overflow:hidden] max-sm:[justify-content:center] max-sm:[align-self:center] max-sm:[width:100%] max-sm:[display:flex] max-sm:[top:0] max-sm:[left:auto]">
+                      <div class="lottie-animation [width:auto] [min-width:300%] [height:100%] [position:relative] [top:auto] [bottom:7%] [left:-90%] [transform:rotate(0)] max-lg:[bottom:auto] max-sm:[min-width:240%] max-sm:[top:-32%] max-sm:[left:auto] max-sm:[transform:rotate(90deg)]" data-w-id="83766190-6895-d8a3-3e22-eb79cc2296fe" data-animation-type="lottie" data-src="/documents/circuit.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="5" data-loading="eager"></div>
+                    </div>
+                    <div class="div-block-17 first [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [justify-content:center] [display:flex] [position:relative] max-lg:[order:0] max-lg:[justify-content:flex-start] max-lg:[align-items:center] max-lg:[position:relative] max-landscape:[justify-content:flex-start] max-landscape:[align-items:center]">
+                      <div class="header center [grid-column-gap:8px] [grid-row-gap:8px] [flex-flow:column] [display:flex] [position:relative] [text-align:center] [justify-content:center] [align-items:center]">
+                        <h2 class="h1 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [padding-right:0] [font-family:Switzer,_sans-serif] [font-size:48px] [font-weight:600] [line-height:120%] max-lg:[font-size:44px] max-landscape:[font-size:38px] max-sm:[font-size:28px] max-sm:[font-weight:600]">Thank you!</h2>
+                        <p class="text-16-150 color-white-80 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:center] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">Your submission has been received.</p>
+                      </div>
+                    </div><img data-meno-optimize="false" loading="eager" src="/images/check-thx-free-sample-graphic.avif" alt="A purple seal with a tick mark on it" class="image-23 [max-width:100%] max-lg:[max-width:60%] max-sm:[max-width:100%]" />
+                  </div><img data-meno-optimize="false" src="/images/Gradient-Background-purple.avif" loading="eager" sizes="(max-width: 1280px) 100vw, 1280px" srcset="/images/Gradient-Background-purple-p-500.png 500w, /images/Gradient-Background-purple.avif 1280w" alt="A purple and blue background with a white background" class="image-22 [position:absolute] [bottom:0] [left:0] [right:0]" />
+                </div>
+                <div class="w-form-fail [display:none] [margin-top:10px] [padding:10px] [background-color:#ffdede]">
+                  <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><img data-meno-optimize="false" sizes="(max-width: 1351px) 100vw, 1351px" srcset="/images/Frame-1707478801_1-p-500.png 500w, /images/Frame-1707478801_1-p-800.png 800w, /images/Frame-1707478801_1.avif 1351w" alt="A woman holding a tennis racquet on top of a tennis court" src="/images/Frame-1707478801_1.avif" loading="lazy" class="image-contact_us-copy [z-index:0] [pointer-events:none] [object-fit:cover] [max-width:863px] [position:absolute] [top:16%] [right:-20%] max-sm:[max-width:400px] max-sm:[top:39%] max-sm:[right:0%]" />
+      </section>
+      <Footer />
+      <div class="css [display:none]">
+        <div class="button-css w-embed [display:none]">
+          <Embed html={__embed1} />
+        </div>
+        <div class="custom-styles w-embed [display:none]">
+          <Embed html={__embed2} />
+        </div>
+        <div class="code-embed-2 w-embed w-script [display:none]">
+          <Embed html={__embed3} />
+        </div>
+        <div class="global-style w-embed [display:none]">
+          <Embed html={__embed4} />
         </div>
       </div>
     </div>
   </div>
+</div>
 </BaseLayout>

@@ -1,183 +1,251 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/theme.css';
+import { BaseLayout, Embed } from 'meno-astro/components';
 import NavBanner from '../../components/NavBanner.astro';
 import Footer from '../../components/Footer.astro';
----
-<BaseLayout
-  title={"Terms of Service | Motion The Agency"}
-  wfPage="67600a744b199523c9e3d807"
-  bodyClass={"body"}
-  description={"Review Motion The Agency’s Terms of Service. Learn about our policies, client agreements, and usage terms for our creative and design services."}
-  ogTitle={"Terms of Service | Motion The Agency"}
-  ogDescription={"Review Motion The Agency’s Terms of Service. Learn about our policies, client agreements, and usage terms for our creative and design services."}
-  twitterTitle={"Terms of Service | Motion The Agency"}
-  twitterDescription={"Review Motion The Agency’s Terms of Service. Learn about our policies, client agreements, and usage terms for our creative and design services."}
-  ogType={"website"}
-  twitterCard={"summary_large_image"}
-  robots={"noindex"}
-  canonical={"https://www.motiontheagency.com/legal/terms-of-services"}
->
-  <Fragment slot="head">
-<script is:inline type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://www.motiontheagency.com/legal/terms-of-services",
-      "name": "Terms of Services - Motion The Agency",
-      "url": "https://www.motiontheagency.com/legal/terms-of-services",
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.motiontheagency.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Terms of Services",
-            "item": "https://www.motiontheagency.com/legal/terms-of-services"
-          }
-        ]
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Unlimited Design Subscription by Motion",
-      "image": "https://www.motiontheagency.com/_next/image?url=%2Fimages%2Fsocial.png",
-      "description": "Unlimited graphic design service with fast turnaround, flexible scope, and unlimited revisions for startups, agencies, and SaaS companies.",
-      "sku": "MOTION-UNLIMITED-001",
-      "brand": {
-        "@type": "Brand",
-        "name": "Motion The Agency"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "Clutch"
-        }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "75"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.motiontheagency.com/pricing/design-subscription-services",
-        "priceCurrency": "GBP",
-        "price": "1499",
-        "priceValidUntil": "2025-12-31",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "seller": {
-          "@type": "Organization",
-          "name": "Motion The Agency"
-        },
-        "shippingDetails": {
-          "@type": "OfferShippingDetails",
-          "shippingRate": {
-            "@type": "MonetaryAmount",
-            "value": "0",
-            "currency": "GBP"
-          },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 0,
-              "maxValue": 0,
-              "unitCode": "d"
-            },
-            "transitTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 0,
-              "maxValue": 0,
-              "unitCode": "d"
-            },
-            "businessDays": {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": [
-                "https://schema.org/Monday",
-                "https://schema.org/Tuesday",
-                "https://schema.org/Wednesday",
-                "https://schema.org/Thursday",
-                "https://schema.org/Friday"
-              ]
-            }
-          },
-          "shippingDestination": {
-            "@type": "DefinedRegion",
-            "addressCountry": "GB"
-          }
-        },
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "GB",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-        }
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I cancel anytime?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! You can cancel your subscription at any time. No contract or hidden fees."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What’s the turnaround time?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most tasks are delivered in 1–2 business days depending on complexity."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who will work on my designs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You’ll work with a dedicated designer and project manager from our creative team."
-          }
-        }
-      ]
-    }
-  ]
+
+const meta = {
+  "title": "Terms of Service | Motion The Agency",
+  "description": "Review Motion The Agency’s Terms of Service. Learn about our policies, client agreements, and usage terms for our creative and design services.",
+  "htmlAttributes": {
+    "data-wf-page": "67600a744b199523c9e3d807",
+    "data-wf-site": "66ebfb6ec8f20d5eda50eb34"
+  },
+  "ogTitle": "Terms of Service | Motion The Agency",
+  "ogDescription": "Review Motion The Agency’s Terms of Service. Learn about our policies, client agreements, and usage terms for our creative and design services.",
+  "ogType": "website",
+  "noindex": true,
+  "customCode": {
+    "head": "\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://www.motiontheagency.com/legal/terms-of-services\",\n      \"name\": \"Terms of Services - Motion The Agency\",\n      \"url\": \"https://www.motiontheagency.com/legal/terms-of-services\",\n      \"breadcrumb\": {\n        \"@type\": \"BreadcrumbList\",\n        \"itemListElement\": [\n          {\n            \"@type\": \"ListItem\",\n            \"position\": 1,\n            \"name\": \"Home\",\n            \"item\": \"https://www.motiontheagency.com/\"\n          },\n          {\n            \"@type\": \"ListItem\",\n            \"position\": 2,\n            \"name\": \"Terms of Services\",\n            \"item\": \"https://www.motiontheagency.com/legal/terms-of-services\"\n          }\n        ]\n      }\n    },\n    {\n      \"@type\": \"Product\",\n      \"name\": \"Unlimited Design Subscription by Motion\",\n      \"image\": \"https://www.motiontheagency.com/_next/image?url=%2Fimages%2Fsocial.png\",\n      \"description\": \"Unlimited graphic design service with fast turnaround, flexible scope, and unlimited revisions for startups, agencies, and SaaS companies.\",\n      \"sku\": \"MOTION-UNLIMITED-001\",\n      \"brand\": {\n        \"@type\": \"Brand\",\n        \"name\": \"Motion The Agency\"\n      },\n      \"review\": {\n        \"@type\": \"Review\",\n        \"reviewRating\": {\n          \"@type\": \"Rating\",\n          \"ratingValue\": \"4.9\",\n          \"bestRating\": \"5\"\n        },\n        \"author\": {\n          \"@type\": \"Organization\",\n          \"name\": \"Clutch\"\n        }\n      },\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": \"4.9\",\n        \"reviewCount\": \"75\"\n      },\n      \"offers\": {\n        \"@type\": \"Offer\",\n        \"url\": \"https://www.motiontheagency.com/pricing/design-subscription-services\",\n        \"priceCurrency\": \"GBP\",\n        \"price\": \"1499\",\n        \"priceValidUntil\": \"2025-12-31\",\n        \"availability\": \"https://schema.org/InStock\",\n        \"itemCondition\": \"https://schema.org/NewCondition\",\n        \"seller\": {\n          \"@type\": \"Organization\",\n          \"name\": \"Motion The Agency\"\n        },\n        \"shippingDetails\": {\n          \"@type\": \"OfferShippingDetails\",\n          \"shippingRate\": {\n            \"@type\": \"MonetaryAmount\",\n            \"value\": \"0\",\n            \"currency\": \"GBP\"\n          },\n          \"deliveryTime\": {\n            \"@type\": \"ShippingDeliveryTime\",\n            \"handlingTime\": {\n              \"@type\": \"QuantitativeValue\",\n              \"minValue\": 0,\n              \"maxValue\": 0,\n              \"unitCode\": \"d\"\n            },\n            \"transitTime\": {\n              \"@type\": \"QuantitativeValue\",\n              \"minValue\": 0,\n              \"maxValue\": 0,\n              \"unitCode\": \"d\"\n            },\n            \"businessDays\": {\n              \"@type\": \"OpeningHoursSpecification\",\n              \"dayOfWeek\": [\n                \"https://schema.org/Monday\",\n                \"https://schema.org/Tuesday\",\n                \"https://schema.org/Wednesday\",\n                \"https://schema.org/Thursday\",\n                \"https://schema.org/Friday\"\n              ]\n            }\n          },\n          \"shippingDestination\": {\n            \"@type\": \"DefinedRegion\",\n            \"addressCountry\": \"GB\"\n          }\n        },\n        \"hasMerchantReturnPolicy\": {\n          \"@type\": \"MerchantReturnPolicy\",\n          \"applicableCountry\": \"GB\",\n          \"returnPolicyCategory\": \"https://schema.org/MerchantReturnNotPermitted\"\n        }\n      }\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can I cancel anytime?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Yes! You can cancel your subscription at any time. No contract or hidden fees.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What’s the turnaround time?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Most tasks are delivered in 1–2 business days depending on complexity.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Who will work on my designs?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"You’ll work with a dedicated designer and project manager from our creative team.\"\n          }\n        }\n      ]\n    }\n  ]\n}\n</script>\n  <meta name=\"twitter:title\" content=\"Terms of Service | Motion The Agency\">\n<meta name=\"twitter:description\" content=\"Review Motion The Agency’s Terms of Service. Learn about our policies, client agreements, and usage terms for our creative and design services.\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">",
+    "bodyStart": "<script>document.body.className=\"body\";</script>"
+  }
+};
+const __embed0 = `<style>
+ * {
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     font-smoothing: antialiased;
+     text-rendering: optimizeLegibility;
 }
-</script>
-  </Fragment>
-<div class="page-wrapper">
+  html { font-size: calc(0.625rem + 0.41666666666666663vw); }
+  @media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
+  @media screen and (max-width:1440px) { html { font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); } }
+  @media screen and (max-width:479px) { html { font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); } }
+.glowing-wrapper-button:after {
+	background: radial-gradient(85% 120% at 50% 120%, rgba(255, 255, 255, .24) 0%, rgba(255, 255, 255, 0) 100%);
+	border-radius: 999px;
+	content: "";
+	height: calc(100% + 4px);
+	left: -2px;
+	opacity: 0;
+	position: absolute;
+	top: -2px;
+	transition: 1s all;
+	width: calc(100% + 4px)
+}
+.glowing-wrapper-button:hover:after {
+	opacity: .7
+}
+.glowing-wrapper-active .glowing-wrapper-animations,
+.glowing-wrapper-active .glowing-wrapper-borders-masker {
+	opacity: 1
+}
+.glowing-wrapper-animations:before,
+.glowing-wrapper-borders:before {
+	content: "";
+	float: left;
+	padding-top: 100%
+}
+.glowing-wrapper-animations:after,
+.glowing-wrapper-borders:after {
+	clear: both;
+	content: "";
+	display: block
+}
+.glowing-wrapper-animations {
+	pointer-events: none;
+}
+.glowing-wrapper-animations * {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%
+}
+.glowing-wrapper-borders,
+.glowing-wrapper-glow,
+.glowing-wrapper-mask {
+	animation: borderTurn 2.5s infinite linear;
+	background-image: conic-gradient(from 0 at 50% 50%, rgba(255, 255, 255, .5) 0deg, rgba(255, 255, 255, 0) 60deg, rgba(255, 255, 255, 0) 310deg, rgba(255, 255, 255, .5) 360deg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover
+}
+.glowing-wrapper-mask-wrapper {
+	-webkit-mask: url("data:image/svg+xml,url('data:image/svg+xml,%253Csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%253E%253Crect width='28' height='24' fill='black'/%253E%253C/svg%253E%250A');");
+	mask: url("data:image/svg+xml,url('data:image/svg+xml,%253Csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%253E%253Crect width='28' height='24' fill='black'/%253E%253C/svg%253E%250A');");
+	mask-repeat: repeat;
+	-webkit-mask-size: auto;
+	mask-size: auto
+}
+.glowing-wrapper-borders {
+	animation-name: borderTurnWithTranslate
+}
+.glowing-wrapper-borders-masker {
+	content: "";
+	inset: 0;
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask-composite: xor;
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	pointer-events: none;
+}
+@keyframes borderTurn {
+	0% {
+		transform: rotate(0)
+	}
+	to {
+		transform: rotate(360deg)
+	}
+}
+@keyframes borderTurnWithTranslate {
+	0% {
+		transform: translate(-50%, -50%) rotate(0)
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(360deg)
+	}
+}
+</style>`;
+const __embed1 = `<style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+        :root {
+            --bg-color: rgb(20, 20, 20);
+            --card-color: rgb(23, 23, 23);
+        }
+        .hero {
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.1), rgba(255, 255, 255, 0));
+        }
+        #cards:hover > .card::after {
+            opacity: 1;
+        }
+        .card:hover::before {
+            opacity: 1;
+        }
+        .card::before,
+        .card::after {
+            border-radius: inherit;
+            content: "";
+            height: 100%;
+            left: 0px;
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            transition: opacity 500ms;
+            width: 100%;
+        }
+        .card::before {
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
+            z-index: 3;
+        }
+        .card::after {
+            background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.4), transparent 40%);
+            z-index: 1;
+        }
+        .card > .card-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            z-index: 2;
+        }
+        .rich-text a{
+        	color: white !important;
+        }
+        .rich-text p{
+        	color: rgba(255, 255, 255, 0.8);
+					font-size: 20px;
+          line-height: 150%;
+        }
+         .rich-text ul,
+         .rich-text ol {
+              font-size: 20px;
+          		line-height: 150%;
+              color: rgba(255, 255, 255, 0.8);
+          }
+        @media (max-width: 768px) {
+          .rich-text p {
+            font-size: 16px; /* Smaller font size for smaller screens */
+            }
+           .rich-text ul,
+           .rich-text ol {
+                font-size: 16px;
+                line-height: 150%;
+            }
+				}
+        .rich-text h1, h2, h3{
+    			margin-top: 48px;
+          margin-bottom: 12px;
+				}
+        .rich-text h4, h5, h6{
+         	margin-top: 20px;
+          margin-bottom: 8px;
+         }
+    }
+</style>`;
+const __embed2 = `<script>
+document.getElementById("cards").onmousemove = (e) => {
+  for (const card of document.getElementsByClassName("card")) {
+    const rect = card.getBoundingClientRect(),
+      x = e.clientX - rect.left,
+      y = e.clientY - rect.top;
+    card.style.setProperty("--mouse-x", \`\${x}px\`);
+    card.style.setProperty("--mouse-y", \`\${y}px\`);
+  }
+};
+</script>`;
+const __embed3 = `<style>
+.card_glow_background {
+	width: calc(100% + 12px);
+  height: calc(100% + 12px);
+}
+.card_glow_background._2 {
+	left : calc(-100% - 24px);
+}
+.card_glow_background._3 {
+	top : calc(-100% - 24px);
+}
+.card_glow_background._4 {
+	left : calc(-100% - 24px);
+  top : calc(-100% - 24px);
+}
+</style>`;
+---
+<BaseLayout meta={meta}>
+<div data-meno-label="Page content" class="body min-h-screen [color:#fff] [background-color:#080610] [overflow-x:hidden]">
+
+<div class="page-wrapper [color:#fff] [overflow-x:hidden]">
     <NavBanner />
-    <div id="cards" class="main-wrapper">
-      <section data-w-id="f69936d7-57cd-0868-00bf-9483da8a17eb" class="section-hero">
-        <div class="w-layout-blockcontainer container-1280 margin-top-sm w-container">
-          <div class="blog-hero left">
-            <div class="header">
-              <h1 class="h2"><span class="span">Terms of Services</span></h1>
+    <div id="cards" class="main-wrapper [z-index:0] [color:#fff] [background-color:#080610] [max-width:none] [position:relative] [overflow-x:hidden]">
+      <section data-w-id="f69936d7-57cd-0868-00bf-9483da8a17eb" class="section-hero [background-image:url('../images/Hero_1.avif')] [background-position:0_100%] [background-repeat:no-repeat] [background-size:cover] [background-attachment:scroll] [padding-top:220px] [padding-bottom:40px] max-lg:[background-position:0%] max-lg:[background-size:cover] max-lg:[padding-top:80px] max-sm:[padding-top:80px] max-sm:[padding-bottom:20px]">
+        <div class="w-layout-blockcontainer container-1280 margin-top-sm w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:20px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:40px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="blog-hero left [grid-column-gap:16px] [grid-row-gap:16px] [text-align:center] [flex-flow:column] [justify-content:center] [align-items:flex-start] [max-width:1280px] [margin-left:auto] [margin-right:auto] [display:flex] max-lg:[max-width:100%]">
+            <div class="header [grid-column-gap:8px] [grid-row-gap:8px] [flex-flow:column] [display:flex] [position:relative]">
+              <h1 class="h2 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px]"><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">Terms of Services</span></h1>
             </div>
-            <p class="text-16-150 max-w-480-hero full-left">Effective date: 1<sup>st</sup> September 2021</p>
+            <p class="text-16-150 max-w-480-hero full-left [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [max-width:100%] [text-align:left] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Effective date: 1<sup>st</sup> September 2021</p>
           </div>
         </div>
-        <div id="banner-trigger" class="nav_banner-trigger"></div>
+        <div id="banner-trigger" class="nav_banner-trigger [pointer-events:none] [border:1px_solid_#0000] [width:100%] [height:240px] [position:absolute] [top:0] [bottom:auto]"></div>
       </section>
-      <div class="section-blog margin-top-0">
-        <div class="terms-text-wrapper">
-          <div class="rich-text w-richtext">
+      <div class="section-blog margin-top-0 [justify-content:center] [align-items:flex-start] [width:100%] [max-width:none] [padding-top:40px] [padding-bottom:80px] [display:flex] [position:relative] [overflow:clip] [background-image:none] [background-repeat:repeat] [background-size:auto] [background-attachment:scroll] max-lg:[padding-top:0] max-lg:[padding-bottom:40px] max-landscape:[padding-top:40px] max-landscape:[padding-bottom:40px] max-sm:[padding-top:0] max-sm:[padding-bottom:60px] max-sm:[overflow:hidden]">
+        <div class="terms-text-wrapper [max-width:1280px] max-lg:[max-width:728px] max-lg:[padding-left:20px] max-lg:[padding-right:20px]">
+          <div class="rich-text w-richtext [font-family:Switzer,_sans-serif] [font-size:16px]">
             <h3>1. Introduction</h3>
             <p>Welcome to www.motiontheagency.com (“Site” or “Website”).</p>
             <p>‍</p>
@@ -291,227 +359,27 @@ import Footer from '../../components/Footer.astro';
             <h3><strong>25. Contact Us</strong></h3>
             <p>For any questions, complaints, and queries or to report any violations, kindly send an email on hello@motiontheagency.com</p>
             <p>‍</p>
-            <p class="hide-select"><strong>Motion The Agency</strong></p>
-            <p class="hide-select">Registered Address: Jalan Padang Mekar Nomor 9, Denpasar, Bali, 80117. </p>
+            <p class="hide-select [display:none]"><strong>Motion The Agency</strong></p>
+            <p class="hide-select [display:none]">Registered Address: Jalan Padang Mekar Nomor 9, Denpasar, Bali, 80117. </p>
           </div>
         </div>
       </div>
       <Footer />
-      <div class="css">
-        <div class="button-css w-embed">
-          <style is:inline>
- * {
-     -webkit-font-smoothing: antialiased;
-     -moz-osx-font-smoothing: grayscale;
-     font-smoothing: antialiased;
-     text-rendering: optimizeLegibility;
-}
-  html { font-size: calc(0.625rem + 0.41666666666666663vw); }
-  @media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
-  @media screen and (max-width:1440px) { html { font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); } }
-  @media screen and (max-width:479px) { html { font-size: calc(0.7494769874476988rem + 0.8368200836820083vw); } }
-.glowing-wrapper-button:after {
-	background: radial-gradient(85% 120% at 50% 120%, rgba(255, 255, 255, .24) 0%, rgba(255, 255, 255, 0) 100%);
-	border-radius: 999px;
-	content: "";
-	height: calc(100% + 4px);
-	left: -2px;
-	opacity: 0;
-	position: absolute;
-	top: -2px;
-	transition: 1s all;
-	width: calc(100% + 4px)
-}
-.glowing-wrapper-button:hover:after {
-	opacity: .7
-}
-.glowing-wrapper-active .glowing-wrapper-animations,
-.glowing-wrapper-active .glowing-wrapper-borders-masker {
-	opacity: 1
-}
-.glowing-wrapper-animations:before,
-.glowing-wrapper-borders:before {
-	content: "";
-	float: left;
-	padding-top: 100%
-}
-.glowing-wrapper-animations:after,
-.glowing-wrapper-borders:after {
-	clear: both;
-	content: "";
-	display: block
-}
-.glowing-wrapper-animations {
-	pointer-events: none;
-}
-.glowing-wrapper-animations * {
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%
-}
-.glowing-wrapper-borders,
-.glowing-wrapper-glow,
-.glowing-wrapper-mask {
-	animation: borderTurn 2.5s infinite linear;
-	background-image: conic-gradient(from 0 at 50% 50%, rgba(255, 255, 255, .5) 0deg, rgba(255, 255, 255, 0) 60deg, rgba(255, 255, 255, 0) 310deg, rgba(255, 255, 255, .5) 360deg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover
-}
-.glowing-wrapper-mask-wrapper {
-	-webkit-mask: url("data:image/svg+xml,url('data:image/svg+xml,%253Csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%253E%253Crect width='28' height='24' fill='black'/%253E%253C/svg%253E%250A');");
-	mask: url("data:image/svg+xml,url('data:image/svg+xml,%253Csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%253E%253Crect width='28' height='24' fill='black'/%253E%253C/svg%253E%250A');");
-	mask-repeat: repeat;
-	-webkit-mask-size: auto;
-	mask-size: auto
-}
-.glowing-wrapper-borders {
-	animation-name: borderTurnWithTranslate
-}
-.glowing-wrapper-borders-masker {
-	content: "";
-	inset: 0;
-	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-	mask-composite: xor;
-	-webkit-mask-composite: xor;
-	mask-composite: exclude;
-	pointer-events: none;
-}
-@keyframes borderTurn {
-	0% {
-		transform: rotate(0)
-	}
-	to {
-		transform: rotate(360deg)
-	}
-}
-@keyframes borderTurnWithTranslate {
-	0% {
-		transform: translate(-50%, -50%) rotate(0)
-	}
-	to {
-		transform: translate(-50%, -50%) rotate(360deg)
-	}
-}
-</style>
+      <div class="css [display:none]">
+        <div class="button-css w-embed [display:none]">
+          <Embed html={__embed0} />
         </div>
-        <div class="custom-styles w-embed">
-          <style is:inline>
-        * {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
-        }
-        :root {
-            --bg-color: rgb(20, 20, 20);
-            --card-color: rgb(23, 23, 23);
-        }
-        .hero {
-            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.1), rgba(255, 255, 255, 0));
-        }
-        #cards:hover > .card::after {
-            opacity: 1;
-        }
-        .card:hover::before {
-            opacity: 1;
-        }
-        .card::before,
-        .card::after {
-            border-radius: inherit;
-            content: "";
-            height: 100%;
-            left: 0px;
-            opacity: 0;
-            position: absolute;
-            top: 0px;
-            transition: opacity 500ms;
-            width: 100%;
-        }
-        .card::before {
-            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
-            z-index: 3;
-        }
-        .card::after {
-            background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.4), transparent 40%);
-            z-index: 1;
-        }
-        .card > .card-content {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            z-index: 2;
-        }
-        .rich-text a{
-        	color: white !important;
-        }
-        .rich-text p{
-        	color: rgba(255, 255, 255, 0.8);
-					font-size: 20px;
-          line-height: 150%;
-        }
-         .rich-text ul,
-         .rich-text ol {
-              font-size: 20px;
-          		line-height: 150%;
-              color: rgba(255, 255, 255, 0.8);
-          }
-        @media (max-width: 768px) {
-          .rich-text p {
-            font-size: 16px; /* Smaller font size for smaller screens */
-            }
-           .rich-text ul,
-           .rich-text ol {
-                font-size: 16px;
-                line-height: 150%;
-            }
-				}
-        .rich-text h1, h2, h3{
-    			margin-top: 48px;
-          margin-bottom: 12px;
-				}
-        .rich-text h4, h5, h6{
-         	margin-top: 20px;
-          margin-bottom: 8px;
-         }
-    }
-</style>
+        <div class="custom-styles w-embed [display:none]">
+          <Embed html={__embed1} />
         </div>
-        <div class="code-embed-2 w-embed w-script">
-          <script is:inline>
-document.getElementById("cards").onmousemove = (e) => {
-  for (const card of document.getElementsByClassName("card")) {
-    const rect = card.getBoundingClientRect(),
-      x = e.clientX - rect.left,
-      y = e.clientY - rect.top;
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
-  }
-};
-</script>
+        <div class="code-embed-2 w-embed w-script [display:none]">
+          <Embed html={__embed2} />
         </div>
-        <div class="global-style w-embed">
-          <style is:inline>
-.card_glow_background {
-	width: calc(100% + 12px);
-  height: calc(100% + 12px);
-}
-.card_glow_background._2 {
-	left : calc(-100% - 24px); 
-}
-.card_glow_background._3 {
-	top : calc(-100% - 24px);
-}
-.card_glow_background._4 {
-	left : calc(-100% - 24px);
-  top : calc(-100% - 24px);
-}
-</style>
+        <div class="global-style w-embed [display:none]">
+          <Embed html={__embed3} />
         </div>
       </div>
     </div>
   </div>
+</div>
 </BaseLayout>

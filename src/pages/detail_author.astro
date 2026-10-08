@@ -1,109 +1,24 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/theme.css';
+import { BaseLayout, Embed } from 'meno-astro/components';
 import NavBanner from '../components/NavBanner.astro';
 import Footer from '../components/Footer.astro';
----
-<BaseLayout
-  title={"| Blog Author"}
-  wfPage="675ae08446f55a53cc92f207"
-  bodyClass={"body"}
-  description={""}
-  ogTitle={"| Blog Author"}
-  ogDescription={""}
-  ogImage={""}
-  twitterTitle={"| Blog Author"}
-  twitterDescription={""}
-  twitterImage={""}
-  ogType={"website"}
-  twitterCard={"summary_large_image"}
-  canonical={"https://www.motiontheagency.com/detail_author"}
->
-  <Fragment slot="head">
-<!--  [Attributes by Finsweet] CMS Slider  -->
-<script is:inline async="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js"></script>
-<!--  [Attributes by Finsweet] CMS Filter  -->
-<script is:inline async="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js"></script>
-<!--  [Attributes by Finsweet] CMS Load  -->
-<script is:inline async="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsload@1/cmsload.js"></script>
-<!--  Finsweet Attributes  -->
-<script is:inline async="" type="module" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js" fs-list=""></script>
-  </Fragment>
-<div class="page-wrapper">
-    <NavBanner />
-    <div id="cards" class="main-wrapper">
-      <section data-w-id="ecdc1cd5-3465-5d3f-45fa-ac7efbae8292" class="section-hero">
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="w-layout-hflex horizontal-wrapper">
-            <div><img src="/images/Profile-Widi.avif" loading="lazy" alt="" class="author-image w-dyn-bind-empty"></div>
-            <div class="text-wrapper">
-              <div class="div-block-44">
-                <div class="w-layout-hflex flex-block">
-                  <h1 class="h2 w-dyn-bind-empty"></h1>
-                  <a fs-socialshare-element="facebook" href="#" class="share-link linkedin w-inline-block">
-                    <div class="icon-embed-xsmall w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.429 8.969H13.143V10.819C13.678 9.755 15.05 8.799 17.111 8.799C21.062 8.799 22 10.917 22 14.803V22H18V15.688C18 13.475 17.465 12.227 16.103 12.227C14.214 12.227 13.429 13.572 13.429 15.687V22H9.429V8.969ZM2.57 21.83H6.57V8.799H2.57V21.83ZM7.143 4.55C7.14315 4.88528 7.07666 5.21724 6.94739 5.52659C6.81812 5.83594 6.62865 6.11651 6.39 6.352C6.15064 6.59012 5.86671 6.77874 5.55442 6.90708C5.24214 7.03543 4.90763 7.10098 4.57 7.1C3.8896 7.09847 3.23691 6.83029 2.752 6.353C2.5143 6.11665 2.32553 5.83575 2.1965 5.52637C2.06746 5.21699 2.00069 4.88521 2 4.55C2 3.873 2.27 3.225 2.753 2.747C3.2367 2.26788 3.89018 1.99938 4.571 2C5.253 2 5.907 2.269 6.39 2.747C6.873 3.225 7.143 3.873 7.143 4.55Z" fill="white"></path>
-                      </svg></div>
-                  </a>
-                </div>
-                <p class="text-caps w-dyn-bind-empty"></p>
-              </div>
-              <div class="text-16-150 color-white-80 left w-dyn-bind-empty"></div>
-            </div>
-          </div>
-        </div>
-        <div id="banner-trigger" class="nav_banner-trigger"></div>
-      </section>
-      <div class="section-blog padding-top">
-        <div class="image-wrapper-blog"><img src="/images/Frame-1707478673_1.avif" loading="lazy" sizes="(max-width: 3576px) 100vw, 3576px" srcset="/images/Frame-1707478673_1-p-500.png 500w, /images/Frame-1707478673_1-p-800.png 800w, /images/Frame-1707478673_1-p-1080.png 1080w, /images/Frame-1707478673_1-p-1600.png 1600w, /images/Frame-1707478673_1-p-2000.png 2000w, /images/Frame-1707478673_1.avif 3576w" alt="A group of three giraffe standing next to each other" class="image-blog-gradient"></div>
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="blog-wrapper no-spacing">
-            <h2 class="h3">Latest articles</h2>
-            <div class="flex-40 w-dyn-list">
-              <div fs-cmsload-element="list" fs-cmsfilter-element="list" fs-cmsload-mode="pagination" role="list" class="collection-list w-dyn-items">
-                <div role="listitem" class="w-dyn-item">
-                  <div class="card-contaiiner fill no-bg">
-                    <a href="#" class="card w-inline-block">
-                      <div class="card-content"><img loading="lazy" src="/images/Frame-1707478606.avif" alt="" class="img-main-blog w-dyn-bind-empty">
-                        <div class="text-wrapper-card-blog">
-                          <div class="gap-16-blog">
-                            <div fs-cmsfilter-field="category" class="vanish">All</div>
-                            <div fs-cmsfilter-field="category" class="text-14-150 text-color-purple w-dyn-bind-empty"></div>
-                            <div fs-cmsfilter-field="title" class="h4 w-dyn-bind-empty"></div>
-                          </div>
-                          <div class="author-description-blog">
-                            <p class="text-16-150 opacity-80 w-dyn-bind-empty"></p>
-                            <div class="author_date-blog">
-                              <div class="text-14-150 opacity-80 w-dyn-bind-empty"></div>
-                              <div class="text-14-150 opacity-80">・</div>
-                              <div class="text-14-150 opacity-80 w-dyn-bind-empty"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="empty-state w-dyn-empty">
-                <div>No items found.</div>
-              </div>
-              <div role="navigation" aria-label="List" class="w-pagination-wrapper arrow-wrapper">
-                <a href="#" aria-label="Previous Page" class="w-pagination-previous slider-arrow inline first"><img width="10" loading="lazy" alt="" src="/images/Arrow---Left.svg" class="image-26">
-                  <div class="text-14-150">Previous</div>
-                </a>
-                <a fs-cmsload-element="page-button" href="#" class="slider-arrow inline page-button">1</a>
-                <a href="#" aria-label="Next Page" class="w-pagination-next slider-arrow inline last">
-                  <div class="text-14-150">Next</div><img loading="lazy" src="/images/Arrow---Right.svg" alt="" class="image-26">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-      <div class="css">
-        <div class="button-css w-embed">
-          <style is:inline>
+
+const meta = {
+  "title": "| Blog Author",
+  "description": "",
+  "htmlAttributes": {
+    "data-wf-page": "675ae08446f55a53cc92f207",
+    "data-wf-site": "66ebfb6ec8f20d5eda50eb34"
+  },
+  "ogTitle": "| Blog Author",
+  "ogType": "website",
+  "customCode": {
+    "head": "\n<!--  [Attributes by Finsweet] CMS Slider  -->\n<script async=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js\"></script>\n<!--  [Attributes by Finsweet] CMS Filter  -->\n<script async=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js\"></script>\n<!--  [Attributes by Finsweet] CMS Load  -->\n<script async=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsload@1/cmsload.js\"></script>\n<!--  Finsweet Attributes  -->\n<script async=\"\" type=\"module\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js\" fs-list=\"\"></script>\n  <meta name=\"twitter:title\" content=\"| Blog Author\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">",
+    "bodyStart": "<script>document.body.className=\"body\";</script>"
+  }
+};
+const __embed0 = `<style>
  * {
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
@@ -200,10 +115,8 @@ import Footer from '../components/Footer.astro';
 		transform: translate(-50%, -50%) rotate(360deg)
 	}
 }
-</style>
-        </div>
-        <div class="custom-styles w-embed">
-          <style is:inline>
+</style>`;
+const __embed1 = `<style>
         * {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -250,29 +163,25 @@ import Footer from '../components/Footer.astro';
             z-index: 2;
         }
     }
-</style>
-        </div>
-        <div class="code-embed-2 w-embed w-script">
-          <script is:inline>
+</style>`;
+const __embed2 = `<script>
 document.getElementById("cards").onmousemove = (e) => {
   for (const card of document.getElementsByClassName("card")) {
     const rect = card.getBoundingClientRect(),
       x = e.clientX - rect.left,
       y = e.clientY - rect.top;
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
+    card.style.setProperty("--mouse-x", \`\${x}px\`);
+    card.style.setProperty("--mouse-y", \`\${y}px\`);
   }
 };
-</script>
-        </div>
-        <div class="global-style w-embed">
-          <style is:inline>
+</script>`;
+const __embed3 = `<style>
 .card_glow_background {
 	width: calc(100% + 12px);
   height: calc(100% + 12px);
 }
 .card_glow_background._2 {
-	left : calc(-100% - 24px); 
+	left : calc(-100% - 24px);
 }
 .card_glow_background._3 {
 	top : calc(-100% - 24px);
@@ -281,13 +190,8 @@ document.getElementById("cards").onmousemove = (e) => {
 	left : calc(-100% - 24px);
   top : calc(-100% - 24px);
 }
-</style>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="code-embed-2 w-embed w-script">
-    <script is:inline type="application/ld+json">
+</style>`;
+const __embed4 = `<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -416,10 +320,8 @@ document.getElementById("cards").onmousemove = (e) => {
     }
   ]
 }
-</script>
-  </div>
-  <div class="code-embed-2 w-embed w-script">
-    <script is:inline type="application/ld+json">
+</script>`;
+const __embed5 = `<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -479,10 +381,8 @@ document.getElementById("cards").onmousemove = (e) => {
     }
   ]
 }
-</script>
-  </div>
-  <div class="code-embed-2 w-embed w-script">
-    <script is:inline type="application/ld+json">
+</script>`;
+const __embed6 = `<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -542,6 +442,108 @@ document.getElementById("cards").onmousemove = (e) => {
     }
   ]
 }
-</script>
+</script>`;
+---
+<BaseLayout meta={meta}>
+<div data-meno-label="Page content" class="body min-h-screen [color:#fff] [background-color:#080610] [overflow-x:hidden]">
+
+<div class="page-wrapper [color:#fff] [overflow-x:hidden]">
+    <NavBanner />
+    <div id="cards" class="main-wrapper [z-index:0] [color:#fff] [background-color:#080610] [max-width:none] [position:relative] [overflow-x:hidden]">
+      <section data-w-id="ecdc1cd5-3465-5d3f-45fa-ac7efbae8292" class="section-hero [background-image:url('../images/Hero_1.avif')] [background-position:0_100%] [background-repeat:no-repeat] [background-size:cover] [background-attachment:scroll] [padding-top:220px] [padding-bottom:40px] max-lg:[background-position:0%] max-lg:[background-size:cover] max-lg:[padding-top:80px] max-sm:[padding-top:80px] max-sm:[padding-bottom:20px]">
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="w-layout-hflex horizontal-wrapper [flex-direction:row] [align-items:flex-start] [display:flex] [grid-column-gap:40px] [grid-row-gap:40px] max-landscape:[grid-column-gap:0px] max-landscape:[grid-row-gap:0px] max-landscape:[flex-flow:column]">
+            <div><img data-meno-optimize="false" src="/images/Profile-Widi.avif" loading="lazy" alt="" class="author-image w-dyn-bind-empty [min-width:160px] [max-width:160px]" /></div>
+            <div class="text-wrapper [grid-column-gap:20px] [grid-row-gap:20px] [flex-flow:column] [margin-top:32px] [padding-right:120px] [display:flex] max-landscape:[padding-right:0]">
+              <div class="div-block-44 [grid-column-gap:8px] [grid-row-gap:8px] [flex-flow:column] [justify-content:flex-start] [align-items:flex-start] [display:flex]">
+                <div class="w-layout-hflex flex-block [flex-direction:row] [align-items:center] [display:flex] [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] max-sm:[flex-flow:wrap] max-sm:[justify-content:space-between]">
+                  <h1 class="h2 w-dyn-bind-empty [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px]"></h1>
+                  <a fs-socialshare-element="facebook" href="#" class="share-link linkedin w-inline-block [max-width:100%] [display:flex] [width:40px] [height:40px] [color:var(--white)] [background-color:#726eff0d] [border:1px_solid_#581de3] [border-radius:50%] [justify-content:center] [align-items:center] [padding:8px] [transition:color_.2s] [position:relative] [padding-bottom:12px] [padding-left:12px] [padding-right:12px] hover:[color:#f06]">
+                    <div class="icon-embed-xsmall w-embed [flex-direction:column] [justify-content:center] [align-items:center] [width:24px] [height:24px] [display:flex]"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.429 8.969H13.143V10.819C13.678 9.755 15.05 8.799 17.111 8.799C21.062 8.799 22 10.917 22 14.803V22H18V15.688C18 13.475 17.465 12.227 16.103 12.227C14.214 12.227 13.429 13.572 13.429 15.687V22H9.429V8.969ZM2.57 21.83H6.57V8.799H2.57V21.83ZM7.143 4.55C7.14315 4.88528 7.07666 5.21724 6.94739 5.52659C6.81812 5.83594 6.62865 6.11651 6.39 6.352C6.15064 6.59012 5.86671 6.77874 5.55442 6.90708C5.24214 7.03543 4.90763 7.10098 4.57 7.1C3.8896 7.09847 3.23691 6.83029 2.752 6.353C2.5143 6.11665 2.32553 5.83575 2.1965 5.52637C2.06746 5.21699 2.00069 4.88521 2 4.55C2 3.873 2.27 3.225 2.753 2.747C3.2367 2.26788 3.89018 1.99938 4.571 2C5.253 2 5.907 2.269 6.39 2.747C6.873 3.225 7.143 3.873 7.143 4.55Z" fill="white"></path>
+                      </svg></div>
+                  </a>
+                </div>
+                <p class="text-caps w-dyn-bind-empty [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px]"></p>
+              </div>
+              <div class="text-16-150 color-white-80 left w-dyn-bind-empty [letter-spacing:.2px] [text-wrap:pretty] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:left] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]"></div>
+            </div>
+          </div>
+        </div>
+        <div id="banner-trigger" class="nav_banner-trigger [pointer-events:none] [border:1px_solid_#0000] [width:100%] [height:240px] [position:absolute] [top:0] [bottom:auto]"></div>
+      </section>
+      <div class="section-blog padding-top [justify-content:center] [align-items:center] [width:100%] [max-width:none] [padding-top:80px] [padding-bottom:80px] [display:flex] [position:relative] [overflow:clip] max-lg:[padding-top:0] max-lg:[padding-bottom:40px] max-landscape:[padding-top:0] max-landscape:[padding-bottom:40px] max-sm:[padding-top:0] max-sm:[padding-bottom:60px] max-sm:[overflow:hidden]">
+        <div class="image-wrapper-blog [pointer-events:none] [justify-content:center] [align-items:flex-start] [display:flex] [position:absolute] [inset:0%_0%_auto]"><img data-meno-optimize="false" src="/images/Frame-1707478673_1.avif" loading="lazy" sizes="(max-width: 3576px) 100vw, 3576px" srcset="/images/Frame-1707478673_1-p-500.png 500w, /images/Frame-1707478673_1-p-800.png 800w, /images/Frame-1707478673_1-p-1080.png 1080w, /images/Frame-1707478673_1-p-1600.png 1600w, /images/Frame-1707478673_1-p-2000.png 2000w, /images/Frame-1707478673_1.avif 3576w" alt="A group of three giraffe standing next to each other" class="image-blog-gradient [pointer-events:none] [min-width:1400px] [position:absolute] [bottom:auto]" /></div>
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="blog-wrapper no-spacing [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [width:100%] [display:flex] max-landscape:[grid-column-gap:40px] max-landscape:[grid-row-gap:40px]">
+            <h2 class="h3 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px]">Latest articles</h2>
+            <div class="flex-40 w-dyn-list [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [display:flex] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px]">
+              <div fs-cmsload-element="list" fs-cmsfilter-element="list" fs-cmsload-mode="pagination" role="list" class="collection-list w-dyn-items [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr_1fr] [grid-auto-columns:1fr] [display:grid] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[flex-flow:wrap] max-lg:[grid-template-rows:auto] max-lg:[grid-template-columns:1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:grid] max-lg:[overflow:auto] max-landscape:[grid-template-columns:1fr] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px] max-sm:[flex-flow:column]">
+                <div role="listitem" class="w-dyn-item">
+                  <div class="card-contaiiner fill no-bg [flex:1] [color:] [background-image:none] [border:0_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [justify-content:flex-start] [height:100%] [display:flex] [position:relative] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex] max-sm:[width:100%]">
+                    <a href="#" class="card w-inline-block [max-width:100%] [display:flex] [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [position:relative] max-lg:[border-radius:16px]">
+                      <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]"><img data-meno-optimize="false" loading="lazy" src="/images/Frame-1707478606.avif" alt="" class="img-main-blog w-dyn-bind-empty [object-fit:cover] [border-radius:12px] [width:100%] [height:auto] max-lg:[width:100%]" />
+                        <div class="text-wrapper-card-blog [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [align-items:flex-start] [height:100%] [padding:24px_24px_32px] [display:flex]">
+                          <div class="gap-16-blog [z-index:111] [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [align-items:flex-start] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px] max-lg:[width:100%] max-landscape:[grid-column-gap:16px] max-landscape:[grid-row-gap:16px]">
+                            <div fs-cmsfilter-field="category" class="vanish [display:none]">All</div>
+                            <div fs-cmsfilter-field="category" class="text-14-150 text-color-purple w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [color:#726eff] max-landscape:[font-size:13px]"></div>
+                            <div fs-cmsfilter-field="title" class="h4 w-dyn-bind-empty [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] max-sm:[font-size:18px]"></div>
+                          </div>
+                          <div class="author-description-blog [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [height:100%] [display:flex]">
+                            <p class="text-16-150 opacity-80 w-dyn-bind-empty [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [opacity:.8] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]"></p>
+                            <div class="author_date-blog [grid-column-gap:4px] [grid-row-gap:4px] [margin-top:auto] [display:flex]">
+                              <div class="text-14-150 opacity-80 w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]"></div>
+                              <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">・</div>
+                              <div class="text-14-150 opacity-80 w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="empty-state w-dyn-empty [padding:10px] [background-color:#ddd0] [color:var(--untitled-ui--primary600)] [text-align:center]">
+                <div>No items found.</div>
+              </div>
+              <div role="navigation" aria-label="List" class="w-pagination-wrapper arrow-wrapper [flex-wrap:wrap] [justify-content:center] [display:flex] [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:row] [align-items:stretch] [left:-30px]">
+                <a href="#" aria-label="Previous Page" class="w-pagination-previous slider-arrow inline first [color:#fff] [background-color:#fafafa33] [border:1px_solid_#ffffff1a] [border-radius:8px] [margin-left:0] [margin-right:0] [padding:9px_20px] [font-size:14px] [display:flex] [justify-content:center] [align-items:center] [max-width:none] [max-height:48px] [order:-1] [padding-left:4px] [text-decoration:none] max-landscape:[margin-left:-48px] max-sm:[display:flex] max-sm:[inset:auto_0%_-10%]"><img data-meno-optimize="false" width="10" loading="lazy" alt="" src="/images/Arrow---Left.svg" class="image-26 [width:32px] [max-width:32px]" />
+                  <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Previous</div>
+                </a>
+                <a fs-cmsload-element="page-button" href="#" class="slider-arrow inline page-button [background-color:#ffffff1a] [border:1px_solid_#ffffff1a] [border-radius:8px] [justify-content:center] [align-items:center] [max-width:none] [max-height:48px] [margin-left:0] [display:flex] [margin-right:0] [color:#fff] [width:48px] [height:48px] [font-family:Switzer,_sans-serif] [font-size:18px] [font-weight:400] [text-decoration:none] max-landscape:[margin-left:-48px] max-sm:[display:none] max-sm:[inset:auto_0%_-10%]">1</a>
+                <a href="#" aria-label="Next Page" class="w-pagination-next slider-arrow inline last [color:#fff] [background-color:#fafafa00] [border:1px_solid_#ffffff1a] [border-radius:8px] [margin-left:0] [margin-right:0] [padding:9px_20px] [font-size:14px] [display:flex] [justify-content:center] [align-items:center] [max-width:none] [max-height:48px] [background-image:linear-gradient(-90deg,_#581de3,_#726eff)] [order:1] [padding-right:4px] [text-decoration:none] max-landscape:[margin-left:-48px] max-sm:[display:flex] max-sm:[inset:auto_0%_-10%]">
+                  <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Next</div><img data-meno-optimize="false" loading="lazy" src="/images/Arrow---Right.svg" alt="" class="image-26 [width:32px] [max-width:32px]" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+      <div class="css [display:none]">
+        <div class="button-css w-embed [display:none]">
+          <Embed html={__embed0} />
+        </div>
+        <div class="custom-styles w-embed [display:none]">
+          <Embed html={__embed1} />
+        </div>
+        <div class="code-embed-2 w-embed w-script [display:none]">
+          <Embed html={__embed2} />
+        </div>
+        <div class="global-style w-embed [display:none]">
+          <Embed html={__embed3} />
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="code-embed-2 w-embed w-script [display:none]">
+    <Embed html={__embed4} />
+  </div>
+  <div class="code-embed-2 w-embed w-script [display:none]">
+    <Embed html={__embed5} />
+  </div>
+  <div class="code-embed-2 w-embed w-script [display:none]">
+    <Embed html={__embed6} />
+  </div>
+</div>
 </BaseLayout>

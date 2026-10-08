@@ -1,198 +1,26 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/theme.css';
+import { BaseLayout, Embed } from 'meno-astro/components';
 import NavBanner from '../components/NavBanner.astro';
 import Footer from '../components/Footer.astro';
----
-<BaseLayout
-  title={"Inside Motion The Agency’s Creative Process | How It Works"}
-  wfPage="67091882d6363303c1a05a67"
-  bodyClass={"body"}
-  description={"See how Motion's design subscription works. Expert designers, fast turnaround, flexible plans. Start with a free sample."}
-  ogTitle={"Inside Motion The Agency’s Creative Process | How It Works"}
-  ogDescription={"See how Motion's design subscription works. Expert designers, fast turnaround, flexible plans. Start with a free sample."}
-  ogImage={"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670694d04b4cfd54b92c5529_Frame%20273.png"}
-  twitterTitle={"Inside Motion The Agency’s Creative Process | How It Works"}
-  twitterDescription={"See how Motion's design subscription works. Expert designers, fast turnaround, flexible plans. Start with a free sample."}
-  twitterImage={"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670694d04b4cfd54b92c5529_Frame%20273.png"}
-  ogType={"website"}
-  twitterCard={"summary_large_image"}
-  canonical={"https://www.motiontheagency.com/how-it-works"}
->
-  <Fragment slot="head">
-<!--  [Attributes by Finsweet] CMS Slider  -->
-<script is:inline async="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js"></script>
-<script is:inline type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Product",
-      "name": "Our Production Process",
-      "url": "https://www.motiontheagency.com/how-it-works",
-      "description": "Understand how our streamlined motion graphics process works — from idea to final delivery. Fast, efficient, and stress-free production designed for impact.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Motion The Agency"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "Clutch",
-          "url": "https://clutch.co/profile/motion-agency-0"
-        }
-      }
-    },
-    {
-      "@type": "HowTo",
-      "name": "How Motion's production process works",
-      "description": "Step-by-step workflow of how Motion The Agency produces animation videos for clients efficiently.",
-      "step": [
-        {"@type": "HowToStep","name": "You have an idea","text": "Clients come to us with an idea or problem that needs to be explained visually."},
-        {"@type": "HowToStep","name": "They need a sample","text": "We prepare an initial reference to align expectations and style."},
-        {"@type": "HowToStep","name": "Creative team formats a brief","text": "Our team creates a concise creative brief based on your notes, website, or decks."},
-        {"@type": "HowToStep","name": "Support schedules a call","text": "Our support team arranges a discovery call for deeper understanding."},
-        {"@type": "HowToStep","name": "Creative team builds first draft","text": "We create a video draft tailored to your brand and audience."},
-        {"@type": "HowToStep","name": "Wistia link sent","text": "We deliver the preview via a private Wistia link."},
-        {"@type": "HowToStep","name": "Revisions if needed","text": "You can request revisions—we aim for perfection with minimal friction."},
-        {"@type": "HowToStep","name": "Final delivery","text": "Once approved, we send you the final video files in your preferred format."}
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is included in your video service?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We specialize in 2D and 3D animation, branded motion graphics, social media motion graphics, product video, and UI animations. We will create a custom video to fit your needs!"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "We have existing video footage. Do you still charge per minute?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We won’t charge you for the duration of the video. You’ll only be charged for the animation we add to it."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I know which package suits my needs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "From simple to high-volume needs, we’ve got a package to bring your brand to life. Visit our pricing page or contact us directly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How fast are your turnaround times like?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We aim to deliver videos in 2 business days. Larger projects may take longer depending on scope."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "VideoObject",
-      "name": "Our Motion Graphics Workflow Process - Motion The Agency",
-      "description": "Motion the Agency is a full-service Motion Graphics Agency based in the United Kingdom. We offer services for branded motion graphics, 2D animations, 3D animations, social media content, UI animations, and Product video.",
-      "thumbnailUrl": "https://i.ytimg.com/vi/Ku881yQENWU/maxresdefault.jpg",
-      "uploadDate": "2023-01-12T00:00:00+00:00",
-      "duration": "PT13M23S",
-      "embedUrl": "https://www.youtube.com/embed/Ku881yQENWU",
-      "contentUrl": "https://www.youtube.com/watch?v=Ku881yQENWU"
-    },
-    {
-      "@type": "VideoObject",
-      "name": "Attraction.IO - Video Testimonial",
-      "description": "Discover how Attraction.IO's collaboration with Motion transformed visitor engagement strategies with captivating motion graphics.",
-      "thumbnailUrl": "https://i.ytimg.com/vi/O5xibKNNL1w/maxresdefault.jpg",
-      "uploadDate": "2024-07-02T00:00:00+00:00",
-      "duration": "PT1M0S",
-      "embedUrl": "https://www.youtube.com/embed/O5xibKNNL1w",
-      "contentUrl": "https://www.youtube.com/watch?v=O5xibKNNL1w"
-    },
-    {
-      "@type": "VideoObject",
-      "name": "HackerRank's Success Story",
-      "description": "Discover how Motion brought HackerRank's innovative solutions to life with stunning motion graphics!",
-      "thumbnailUrl": "https://i.ytimg.com/vi/PyZz16CtX-0/maxresdefault.jpg",
-      "uploadDate": "2024-06-28T00:00:00+00:00",
-      "duration": "PT1M0S",
-      "embedUrl": "https://www.youtube.com/embed/PyZz16CtX-0",
-      "contentUrl": "https://www.youtube.com/watch?v=PyZz16CtX-0"
-    },
-    {
-      "@type": "VideoObject",
-      "name": "Testimonial Video - Navatar",
-      "description": "Discover how Motion transformed Navatar's complex ideas into engaging visual stories!",
-      "thumbnailUrl": "https://i.ytimg.com/vi/G0ZHbVIleu4/maxresdefault.jpg",
-      "uploadDate": "2024-06-28T00:00:00+00:00",
-      "duration": "PT1M0S",
-      "embedUrl": "https://www.youtube.com/embed/G0ZHbVIleu4",
-      "contentUrl": "https://www.youtube.com/watch?v=G0ZHbVIleu4"
-    }
-  ]
-}
-</script>
-<script is:inline type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Gem - Video Testimonial",
-  "description": "Video testimonial from Gem on their experience working with Motion The Agency.",
-  "thumbnailUrl": "https://i.ytimg.com/vi/5JOb8IlK_m8/maxresdefault.jpg",
-  "uploadDate": "2025-10-30T01:15:43-07:00",
-  "duration": "PT1M37S",
-  "embedUrl": "https://www.youtube.com/embed/5JOb8IlK_m8",
-  "contentUrl": "https://www.youtube.com/watch?v=5JOb8IlK_m8",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Motion The Agency",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/6762c1dea24d4f98491f457f_Logo.png"
-    }
+
+const meta = {
+  "title": "Inside Motion The Agency’s Creative Process | How It Works",
+  "description": "See how Motion's design subscription works. Expert designers, fast turnaround, flexible plans. Start with a free sample.",
+  "htmlAttributes": {
+    "data-wf-page": "67091882d6363303c1a05a67",
+    "data-wf-site": "66ebfb6ec8f20d5eda50eb34"
+  },
+  "ogTitle": "Inside Motion The Agency’s Creative Process | How It Works",
+  "ogDescription": "See how Motion's design subscription works. Expert designers, fast turnaround, flexible plans. Start with a free sample.",
+  "ogImage": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670694d04b4cfd54b92c5529_Frame%20273.png",
+  "ogType": "website",
+  "customCode": {
+    "head": "\n<!--  [Attributes by Finsweet] CMS Slider  -->\n<script async=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js\"></script>\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Product\",\n      \"name\": \"Our Production Process\",\n      \"url\": \"https://www.motiontheagency.com/how-it-works\",\n      \"description\": \"Understand how our streamlined motion graphics process works — from idea to final delivery. Fast, efficient, and stress-free production designed for impact.\",\n      \"brand\": {\n        \"@type\": \"Brand\",\n        \"name\": \"Motion The Agency\"\n      },\n      \"review\": {\n        \"@type\": \"Review\",\n        \"reviewRating\": {\n          \"@type\": \"Rating\",\n          \"ratingValue\": \"5\",\n          \"bestRating\": \"5\"\n        },\n        \"author\": {\n          \"@type\": \"Organization\",\n          \"name\": \"Clutch\",\n          \"url\": \"https://clutch.co/profile/motion-agency-0\"\n        }\n      }\n    },\n    {\n      \"@type\": \"HowTo\",\n      \"name\": \"How Motion's production process works\",\n      \"description\": \"Step-by-step workflow of how Motion The Agency produces animation videos for clients efficiently.\",\n      \"step\": [\n        {\"@type\": \"HowToStep\",\"name\": \"You have an idea\",\"text\": \"Clients come to us with an idea or problem that needs to be explained visually.\"},\n        {\"@type\": \"HowToStep\",\"name\": \"They need a sample\",\"text\": \"We prepare an initial reference to align expectations and style.\"},\n        {\"@type\": \"HowToStep\",\"name\": \"Creative team formats a brief\",\"text\": \"Our team creates a concise creative brief based on your notes, website, or decks.\"},\n        {\"@type\": \"HowToStep\",\"name\": \"Support schedules a call\",\"text\": \"Our support team arranges a discovery call for deeper understanding.\"},\n        {\"@type\": \"HowToStep\",\"name\": \"Creative team builds first draft\",\"text\": \"We create a video draft tailored to your brand and audience.\"},\n        {\"@type\": \"HowToStep\",\"name\": \"Wistia link sent\",\"text\": \"We deliver the preview via a private Wistia link.\"},\n        {\"@type\": \"HowToStep\",\"name\": \"Revisions if needed\",\"text\": \"You can request revisions—we aim for perfection with minimal friction.\"},\n        {\"@type\": \"HowToStep\",\"name\": \"Final delivery\",\"text\": \"Once approved, we send you the final video files in your preferred format.\"}\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is included in your video service?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"We specialize in 2D and 3D animation, branded motion graphics, social media motion graphics, product video, and UI animations. We will create a custom video to fit your needs!\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"We have existing video footage. Do you still charge per minute?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"We won’t charge you for the duration of the video. You’ll only be charged for the animation we add to it.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How do I know which package suits my needs?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"From simple to high-volume needs, we’ve got a package to bring your brand to life. Visit our pricing page or contact us directly.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How fast are your turnaround times like?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"We aim to deliver videos in 2 business days. Larger projects may take longer depending on scope.\"\n          }\n        }\n      ]\n    },\n    {\n      \"@type\": \"VideoObject\",\n      \"name\": \"Our Motion Graphics Workflow Process - Motion The Agency\",\n      \"description\": \"Motion the Agency is a full-service Motion Graphics Agency based in the United Kingdom. We offer services for branded motion graphics, 2D animations, 3D animations, social media content, UI animations, and Product video.\",\n      \"thumbnailUrl\": \"https://i.ytimg.com/vi/Ku881yQENWU/maxresdefault.jpg\",\n      \"uploadDate\": \"2023-01-12T00:00:00+00:00\",\n      \"duration\": \"PT13M23S\",\n      \"embedUrl\": \"https://www.youtube.com/embed/Ku881yQENWU\",\n      \"contentUrl\": \"https://www.youtube.com/watch?v=Ku881yQENWU\"\n    },\n    {\n      \"@type\": \"VideoObject\",\n      \"name\": \"Attraction.IO - Video Testimonial\",\n      \"description\": \"Discover how Attraction.IO's collaboration with Motion transformed visitor engagement strategies with captivating motion graphics.\",\n      \"thumbnailUrl\": \"https://i.ytimg.com/vi/O5xibKNNL1w/maxresdefault.jpg\",\n      \"uploadDate\": \"2024-07-02T00:00:00+00:00\",\n      \"duration\": \"PT1M0S\",\n      \"embedUrl\": \"https://www.youtube.com/embed/O5xibKNNL1w\",\n      \"contentUrl\": \"https://www.youtube.com/watch?v=O5xibKNNL1w\"\n    },\n    {\n      \"@type\": \"VideoObject\",\n      \"name\": \"HackerRank's Success Story\",\n      \"description\": \"Discover how Motion brought HackerRank's innovative solutions to life with stunning motion graphics!\",\n      \"thumbnailUrl\": \"https://i.ytimg.com/vi/PyZz16CtX-0/maxresdefault.jpg\",\n      \"uploadDate\": \"2024-06-28T00:00:00+00:00\",\n      \"duration\": \"PT1M0S\",\n      \"embedUrl\": \"https://www.youtube.com/embed/PyZz16CtX-0\",\n      \"contentUrl\": \"https://www.youtube.com/watch?v=PyZz16CtX-0\"\n    },\n    {\n      \"@type\": \"VideoObject\",\n      \"name\": \"Testimonial Video - Navatar\",\n      \"description\": \"Discover how Motion transformed Navatar's complex ideas into engaging visual stories!\",\n      \"thumbnailUrl\": \"https://i.ytimg.com/vi/G0ZHbVIleu4/maxresdefault.jpg\",\n      \"uploadDate\": \"2024-06-28T00:00:00+00:00\",\n      \"duration\": \"PT1M0S\",\n      \"embedUrl\": \"https://www.youtube.com/embed/G0ZHbVIleu4\",\n      \"contentUrl\": \"https://www.youtube.com/watch?v=G0ZHbVIleu4\"\n    }\n  ]\n}\n</script>\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"VideoObject\",\n  \"name\": \"Gem - Video Testimonial\",\n  \"description\": \"Video testimonial from Gem on their experience working with Motion The Agency.\",\n  \"thumbnailUrl\": \"https://i.ytimg.com/vi/5JOb8IlK_m8/maxresdefault.jpg\",\n  \"uploadDate\": \"2025-10-30T01:15:43-07:00\",\n  \"duration\": \"PT1M37S\",\n  \"embedUrl\": \"https://www.youtube.com/embed/5JOb8IlK_m8\",\n  \"contentUrl\": \"https://www.youtube.com/watch?v=5JOb8IlK_m8\",\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Motion The Agency\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/6762c1dea24d4f98491f457f_Logo.png\"\n    }\n  }\n}\n</script>\n  <meta name=\"twitter:title\" content=\"Inside Motion The Agency’s Creative Process | How It Works\">\n<meta name=\"twitter:description\" content=\"See how Motion's design subscription works. Expert designers, fast turnaround, flexible plans. Start with a free sample.\">\n<meta name=\"twitter:image\" content=\"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670694d04b4cfd54b92c5529_Frame%20273.png\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">",
+    "bodyStart": "<script>document.body.className=\"body\";</script>"
   }
-}
-</script>
-  </Fragment>
-<div class="page-wrapper">
-    <NavBanner />
-    <div id="cards" class="main-wrapper">
-      <section data-w-id="e870b645-7926-91eb-624c-e4356dfac346" class="section-hero margin-btm">
-        <div id="banner-trigger" class="nav_banner-trigger"></div>
-        <div class="w-layout-blockcontainer container-1280 height-100 w-container">
-          <div class="gap-60-hero">
-            <div class="gap-76">
-              <div class="wrapper-hero">
-                <div class="left-hero">
-                  <div class="gap-4">
-                    <p class="text-caps">SIMPLE, SWIFT, AND STREAMLINED SERVICE</p>
-                    <h1 class="h1"><span class="span-pink-2">How it works</span></h1>
-                  </div>
-                  <div class="text-16-150 color-white-80">We know how difficult it can be to work with designers that aren’t in-house, so we’ve made our process as simple and streamlined as possible. Our goal is to help your business thrive by providing you with exceptional motion graphic services at a fraction of the cost.</div>
-                  <div class="wrap-btn">
-                    <div class="wrapper-btn">
-                      <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient">
-                        <div class="glowing-wrapper-borders-masker">
-                          <div class="glowing-wrapper-borders"></div>
-                        </div>
-                        <a href="/get-free-sample" class="glowing-wrapper-button w-inline-block">
-                          <div class="text-block rel align-center-middle">Get free sample</div>
-                        </a>
-                      </div>
-                      <div data-w-id="32e02f95-aaf3-260a-6ae0-375ab9d7ca36" class="glowing-wrapper glowing-wrapper-active">
-                        <a href="#" class="lightbox-link w-inline-block w-lightbox">
-                          <script is:inline type="application/json" class="w-json">{
+};
+const __embed0 = `<script type="application/json" class="w-json">{
   "items": [
     {
       "url": "https://youtube.com/watch?v=r0y_C24-e5Y?feature=shared",
@@ -200,15 +28,13 @@ import Footer from '../components/Footer.astro';
       "width": 940,
       "height": 528,
       "thumbnailUrl": "https://i.ytimg.com/vi/r0y_C24-e5Y/hqdefault.jpg",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fr0y_C24-e5Y%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dr0y_C24-e5Y&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fr0y_C24-e5Y%2Fhqdefault.jpg&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
+      "html": "<iframe class=\\"embedly-embed\\" src=\\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fr0y_C24-e5Y%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dr0y_C24-e5Y&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fr0y_C24-e5Y%2Fhqdefault.jpg&type=text%2Fhtml&schema=youtube\\" width=\\"940\\" height=\\"528\\" scrolling=\\"no\\" title=\\"YouTube embed\\" frameborder=\\"0\\" allow=\\"autoplay; fullscreen; encrypted-media; picture-in-picture;\\" allowfullscreen=\\"true\\"></iframe>",
       "type": "video"
     }
   ],
   "group": ""
-}</script>
-                        </a>
-                        <div class="button-css w-embed">
-                          <style is:inline>
+}</script>`;
+const __embed1 = `<style>
  * {
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
@@ -305,56 +131,13 @@ import Footer from '../components/Footer.astro';
 		transform: translate(-50%, -50%) rotate(360deg)
 	}
 }
-                    </style>
-                        </div>
-                        <div class="glowing-wrapper-borders-masker">
-                          <div class="glowing-wrapper-borders"></div>
-                        </div>
-                        <a href="https://youtu.be/Bmr_1de_pvA" class="glowing-wrapper-button w-inline-block"><img src="/images/icon-park-solid_play.svg" loading="lazy" alt="play icon" class="img-20">
-                          <div class="text-block rel">Play showreels</div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="w-node-_3cd5a31f-7c8a-fb7f-77ca-f0bbf10c008a-c1a05a67" class="right-hero"><img src="/images/How-it-works-cover-1.avif" loading="lazy" sizes="100vw" srcset="/images/How-it-works-cover-1-p-500.png 500w, /images/How-it-works-cover-1-p-800.png 800w, /images/How-it-works-cover-1-p-1080.png 1080w, /images/How-it-works-cover-1-p-1600.png 1600w, /images/How-it-works-cover-1.avif 2920w" alt="A group of electronic devices sitting on top of each other" class="image-hero"></div>
-              </div>
-            </div>
-            <div class="wrapper-logo-1">
-              <h2 class="text-16-150 color-white-60">Trusted by industry leaders</h2>
-              <div class="sub-logo"><img src="/images/Logo.avif" loading="eager" id="w-node-_9107f9ee-ac33-9073-85e0-b9140e6ff9b0-0e6ff9af" fetchpriority="high" alt="A black and white photo of an open sign" class="img-logo"><img src="/images/Logo-1.avif" loading="eager" fetchpriority="high" alt="A black and white photo of a man in a suit" class="img-logo"><img src="/images/Logo-2.avif" loading="eager" fetchpriority="high" alt="A white background with the words click up" class="img-logo"><img src="/images/Logo-3.avif" loading="eager" fetchpriority="high" alt="A black and white photo of a person holding a tennis racket" class="img-logo"><img src="/images/Logo-4.avif" loading="eager" fetchpriority="high" alt="A black and white photo of a person on a cell phone" class="img-logo"><img src="/images/Logo-5.avif" loading="eager" fetchpriority="high" alt="A black and white photo of a person on a skateboard" class="img-logo"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section_our-process">
-        <div class="line-gradient-2"></div>
-        <div class="w-layout-blockcontainer container-1280 overflow-hide w-container">
-          <div class="our-process-wrapper">
-            <div class="top_side-our-process">
-              <div class="gap-12-our_process">
-                <div class="heading_text-our-process">
-                  <div class="text-caps weight-regular">ANIMATED CORPORATE VIDEO PRODUCTION</div>
-                  <h2 class="h2"><span class="span-pink-2">Our process</span></h2>
-                </div>
-                <div class="text-16-150 opacity-80">It can be quite expensive and time-consuming to produce great motion graphics that you’ll use in the coming years to promote your business. Our experience can guide you through the process of creating professional content that is easy to update with your latest information and visuals.</div>
-              </div>
-              <div class="div-image-our_proccess"><img src="/images/Frame-1707478538_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px" srcset="/images/Frame-1707478538_1-p-500.png 500w, /images/Frame-1707478538_1-p-800.png 800w, /images/Frame-1707478538_1-p-1080.png 1080w, /images/Frame-1707478538_1.avif 1600w" alt="Blur purple background" class="image-10"></div>
-            </div>
-            <div class="bottom_side-our-process">
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div style="padding-top:56.17021276595745%" class="video-our_process w-video w-embed"><iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FKu881yQENWU%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DKu881yQENWU&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FKu881yQENWU%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube" width="940" height="528" scrolling="no" allowfullscreen="" title="Our Motion Graphics Workflow Process - Motion The Agency"></iframe></div>
-                  <div class="circle-240">
-                    <div class="circle-184"><img src="/images/Polygon-5.svg" loading="lazy" alt="" class="ic-video"><img src="/images/Frame-1707478779_1.avif" loading="lazy" alt="A blue circle with a white background" class="image-our_process-gradient"></div>
-                  </div>
-                  <div class="code-embed-4 w-embed w-script">
-                    <style is:inline>
+                    </style>`;
+const __embed2 = `<style>
 .overlay {
     cursor: pointer; /* Курсор указателя */
 }
-</style>
-                    <script is:inline>
+</style>`;
+const __embed3 = `<script>
 document.addEventListener("DOMContentLoaded", function() {
     const overlay = document.querySelector('.overlay');
     const circle = document.querySelector('.circle-240');
@@ -366,428 +149,22 @@ document.addEventListener("DOMContentLoaded", function() {
         console.warn('Элементы overlay или .circle-240 не найдены.');
     }
 });
-</script>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-how_it_works">
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="how_it_works-wrapper">
-            <div class="top_side-how_it_works">
-              <div class="heading_text-how_it_works">
-                <div class="text-caps weight-regular">FROM FIRST IDEA TO FINAL VIDEO</div>
-                <h2 class="h2"><span class="span-pink-2">How it works</span></h2>
-              </div>
-              <div class="div-image-how-it-works"><img src="/images/1_2.avif" loading="lazy" sizes="100vw" srcset="/images/1_2-p-500.png 500w, /images/1_2-p-800.png 800w, /images/1_2-p-1080.png 1080w, /images/1_2-p-1600.png 1600w, /images/1_2.avif 2682w" alt="blur purple background" class="image-how-it-works"></div>
-            </div>
-            <div class="bottom_side-how_it_works">
-              <div class="embed-visible-ic w-embed">
-                <style is:inline>
+</script>`;
+const __embed4 = `<style>
 .div-ic-80x80 {
     overflow: visible !important;
 }
 .ic-80x80 {
     overflow: visible !important;
 }
-</style>
-              </div>
-              <div class="_1-step-how_it_works">
-                <div class="inline-card-how_it_works">
-                  <div class="card-how_it-_works">
-                    <div class="div-ic-80x80"><img src="/images/Frame-260_10.avif" loading="lazy" alt="" class="ic-80x80"></div>
-                    <div class="text-18-semibold">Have an idea</div>
-                  </div><img src="/images/Vector-509.svg" loading="lazy" alt="" class="image-how-it-works-1">
-                </div>
-                <div class="inline-card-how_it_works max-w-288">
-                  <div class="card-how_it-_works">
-                    <div class="div-ic-80x80"><img src="/images/Frame-260-1.avif" loading="lazy" alt="" class="ic-80x80"></div>
-                    <div class="text-18-semibold">Request a free sample</div>
-                  </div><img src="/images/Vector-510.svg" loading="lazy" alt="" class="image-how-it-works-2">
-                </div>
-              </div>
-              <div class="_2-step-how_it_works">
-                <div class="inline-card-how_it_works max-w-354">
-                  <div class="card-how_it-_works">
-                    <div class="div-ic-80x80"><img src="/images/Frame-260-2.avif" loading="lazy" alt="" class="ic-80x80"></div>
-                    <div class="text-18-semibold">We recommend the right format and style</div>
-                  </div><img src="/images/Vector-514.svg" loading="lazy" alt="" class="image-how-it-works-3"><img src="/images/Vector-512.svg" loading="lazy" alt="" class="image-how-it-works-3 _2">
-                </div>
-              </div>
-              <div class="_3-step-how_it_works">
-                <div class="inline-card-how_it_works absolute-1">
-                  <div class="card-how_it-_works">
-                    <div class="div-ic-80x80"><img src="/images/Frame-260-6.avif" loading="lazy" alt="" class="ic-80x80"></div>
-                    <div class="text-18-semibold">Send us your brief</div>
-                  </div><img src="/images/Vector-513.svg" loading="lazy" alt="" class="image-how-it-works-5">
-                </div>
-                <div class="inline-card-how_it_works max-w-354">
-                  <div class="card-how_it-_works">
-                    <div class="div-ic-80x80"><img src="/images/Frame-260-3.avif" loading="lazy" alt="" class="ic-80x80"></div>
-                    <div class="text-18-semibold">We create the visuals, animation, and sound</div>
-                  </div><img src="/images/Vector-514.svg" loading="lazy" alt="" class="image-how-it-works-4">
-                </div>
-              </div>
-              <div class="_4-step-how_it_works">
-                <div class="inline-card-how_it_works max-w-354">
-                  <div class="card-how_it-_works">
-                    <div class="div-ic-80x80"><img src="/images/Frame-260-4.avif" loading="lazy" alt="" class="ic-80x80"></div>
-                    <div class="text-18-semibold">We create the assets, animation, and sound</div>
-                  </div><img src="/images/Vector-514.svg" loading="lazy" alt="" class="image-how-it-works-4">
-                </div>
-              </div>
-              <div class="_5-step-how_it_works">
-                <div class="inline-card-how_it_works max-w-354">
-                  <div class="card-how_it-_works bg-gradient-how-it-works">
-                    <div class="div-ic-80x80"><img src="/images/Frame-260-5.avif" loading="lazy" alt="" class="ic-80x80"></div>
-                    <div class="text-18-semibold">We’ll deliver your finished video</div>
-                  </div><img src="/images/Vector-516.svg" loading="lazy" alt="" class="image-how-it-works-7">
-                </div>
-                <div class="inline-card-how_it_works absolute-2"><img src="/images/Vector-517.svg" loading="lazy" alt="" class="image-how-it-works-6">
-                  <div class="card-how_it-_works bg-white-10">
-                    <div class="div-ic-80x80"><img src="/images/Frame-260-7.avif" loading="lazy" alt="" class="ic-80x80"></div>
-                    <div class="text-18-semibold">Need changes? Send us your feedback</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-extension">
-        <div class="line-gradient-2"></div><img src="/images/Frame-1707478539_1.avif" loading="lazy" sizes="100vw" srcset="/images/Frame-1707478539_1Frame-1707478539.avif 500w, /images/Frame-1707478539_1.avif 2400w" alt="A black and white photo of a plane flying in the sky" class="image-extension">
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="extension-wrapper">
-            <div class="top_side-extension">
-              <div class="gap-12-extension">
-                <div class="heading_text-extension">
-                  <div class="text-caps weight-regular">ANYTHING IS POSSIBLE</div>
-                  <h2 class="h2 _70"><span class="span-pink-2">We&#x27;re an extension  </span>of your team</h2>
-                </div>
-                <div class="text-16-150 opacity-80">Motion The Agency is not just a motion graphic and video editing studio. We are design experts with years of experience in video production; whether creating from scratch or refreshing existing content.</div>
-              </div>
-            </div>
-            <div class="bottom_side-extension">
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-28-extension"><img src="/images/Frame-1707478607_3.avif" loading="lazy" alt="An interface displaying a task list with checkboxes. Two user avatars are shown, one with a checkmark indicating completed tasks, and another with an empty checkbox for pending tasks. The design features a modern, minimalist aesthetic with a purple and white color scheme." class="img-purpose">
-                      <div class="gap-20-center-extension">
-                        <h3 class="h3">1-on-1 personalised consultation</h3>
-                        <div class="text-14-150 opacity-80">Our team will go through your brief and we’ll mockup your ideas with images, this allows us to visualise the final result of your video.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-28-extension"><img src="/images/Frame-1707478608_3.avif" loading="lazy" alt="An illustration featuring a laptop at the center, surrounded by four rectangular panels displaying performance metrics: 4 ms, 0.8 s, and 2.9 s, with a purple star icon in the top left and bottom right corners." class="img-purpose">
-                      <div class="gap-20-center-extension">
-                        <h3 class="h3">Best performance hardware</h3>
-                        <div class="text-14-150 opacity-80">Video editing hardware is expensive, but investing in the best tech allows us to save countless hours when editing and exporting.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-28-extension"><img src="/images/Frame-1707478606_5.avif" loading="lazy" sizes="100vw" srcset="/images/Frame-1707478606_5-p-500.png 500w, /images/Frame-1707478606_5.avif 600w" alt="An illustrated weekly schedule featuring team roles such as Graphics Design, Project Manager, 2D Animator, 3D Animator, Motion Artist, and tasks like Branding, UI Design, Prototyping, and 3D Animation, set against a dynamic background." class="img-purpose">
-                      <div class="gap-20-center-extension">
-                        <h3 class="h3">No recruitment/sick days</h3>
-                        <div class="text-14-150 opacity-80">Recruiting the right talent can take months and illness can cause big delays to projects. We&#x27;re ready to start work straight away and our team are always available to cover any unexpected events.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-28-extension"><img src="/images/Frame-1707478606-1.avif" loading="lazy" alt="A stylized trophy in purple, positioned in front of a glowing circular icon against a vibrant, swirling purple background." class="img-purpose">
-                      <div class="gap-20-center-extension">
-                        <h3 class="h3">Best training</h3>
-                        <div class="text-14-150 opacity-80">Training and staying up to date with the latest motion design trends is essential. We ensure repetitive tasks can be automated allowing us to pass on efficiencies to our customers.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-28-extension"><img src="/images/Frame-1707478609_1.avif" loading="lazy" alt="A digital interface featuring a selection of audio files, with a highlighted waveform display in the center and buttons for MP4 format on the side." class="img-purpose">
-                      <div class="gap-20-center-extension">
-                        <h3 class="h3">Access to 200+  reference library</h3>
-                        <div class="text-14-150 opacity-80">References provided are specific to your business and objectives. This means you can visualise the style of your video before committing to work together.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-contaiiner">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="gap-28-extension"><img src="/images/Frame-1707478610_1.avif" loading="lazy" alt="A chat interface showing a conversation between a user and &quot;Motion The Agency.&quot; The user requests to slow down a specific part of a video and add a light-leak effect, while the agency responds affirmatively, agreeing to make the adjustments. The time stamps indicate the messages were sent at 11:55 AM." class="img-purpose">
-                      <div class="gap-20-center-extension">
-                        <h3 class="h3">Streamlined revisions</h3>
-                        <div class="text-14-150 opacity-80">Feedback is important, but it can also be time-consuming. We use best in class software that allows you to easily feedback to us and receive your finished video content quickly.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-testimonials">
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="testimonials">
-            <div class="header--p _w-620">
-              <div class="header">
-                <div class="text-caps">TESTIMONIALS</div>
-                <h2 class="h2"><span class="span-pink-2">See what our clients say</span></h2>
-              </div>
-              <p class="text-16-150 color-white-80">We work with teams of varying sizes all across the world. A large majority of our work is to support the marketing function of the business but  our videos are also used across a variety of departments including HR and Finance.</p>
-            </div>
-            <div class="slider-wrap testimonial">
-              <div data-delay="3000" data-animation="slide" class="slider-2 w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-                <div class="testimonial-wrapper-slider w-slider-mask">
-                  <div class="video-example is-100h w-slide">
-                    <div class="testimonials-card">
-                      <div class="video-testimonials-wrapper">
-                        <div class="video home-testimonials embed w-embed w-iframe"><iframe src="https://www.youtube.com/embed/O5xibKNNL1w" loading="lazy" title="Video title here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                          </iframe></div>
-                      </div>
-                      <div class="div-block-8">
-                        <h3 class="heading-20-120">Ellen Kasinopoulou</h3>
-                        <div class="text-14-150 opacity-80">Head of Marketing at Attractions.io</div>
-                      </div>
-                      <div class="country-why"><img src="/images/Frame-1707478758.avif" loading="lazy" alt="The british flag is shown in the shape of a cross" class="ic-22x22"></div>
-                    </div>
-                  </div>
-                  <div class="video-example is-100h w-slide">
-                    <div class="testimonials-card">
-                      <div class="video-testimonials-wrapper">
-                        <div class="video home-testimonials embed w-embed w-iframe"><iframe src="https://www.youtube.com/embed/PyZz16CtX-0" loading="lazy" title="Video title here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                          </iframe></div>
-                      </div>
-                      <div class="div-block-8">
-                        <h3 class="heading-20-120">Kurt Jones</h3>
-                        <div class="text-14-150 opacity-80">Product Marketing Manager at Hacker Rank</div>
-                      </div>
-                      <div class="country-why"><img src="/images/Frame-1707478784.avif" loading="lazy" alt="An american flag is shown in the shape of a heart" class="ic-22x22"></div>
-                    </div>
-                  </div>
-                  <div class="video-example w-slide">
-                    <div class="testimonials-card">
-                      <div class="video-testimonials-wrapper">
-                        <div class="video home-testimonials embed w-embed w-iframe"><iframe src="https://www.youtube.com/embed/G0ZHbVIleu4" loading="lazy" title="Video title here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                          </iframe></div>
-                      </div>
-                      <div class="div-block-8">
-                        <h3 class="heading-20-120">Matthew Springer</h3>
-                        <div class="text-14-150 opacity-80">Chief Revenue Officer at Navatar</div>
-                      </div>
-                      <div class="country-why"><img src="/images/Frame-1707478784.avif" loading="lazy" alt="An american flag is shown in the shape of a heart" class="ic-22x22"></div>
-                    </div>
-                  </div>
-                  <div class="video-example w-slide">
-                    <div class="testimonials-card">
-                      <div class="video-testimonials-wrapper">
-                        <div class="video home-testimonials embed w-embed w-iframe"><iframe src="https://www.youtube.com/embed/AqWlk4iItX4" loading="lazy" title="Video title here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                          </iframe></div>
-                      </div>
-                      <div class="div-block-8">
-                        <h3 class="heading-20-120">Carlos Morales</h3>
-                        <div class="text-14-150 opacity-80">Operations Lead at StockRX</div>
-                      </div>
-                      <div class="country-why"><img src="/images/Frame-1707478784.avif" loading="lazy" alt="An american flag is shown in the shape of a heart" class="ic-22x22"></div>
-                    </div>
-                  </div>
-                  <div class="video-example w-slide">
-                    <div class="testimonials-card">
-                      <div class="video-testimonials-wrapper">
-                        <div class="video home-testimonials embed w-embed w-iframe"><iframe src="https://www.youtube.com/embed/9DGNgQ-reDc" loading="lazy" title="Video title here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                          </iframe></div>
-                      </div>
-                      <div class="div-block-8">
-                        <h3 class="heading-20-120">Oscar Forshaw-Swift</h3>
-                        <div class="text-14-150 opacity-80">Head of Content &amp; Content Strategy at Obrizum Group</div>
-                      </div>
-                      <div class="country-why"><img src="/images/Frame-1707478758.avif" loading="lazy" alt="The british flag is shown in the shape of a cross" class="ic-22x22"></div>
-                    </div>
-                  </div>
-                  <div class="video-example w-slide">
-                    <div class="testimonials-card">
-                      <div class="video-testimonials-wrapper">
-                        <div class="video home-testimonials embed w-embed w-iframe"><iframe src="https://www.youtube.com/embed/5JOb8IlK_m8" loading="lazy" title="Video title here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                          </iframe></div>
-                      </div>
-                      <div class="div-block-8">
-                        <h3 class="heading-20-120">Vanlizza Chau</h3>
-                        <div class="text-14-150 opacity-80">Product Marketing at Gem</div>
-                      </div>
-                      <div class="country-why"><img src="/images/Frame-1707478784.avif" loading="lazy" alt="An american flag is shown in the shape of a heart" class="ic-22x22"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="slider-arrow overlap w-slider-arrow-left"><img src="/images/Arrow---Left.svg" loading="lazy" alt=""></div>
-                <div class="slider-arrow overlap right w-slider-arrow-right"><img src="/images/Arrow---Right.svg" loading="lazy" alt=""></div>
-                <div class="slide-nav-2 testimonial w-slider-nav w-round"></div>
-              </div>
-            </div>
-            <div class="clutch-div">
-              <div class="clutch w-embed w-script">
-                <script is:inline type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>
-                <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="12" data-height="375" data-nofollow="true" data-expandifr="true" data-scale="100" data-reviews="297990,295481,295343,269445,264137,254012,252084,249935,241995,239853,237733,237398" data-clutchcompany-id="1917615"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-faq">
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="faq-wrapper">
-            <div class="left_side-faq">
-              <div class="header-faq">
-                <div class="text_heading-faq">
-                  <div class="text-12-caps opacity-60 center-small">Frequently asked questions</div>
-                  <div class="max-w-400">
-                    <h2 class="h2 center-small"><span class="span-pink-2">Got questions?</span> we&#x27;ve got answers</h2>
-                  </div>
-                </div>
-                <p class="text-14-150 opacity-80 center-small">We want to make sure you feel confident that our service is right for you. Here we’ve looked to address some commonly asked questions. If you have any more specific questions, don’t hesitate to get in touch with a member of the team.</p>
-              </div><img src="/images/Frame-1707478606_4.avif" loading="lazy" alt="An abstract digital interface featuring a dark theme with various input fields, a progress bar, and a question mark icon, suggesting a user-friendly design for a software application." class="image-faq">
-            </div>
-            <div class="right_side-faq">
-              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c6fe7" class="dropdown-faq w-dropdown">
-                <div class="dropdown-top w-dropdown-toggle">
-                  <p class="text-14-150">What is included in your video service?</p>
-                  <div data-is-ix2-target="1" class="ic-plus-faq" data-w-id="77047380-cda2-6192-4995-cd70f47c6feb" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
-                </div>
-                <nav style="height:0px" class="dropdown-list-faq w-dropdown-list">
-                  <div class="wrapper-text-faq">
-                    <p class="text-14-150 opacity-80">We specialize in 2D and 3D animation, branded motion graphics, social media motion graphics, product video, and UI animations. We will create a custom video to fit your needs! We work with advertising agencies and marketers or directly with companies and individuals.</p>
-                  </div>
-                </nav>
-              </div>
-              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c6ff0" class="dropdown-faq w-dropdown">
-                <div class="dropdown-top w-dropdown-toggle">
-                  <p class="text-14-150">We have existing video footage. Do you still charge per minute?</p>
-                  <div data-is-ix2-target="1" class="ic-plus-faq" data-w-id="77047380-cda2-6192-4995-cd70f47c6ff4" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
-                </div>
-                <nav style="height:0px" class="dropdown-list-faq w-dropdown-list">
-                  <div class="wrapper-text-faq">
-                    <p class="text-14-150 opacity-80">We won’t charge you for the duration of the video. We will charge you for the duration of the animation we add to your video. If you send a 3 minute video clip to us and we create and add a 15 second introduction, you will only be charged for 15 seconds (1/4 minute) of animation.</p>
-                  </div>
-                </nav>
-              </div>
-              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c6ff9" class="dropdown-faq w-dropdown">
-                <div class="dropdown-top w-dropdown-toggle">
-                  <p class="text-14-150">How do I know which package suits my needs?</p>
-                  <div data-is-ix2-target="1" class="ic-plus-faq" data-w-id="77047380-cda2-6192-4995-cd70f47c6ffd" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
-                </div>
-                <nav style="height:0px" class="dropdown-list-faq w-dropdown-list">
-                  <div class="wrapper-text-faq">
-                    <p class="text-14-150 opacity-80">Perhaps your needs are simple, and you only need a few videos each month. Maybe you’re skyrocketing with your business and need lots of videos at a great price. In either case, we have the package for you to help bring your brand to life. Check our pricing page or feel free to contact us for more information.</p>
-                  </div>
-                </nav>
-              </div>
-              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c7002" class="dropdown-faq w-dropdown">
-                <div class="dropdown-top w-dropdown-toggle">
-                  <p class="text-14-150">How fast are your turnaround times like?</p>
-                  <div data-is-ix2-target="1" class="ic-plus-faq" data-w-id="77047380-cda2-6192-4995-cd70f47c7006" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
-                </div>
-                <nav style="height:0px" class="dropdown-list-faq w-dropdown-list">
-                  <div class="wrapper-text-faq">
-                    <p class="text-14-150 opacity-80">We aim to deliver completely edited and annotated videos in 2 business days. Although we try to deliver everything as quickly as possible, larger time-intensive projects may take more than 2-3 days to complete and we’ll set realistic expectations for you as the requests come in.</p>
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-contact_us">
-        <div class="line-gradient-2"></div>
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="contact_us-wrapper">
-            <div id="w-node-bc62d5ae-4242-6196-3d60-996ecf1e4aeb-c1a05a67" class="left_side-contact_us">
-              <div class="header-contact_us">
-                <div class="text_heading-contact_us">
-                  <div class="text-12-caps opacity-60 center-small">Contact Us</div>
-                  <h2 class="h2 center-small"><span class="span-pink-2">Ready to animate your vision?  </span>Get Free Custom Video Sample</h2>
-                </div>
-              </div>
-              <div class="image-wrapper-contact_us"><img src="/images/Frame-273_1.avif" loading="lazy" sizes="100vw" srcset="/images/Frame-273_1Frame-273.avif 500w, /images/Frame-273_1.avif 1155w" alt="Mobile interface displaying a form titled &#x27;Try Out Our Service, Risk-Free!&#x27; with fields for Company Name and Work Email. Below, there is a message from &#x27;Motion The Agency&#x27; thanking the user for their trust and requesting project details. The interface also includes a video sample section labeled &#x27;10s Video Free Sample&#x27; with play, share, and save options. The design features a modern, dark theme with vibrant accents." class="image-contact_us-2"></div>
-            </div>
-            <div class="right_side-contact_us">
-              <div id="contact-us" class="form-block narrow-padding w-form">
-                <form method="get" ms-code-business-email="" name="wf-form-Contact-Us-Form" data-name="Contact Us Form" id="wf-form-Contact-Us-Form" data-webflow-hubspot-api-form-url="https://hubspotonwebflow.com/api/forms/3231aa55-9f82-443a-9469-3209181a5ab4" class="form gap-20" data-wf-page-id="67091882d6363303c1a05a67" data-wf-element-id="fa7944cc-145c-217e-5ad2-23c75414ee98">
-                  <div class="field-grid">
-                    <div class="text-field-contact"><label for="First-Name-3" class="text-14-150 opacity-80">First name<span class="red-text">*</span></label><input class="field-contact w-input" data-wfhsfieldname="FormTextInput-2" maxlength="256" name="First-Name" data-name="First Name" placeholder="Your first name..." type="text" id="First-Name-3" required=""></div>
-                    <div class="text-field-contact"><label for="Last-Name-3" class="text-14-150 opacity-80">Last name<span class="red-text">*</span></label><input class="field-contact w-input" data-wfhsfieldname="FormTextInput-3" maxlength="256" name="Last-Name" data-name="Last Name" placeholder="Your last name..." type="text" id="Last-Name-3" required=""></div>
-                  </div>
-                  <div class="text-field-contact">
-                    <div class="w-layout-vflex flex-h space-between"><label for="Email-3" class="text-14-150 opacity-80">Work Email<span class="red-text">*</span></label></div><input class="field-contact w-input" ms-code-business-email="" data-wfhsfieldname="FormTextInput-4" maxlength="256" name="Email" data-name="Email" placeholder="yourname@company.com" type="email" id="Email-3" required="">
-                  </div>
-                  <div class="text-field-contact"><label for="Company-2" class="text-14-150 opacity-80">Company<span class="red-text">*</span></label><input class="field-contact w-input" data-wfhsfieldname="FormTextInput-5" maxlength="256" name="Company-2" data-name="Company 2" placeholder="Your company name..." type="text" id="Company-2" required=""></div>
-                  <div class="text-field-contact"><label for="Message-2" class="text-14-150 opacity-80">Message<span class="red-text">*</span></label><textarea class="text-area w-input" data-wfhsfieldname="FormTextarea-6" maxlength="5000" name="Message-2" data-name="Message 2" placeholder="Describe what you want to achieve.. any additional details " id="Message-2" required=""></textarea>
-                    <div class="css-form w-embed">
-                      <style is:inline>
+</style>`;
+const __embed5 = `<script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>`;
+const __embed6 = `<style>
 .text-area {
     resize: none;
 }
-</style>
-                    </div>
-                  </div>
-                  <div class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key"></div>
-                  <div class="text-button-contact">
-                    <div class="text-12-150 opacity-50">By clicking submit, you consent to receive email communications about Motion&#x27;s products and services. You agree to our Terms of Service and acknowledge that your data will be processed in accordance with our Privacy Policy. You may opt out at any time.</div>
-                    <div class="glowing-wrapper glowing-wrapper-active gradient">
-                      <div class="glowing-wrapper-borders-masker">
-                        <div class="glowing-wrapper-borders"></div>
-                      </div><input type="submit" data-wait="Please wait..." class="glowing-wrapper-button-copy w-button" value="Get free sample">
-                    </div>
-                  </div><input type="hidden" name="hutk" value=""><input type="hidden" name="ipAddress" value=""><input type="hidden" name="pageUri" value=""><input type="hidden" name="pageId" value=""><input type="hidden" name="pageName" value="">
-                </form>
-                <div class="success-form free-sample w-form-done"><img src="/images/AI-Enhanced-Analytics-1-1_1.avif" loading="lazy" sizes="(max-width: 2071px) 100vw, 2071px" srcset="/images/AI-Enhanced-Analytics-1-1_1-p-500.png 500w, /images/AI-Enhanced-Analytics-1-1_1AI-Enhanced-Analytics-1-1.avif 800w, /images/AI-Enhanced-Analytics-1-1_1.avif 2071w" alt="A black and purple hexagonal object with a check mark" class="image-21">
-                  <div class="h4 hide">Thank you! Your submission has been received!</div>
-                  <div class="thank-you-free-sample">
-                    <div class="circuit-right">
-                      <div class="lottie-animation flip" data-w-id="83766190-6895-d8a3-3e22-eb79cc2296fc" data-animation-type="lottie" data-src="/documents/circuit.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="5" data-loading="eager"></div>
-                    </div>
-                    <div class="circuit-left">
-                      <div class="lottie-animation" data-w-id="83766190-6895-d8a3-3e22-eb79cc2296fe" data-animation-type="lottie" data-src="/documents/circuit.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="5" data-loading="eager"></div>
-                    </div>
-                    <div class="div-block-17 first">
-                      <div class="header center">
-                        <h2 class="h1">Thank you!</h2>
-                        <p class="text-16-150 color-white-80">Your submission has been received.</p>
-                      </div>
-                    </div><img loading="eager" src="/images/check-thx-free-sample-graphic.avif" alt="A purple seal with a tick mark on it" class="image-23">
-                  </div><img src="/images/Gradient-Background-purple.avif" loading="eager" sizes="(max-width: 1280px) 100vw, 1280px" srcset="/images/Gradient-Background-purple-p-500.png 500w, /images/Gradient-Background-purple.avif 1280w" alt="A purple and blue background with a white background" class="image-22">
-                </div>
-                <div class="w-form-fail">
-                  <div>Oops! Something went wrong while submitting the form.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <Footer />
-      <div class="css">
-        <div class="button-css w-embed">
-          <style is:inline>
+</style>`;
+const __embed7 = `<style>
  * {
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
@@ -884,10 +261,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		transform: translate(-50%, -50%) rotate(360deg)
 	}
 }
-</style>
-        </div>
-        <div class="custom-styles w-embed">
-          <style is:inline>
+</style>`;
+const __embed8 = `<style>
         * {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -934,29 +309,25 @@ document.addEventListener("DOMContentLoaded", function() {
             z-index: 2;
         }
     }
-</style>
-        </div>
-        <div class="code-embed-2 w-embed w-script">
-          <script is:inline>
+</style>`;
+const __embed9 = `<script>
 document.getElementById("cards").onmousemove = (e) => {
   for (const card of document.getElementsByClassName("card")) {
     const rect = card.getBoundingClientRect(),
       x = e.clientX - rect.left,
       y = e.clientY - rect.top;
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
+    card.style.setProperty("--mouse-x", \`\${x}px\`);
+    card.style.setProperty("--mouse-y", \`\${y}px\`);
   }
 };
-</script>
-        </div>
-        <div class="global-style w-embed">
-          <style is:inline>
+</script>`;
+const __embed10 = `<style>
 .card_glow_background {
 	width: calc(100% + 12px);
   height: calc(100% + 12px);
 }
 .card_glow_background._2 {
-	left : calc(-100% - 24px); 
+	left : calc(-100% - 24px);
 }
 .card_glow_background._3 {
 	top : calc(-100% - 24px);
@@ -965,9 +336,511 @@ document.getElementById("cards").onmousemove = (e) => {
 	left : calc(-100% - 24px);
   top : calc(-100% - 24px);
 }
-</style>
+</style>`;
+---
+<BaseLayout meta={meta}>
+<div data-meno-label="Page content" class="body min-h-screen [color:#fff] [background-color:#080610] [overflow-x:hidden]">
+
+<div class="page-wrapper [color:#fff] [overflow-x:hidden]">
+    <NavBanner />
+    <div id="cards" class="main-wrapper [z-index:0] [color:#fff] [background-color:#080610] [max-width:none] [position:relative] [overflow-x:hidden]">
+      <section data-w-id="e870b645-7926-91eb-624c-e4356dfac346" class="section-hero margin-btm [background-image:url('../images/Hero_1.avif')] [background-position:0_100%] [background-repeat:no-repeat] [background-size:cover] [background-attachment:scroll] [padding-top:220px] [padding-bottom:120px] max-lg:[background-position:0%] max-lg:[background-size:cover] max-lg:[padding-top:80px] max-lg:[padding-bottom:80px] max-sm:[padding-top:80px] max-sm:[padding-bottom:20px] max-landscape:[padding-bottom:40px]">
+        <div id="banner-trigger" class="nav_banner-trigger [pointer-events:none] [border:1px_solid_#0000] [width:100%] [height:240px] [position:absolute] [top:0] [bottom:auto]"></div>
+        <div class="w-layout-blockcontainer container-1280 height-100 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] [height:100%] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="gap-60-hero [grid-column-gap:20px] [grid-row-gap:20px] [flex-flow:column] [justify-content:flex-start] [align-items:center] [height:100%] [display:flex] max-landscape:[grid-column-gap:32px] max-landscape:[grid-row-gap:32px]">
+            <div class="gap-76 [grid-column-gap:70px] [grid-row-gap:70px] [flex-flow:column] [width:100%] [display:flex] max-landscape:[grid-column-gap:60px] max-landscape:[grid-row-gap:60px]">
+              <div class="wrapper-hero [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1fr_1.25fr] [grid-auto-columns:1fr] [display:grid] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[flex-flow:column-reverse_wrap] max-lg:[justify-content:flex-end] max-lg:[align-items:center] max-lg:[display:flex] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px]">
+                <div class="left-hero [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [justify-content:center] [max-width:480px] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px] max-lg:[text-align:center] max-lg:[order:1] max-lg:[align-items:center] max-lg:[max-width:100%] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px]">
+                  <div class="gap-4 [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] max-lg:[justify-content:flex-start] max-lg:[align-items:center]">
+                    <p class="text-caps [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px]">SIMPLE, SWIFT, AND STREAMLINED SERVICE</p>
+                    <h1 class="h1 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [padding-right:0] [font-family:Switzer,_sans-serif] [font-size:48px] [font-weight:600] [line-height:120%] max-lg:[font-size:44px] max-landscape:[font-size:38px] max-sm:[font-size:28px] max-sm:[font-weight:600]"><span class="span-pink-2 [box-sizing:border-box] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_39%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text]">How it works</span></h1>
+                  </div>
+                  <div class="text-16-150 color-white-80 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:center] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">We know how difficult it can be to work with designers that aren’t in-house, so we’ve made our process as simple and streamlined as possible. Our goal is to help your business thrive by providing you with exceptional motion graphic services at a fraction of the cost.</div>
+                  <div class="wrap-btn [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] [align-items:center] [padding-top:16px] [padding-bottom:16px] [display:flex]">
+                    <div class="wrapper-btn [grid-column-gap:10px] [grid-row-gap:10px] [justify-content:flex-start] [align-items:center] [display:flex]">
+                      <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] [background-image:linear-gradient(90deg,_#ff008e,_#ff4dcb)] [-webkit-text-fill-color:inherit] [-webkit-background-clip:text] [background-clip:border-box] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)] max-sm:[width:fit-content]">
+                        <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                          <div class="glowing-wrapper-borders [opacity:1] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+                        </div>
+                        <a href="/get-free-sample" class="glowing-wrapper-button w-inline-block [max-width:100%] [display:inline-flex] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [color:#fff] [letter-spacing:-.01em] [background-color:#3898ec00] [border:1px_solid_#ffffff1a] [border-radius:62.5rem] [justify-content:center] [align-items:center] [padding:12px_24px] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:500] [line-height:1.42] [text-decoration:none] [position:relative] max-lg:[width:100%] max-sm:[width:100%]">
+                          <div class="text-block rel align-center-middle [color:var(--white)] [text-decoration:none] [z-index:2] [position:relative] [text-align:center] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[display:flex] max-sm:[text-align:center] max-sm:[font-size:13px] max-sm:[line-height:120%]">Get free sample</div>
+                        </a>
+                      </div>
+                      <div data-w-id="32e02f95-aaf3-260a-6ae0-375ab9d7ca36" class="glowing-wrapper glowing-wrapper-active [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] max-sm:[width:fit-content]">
+                        <a href="#" class="lightbox-link w-inline-block w-lightbox [max-width:100%] [display:inline-block] [z-index:10] [position:absolute] [inset:0%]">
+                          <Embed html={__embed0} />
+                        </a>
+                        <div class="button-css w-embed [display:none]">
+                          <Embed html={__embed1} />
+                        </div>
+                        <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                          <div class="glowing-wrapper-borders [opacity:1] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+                        </div>
+                        <a href="https://youtu.be/Bmr_1de_pvA" class="glowing-wrapper-button w-inline-block [max-width:100%] [display:inline-flex] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [color:#fff] [letter-spacing:-.01em] [background-color:#3898ec00] [border:1px_solid_#ffffff1a] [border-radius:62.5rem] [justify-content:center] [align-items:center] [padding:12px_24px] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:500] [line-height:1.42] [text-decoration:none] [position:relative] max-lg:[width:100%] max-sm:[width:100%]"><img data-meno-optimize="false" src="/images/icon-park-solid_play.svg" loading="lazy" alt="play icon" class="img-20 [z-index:2] [width:20px] [height:20px] [position:relative]" />
+                          <div class="text-block rel [color:var(--white)] [text-decoration:none] [z-index:2] [position:relative] max-sm:[text-align:center] max-sm:[font-size:13px] max-sm:[line-height:120%]">Play showreels</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="w-node-_3cd5a31f-7c8a-fb7f-77ca-f0bbf10c008a-c1a05a67" class="right-hero [border-radius:12px] [position:relative] max-lg:[width:100%] max-lg:[position:static] max-lg:[left:0]"><img data-meno-optimize="false" src="/images/How-it-works-cover-1.avif" loading="lazy" sizes="100vw" srcset="/images/How-it-works-cover-1-p-500.png 500w, /images/How-it-works-cover-1-p-800.png 800w, /images/How-it-works-cover-1-p-1080.png 1080w, /images/How-it-works-cover-1-p-1600.png 1600w, /images/How-it-works-cover-1.avif 2920w" alt="A group of electronic devices sitting on top of each other" class="image-hero [width:100%]" /></div>
+              </div>
+            </div>
+            <div class="wrapper-logo-1 [grid-column-gap:8px] [grid-row-gap:8px] [text-align:center] [flex-flow:column] [display:flex]">
+              <h2 class="text-16-150 color-white-60 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fff9] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Trusted by industry leaders</h2>
+              <div class="sub-logo [grid-column-gap:20px] [grid-row-gap:20px] [justify-content:center] [align-items:center] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px] max-lg:[flex-flow:row] max-lg:[grid-template-rows:auto] max-lg:[grid-template-columns:1fr_1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:grid] max-sm:[grid-column-gap:8px] max-sm:[grid-row-gap:8px]"><img data-meno-optimize="false" src="/images/Logo.avif" loading="eager" id="w-node-_9107f9ee-ac33-9073-85e0-b9140e6ff9b0-0e6ff9af" fetchpriority="high" alt="A black and white photo of an open sign" class="img-logo [width:196px]" /><img data-meno-optimize="false" src="/images/Logo-1.avif" loading="eager" fetchpriority="high" alt="A black and white photo of a man in a suit" class="img-logo [width:196px]" /><img data-meno-optimize="false" src="/images/Logo-2.avif" loading="eager" fetchpriority="high" alt="A white background with the words click up" class="img-logo [width:196px]" /><img data-meno-optimize="false" src="/images/Logo-3.avif" loading="eager" fetchpriority="high" alt="A black and white photo of a person holding a tennis racket" class="img-logo [width:196px]" /><img data-meno-optimize="false" src="/images/Logo-4.avif" loading="eager" fetchpriority="high" alt="A black and white photo of a person on a cell phone" class="img-logo [width:196px]" /><img data-meno-optimize="false" src="/images/Logo-5.avif" loading="eager" fetchpriority="high" alt="A black and white photo of a person on a skateboard" class="img-logo [width:196px]" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section_our-process [justify-content:center] [align-items:flex-start] [padding-bottom:56px] [display:flex] [position:relative] [overflow:hidden] max-sm:[padding-bottom:0]">
+        <div class="line-gradient-2 [background-image:linear-gradient(90deg,_#60537700,_#605377_50%,_#60537700)] [width:100%] [height:4px] [position:absolute] [inset:0_0%_auto]"></div>
+        <div class="w-layout-blockcontainer container-1280 overflow-hide w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] [padding-top:80px] [padding-bottom:80px] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-lg:[padding-top:120px] max-sm:[max-width:none] max-sm:[padding-top:80px] max-sm:[padding-bottom:80px] max-sm:[overflow:hidden] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="our-process-wrapper [z-index:10] [grid-column-gap:64px] [grid-row-gap:64px] [flex-flow:column] [padding-top:120px] [display:flex] [position:relative] max-lg:[padding-top:100px] max-landscape:[grid-column-gap:32px] max-landscape:[grid-row-gap:32px] max-landscape:[padding-top:80px] max-sm:[padding-top:0]">
+            <div class="top_side-our-process [grid-column-gap:12px] [grid-row-gap:12px] [text-align:center] [flex-flow:column] [justify-content:center] [align-items:center] [max-width:730px] [margin-left:auto] [margin-right:auto] [display:flex]">
+              <div class="gap-12-our_process [z-index:10] [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] [position:relative]">
+                <div class="heading_text-our-process [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [display:flex]">
+                  <div class="text-caps weight-regular [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative]">ANIMATED CORPORATE VIDEO PRODUCTION</div>
+                  <h2 class="h2 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px]"><span class="span-pink-2 [box-sizing:border-box] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_39%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text]">Our process</span></h2>
+                </div>
+                <div class="text-16-150 opacity-80 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [opacity:.8] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">It can be quite expensive and time-consuming to produce great motion graphics that you’ll use in the coming years to promote your business. Our experience can guide you through the process of creating professional content that is easy to update with your latest information and visuals.</div>
+              </div>
+              <div class="div-image-our_proccess [pointer-events:none] [justify-content:center] [align-items:flex-start] [min-width:100%] [display:flex] [position:absolute] [inset:0%_0%_auto]"><img data-meno-optimize="false" src="/images/Frame-1707478538_1.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px" srcset="/images/Frame-1707478538_1-p-500.png 500w, /images/Frame-1707478538_1-p-800.png 800w, /images/Frame-1707478538_1-p-1080.png 1080w, /images/Frame-1707478538_1.avif 1600w" alt="Blur purple background" class="image-10 [pointer-events:none] [min-width:1080px] [position:absolute] max-lg:[min-width:960px] max-landscape:[min-width:640px]" /></div>
+            </div>
+            <div class="bottom_side-our-process [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto_auto] [grid-template-columns:1fr_1fr_1fr] [grid-auto-columns:1fr] max-lg:[grid-template-columns:1fr_1fr] max-landscape:[grid-column-gap:32px] max-landscape:[grid-row-gap:32px] max-landscape:[flex-flow:column] max-landscape:[grid-template-columns:1fr] max-landscape:[display:flex]">
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="video-our_process w-video w-embed [width:100%] [position:relative] [padding:0] [z-index:10] [pointer-events:auto] [border-radius:20px] [overflow:hidden] [padding-top:56.17021276595745%]"><iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FKu881yQENWU%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DKu881yQENWU&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FKu881yQENWU%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube" width="940" height="528" scrolling="no" allowfullscreen="" title="Our Motion Graphics Workflow Process - Motion The Agency"></iframe></div>
+                  <div class="circle-240 [z-index:10] [-webkit-backdrop-filter:blur(15px)] [backdrop-filter:blur(15px)] [pointer-events:none] [background-color:#ffffff4d] [border-radius:50%] [justify-content:center] [align-items:center] [width:240px] [height:240px] [display:none] [position:absolute] [overflow:hidden]">
+                    <div class="circle-184 [pointer-events:none] [background-color:#0c0c0c] [border-radius:50%] [flex-flow:column] [justify-content:center] [align-items:center] [width:184px] [height:184px] [display:flex] [box-shadow:inset_0_-3px_14px_#5a55ff1a,_0_2px_6px_#00000026]"><img src="/images/Polygon-5.svg" loading="lazy" alt="" class="ic-video" /><img data-meno-optimize="false" src="/images/Frame-1707478779_1.avif" loading="lazy" alt="A blue circle with a white background" class="image-our_process-gradient [pointer-events:none] [width:343px] [min-width:343px] [position:absolute] [top:15%] [bottom:auto]" /></div>
+                  </div>
+                  <div class="code-embed-4 w-embed w-script [display:none]">
+                    <Embed html={__embed2} />
+                    <Embed html={__embed3} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-how_it_works [padding-top:80px] [padding-bottom:120px] [position:relative] max-lg:[padding-top:40px] max-lg:[padding-bottom:80px] max-landscape:[padding-top:0] max-landscape:[padding-bottom:64px] max-sm:[padding-top:40px] max-sm:[padding-bottom:40px] max-sm:[overflow:hidden]">
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="how_it_works-wrapper [grid-column-gap:64px] [grid-row-gap:64px] [flex-flow:column] [display:flex] max-lg:[grid-column-gap:40px] max-lg:[grid-row-gap:40px] max-landscape:[grid-column-gap:32px] max-landscape:[grid-row-gap:32px]">
+            <div class="top_side-how_it_works [grid-column-gap:12px] [grid-row-gap:12px] [text-align:center] [flex-flow:column] [justify-content:center] [align-items:center] [max-width:730px] [margin-left:auto] [margin-right:auto] [display:flex] max-landscape:[max-width:100%]">
+              <div class="heading_text-how_it_works [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [display:flex]">
+                <div class="text-caps weight-regular [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative]">FROM FIRST IDEA TO FINAL VIDEO</div>
+                <h2 class="h2 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px]"><span class="span-pink-2 [box-sizing:border-box] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_39%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text]">How it works</span></h2>
+              </div>
+              <div class="div-image-how-it-works [pointer-events:none] [justify-content:center] [align-items:flex-start] [min-width:100%] [display:flex] [position:absolute] [inset:0%_0%_auto]"><img data-meno-optimize="false" src="/images/1_2.avif" loading="lazy" sizes="100vw" srcset="/images/1_2-p-500.png 500w, /images/1_2-p-800.png 800w, /images/1_2-p-1080.png 1080w, /images/1_2-p-1600.png 1600w, /images/1_2.avif 2682w" alt="blur purple background" class="image-how-it-works [pointer-events:none] [min-width:1400px] [position:absolute]" /></div>
+            </div>
+            <div class="bottom_side-how_it_works [z-index:10] [grid-column-gap:120px] [grid-row-gap:120px] [flex-flow:column] [display:flex] [position:relative] max-lg:[grid-column-gap:24px] max-lg:[grid-row-gap:24px] max-landscape:[grid-column-gap:12px] max-landscape:[grid-row-gap:12px]">
+              <div class="embed-visible-ic w-embed [display:none] max-sm:[display:none]">
+                <Embed html={__embed4} />
+              </div>
+              <div class="_1-step-how_it_works [justify-content:space-between] [width:100%] [max-width:773px] [margin-left:auto] [margin-right:auto] [display:flex] max-lg:[grid-column-gap:16px] max-lg:[grid-row-gap:16px] max-lg:[grid-template-rows:auto] max-lg:[grid-template-columns:1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[max-width:100%] max-lg:[display:grid] max-landscape:[grid-column-gap:12px] max-landscape:[grid-row-gap:12px] max-landscape:[flex-flow:column] max-landscape:[grid-template-rows:auto_auto] max-landscape:[grid-template-columns:1fr_1fr] max-landscape:[grid-auto-columns:1fr] max-landscape:[justify-content:flex-start] max-landscape:[align-items:center] max-landscape:[display:flex]">
+                <div class="inline-card-how_it_works [flex-flow:column] [justify-content:flex-start] [align-items:center] [width:100%] [max-width:247px] [display:flex] [position:relative] max-lg:[max-width:100%] max-landscape:[max-width:100%]">
+                  <div class="card-how_it-_works [grid-column-gap:12px] [grid-row-gap:12px] [background-image:linear-gradient(45deg,_#140d24b3,_#0a0814b3)] [border:1px_solid_#ffffff1a] [border-radius:16px] [justify-content:center] [align-items:center] [width:100%] [padding:12px] [display:flex] [overflow:hidden] max-lg:[justify-content:flex-start] max-lg:[align-items:center] max-lg:[width:100%] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px] max-landscape:[justify-content:flex-start] max-landscape:[width:100%] max-landscape:[padding:20px] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px] max-sm:[padding:12px]">
+                    <div class="div-ic-80x80 [justify-content:center] [align-items:center] [width:80px] [min-width:80px] [height:80px] [min-height:80px] [display:flex] [position:relative] [overflow:visible] max-landscape:[width:40px] max-landscape:[min-width:40px] max-landscape:[height:40px] max-landscape:[min-height:40px]"><img data-meno-optimize="false" src="/images/Frame-260_10.avif" loading="lazy" alt="" class="ic-80x80 [object-fit:cover] [width:80px] [height:80px] [overflow:visible] max-landscape:[width:40px] max-landscape:[height:40px]" /></div>
+                    <div class="text-18-semibold [font-family:Switzer,_sans-serif] [font-size:18px] [font-weight:600] [line-height:120%] max-landscape:[font-size:16px] max-sm:[font-size:14px]">Have an idea</div>
+                  </div><img data-meno-optimize="false" src="/images/Vector-509.svg" loading="lazy" alt="" class="image-how-it-works-1 [position:absolute] [inset:112px_18%_auto_auto] max-lg:[display:none]" />
+                </div>
+                <div class="inline-card-how_it_works max-w-288 [flex-flow:column] [justify-content:flex-start] [align-items:center] [width:100%] [max-width:288px] [display:flex] [position:relative] max-lg:[max-width:100%] max-landscape:[max-width:100%]">
+                  <div class="card-how_it-_works [grid-column-gap:12px] [grid-row-gap:12px] [background-image:linear-gradient(45deg,_#140d24b3,_#0a0814b3)] [border:1px_solid_#ffffff1a] [border-radius:16px] [justify-content:center] [align-items:center] [width:100%] [padding:12px] [display:flex] [overflow:hidden] max-lg:[justify-content:flex-start] max-lg:[align-items:center] max-lg:[width:100%] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px] max-landscape:[justify-content:flex-start] max-landscape:[width:100%] max-landscape:[padding:20px] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px] max-sm:[padding:12px]">
+                    <div class="div-ic-80x80 [justify-content:center] [align-items:center] [width:80px] [min-width:80px] [height:80px] [min-height:80px] [display:flex] [position:relative] [overflow:visible] max-landscape:[width:40px] max-landscape:[min-width:40px] max-landscape:[height:40px] max-landscape:[min-height:40px]"><img data-meno-optimize="false" src="/images/Frame-260-1.avif" loading="lazy" alt="" class="ic-80x80 [object-fit:cover] [width:80px] [height:80px] [overflow:visible] max-landscape:[width:40px] max-landscape:[height:40px]" /></div>
+                    <div class="text-18-semibold [font-family:Switzer,_sans-serif] [font-size:18px] [font-weight:600] [line-height:120%] max-landscape:[font-size:16px] max-sm:[font-size:14px]">Request a free sample</div>
+                  </div><img data-meno-optimize="false" src="/images/Vector-510.svg" loading="lazy" alt="" class="image-how-it-works-2 [position:absolute] [inset:112px_38%_auto_auto] max-lg:[display:none]" />
+                </div>
+              </div>
+              <div class="_2-step-how_it_works [justify-content:center] [width:100%] [max-width:773px] [margin-left:auto] [margin-right:auto] [display:flex]">
+                <div class="inline-card-how_it_works max-w-354 [flex-flow:column] [justify-content:flex-start] [align-items:center] [width:100%] [max-width:354px] [display:flex] [position:relative] max-lg:[max-width:100%] max-landscape:[max-width:100%]">
+                  <div class="card-how_it-_works [grid-column-gap:12px] [grid-row-gap:12px] [background-image:linear-gradient(45deg,_#140d24b3,_#0a0814b3)] [border:1px_solid_#ffffff1a] [border-radius:16px] [justify-content:center] [align-items:center] [width:100%] [padding:12px] [display:flex] [overflow:hidden] max-lg:[justify-content:flex-start] max-lg:[align-items:center] max-lg:[width:100%] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px] max-landscape:[justify-content:flex-start] max-landscape:[width:100%] max-landscape:[padding:20px] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px] max-sm:[padding:12px]">
+                    <div class="div-ic-80x80 [justify-content:center] [align-items:center] [width:80px] [min-width:80px] [height:80px] [min-height:80px] [display:flex] [position:relative] [overflow:visible] max-landscape:[width:40px] max-landscape:[min-width:40px] max-landscape:[height:40px] max-landscape:[min-height:40px]"><img data-meno-optimize="false" src="/images/Frame-260-2.avif" loading="lazy" alt="" class="ic-80x80 [object-fit:cover] [width:80px] [height:80px] [overflow:visible] max-landscape:[width:40px] max-landscape:[height:40px]" /></div>
+                    <div class="text-18-semibold [font-family:Switzer,_sans-serif] [font-size:18px] [font-weight:600] [line-height:120%] max-landscape:[font-size:16px] max-sm:[font-size:14px]">We recommend the right format and style</div>
+                  </div><img data-meno-optimize="false" src="/images/Vector-514.svg" loading="lazy" alt="" class="image-how-it-works-3 [position:absolute] [inset:112px_47%_auto_auto] max-lg:[display:none]" /><img data-meno-optimize="false" src="/images/Vector-512.svg" loading="lazy" alt="" class="image-how-it-works-3 _2 [position:absolute] [inset:112px_47%_auto_auto] [width:391px] [min-width:391px] [top:160px] [right:48%] max-lg:[display:none]" />
+                </div>
+              </div>
+              <div class="_3-step-how_it_works [justify-content:center] [width:100%] [max-width:773px] [margin-left:auto] [margin-right:auto] [display:flex] [position:relative] max-lg:[grid-column-gap:24px] max-lg:[grid-row-gap:24px] max-lg:[grid-template-rows:auto] max-lg:[grid-template-columns:1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[justify-content:space-between] max-lg:[max-width:100%] max-lg:[display:grid] max-landscape:[grid-column-gap:24px] max-landscape:[grid-row-gap:24px] max-landscape:[flex-flow:column] max-landscape:[grid-template-columns:1fr] max-landscape:[align-items:center]">
+                <div class="inline-card-how_it_works absolute-1 [flex-flow:column] [justify-content:flex-start] [align-items:center] [width:100%] [max-width:270px] [display:flex] [position:absolute] [left:-130px] max-lg:[max-width:100%] max-lg:[position:static] max-landscape:[max-width:100%]">
+                  <div class="card-how_it-_works [grid-column-gap:12px] [grid-row-gap:12px] [background-image:linear-gradient(45deg,_#140d24b3,_#0a0814b3)] [border:1px_solid_#ffffff1a] [border-radius:16px] [justify-content:center] [align-items:center] [width:100%] [padding:12px] [display:flex] [overflow:hidden] max-lg:[justify-content:flex-start] max-lg:[align-items:center] max-lg:[width:100%] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px] max-landscape:[justify-content:flex-start] max-landscape:[width:100%] max-landscape:[padding:20px] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px] max-sm:[padding:12px]">
+                    <div class="div-ic-80x80 [justify-content:center] [align-items:center] [width:80px] [min-width:80px] [height:80px] [min-height:80px] [display:flex] [position:relative] [overflow:visible] max-landscape:[width:40px] max-landscape:[min-width:40px] max-landscape:[height:40px] max-landscape:[min-height:40px]"><img data-meno-optimize="false" src="/images/Frame-260-6.avif" loading="lazy" alt="" class="ic-80x80 [object-fit:cover] [width:80px] [height:80px] [overflow:visible] max-landscape:[width:40px] max-landscape:[height:40px]" /></div>
+                    <div class="text-18-semibold [font-family:Switzer,_sans-serif] [font-size:18px] [font-weight:600] [line-height:120%] max-landscape:[font-size:16px] max-sm:[font-size:14px]">Send us your brief</div>
+                  </div><img data-meno-optimize="false" src="/images/Vector-513.svg" loading="lazy" alt="" class="image-how-it-works-5 [position:absolute] [inset:112px_-23.3%_auto_auto] max-lg:[display:none]" />
+                </div>
+                <div class="inline-card-how_it_works max-w-354 [flex-flow:column] [justify-content:flex-start] [align-items:center] [width:100%] [max-width:354px] [display:flex] [position:relative] max-lg:[max-width:100%] max-landscape:[max-width:100%]">
+                  <div class="card-how_it-_works [grid-column-gap:12px] [grid-row-gap:12px] [background-image:linear-gradient(45deg,_#140d24b3,_#0a0814b3)] [border:1px_solid_#ffffff1a] [border-radius:16px] [justify-content:center] [align-items:center] [width:100%] [padding:12px] [display:flex] [overflow:hidden] max-lg:[justify-content:flex-start] max-lg:[align-items:center] max-lg:[width:100%] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px] max-landscape:[justify-content:flex-start] max-landscape:[width:100%] max-landscape:[padding:20px] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px] max-sm:[padding:12px]">
+                    <div class="div-ic-80x80 [justify-content:center] [align-items:center] [width:80px] [min-width:80px] [height:80px] [min-height:80px] [display:flex] [position:relative] [overflow:visible] max-landscape:[width:40px] max-landscape:[min-width:40px] max-landscape:[height:40px] max-landscape:[min-height:40px]"><img data-meno-optimize="false" src="/images/Frame-260-3.avif" loading="lazy" alt="" class="ic-80x80 [object-fit:cover] [width:80px] [height:80px] [overflow:visible] max-landscape:[width:40px] max-landscape:[height:40px]" /></div>
+                    <div class="text-18-semibold [font-family:Switzer,_sans-serif] [font-size:18px] [font-weight:600] [line-height:120%] max-landscape:[font-size:16px] max-sm:[font-size:14px]">We create the visuals, animation, and sound</div>
+                  </div><img data-meno-optimize="false" src="/images/Vector-514.svg" loading="lazy" alt="" class="image-how-it-works-4 [position:absolute] [inset:112px_47%_auto_auto] max-lg:[display:none]" />
+                </div>
+              </div>
+              <div class="_4-step-how_it_works [justify-content:center] [width:100%] [max-width:773px] [margin-left:auto] [margin-right:auto] [display:flex] [position:relative]">
+                <div class="inline-card-how_it_works max-w-354 [flex-flow:column] [justify-content:flex-start] [align-items:center] [width:100%] [max-width:354px] [display:flex] [position:relative] max-lg:[max-width:100%] max-landscape:[max-width:100%]">
+                  <div class="card-how_it-_works [grid-column-gap:12px] [grid-row-gap:12px] [background-image:linear-gradient(45deg,_#140d24b3,_#0a0814b3)] [border:1px_solid_#ffffff1a] [border-radius:16px] [justify-content:center] [align-items:center] [width:100%] [padding:12px] [display:flex] [overflow:hidden] max-lg:[justify-content:flex-start] max-lg:[align-items:center] max-lg:[width:100%] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px] max-landscape:[justify-content:flex-start] max-landscape:[width:100%] max-landscape:[padding:20px] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px] max-sm:[padding:12px]">
+                    <div class="div-ic-80x80 [justify-content:center] [align-items:center] [width:80px] [min-width:80px] [height:80px] [min-height:80px] [display:flex] [position:relative] [overflow:visible] max-landscape:[width:40px] max-landscape:[min-width:40px] max-landscape:[height:40px] max-landscape:[min-height:40px]"><img data-meno-optimize="false" src="/images/Frame-260-4.avif" loading="lazy" alt="" class="ic-80x80 [object-fit:cover] [width:80px] [height:80px] [overflow:visible] max-landscape:[width:40px] max-landscape:[height:40px]" /></div>
+                    <div class="text-18-semibold [font-family:Switzer,_sans-serif] [font-size:18px] [font-weight:600] [line-height:120%] max-landscape:[font-size:16px] max-sm:[font-size:14px]">We create the assets, animation, and sound</div>
+                  </div><img data-meno-optimize="false" src="/images/Vector-514.svg" loading="lazy" alt="" class="image-how-it-works-4 [position:absolute] [inset:112px_47%_auto_auto] max-lg:[display:none]" />
+                </div>
+              </div>
+              <div class="_5-step-how_it_works [justify-content:center] [width:100%] [max-width:773px] [margin-left:auto] [margin-right:auto] [display:flex] [position:relative] max-lg:[grid-column-gap:24px] max-lg:[grid-row-gap:24px] max-lg:[justify-content:space-between] max-lg:[max-width:100%] max-landscape:[grid-column-gap:24px] max-landscape:[grid-row-gap:24px] max-landscape:[flex-flow:column] max-landscape:[align-items:center] max-sm:[flex-flow:column-reverse] max-sm:[justify-content:space-around] max-sm:[align-items:center]">
+                <div class="inline-card-how_it_works max-w-354 [flex-flow:column] [justify-content:flex-start] [align-items:center] [width:100%] [max-width:354px] [display:flex] [position:relative] max-lg:[max-width:100%] max-landscape:[max-width:100%]">
+                  <div class="card-how_it-_works bg-gradient-how-it-works [grid-column-gap:12px] [grid-row-gap:12px] [background-image:linear-gradient(90deg,_#581de3,_#726eff)] [border:1px_solid_#ffffff1a] [border-radius:16px] [justify-content:center] [align-items:center] [width:100%] [padding:12px] [display:flex] [overflow:hidden] max-lg:[justify-content:flex-start] max-lg:[align-items:center] max-lg:[width:100%] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px] max-landscape:[justify-content:flex-start] max-landscape:[width:100%] max-landscape:[padding:20px] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px] max-sm:[padding:12px]">
+                    <div class="div-ic-80x80 [justify-content:center] [align-items:center] [width:80px] [min-width:80px] [height:80px] [min-height:80px] [display:flex] [position:relative] [overflow:visible] max-landscape:[width:40px] max-landscape:[min-width:40px] max-landscape:[height:40px] max-landscape:[min-height:40px]"><img data-meno-optimize="false" src="/images/Frame-260-5.avif" loading="lazy" alt="" class="ic-80x80 [object-fit:cover] [width:80px] [height:80px] [overflow:visible] max-landscape:[width:40px] max-landscape:[height:40px]" /></div>
+                    <div class="text-18-semibold [font-family:Switzer,_sans-serif] [font-size:18px] [font-weight:600] [line-height:120%] max-landscape:[font-size:16px] max-sm:[font-size:14px]">We’ll deliver your finished video</div>
+                  </div><img data-meno-optimize="false" src="/images/Vector-516.svg" loading="lazy" alt="" class="image-how-it-works-7 [position:absolute] [inset:auto_-235px_auto_auto] max-lg:[display:none]" />
+                </div>
+                <div class="inline-card-how_it_works absolute-2 [flex-flow:column] [justify-content:flex-start] [align-items:center] [width:100%] [max-width:347px] [display:flex] [position:absolute] [top:-120px] [left:auto] [right:-184px] max-lg:[max-width:100%] max-lg:[position:static] max-landscape:[max-width:100%]"><img data-meno-optimize="false" src="/images/Vector-517.svg" loading="lazy" alt="" class="image-how-it-works-6 [position:absolute] [inset:-57px_46%_auto_auto] max-lg:[display:none]" />
+                  <div class="card-how_it-_works bg-white-10 [grid-column-gap:12px] [grid-row-gap:12px] [background-image:none] [border:1px_solid_#ffffff1a] [border-radius:16px] [justify-content:center] [align-items:center] [width:100%] [padding:12px] [display:flex] [overflow:hidden] [background-color:#ffffff1a] max-lg:[justify-content:flex-start] max-lg:[align-items:center] max-lg:[width:100%] max-landscape:[grid-column-gap:20px] max-landscape:[grid-row-gap:20px] max-landscape:[justify-content:flex-start] max-landscape:[width:100%] max-landscape:[padding:20px] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px] max-sm:[padding:12px]">
+                    <div class="div-ic-80x80 [justify-content:center] [align-items:center] [width:80px] [min-width:80px] [height:80px] [min-height:80px] [display:flex] [position:relative] [overflow:visible] max-landscape:[width:40px] max-landscape:[min-width:40px] max-landscape:[height:40px] max-landscape:[min-height:40px]"><img data-meno-optimize="false" src="/images/Frame-260-7.avif" loading="lazy" alt="" class="ic-80x80 [object-fit:cover] [width:80px] [height:80px] [overflow:visible] max-landscape:[width:40px] max-landscape:[height:40px]" /></div>
+                    <div class="text-18-semibold [font-family:Switzer,_sans-serif] [font-size:18px] [font-weight:600] [line-height:120%] max-landscape:[font-size:16px] max-sm:[font-size:14px]">Need changes? Send us your feedback</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-extension [justify-content:center] [align-items:center] [padding-top:120px] [padding-bottom:40px] [display:flex] [position:relative] [overflow:hidden] max-lg:[padding-top:40px] max-lg:[padding-bottom:64px] max-landscape:[padding-top:64px] max-sm:[padding-top:40px] max-sm:[padding-bottom:40px]">
+        <div class="line-gradient-2 [background-image:linear-gradient(90deg,_#60537700,_#605377_50%,_#60537700)] [width:100%] [height:4px] [position:absolute] [inset:0_0%_auto]"></div><img data-meno-optimize="false" src="/images/Frame-1707478539_1.avif" loading="lazy" sizes="100vw" srcset="/images/Frame-1707478539_1Frame-1707478539.avif 500w, /images/Frame-1707478539_1.avif 2400w" alt="A black and white photo of a plane flying in the sky" class="image-extension [z-index:-1] [min-width:1400px] [position:absolute] [top:0%] [bottom:auto]" />
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="extension-wrapper [grid-column-gap:64px] [grid-row-gap:64px] [flex-flow:column] [display:flex] max-lg:[grid-column-gap:40px] max-lg:[grid-row-gap:40px] max-landscape:[grid-column-gap:32px] max-landscape:[grid-row-gap:32px]">
+            <div class="top_side-extension [grid-column-gap:12px] [grid-row-gap:12px] [text-align:center] [flex-flow:column] [justify-content:center] [align-items:center] [max-width:620px] [margin-left:auto] [margin-right:auto] [display:flex]">
+              <div class="gap-12-extension [z-index:10] [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] [position:relative]">
+                <div class="heading_text-extension [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [max-width:400px] [margin-left:auto] [margin-right:auto] [display:flex] max-sm:[justify-content:flex-start] max-sm:[align-items:center]">
+                  <div class="text-caps weight-regular [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative]">ANYTHING IS POSSIBLE</div>
+                  <h2 class="h2 _70 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px] max-sm:[width:70%]"><span class="span-pink-2 [box-sizing:border-box] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_39%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text]">We&#x27;re an extension
+</span>of your team</h2>
+                </div>
+                <div class="text-16-150 opacity-80 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [opacity:.8] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Motion The Agency is not just a motion graphic and video editing studio. We are design experts with years of experience in video production; whether creating from scratch or refreshing existing content.</div>
+              </div>
+            </div>
+            <div class="bottom_side-extension [grid-column-gap:40px] [grid-row-gap:64px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr_1fr] [grid-auto-columns:1fr] [display:grid] max-lg:[grid-column-gap:32px] max-lg:[grid-row-gap:32px] max-lg:[grid-template-columns:1fr_1fr] max-landscape:[grid-column-gap:32px] max-landscape:[grid-row-gap:32px] max-landscape:[grid-template-columns:1fr]">
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-28-extension [grid-column-gap:24px] [grid-row-gap:24px] [flex-flow:column] [display:flex]"><img data-meno-optimize="false" src="/images/Frame-1707478607_3.avif" loading="lazy" alt="An interface displaying a task list with checkboxes. Two user avatars are shown, one with a checkmark indicating completed tasks, and another with an empty checkbox for pending tasks. The design features a modern, minimalist aesthetic with a purple and white color scheme." class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-extension [grid-column-gap:8px] [grid-row-gap:8px] [text-align:center] [flex-flow:column] [justify-content:flex-start] [align-items:center] [padding-bottom:24px] [padding-left:24px] [padding-right:24px] [display:flex] max-lg:[padding-bottom:28px]">
+                        <h3 class="h3 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px]">1-on-1 personalised consultation</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Our team will go through your brief and we’ll mockup your ideas with images, this allows us to visualise the final result of your video.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-28-extension [grid-column-gap:24px] [grid-row-gap:24px] [flex-flow:column] [display:flex]"><img data-meno-optimize="false" src="/images/Frame-1707478608_3.avif" loading="lazy" alt="An illustration featuring a laptop at the center, surrounded by four rectangular panels displaying performance metrics: 4 ms, 0.8 s, and 2.9 s, with a purple star icon in the top left and bottom right corners." class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-extension [grid-column-gap:8px] [grid-row-gap:8px] [text-align:center] [flex-flow:column] [justify-content:flex-start] [align-items:center] [padding-bottom:24px] [padding-left:24px] [padding-right:24px] [display:flex] max-lg:[padding-bottom:28px]">
+                        <h3 class="h3 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px]">Best performance hardware</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Video editing hardware is expensive, but investing in the best tech allows us to save countless hours when editing and exporting.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-28-extension [grid-column-gap:24px] [grid-row-gap:24px] [flex-flow:column] [display:flex]"><img data-meno-optimize="false" src="/images/Frame-1707478606_5.avif" loading="lazy" sizes="100vw" srcset="/images/Frame-1707478606_5-p-500.png 500w, /images/Frame-1707478606_5.avif 600w" alt="An illustrated weekly schedule featuring team roles such as Graphics Design, Project Manager, 2D Animator, 3D Animator, Motion Artist, and tasks like Branding, UI Design, Prototyping, and 3D Animation, set against a dynamic background." class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-extension [grid-column-gap:8px] [grid-row-gap:8px] [text-align:center] [flex-flow:column] [justify-content:flex-start] [align-items:center] [padding-bottom:24px] [padding-left:24px] [padding-right:24px] [display:flex] max-lg:[padding-bottom:28px]">
+                        <h3 class="h3 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px]">No recruitment/sick days</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Recruiting the right talent can take months and illness can cause big delays to projects. We&#x27;re ready to start work straight away and our team are always available to cover any unexpected events.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-28-extension [grid-column-gap:24px] [grid-row-gap:24px] [flex-flow:column] [display:flex]"><img data-meno-optimize="false" src="/images/Frame-1707478606-1.avif" loading="lazy" alt="A stylized trophy in purple, positioned in front of a glowing circular icon against a vibrant, swirling purple background." class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-extension [grid-column-gap:8px] [grid-row-gap:8px] [text-align:center] [flex-flow:column] [justify-content:flex-start] [align-items:center] [padding-bottom:24px] [padding-left:24px] [padding-right:24px] [display:flex] max-lg:[padding-bottom:28px]">
+                        <h3 class="h3 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px]">Best training</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Training and staying up to date with the latest motion design trends is essential. We ensure repetitive tasks can be automated allowing us to pass on efficiencies to our customers.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-28-extension [grid-column-gap:24px] [grid-row-gap:24px] [flex-flow:column] [display:flex]"><img data-meno-optimize="false" src="/images/Frame-1707478609_1.avif" loading="lazy" alt="A digital interface featuring a selection of audio files, with a highlighted waveform display in the center and buttons for MP4 format on the side." class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-extension [grid-column-gap:8px] [grid-row-gap:8px] [text-align:center] [flex-flow:column] [justify-content:flex-start] [align-items:center] [padding-bottom:24px] [padding-left:24px] [padding-right:24px] [display:flex] max-lg:[padding-bottom:28px]">
+                        <h3 class="h3 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px]">Access to 200+  reference library</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">References provided are specific to your business and objectives. This means you can visualise the style of your video before committing to work together.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-contaiiner [flex:1] [color:] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex]">
+                <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                  <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]">
+                    <div class="gap-28-extension [grid-column-gap:24px] [grid-row-gap:24px] [flex-flow:column] [display:flex]"><img data-meno-optimize="false" src="/images/Frame-1707478610_1.avif" loading="lazy" alt="A chat interface showing a conversation between a user and &quot;Motion The Agency.&quot; The user requests to slow down a specific part of a video and add a light-leak effect, while the agency responds affirmatively, agreeing to make the adjustments. The time stamps indicate the messages were sent at 11:55 AM." class="img-purpose [object-fit:cover] [width:100%] max-sm:[aspect-ratio:3_/_2] max-sm:[object-fit:cover] max-sm:[object-position:50%_50%] max-sm:[width:100%]" />
+                      <div class="gap-20-center-extension [grid-column-gap:8px] [grid-row-gap:8px] [text-align:center] [flex-flow:column] [justify-content:flex-start] [align-items:center] [padding-bottom:24px] [padding-left:24px] [padding-right:24px] [display:flex] max-lg:[padding-bottom:28px]">
+                        <h3 class="h3 [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:24px] [font-weight:600] [line-height:120%] max-lg:[font-size:22px] max-sm:[font-size:18px]">Streamlined revisions</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Feedback is important, but it can also be time-consuming. We use best in class software that allows you to easily feedback to us and receive your finished video content quickly.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-testimonials [padding-top:80px] [padding-bottom:80px] max-lg:[padding-top:40px] max-lg:[padding-bottom:40px] max-sm:[padding-bottom:40px]">
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="testimonials [grid-column-gap:32px] [grid-row-gap:32px] [text-align:center] [flex-flow:column] [justify-content:center] [align-items:center] [display:flex] max-lg:[grid-column-gap:28px] max-lg:[grid-row-gap:28px] max-landscape:[grid-column-gap:32px] max-landscape:[grid-row-gap:32px] max-sm:[grid-column-gap:20px] max-sm:[grid-row-gap:20px]">
+            <div class="header--p _w-620 [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [max-width:620px] [display:flex] max-lg:[text-align:center] max-lg:[align-items:center] max-lg:[max-width:none] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px]">
+              <div class="header [grid-column-gap:8px] [grid-row-gap:8px] [flex-flow:column] [display:flex] [position:relative]">
+                <div class="text-caps [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px]">TESTIMONIALS</div>
+                <h2 class="h2 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px]"><span class="span-pink-2 [box-sizing:border-box] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_39%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text]">See what our clients say</span></h2>
+              </div>
+              <p class="text-16-150 color-white-80 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:center] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">We work with teams of varying sizes all across the world. A large majority of our work is to support the marketing function of the business but  our videos are also used across a variety of departments including HR and Finance.</p>
+            </div>
+            <div class="slider-wrap testimonial [width:100%] [padding-left:40px] [padding-right:40px] [grid-column-gap:20px] [grid-row-gap:20px] [flex-flow:column] [justify-content:space-between] [align-items:flex-start] [height:50%] [padding:24px_32px_40px] [display:flex] [background-image:url('../images/Card_1.avif')] [background-position:0_0] [background-size:auto] [border-radius:16px] [padding-top:32px] [padding-bottom:32px] [overflow:hidden] max-landscape:[grid-column-gap:12px] max-landscape:[grid-row-gap:12px] max-landscape:[justify-content:flex-start] max-landscape:[align-items:flex-start] max-sm:[padding-left:0] max-sm:[padding-right:0] max-sm:[grid-column-gap:20px] max-sm:[grid-row-gap:20px] max-sm:[padding:12px_4px] max-lg:[height:auto] max-lg:[padding:24px]">
+              <div data-delay="3000" data-animation="slide" class="slider-2 w-slider [position:relative] [height:100%] [text-align:center] [background:#dddddd] [clear:both] [-webkit-tap-highlight-color:rgba(0,_0,_0,_0)] [tap-highlight-color:rgba(0,_0,_0,_0)] [background-color:#ddd0] [width:100%] max-lg:[width:100%]" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+                <div class="testimonial-wrapper-slider w-slider-mask [position:relative] [display:block] [overflow:hidden] [z-index:1] [left:0] [right:0] [height:fit-content] [white-space:nowrap] [width:100%] max-lg:[width:auto]">
+                  <div class="video-example is-100h w-slide [position:relative] [display:inline-block] [vertical-align:top] [width:100%] [height:100%] [white-space:normal] [text-align:left] [min-width:32%] [max-width:32%] [min-height:100%] [margin-left:10px] [margin-right:10px] max-lg:[min-width:auto] max-lg:[max-width:48%] max-lg:[min-height:auto] max-landscape:[min-width:100%] max-landscape:[max-width:100%] max-landscape:[margin-left:0] max-landscape:[margin-right:0] max-sm:[min-width:100%] max-sm:[max-width:100%] max-sm:[min-height:100%]">
+                    <div class="testimonials-card [grid-column-gap:20px] [grid-row-gap:20px] [color:#080610] [background-color:#fff] [border-radius:12px] [flex-flow:column] [justify-content:center] [align-items:flex-start] [padding:20px_20px_28px] [display:flex] [position:relative] max-lg:[padding:16px] max-sm:[height:240px] max-sm:[margin-left:8px] max-sm:[margin-right:8px] max-sm:[padding:8px]">
+                      <div class="video-testimonials-wrapper [border-radius:8px] [width:100%] [position:relative] [overflow:hidden]">
+                        <div class="video home-testimonials embed w-embed w-iframe [z-index:10] [color:#000] [border-radius:8px] [width:100%] [height:auto] [overflow:hidden] [padding-bottom:56.25%] max-lg:[z-index:7] max-sm:[aspect-ratio:16_/_9] max-sm:[height:auto]"><iframe src="https://www.youtube.com/embed/O5xibKNNL1w" loading="lazy" title="Video title here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="[position:absolute] [top:0] [left:0] [width:100%] [height:100%]">
+                          </iframe></div>
+                      </div>
+                      <div class="div-block-8 [grid-column-gap:2px] [grid-row-gap:2px] [text-align:left] [flex-flow:column] [justify-content:center] [align-items:flex-start] [display:flex] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[width:100%] max-sm:[text-align:center] max-sm:[height:22.7%]">
+                        <h3 class="heading-20-120 [font-family:Switzer,_sans-serif] [font-size:20px] [line-height:120%] max-sm:[font-size:20px]">Ellen Kasinopoulou</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Head of Marketing at Attractions.io</div>
+                      </div>
+                      <div class="country-why [background-color:#080610] [border-top-left-radius:100px] [border-bottom-left-radius:100px] [width:43px] [height:32px] [padding:5px_16px_5px_5px] [position:absolute] [inset:auto_0%_56px_auto] max-lg:[z-index:8]"><img data-meno-optimize="false" src="/images/Frame-1707478758.avif" loading="lazy" alt="The british flag is shown in the shape of a cross" class="ic-22x22 [width:22px] [height:22px]" /></div>
+                    </div>
+                  </div>
+                  <div class="video-example is-100h w-slide [position:relative] [display:inline-block] [vertical-align:top] [width:100%] [height:100%] [white-space:normal] [text-align:left] [min-width:32%] [max-width:32%] [min-height:100%] [margin-left:10px] [margin-right:10px] max-lg:[min-width:auto] max-lg:[max-width:48%] max-lg:[min-height:auto] max-landscape:[min-width:100%] max-landscape:[max-width:100%] max-landscape:[margin-left:0] max-landscape:[margin-right:0] max-sm:[min-width:100%] max-sm:[max-width:100%] max-sm:[min-height:100%]">
+                    <div class="testimonials-card [grid-column-gap:20px] [grid-row-gap:20px] [color:#080610] [background-color:#fff] [border-radius:12px] [flex-flow:column] [justify-content:center] [align-items:flex-start] [padding:20px_20px_28px] [display:flex] [position:relative] max-lg:[padding:16px] max-sm:[height:240px] max-sm:[margin-left:8px] max-sm:[margin-right:8px] max-sm:[padding:8px]">
+                      <div class="video-testimonials-wrapper [border-radius:8px] [width:100%] [position:relative] [overflow:hidden]">
+                        <div class="video home-testimonials embed w-embed w-iframe [z-index:10] [color:#000] [border-radius:8px] [width:100%] [height:auto] [overflow:hidden] [padding-bottom:56.25%] max-lg:[z-index:7] max-sm:[aspect-ratio:16_/_9] max-sm:[height:auto]"><iframe src="https://www.youtube.com/embed/PyZz16CtX-0" loading="lazy" title="Video title here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="[position:absolute] [top:0] [left:0] [width:100%] [height:100%]">
+                          </iframe></div>
+                      </div>
+                      <div class="div-block-8 [grid-column-gap:2px] [grid-row-gap:2px] [text-align:left] [flex-flow:column] [justify-content:center] [align-items:flex-start] [display:flex] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[width:100%] max-sm:[text-align:center] max-sm:[height:22.7%]">
+                        <h3 class="heading-20-120 [font-family:Switzer,_sans-serif] [font-size:20px] [line-height:120%] max-sm:[font-size:20px]">Kurt Jones</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Product Marketing Manager at Hacker Rank</div>
+                      </div>
+                      <div class="country-why [background-color:#080610] [border-top-left-radius:100px] [border-bottom-left-radius:100px] [width:43px] [height:32px] [padding:5px_16px_5px_5px] [position:absolute] [inset:auto_0%_56px_auto] max-lg:[z-index:8]"><img data-meno-optimize="false" src="/images/Frame-1707478784.avif" loading="lazy" alt="An american flag is shown in the shape of a heart" class="ic-22x22 [width:22px] [height:22px]" /></div>
+                    </div>
+                  </div>
+                  <div class="video-example w-slide [position:relative] [display:inline-block] [vertical-align:top] [width:100%] [height:100%] [white-space:normal] [text-align:left] [min-width:32%] [max-width:32%] [min-height:100%] [margin-left:10px] [margin-right:10px] max-lg:[min-width:auto] max-lg:[max-width:48%] max-lg:[min-height:auto] max-landscape:[min-width:100%] max-landscape:[max-width:100%] max-landscape:[margin-left:0] max-landscape:[margin-right:0] max-sm:[min-width:100%] max-sm:[max-width:100%]">
+                    <div class="testimonials-card [grid-column-gap:20px] [grid-row-gap:20px] [color:#080610] [background-color:#fff] [border-radius:12px] [flex-flow:column] [justify-content:center] [align-items:flex-start] [padding:20px_20px_28px] [display:flex] [position:relative] max-lg:[padding:16px] max-sm:[height:240px] max-sm:[margin-left:8px] max-sm:[margin-right:8px] max-sm:[padding:8px]">
+                      <div class="video-testimonials-wrapper [border-radius:8px] [width:100%] [position:relative] [overflow:hidden]">
+                        <div class="video home-testimonials embed w-embed w-iframe [z-index:10] [color:#000] [border-radius:8px] [width:100%] [height:auto] [overflow:hidden] [padding-bottom:56.25%] max-lg:[z-index:7] max-sm:[aspect-ratio:16_/_9] max-sm:[height:auto]"><iframe src="https://www.youtube.com/embed/G0ZHbVIleu4" loading="lazy" title="Video title here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="[position:absolute] [top:0] [left:0] [width:100%] [height:100%]">
+                          </iframe></div>
+                      </div>
+                      <div class="div-block-8 [grid-column-gap:2px] [grid-row-gap:2px] [text-align:left] [flex-flow:column] [justify-content:center] [align-items:flex-start] [display:flex] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[width:100%] max-sm:[text-align:center] max-sm:[height:22.7%]">
+                        <h3 class="heading-20-120 [font-family:Switzer,_sans-serif] [font-size:20px] [line-height:120%] max-sm:[font-size:20px]">Matthew Springer</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Chief Revenue Officer at Navatar</div>
+                      </div>
+                      <div class="country-why [background-color:#080610] [border-top-left-radius:100px] [border-bottom-left-radius:100px] [width:43px] [height:32px] [padding:5px_16px_5px_5px] [position:absolute] [inset:auto_0%_56px_auto] max-lg:[z-index:8]"><img data-meno-optimize="false" src="/images/Frame-1707478784.avif" loading="lazy" alt="An american flag is shown in the shape of a heart" class="ic-22x22 [width:22px] [height:22px]" /></div>
+                    </div>
+                  </div>
+                  <div class="video-example w-slide [position:relative] [display:inline-block] [vertical-align:top] [width:100%] [height:100%] [white-space:normal] [text-align:left] [min-width:32%] [max-width:32%] [min-height:100%] [margin-left:10px] [margin-right:10px] max-lg:[min-width:auto] max-lg:[max-width:48%] max-lg:[min-height:auto] max-landscape:[min-width:100%] max-landscape:[max-width:100%] max-landscape:[margin-left:0] max-landscape:[margin-right:0] max-sm:[min-width:100%] max-sm:[max-width:100%]">
+                    <div class="testimonials-card [grid-column-gap:20px] [grid-row-gap:20px] [color:#080610] [background-color:#fff] [border-radius:12px] [flex-flow:column] [justify-content:center] [align-items:flex-start] [padding:20px_20px_28px] [display:flex] [position:relative] max-lg:[padding:16px] max-sm:[height:240px] max-sm:[margin-left:8px] max-sm:[margin-right:8px] max-sm:[padding:8px]">
+                      <div class="video-testimonials-wrapper [border-radius:8px] [width:100%] [position:relative] [overflow:hidden]">
+                        <div class="video home-testimonials embed w-embed w-iframe [z-index:10] [color:#000] [border-radius:8px] [width:100%] [height:auto] [overflow:hidden] [padding-bottom:56.25%] max-lg:[z-index:7] max-sm:[aspect-ratio:16_/_9] max-sm:[height:auto]"><iframe src="https://www.youtube.com/embed/AqWlk4iItX4" loading="lazy" title="Video title here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="[position:absolute] [top:0] [left:0] [width:100%] [height:100%]">
+                          </iframe></div>
+                      </div>
+                      <div class="div-block-8 [grid-column-gap:2px] [grid-row-gap:2px] [text-align:left] [flex-flow:column] [justify-content:center] [align-items:flex-start] [display:flex] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[width:100%] max-sm:[text-align:center] max-sm:[height:22.7%]">
+                        <h3 class="heading-20-120 [font-family:Switzer,_sans-serif] [font-size:20px] [line-height:120%] max-sm:[font-size:20px]">Carlos Morales</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Operations Lead at StockRX</div>
+                      </div>
+                      <div class="country-why [background-color:#080610] [border-top-left-radius:100px] [border-bottom-left-radius:100px] [width:43px] [height:32px] [padding:5px_16px_5px_5px] [position:absolute] [inset:auto_0%_56px_auto] max-lg:[z-index:8]"><img data-meno-optimize="false" src="/images/Frame-1707478784.avif" loading="lazy" alt="An american flag is shown in the shape of a heart" class="ic-22x22 [width:22px] [height:22px]" /></div>
+                    </div>
+                  </div>
+                  <div class="video-example w-slide [position:relative] [display:inline-block] [vertical-align:top] [width:100%] [height:100%] [white-space:normal] [text-align:left] [min-width:32%] [max-width:32%] [min-height:100%] [margin-left:10px] [margin-right:10px] max-lg:[min-width:auto] max-lg:[max-width:48%] max-lg:[min-height:auto] max-landscape:[min-width:100%] max-landscape:[max-width:100%] max-landscape:[margin-left:0] max-landscape:[margin-right:0] max-sm:[min-width:100%] max-sm:[max-width:100%]">
+                    <div class="testimonials-card [grid-column-gap:20px] [grid-row-gap:20px] [color:#080610] [background-color:#fff] [border-radius:12px] [flex-flow:column] [justify-content:center] [align-items:flex-start] [padding:20px_20px_28px] [display:flex] [position:relative] max-lg:[padding:16px] max-sm:[height:240px] max-sm:[margin-left:8px] max-sm:[margin-right:8px] max-sm:[padding:8px]">
+                      <div class="video-testimonials-wrapper [border-radius:8px] [width:100%] [position:relative] [overflow:hidden]">
+                        <div class="video home-testimonials embed w-embed w-iframe [z-index:10] [color:#000] [border-radius:8px] [width:100%] [height:auto] [overflow:hidden] [padding-bottom:56.25%] max-lg:[z-index:7] max-sm:[aspect-ratio:16_/_9] max-sm:[height:auto]"><iframe src="https://www.youtube.com/embed/9DGNgQ-reDc" loading="lazy" title="Video title here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="[position:absolute] [top:0] [left:0] [width:100%] [height:100%]">
+                          </iframe></div>
+                      </div>
+                      <div class="div-block-8 [grid-column-gap:2px] [grid-row-gap:2px] [text-align:left] [flex-flow:column] [justify-content:center] [align-items:flex-start] [display:flex] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[width:100%] max-sm:[text-align:center] max-sm:[height:22.7%]">
+                        <h3 class="heading-20-120 [font-family:Switzer,_sans-serif] [font-size:20px] [line-height:120%] max-sm:[font-size:20px]">Oscar Forshaw-Swift</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Head of Content &amp; Content Strategy at Obrizum Group</div>
+                      </div>
+                      <div class="country-why [background-color:#080610] [border-top-left-radius:100px] [border-bottom-left-radius:100px] [width:43px] [height:32px] [padding:5px_16px_5px_5px] [position:absolute] [inset:auto_0%_56px_auto] max-lg:[z-index:8]"><img data-meno-optimize="false" src="/images/Frame-1707478758.avif" loading="lazy" alt="The british flag is shown in the shape of a cross" class="ic-22x22 [width:22px] [height:22px]" /></div>
+                    </div>
+                  </div>
+                  <div class="video-example w-slide [position:relative] [display:inline-block] [vertical-align:top] [width:100%] [height:100%] [white-space:normal] [text-align:left] [min-width:32%] [max-width:32%] [min-height:100%] [margin-left:10px] [margin-right:10px] max-lg:[min-width:auto] max-lg:[max-width:48%] max-lg:[min-height:auto] max-landscape:[min-width:100%] max-landscape:[max-width:100%] max-landscape:[margin-left:0] max-landscape:[margin-right:0] max-sm:[min-width:100%] max-sm:[max-width:100%]">
+                    <div class="testimonials-card [grid-column-gap:20px] [grid-row-gap:20px] [color:#080610] [background-color:#fff] [border-radius:12px] [flex-flow:column] [justify-content:center] [align-items:flex-start] [padding:20px_20px_28px] [display:flex] [position:relative] max-lg:[padding:16px] max-sm:[height:240px] max-sm:[margin-left:8px] max-sm:[margin-right:8px] max-sm:[padding:8px]">
+                      <div class="video-testimonials-wrapper [border-radius:8px] [width:100%] [position:relative] [overflow:hidden]">
+                        <div class="video home-testimonials embed w-embed w-iframe [z-index:10] [color:#000] [border-radius:8px] [width:100%] [height:auto] [overflow:hidden] [padding-bottom:56.25%] max-lg:[z-index:7] max-sm:[aspect-ratio:16_/_9] max-sm:[height:auto]"><iframe src="https://www.youtube.com/embed/5JOb8IlK_m8" loading="lazy" title="Video title here" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="[position:absolute] [top:0] [left:0] [width:100%] [height:100%]">
+                          </iframe></div>
+                      </div>
+                      <div class="div-block-8 [grid-column-gap:2px] [grid-row-gap:2px] [text-align:left] [flex-flow:column] [justify-content:center] [align-items:flex-start] [display:flex] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[width:100%] max-sm:[text-align:center] max-sm:[height:22.7%]">
+                        <h3 class="heading-20-120 [font-family:Switzer,_sans-serif] [font-size:20px] [line-height:120%] max-sm:[font-size:20px]">Vanlizza Chau</h3>
+                        <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Product Marketing at Gem</div>
+                      </div>
+                      <div class="country-why [background-color:#080610] [border-top-left-radius:100px] [border-bottom-left-radius:100px] [width:43px] [height:32px] [padding:5px_16px_5px_5px] [position:absolute] [inset:auto_0%_56px_auto] max-lg:[z-index:8]"><img data-meno-optimize="false" src="/images/Frame-1707478784.avif" loading="lazy" alt="An american flag is shown in the shape of a heart" class="ic-22x22 [width:22px] [height:22px]" /></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider-arrow overlap w-slider-arrow-left [position:absolute] [width:80px] [top:0] [right:auto] [bottom:0] [left:0] [margin:auto] [cursor:pointer] [overflow:hidden] [color:white] [font-size:40px] [-webkit-tap-highlight-color:rgba(0,_0,_0,_0)] [tap-highlight-color:rgba(0,_0,_0,_0)] [user-select:none] [z-index:3] [background-color:#0a0814] [border:1px_solid_#ffffff1a] [border-radius:100px] [justify-content:center] [align-items:center] [max-width:48px] [max-height:48px] [margin-left:-18px] [display:flex] focus:[outline:0] max-landscape:[margin-left:-48px] max-sm:[display:none] max-sm:[inset:auto_0%_-10%]"><img src="/images/Arrow---Left.svg" loading="lazy" alt="" /></div>
+                <div class="slider-arrow overlap right w-slider-arrow-right [position:absolute] [width:80px] [top:0] [right:0] [bottom:0] [left:auto] [margin:auto] [cursor:pointer] [overflow:hidden] [color:white] [font-size:40px] [-webkit-tap-highlight-color:rgba(0,_0,_0,_0)] [tap-highlight-color:rgba(0,_0,_0,_0)] [user-select:none] [z-index:4] [background-color:#0a0814] [border:1px_solid_#ffffff1a] [border-radius:100px] [justify-content:center] [align-items:center] [max-width:48px] [max-height:48px] [margin-left:0] [display:flex] [margin-right:-18px] focus:[outline:0] max-landscape:[margin-left:-48px] max-landscape:[margin-right:-56px] max-sm:[display:none] max-sm:[inset:auto_0%_-10%]"><img src="/images/Arrow---Right.svg" loading="lazy" alt="" /></div>
+                <div class="slide-nav-2 testimonial w-slider-nav w-round [position:absolute] [z-index:2] [top:auto] [right:0] [bottom:0] [left:0] [margin:auto] [padding-top:10px] [height:50%] [text-align:center] [-webkit-tap-highlight-color:rgba(0,_0,_0,_0)] [tap-highlight-color:rgba(0,_0,_0,_0)] [display:none] [grid-column-gap:20px] [grid-row-gap:20px] [flex-flow:column] [justify-content:space-between] [align-items:flex-start] [padding:24px_32px_40px] max-landscape:[grid-column-gap:12px] max-landscape:[grid-row-gap:12px] max-landscape:[justify-content:flex-start] max-landscape:[align-items:flex-start] max-sm:[padding-top:20px] max-sm:[display:block] max-sm:[inset:auto_0%_-10%] max-sm:[grid-column-gap:20px] max-sm:[grid-row-gap:20px] max-sm:[padding:8px_0_0] max-sm:[height:auto] max-sm:[margin-top:12px] max-sm:[position:static]"></div>
+              </div>
+            </div>
+            <div class="clutch-div [background-color:#0000] [width:100%] [height:100%] [margin-left:auto] [margin-right:auto] [overflow:hidden]">
+              <div class="clutch w-embed w-script">
+                <Embed html={__embed5} />
+                <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="12" data-height="375" data-nofollow="true" data-expandifr="true" data-scale="100" data-reviews="297990,295481,295343,269445,264137,254012,252084,249935,241995,239853,237733,237398" data-clutchcompany-id="1917615"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-faq [background-color:#080610] [padding-top:80px] [padding-bottom:80px] max-lg:[padding-top:0] max-lg:[padding-bottom:80px] max-landscape:[padding-bottom:64px] max-sm:[padding-top:20px] max-sm:[padding-bottom:40px]">
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="faq-wrapper [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [display:grid] max-lg:[flex-flow:column] max-lg:[display:flex] max-sm:[grid-column-gap:20px] max-sm:[grid-row-gap:20px]">
+            <div class="left_side-faq [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [justify-content:flex-start] [align-items:flex-start] [display:flex]">
+              <div class="header-faq [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [max-width:540px] [display:flex] max-lg:[text-align:center] max-lg:[justify-content:flex-start] max-lg:[align-items:center] max-lg:[max-width:none] max-landscape:[justify-content:flex-start] max-landscape:[align-items:center] max-sm:[text-align:center]">
+                <div class="text_heading-faq [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [display:flex] max-lg:[text-align:center] max-lg:[justify-content:flex-start] max-lg:[align-items:center]">
+                  <div class="text-12-caps opacity-60 center-small [letter-spacing:6px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.6] [color:var(--white)] max-sm:[font-size:12px] max-lg:[text-align:center]">Frequently asked questions</div>
+                  <div class="max-w-400 [max-width:400px]">
+                    <h2 class="h2 center-small [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-lg:[text-align:center] max-sm:[text-align:center] max-sm:[font-size:28px]"><span class="span-pink-2 [box-sizing:border-box] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_39%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text]">Got questions?</span> we&#x27;ve got answers</h2>
+                  </div>
+                </div>
+                <p class="text-14-150 opacity-80 center-small [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px] max-lg:[text-align:center]">We want to make sure you feel confident that our service is right for you. Here we’ve looked to address some commonly asked questions. If you have any more specific questions, don’t hesitate to get in touch with a member of the team.</p>
+              </div><img data-meno-optimize="false" src="/images/Frame-1707478606_4.avif" loading="lazy" alt="An abstract digital interface featuring a dark theme with various input fields, a progress bar, and a question mark icon, suggesting a user-friendly design for a software application." class="image-faq [object-fit:cover] [min-width:100%] max-lg:[order:-1]" />
+            </div>
+            <div class="right_side-faq [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [justify-content:center] [align-items:center] [display:flex]">
+              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c6fe7" class="dropdown-faq w-dropdown [display:inline-block] [position:relative] [text-align:left] [margin-left:auto] [margin-right:auto] [z-index:900] [cursor:pointer] [background-image:linear-gradient(75deg,_#0a0814b3,_#140d24b3)] [border:1px_solid_#ffffff1a] [border-radius:25px] [width:100%] [padding-left:20px] [padding-right:20px] max-sm:[z-index:1]">
+                <div class="dropdown-top w-dropdown-toggle [position:relative] [vertical-align:top] [text-decoration:none] [color:var(--white)] [padding:16px_0] [text-align:left] [margin-left:auto] [margin-right:auto] [white-space:nowrap] [user-select:none] [display:flex] [cursor:pointer] [padding-right:40px] [width:100%] [justify-content:space-between] [align-items:flex-start] focus:[outline:0] max-lg:[padding-bottom:16px] max-sm:[white-space:normal] max-sm:[align-items:center]">
+                  <p class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">What is included in your video service?</p>
+                  <div data-is-ix2-target="1" class="ic-plus-faq [width:20px] [min-width:20px] [height:20px] [min-height:20px] max-sm:[min-width:2rem]" data-w-id="77047380-cda2-6192-4995-cd70f47c6feb" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
+                </div>
+                <nav class="dropdown-list-faq w-dropdown-list [position:static] [background:#dddddd] [display:block] [min-width:100%] [pointer-events:none] [cursor:pointer] [background-color:#0000] [overflow:hidden] [height:0px]">
+                  <div class="wrapper-text-faq [grid-column-gap:10px] [grid-row-gap:10px] [flex-flow:column] [padding-bottom:16px] [display:flex]">
+                    <p class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">We specialize in 2D and 3D animation, branded motion graphics, social media motion graphics, product video, and UI animations. We will create a custom video to fit your needs! We work with advertising agencies and marketers or directly with companies and individuals.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c6ff0" class="dropdown-faq w-dropdown [display:inline-block] [position:relative] [text-align:left] [margin-left:auto] [margin-right:auto] [z-index:900] [cursor:pointer] [background-image:linear-gradient(75deg,_#0a0814b3,_#140d24b3)] [border:1px_solid_#ffffff1a] [border-radius:25px] [width:100%] [padding-left:20px] [padding-right:20px] max-sm:[z-index:1]">
+                <div class="dropdown-top w-dropdown-toggle [position:relative] [vertical-align:top] [text-decoration:none] [color:var(--white)] [padding:16px_0] [text-align:left] [margin-left:auto] [margin-right:auto] [white-space:nowrap] [user-select:none] [display:flex] [cursor:pointer] [padding-right:40px] [width:100%] [justify-content:space-between] [align-items:flex-start] focus:[outline:0] max-lg:[padding-bottom:16px] max-sm:[white-space:normal] max-sm:[align-items:center]">
+                  <p class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">We have existing video footage. Do you still charge per minute?</p>
+                  <div data-is-ix2-target="1" class="ic-plus-faq [width:20px] [min-width:20px] [height:20px] [min-height:20px] max-sm:[min-width:2rem]" data-w-id="77047380-cda2-6192-4995-cd70f47c6ff4" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
+                </div>
+                <nav class="dropdown-list-faq w-dropdown-list [position:static] [background:#dddddd] [display:block] [min-width:100%] [pointer-events:none] [cursor:pointer] [background-color:#0000] [overflow:hidden] [height:0px]">
+                  <div class="wrapper-text-faq [grid-column-gap:10px] [grid-row-gap:10px] [flex-flow:column] [padding-bottom:16px] [display:flex]">
+                    <p class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">We won’t charge you for the duration of the video. We will charge you for the duration of the animation we add to your video. If you send a 3 minute video clip to us and we create and add a 15 second introduction, you will only be charged for 15 seconds (1/4 minute) of animation.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c6ff9" class="dropdown-faq w-dropdown [display:inline-block] [position:relative] [text-align:left] [margin-left:auto] [margin-right:auto] [z-index:900] [cursor:pointer] [background-image:linear-gradient(75deg,_#0a0814b3,_#140d24b3)] [border:1px_solid_#ffffff1a] [border-radius:25px] [width:100%] [padding-left:20px] [padding-right:20px] max-sm:[z-index:1]">
+                <div class="dropdown-top w-dropdown-toggle [position:relative] [vertical-align:top] [text-decoration:none] [color:var(--white)] [padding:16px_0] [text-align:left] [margin-left:auto] [margin-right:auto] [white-space:nowrap] [user-select:none] [display:flex] [cursor:pointer] [padding-right:40px] [width:100%] [justify-content:space-between] [align-items:flex-start] focus:[outline:0] max-lg:[padding-bottom:16px] max-sm:[white-space:normal] max-sm:[align-items:center]">
+                  <p class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">How do I know which package suits my needs?</p>
+                  <div data-is-ix2-target="1" class="ic-plus-faq [width:20px] [min-width:20px] [height:20px] [min-height:20px] max-sm:[min-width:2rem]" data-w-id="77047380-cda2-6192-4995-cd70f47c6ffd" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
+                </div>
+                <nav class="dropdown-list-faq w-dropdown-list [position:static] [background:#dddddd] [display:block] [min-width:100%] [pointer-events:none] [cursor:pointer] [background-color:#0000] [overflow:hidden] [height:0px]">
+                  <div class="wrapper-text-faq [grid-column-gap:10px] [grid-row-gap:10px] [flex-flow:column] [padding-bottom:16px] [display:flex]">
+                    <p class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Perhaps your needs are simple, and you only need a few videos each month. Maybe you’re skyrocketing with your business and need lots of videos at a great price. In either case, we have the package for you to help bring your brand to life. Check our pricing page or feel free to contact us for more information.</p>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" data-w-id="77047380-cda2-6192-4995-cd70f47c7002" class="dropdown-faq w-dropdown [display:inline-block] [position:relative] [text-align:left] [margin-left:auto] [margin-right:auto] [z-index:900] [cursor:pointer] [background-image:linear-gradient(75deg,_#0a0814b3,_#140d24b3)] [border:1px_solid_#ffffff1a] [border-radius:25px] [width:100%] [padding-left:20px] [padding-right:20px] max-sm:[z-index:1]">
+                <div class="dropdown-top w-dropdown-toggle [position:relative] [vertical-align:top] [text-decoration:none] [color:var(--white)] [padding:16px_0] [text-align:left] [margin-left:auto] [margin-right:auto] [white-space:nowrap] [user-select:none] [display:flex] [cursor:pointer] [padding-right:40px] [width:100%] [justify-content:space-between] [align-items:flex-start] focus:[outline:0] max-lg:[padding-bottom:16px] max-sm:[white-space:normal] max-sm:[align-items:center]">
+                  <p class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">How fast are your turnaround times like?</p>
+                  <div data-is-ix2-target="1" class="ic-plus-faq [width:20px] [min-width:20px] [height:20px] [min-height:20px] max-sm:[min-width:2rem]" data-w-id="77047380-cda2-6192-4995-cd70f47c7006" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/62581cacf7654a9838775673/62581cacf7654a49f0775692_plus.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0.5" data-duration="0" data-loading="eager"></div>
+                </div>
+                <nav class="dropdown-list-faq w-dropdown-list [position:static] [background:#dddddd] [display:block] [min-width:100%] [pointer-events:none] [cursor:pointer] [background-color:#0000] [overflow:hidden] [height:0px]">
+                  <div class="wrapper-text-faq [grid-column-gap:10px] [grid-row-gap:10px] [flex-flow:column] [padding-bottom:16px] [display:flex]">
+                    <p class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">We aim to deliver completely edited and annotated videos in 2 business days. Although we try to deliver everything as quickly as possible, larger time-intensive projects may take more than 2-3 days to complete and we’ll set realistic expectations for you as the requests come in.</p>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-contact_us [z-index:10] [color:var(--white)] [background-image:url('../images/Frame-1707478678_2.avif')] [background-position:50%_0] [background-size:cover] [background-attachment:scroll] [padding-top:120px] [padding-bottom:120px] [position:relative] [overflow:hidden] max-lg:[background-position:50%_0] max-lg:[padding-top:40px] max-lg:[padding-bottom:40px] max-sm:[padding-top:0] max-sm:[padding-bottom:40px]">
+        <div class="line-gradient-2 [background-image:linear-gradient(90deg,_#60537700,_#605377_50%,_#60537700)] [width:100%] [height:4px] [position:absolute] [inset:0_0%_auto]"></div>
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="contact_us-wrapper [z-index:1] [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:row] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [display:grid] [position:relative] max-lg:[flex-flow:column] max-lg:[display:flex]">
+            <div id="w-node-bc62d5ae-4242-6196-3d60-996ecf1e4aeb-c1a05a67" class="left_side-contact_us [grid-column-gap:88px] [grid-row-gap:88px] [flex-flow:column] [display:flex] max-sm:[grid-column-gap:46px] max-sm:[grid-row-gap:46px]">
+              <div class="header-contact_us [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [display:flex] max-lg:[max-width:none]">
+                <div class="text_heading-contact_us [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex] max-lg:[text-align:center] max-lg:[justify-content:center] max-lg:[align-items:center] max-landscape:[justify-content:flex-start] max-landscape:[align-items:center] max-sm:[text-align:center]">
+                  <div class="text-12-caps opacity-60 center-small [letter-spacing:6px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.6] [color:var(--white)] max-sm:[font-size:12px] max-lg:[text-align:center]">Contact Us</div>
+                  <h2 class="h2 center-small [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-lg:[text-align:center] max-sm:[text-align:center] max-sm:[font-size:28px]"><span class="span-pink-2 [box-sizing:border-box] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_39%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text]">Ready to animate your vision?
+</span>Get Free Custom Video Sample</h2>
+                </div>
+              </div>
+              <div class="image-wrapper-contact_us [justify-content:flex-end] [max-width:660px] [max-height:445px] [display:flex] [overflow:hidden] max-lg:[max-width:100%] max-lg:[max-height:550px] max-lg:[display:none] max-lg:[transform:translate(-38px)] max-landscape:[max-width:100%] max-landscape:[max-height:100%] max-landscape:[transform:translate(-16px)]"><img data-meno-optimize="false" src="/images/Frame-273_1.avif" loading="lazy" sizes="100vw" srcset="/images/Frame-273_1Frame-273.avif 500w, /images/Frame-273_1.avif 1155w" alt="Mobile interface displaying a form titled &#x27;Try Out Our Service, Risk-Free!&#x27; with fields for Company Name and Work Email. Below, there is a message from &#x27;Motion The Agency&#x27; thanking the user for their trust and requesting project details. The interface also includes a video sample section labeled &#x27;10s Video Free Sample&#x27; with play, share, and save options. The design features a modern, dark theme with vibrant accents." class="image-contact_us-2 [object-fit:cover] [min-width:725px] max-landscape:[min-width:100%]" /></div>
+            </div>
+            <div class="right_side-contact_us">
+              <div id="contact-us" class="form-block narrow-padding w-form [margin:0_0_15px] [background-image:linear-gradient(45deg,_#0a0814cc_47%,_#140d24cc)] [border:1px_solid_#ffffff1a] [border-radius:12px] [margin-bottom:0] [padding:32px] [position:relative] [overflow:hidden] max-sm:[padding:24px]">
+                <form method="get" ms-code-business-email="" name="wf-form-Contact-Us-Form" data-name="Contact Us Form" id="wf-form-Contact-Us-Form" data-webflow-hubspot-api-form-url="https://hubspotonwebflow.com/api/forms/3231aa55-9f82-443a-9469-3209181a5ab4" class="form gap-20 [grid-column-gap:20px] [grid-row-gap:20px] [flex-flow:column] [display:flex] max-sm:[grid-column-gap:24px] max-sm:[grid-row-gap:24px]" data-wf-page-id="67091882d6363303c1a05a67" data-wf-element-id="fa7944cc-145c-217e-5ad2-23c75414ee98">
+                  <div class="field-grid [grid-column-gap:20px] [grid-row-gap:20px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [display:grid] max-sm:[grid-column-gap:24px] max-sm:[grid-row-gap:24px] max-sm:[grid-template-columns:1fr]">
+                    <div class="text-field-contact [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:12px] [display:flex]"><label for="First-Name-3" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">First name<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label><input class="field-contact w-input [display:block] [width:100%] [height:48px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#191922] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:24px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" data-wfhsfieldname="FormTextInput-2" maxlength="256" name="First-Name" data-name="First Name" placeholder="Your first name..." type="text" id="First-Name-3" required="" /></div>
+                    <div class="text-field-contact [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:12px] [display:flex]"><label for="Last-Name-3" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Last name<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label><input class="field-contact w-input [display:block] [width:100%] [height:48px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#191922] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:24px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" data-wfhsfieldname="FormTextInput-3" maxlength="256" name="Last-Name" data-name="Last Name" placeholder="Your last name..." type="text" id="Last-Name-3" required="" /></div>
+                  </div>
+                  <div class="text-field-contact [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:12px] [display:flex]">
+                    <div class="w-layout-vflex flex-h space-between [flex-direction:column] [align-items:flex-start] [display:flex] [grid-column-gap:8px] [grid-row-gap:8px] [align-self:auto] [flex-flow:row] [justify-content:space-between] max-lg:[grid-column-gap:40px] max-lg:[grid-row-gap:40px] max-lg:[flex-flow:wrap] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr_1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:flex] max-landscape:[grid-template-columns:1fr_1fr] max-landscape:[grid-column-gap:8px] max-landscape:[grid-row-gap:8px] max-landscape:[flex-flow:column] max-sm:[grid-column-gap:20px] max-sm:[grid-row-gap:32px] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:1fr_1fr] max-sm:[grid-auto-columns:1fr] max-sm:[display:flex]"><label for="Email-3" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Work Email<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label></div><input class="field-contact w-input [display:block] [width:100%] [height:48px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#191922] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:24px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" ms-code-business-email="" data-wfhsfieldname="FormTextInput-4" maxlength="256" name="Email" data-name="Email" placeholder="yourname@company.com" type="email" id="Email-3" required="" />
+                  </div>
+                  <div class="text-field-contact [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:12px] [display:flex]"><label for="Company-2" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Company<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label><input class="field-contact w-input [display:block] [width:100%] [height:48px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#191922] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:24px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" data-wfhsfieldname="FormTextInput-5" maxlength="256" name="Company-2" data-name="Company 2" placeholder="Your company name..." type="text" id="Company-2" required="" /></div>
+                  <div class="text-field-contact [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [margin-bottom:12px] [display:flex]"><label for="Message-2" class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">Message<span class="red-text [color:var(--pink)] [font-size:18px]">*</span></label><textarea class="text-area w-input [display:block] [width:100%] [height:120px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#ffffff0d] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:12px] [min-height:120px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" data-wfhsfieldname="FormTextarea-6" maxlength="5000" name="Message-2" data-name="Message 2" placeholder="Describe what you want to achieve.. any additional details " id="Message-2" required=""></textarea>
+                    <div class="css-form w-embed [display:none]">
+                      <Embed html={__embed6} />
+                    </div>
+                  </div>
+                  <div class="w-form-formrecaptcha g-recaptcha g-recaptcha-error g-recaptcha-disabled g-recaptcha-invalid-key [margin-bottom:8px]"></div>
+                  <div class="text-button-contact [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [align-items:flex-start] [display:flex] max-sm:[grid-column-gap:24px] max-sm:[grid-row-gap:24px]">
+                    <div class="text-12-150 opacity-50 [font-family:Switzer,_sans-serif] [font-size:12px] [line-height:150%] [opacity:.5]">By clicking submit, you consent to receive email communications about Motion&#x27;s products and services. You agree to our Terms of Service and acknowledge that your data will be processed in accordance with our Privacy Policy. You may opt out at any time.</div>
+                    <div class="glowing-wrapper glowing-wrapper-active gradient [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] [background-image:linear-gradient(90deg,_#ff008e,_#ff4dcb)] [-webkit-text-fill-color:inherit] [-webkit-background-clip:text] [background-clip:border-box] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)] max-sm:[width:fit-content]">
+                      <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                        <div class="glowing-wrapper-borders [opacity:1] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+                      </div><input type="submit" data-wait="Please wait..." class="glowing-wrapper-button-copy w-button [display:inline-flex] [padding:12px_24px] [background-color:#0000] [color:#fff] [border:1px_solid_#ffffff1a] [line-height:1.42] [text-decoration:none] [cursor:pointer] [border-radius:62.5rem] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [letter-spacing:-.01em] [justify-content:center] [align-items:center] [font-size:.88rem] [position:relative] max-lg:[width:100%] max-sm:[width:100%]" value="Get free sample" />
+                    </div>
+                  </div><input type="hidden" name="hutk" value="" /><input type="hidden" name="ipAddress" value="" /><input type="hidden" name="pageUri" value="" /><input type="hidden" name="pageId" value="" /><input type="hidden" name="pageName" value="" />
+                </form>
+                <div class="success-form free-sample w-form-done [display:none] [padding:0] [text-align:center] [background-color:#ddd0] [background-image:none] [background-repeat:repeat] [background-size:auto] [border-radius:24px] [padding-top:32px] [padding-bottom:32px] [font-family:Switzer,_sans-serif] [font-weight:500] [line-height:150%]"><img data-meno-optimize="false" src="/images/AI-Enhanced-Analytics-1-1_1.avif" loading="lazy" sizes="(max-width: 2071px) 100vw, 2071px" srcset="/images/AI-Enhanced-Analytics-1-1_1-p-500.png 500w, /images/AI-Enhanced-Analytics-1-1_1AI-Enhanced-Analytics-1-1.avif 800w, /images/AI-Enhanced-Analytics-1-1_1.avif 2071w" alt="A black and purple hexagonal object with a check mark" class="image-21 [display:none]" />
+                  <div class="h4 hide [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] [display:none] max-sm:[font-size:18px]">Thank you! Your submission has been received!</div>
+                  <div class="thank-you-free-sample [z-index:auto] [height:auto] [box-shadow:none] [border:0_solid_#ffffff1a] [border-radius:20px] [flex-flow:column] [flex:1] [order:0] [justify-content:space-between] [padding:40px_64px] [transition:all_.2s] [display:flex] [position:static] [overflow:hidden] max-lg:[justify-content:center] max-lg:[align-items:center] max-lg:[height:auto] max-lg:[min-height:auto] max-lg:[padding:40px_24px] max-sm:[background-image:none] max-sm:[border-radius:26px] max-sm:[min-height:auto] max-sm:[padding:16px]">
+                    <div class="circuit-right [flex-flow:column] [justify-content:center] [width:40%] [height:90%] [display:flex] [position:absolute] [left:auto] [right:0] [overflow:hidden] max-sm:[justify-content:center] max-sm:[align-self:center] max-sm:[width:100%] max-sm:[height:12%] max-sm:[display:none] max-sm:[top:auto] max-sm:[bottom:0] max-sm:[right:auto]">
+                      <div class="lottie-animation flip [width:auto] [min-width:300%] [height:100%] [position:relative] [top:auto] [bottom:7%] [left:auto] [transform:rotate(180deg)] [right:110%] max-lg:[bottom:auto] max-sm:[min-width:240%] max-sm:[top:-32%] max-sm:[left:auto] max-sm:[transform:rotate(-90deg)] max-sm:[height:240%] max-sm:[bottom:100%] max-sm:[right:auto]" data-w-id="83766190-6895-d8a3-3e22-eb79cc2296fc" data-animation-type="lottie" data-src="/documents/circuit.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="5" data-loading="eager"></div>
+                    </div>
+                    <div class="circuit-left [flex-flow:column] [justify-content:center] [width:40%] [height:90%] [display:flex] [position:absolute] [left:0] [overflow:hidden] max-sm:[justify-content:center] max-sm:[align-self:center] max-sm:[width:100%] max-sm:[display:flex] max-sm:[top:0] max-sm:[left:auto]">
+                      <div class="lottie-animation [width:auto] [min-width:300%] [height:100%] [position:relative] [top:auto] [bottom:7%] [left:-90%] [transform:rotate(0)] max-lg:[bottom:auto] max-sm:[min-width:240%] max-sm:[top:-32%] max-sm:[left:auto] max-sm:[transform:rotate(90deg)]" data-w-id="83766190-6895-d8a3-3e22-eb79cc2296fe" data-animation-type="lottie" data-src="/documents/circuit.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="5" data-loading="eager"></div>
+                    </div>
+                    <div class="div-block-17 first [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [justify-content:center] [display:flex] [position:relative] max-lg:[order:0] max-lg:[justify-content:flex-start] max-lg:[align-items:center] max-lg:[position:relative] max-landscape:[justify-content:flex-start] max-landscape:[align-items:center]">
+                      <div class="header center [grid-column-gap:8px] [grid-row-gap:8px] [flex-flow:column] [display:flex] [position:relative] [text-align:center] [justify-content:center] [align-items:center]">
+                        <h2 class="h1 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [padding-right:0] [font-family:Switzer,_sans-serif] [font-size:48px] [font-weight:600] [line-height:120%] max-lg:[font-size:44px] max-landscape:[font-size:38px] max-sm:[font-size:28px] max-sm:[font-weight:600]">Thank you!</h2>
+                        <p class="text-16-150 color-white-80 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [color:#fcfcfccc] [text-decoration:none] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-lg:[text-align:center] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:14px] max-sm:[font-size:13px]">Your submission has been received.</p>
+                      </div>
+                    </div><img data-meno-optimize="false" loading="eager" src="/images/check-thx-free-sample-graphic.avif" alt="A purple seal with a tick mark on it" class="image-23 [max-width:100%] max-lg:[max-width:60%] max-sm:[max-width:100%]" />
+                  </div><img data-meno-optimize="false" src="/images/Gradient-Background-purple.avif" loading="eager" sizes="(max-width: 1280px) 100vw, 1280px" srcset="/images/Gradient-Background-purple-p-500.png 500w, /images/Gradient-Background-purple.avif 1280w" alt="A purple and blue background with a white background" class="image-22 [position:absolute] [bottom:0] [left:0] [right:0]" />
+                </div>
+                <div class="w-form-fail [display:none] [margin-top:10px] [padding:10px] [background-color:#ffdede]">
+                  <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+      <div class="css [display:none]">
+        <div class="button-css w-embed [display:none]">
+          <Embed html={__embed7} />
+        </div>
+        <div class="custom-styles w-embed [display:none]">
+          <Embed html={__embed8} />
+        </div>
+        <div class="code-embed-2 w-embed w-script [display:none]">
+          <Embed html={__embed9} />
+        </div>
+        <div class="global-style w-embed [display:none]">
+          <Embed html={__embed10} />
         </div>
       </div>
     </div>
   </div>
+</div>
 </BaseLayout>

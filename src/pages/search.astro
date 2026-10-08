@@ -1,19 +1,25 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/theme.css';
+import { BaseLayout, Embed } from 'meno-astro/components';
+
+const meta = {
+  "title": "Search Results",
+  "description": "",
+  "htmlAttributes": {
+    "data-wf-page": "692d723d5988c81ef2a00576",
+    "data-wf-site": "66ebfb6ec8f20d5eda50eb34"
+  },
+  "ogTitle": "Search Results",
+  "noindex": true,
+  "customCode": {
+    "head": "\n<meta name=\"robots\" content=\"noindex\">\n  <meta name=\"twitter:title\" content=\"Search Results\">"
+  }
+};
+
 ---
-<BaseLayout
-  title={"Search Results"}
-  wfPage="692d723d5988c81ef2a00576"
-  ogTitle={"Search Results"}
-  twitterTitle={"Search Results"}
-  robots={"noindex"}
-  canonical={"https://www.motiontheagency.com/search"}
->
-  <Fragment slot="head">
-<meta name="robots" content="noindex">
-  </Fragment>
-<div class="w-container">
+<BaseLayout meta={meta}>
+<div class="w-container [margin-left:auto] [margin-right:auto] [max-width:940px] max-lg:[max-width:728px] max-sm:[max-width:none]">
     <h1>Search results</h1>
-    <form action="/search" class="w-form"><label for="search">Search</label><input class="w-input" maxlength="256" name="query" placeholder="Search…" type="search" id="search" required=""><input type="submit" class="w-button" value="Search"></form>
+    <form action="/search" class="w-form [margin:0_0_15px]"><label for="search">Search</label><input class="w-input [display:block] [width:100%] [height:38px] [padding:8px_12px] [margin-bottom:10px] [font-size:14px] [line-height:1.42857143] [color:#333333] [vertical-align:middle] [background-color:#ffffff] [border:1px_solid_#cccccc] focus:[border-color:#3898EC] focus:[outline:0]" maxlength="256" name="query" placeholder="Search…" type="search" id="search" required="" /><input type="submit" class="w-button [display:inline-block] [padding:9px_15px] [background-color:#3898EC] [color:white] [border:0] [line-height:inherit] [text-decoration:none] [cursor:pointer] [border-radius:0]" value="Search" /></form>
   </div>
 </BaseLayout>

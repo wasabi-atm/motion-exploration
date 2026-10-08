@@ -1,11 +1,10 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import meno from 'meno-astro/integration';
 
 export default defineConfig({
   site: 'https://www.motiontheagency.com',
-  // Webflow-style clean URLs without trailing slashes: /about-us -> dist/about-us.html
+  integrations: [meno()],
   trailingSlash: 'never',
   build: { format: 'file' },
-  // Keep Webflow markup whitespace intact (inline-block layouts are whitespace-sensitive).
-  compressHTML: false,
+  compressHTML: false
 });

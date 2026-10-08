@@ -1,28 +1,37 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
----
-<BaseLayout
-  title={"Protected page"}
-  wfPage="670caecfb7b510af141ed5e6"
-  ogTitle={"Protected page"}
-  twitterTitle={"Protected page"}
-  robots={"noindex"}
-  canonical={"https://www.motiontheagency.com/401"}
->
-<div class="utility-page-wrap">
-    <div class="utility-page-content w-password-page w-form">
-      <form action="/.wf_auth" method="post" id="email-form" name="email-form" data-name="Email Form" class="utility-page-form w-password-page" data-wf-page-id="670caecfb7b510af141ed5e6" data-wf-element-id="670caecfb7b510af141ed5e900000000000c"><img src="https://d3e54v103j8qbb.cloudfront.net/static/utility-lock.ae54711958.svg" alt="">
-        <h2>Protected Page</h2><label for="pass" class="w-password-page">Password</label><input class="w-password-page w-input" autofocus="true" maxlength="256" name="pass" data-name="field" placeholder="Enter your password" type="password" id="pass"><input type="submit" data-wait="Please wait..." class="w-password-page w-button" value="Submit">
-        <div class="w-password-page w-form-fail">
-          <div>Incorrect password. Please try again.</div>
-        </div>
-        <div style="display:none" class="w-password-page w-embed w-script"><input type="hidden" name="path" value="<%WF_FORM_VALUE_PATH%>"><input type="hidden" name="page" value="<%WF_FORM_VALUE_PAGE%>"></div>
-        <div style="display:none" class="w-password-page w-embed w-script">
-          <script is:inline type="application/javascript">(function _handlePasswordPageOnload() {
+import '../styles/theme.css';
+import { BaseLayout, Embed } from 'meno-astro/components';
+
+const meta = {
+  "title": "Protected page",
+  "description": "",
+  "htmlAttributes": {
+    "data-wf-page": "670caecfb7b510af141ed5e6",
+    "data-wf-site": "66ebfb6ec8f20d5eda50eb34"
+  },
+  "ogTitle": "Protected page",
+  "noindex": true,
+  "customCode": {
+    "head": "<meta name=\"twitter:title\" content=\"Protected page\">"
+  }
+};
+const __embed0 = `<script type="application/javascript">(function _handlePasswordPageOnload() {
 	  if (/[?&]e=1(&|$)/.test(document.location.search)) {
 	    document.querySelector('.w-password-page.w-form-fail').style.display = 'block';
 	  }
-	})()</script>
+	})()</script>`;
+---
+<BaseLayout meta={meta}>
+<div class="utility-page-wrap [justify-content:center] [align-items:center] [width:100vw] [max-width:100%] [height:100vh] [max-height:100%] [display:flex]">
+    <div class="utility-page-content w-password-page w-form [margin:0_0_15px] [text-align:center] [flex-direction:column] [width:560px] [display:flex] max-landscape:[width:400px] max-sm:[width:320px]">
+      <form action="/.wf_auth" method="post" id="email-form" name="email-form" data-name="Email Form" class="utility-page-form w-password-page [flex-direction:column] [align-items:stretch] [display:flex]" data-wf-page-id="670caecfb7b510af141ed5e6" data-wf-element-id="670caecfb7b510af141ed5e900000000000c"><img src="https://d3e54v103j8qbb.cloudfront.net/static/utility-lock.ae54711958.svg" alt="" />
+        <h2>Protected Page</h2><label for="pass" class="w-password-page">Password</label><input class="w-password-page w-input [display:block] [width:100%] [height:38px] [padding:8px_12px] [margin-bottom:10px] [font-size:14px] [line-height:1.42857143] [color:#333333] [vertical-align:middle] [background-color:#ffffff] [border:1px_solid_#cccccc] focus:[border-color:#3898EC] focus:[outline:0]" autofocus="true" maxlength="256" name="pass" data-name="field" placeholder="Enter your password" type="password" id="pass" /><input type="submit" data-wait="Please wait..." class="w-password-page w-button [display:inline-block] [padding:9px_15px] [background-color:#3898EC] [color:white] [border:0] [line-height:inherit] [text-decoration:none] [cursor:pointer] [border-radius:0]" value="Submit" />
+        <div class="w-password-page w-form-fail [display:none] [margin-top:10px] [padding:10px] [background-color:#ffdede]">
+          <div>Incorrect password. Please try again.</div>
+        </div>
+        <div class="w-password-page w-embed w-script [display:none]"><input type="hidden" name="path" value="<%WF_FORM_VALUE_PATH%>" /><input type="hidden" name="page" value="<%WF_FORM_VALUE_PAGE%>" /></div>
+        <div class="w-password-page w-embed w-script [display:none]">
+          <Embed html={__embed0} />
         </div>
       </form>
     </div>

@@ -1,60 +1,27 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/theme.css';
+import { BaseLayout, Embed } from 'meno-astro/components';
 import NavBanner from '../components/NavBanner.astro';
 import Footer from '../components/Footer.astro';
----
-<BaseLayout
-  title={"Thank you B2B video marketing review"}
-  wfPage="69c63738d22bbe262ce76a88"
-  bodyClass={"body"}
-  description={"Download our free video brief template and streamline your next production. Plan, align, and deliver better results with Motion The Agency."}
-  ogTitle={"Thank you B2B video marketing review"}
-  ogDescription={"Download our free video brief template and streamline your next production. Plan, align, and deliver better results with Motion The Agency."}
-  ogImage={"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670694d04b4cfd54b92c5529_Frame%20273.png"}
-  twitterTitle={"Thank you B2B video marketing review"}
-  twitterDescription={"Download our free video brief template and streamline your next production. Plan, align, and deliver better results with Motion The Agency."}
-  twitterImage={"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670694d04b4cfd54b92c5529_Frame%20273.png"}
-  ogType={"website"}
-  twitterCard={"summary_large_image"}
-  robots={"noindex"}
-  canonical={"https://www.motiontheagency.com/b2b-video-marketing-review-thank-you"}
->
-  <Fragment slot="head">
-<!--  [Attributes by Finsweet] CMS Slider  -->
-<script is:inline async="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js"></script>
-<!--  [Attributes by Finsweet] Custom Form Select  -->
-<script is:inline defer="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-selectcustom@1/selectcustom.js"></script>
-  </Fragment>
-<div class="page-wrapper">
-    <NavBanner />
-    <div id="cards" class="main-wrapper">
-      <section class="section-download">
-        <div id="banner-trigger" class="nav_banner-trigger"></div>
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="wrapper-download">
-            <div class="heading-download">
-              <h2 class="h2"><span class="span-pink-2">Thanks for your submission!</span> </h2>
-              <h2 class="h4">We’ll connect with you within 15 minutes.</h2>
-              <div class="image-wrapper"><img src="/images/Star-BG.avif" loading="lazy" sizes="100vw" srcset="/images/Star-BG-p-500.png 500w, /images/Star-BG-p-800.png 800w, /images/Star-BG-p-1080.png 1080w, /images/Star-BG-p-1600.png 1600w, /images/Star-BG.avif 2858w" alt="purple blur background" class="image-10"></div>
-            </div>
-            <div class="wrap-btn align-center-middle">
-              <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient">
-                <div class="glowing-wrapper-borders-masker">
-                  <div class="glowing-wrapper-borders"></div>
-                </div>
-                <a href="/" class="glowing-wrapper-button w-inline-block">
-                  <div class="text-block rel align-center-middle">Back to homepage</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="banner-trigger" class="nav_banner-trigger"></div>
-      </section>
-      <Footer />
-      <div class="css">
-        <div class="button-css w-embed">
-          <style is:inline>
+
+const meta = {
+  "title": "Thank you B2B video marketing review",
+  "description": "Download our free video brief template and streamline your next production. Plan, align, and deliver better results with Motion The Agency.",
+  "htmlAttributes": {
+    "data-wf-page": "69c63738d22bbe262ce76a88",
+    "data-wf-site": "66ebfb6ec8f20d5eda50eb34"
+  },
+  "ogTitle": "Thank you B2B video marketing review",
+  "ogDescription": "Download our free video brief template and streamline your next production. Plan, align, and deliver better results with Motion The Agency.",
+  "ogImage": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670694d04b4cfd54b92c5529_Frame%20273.png",
+  "ogType": "website",
+  "noindex": true,
+  "customCode": {
+    "head": "\n<!--  [Attributes by Finsweet] CMS Slider  -->\n<script async=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js\"></script>\n<!--  [Attributes by Finsweet] Custom Form Select  -->\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-selectcustom@1/selectcustom.js\"></script>\n  <meta name=\"twitter:title\" content=\"Thank you B2B video marketing review\">\n<meta name=\"twitter:description\" content=\"Download our free video brief template and streamline your next production. Plan, align, and deliver better results with Motion The Agency.\">\n<meta name=\"twitter:image\" content=\"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670694d04b4cfd54b92c5529_Frame%20273.png\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">",
+    "bodyStart": "<script>document.body.className=\"body\";</script>"
+  }
+};
+const __embed0 = `<style>
  * {
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
@@ -151,10 +118,8 @@ import Footer from '../components/Footer.astro';
 		transform: translate(-50%, -50%) rotate(360deg)
 	}
 }
-</style>
-        </div>
-        <div class="custom-styles w-embed">
-          <style is:inline>
+</style>`;
+const __embed1 = `<style>
         * {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -202,29 +167,25 @@ import Footer from '../components/Footer.astro';
             z-index: 2;
         }
     }
-</style>
-        </div>
-        <div class="code-embed-2 w-embed w-script">
-          <script is:inline>
+</style>`;
+const __embed2 = `<script>
 document.getElementById("cards").onmousemove = (e) => {
   for (const card of document.getElementsByClassName("card")) {
     const rect = card.getBoundingClientRect(),
       x = e.clientX - rect.left,
       y = e.clientY - rect.top;
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
+    card.style.setProperty("--mouse-x", \`\${x}px\`);
+    card.style.setProperty("--mouse-y", \`\${y}px\`);
   }
 };
-</script>
-        </div>
-        <div class="global-style w-embed">
-          <style is:inline>
+</script>`;
+const __embed3 = `<style>
 .card_glow_background {
 	width: calc(100% + 12px);
   height: calc(100% + 12px);
 }
 .card_glow_background._2 {
-	left : calc(-100% - 24px); 
+	left : calc(-100% - 24px);
 }
 .card_glow_background._3 {
 	top : calc(-100% - 24px);
@@ -233,9 +194,53 @@ document.getElementById("cards").onmousemove = (e) => {
 	left : calc(-100% - 24px);
   top : calc(-100% - 24px);
 }
-</style>
+</style>`;
+---
+<BaseLayout meta={meta}>
+<div data-meno-label="Page content" class="body min-h-screen [color:#fff] [background-color:#080610] [overflow-x:hidden]">
+
+<div class="page-wrapper [color:#fff] [overflow-x:hidden]">
+    <NavBanner />
+    <div id="cards" class="main-wrapper [z-index:0] [color:#fff] [background-color:#080610] [max-width:none] [position:relative] [overflow-x:hidden]">
+      <section class="section-download [padding-top:240px] [padding-bottom:120px] [position:relative] max-lg:[padding-top:160px] max-lg:[padding-bottom:80px] max-lg:[overflow:hidden] max-landscape:[padding-bottom:80px] max-sm:[padding-bottom:60px]">
+        <div id="banner-trigger" class="nav_banner-trigger [pointer-events:none] [border:1px_solid_#0000] [width:100%] [height:240px] [position:absolute] [top:0] [bottom:auto]"></div>
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="wrapper-download [grid-column-gap:64px] [grid-row-gap:64px] [flex-flow:column] [display:flex]">
+            <div class="heading-download [grid-column-gap:16px] [grid-row-gap:16px] [text-align:center] [flex-flow:column] [justify-content:center] [align-items:center] [max-width:700px] [margin-left:auto] [margin-right:auto] [display:flex] [position:relative] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px]">
+              <h2 class="h2 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px]"><span class="span-pink-2 [box-sizing:border-box] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_39%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text]">Thanks for your submission!</span> </h2>
+              <h2 class="h4 [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] max-sm:[font-size:18px]">We’ll connect with you within 15 minutes.</h2>
+              <div class="image-wrapper [z-index:-1] [pointer-events:none] [justify-content:center] [align-items:center] [display:flex] [position:absolute] [inset:0%] max-lg:[justify-content:center] max-lg:[align-items:center] max-sm:[flex-flow:column] max-sm:[justify-content:center] max-sm:[align-items:center] max-sm:[display:flex] max-sm:[position:absolute] max-sm:[inset:0%]"><img data-meno-optimize="false" src="/images/Star-BG.avif" loading="lazy" sizes="100vw" srcset="/images/Star-BG-p-500.png 500w, /images/Star-BG-p-800.png 800w, /images/Star-BG-p-1080.png 1080w, /images/Star-BG-p-1600.png 1600w, /images/Star-BG.avif 2858w" alt="purple blur background" class="image-10 [pointer-events:none] [min-width:1080px] [position:absolute] max-lg:[min-width:960px] max-landscape:[min-width:640px]" /></div>
+            </div>
+            <div class="wrap-btn align-center-middle [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:center] [align-items:center] [padding-top:16px] [padding-bottom:16px] [display:flex] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[display:flex]">
+              <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] [background-image:linear-gradient(90deg,_#ff008e,_#ff4dcb)] [-webkit-text-fill-color:inherit] [-webkit-background-clip:text] [background-clip:border-box] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)] max-sm:[width:fit-content]">
+                <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                  <div class="glowing-wrapper-borders [opacity:1] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+                </div>
+                <a href="/" class="glowing-wrapper-button w-inline-block [max-width:100%] [display:inline-flex] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [color:#fff] [letter-spacing:-.01em] [background-color:#3898ec00] [border:1px_solid_#ffffff1a] [border-radius:62.5rem] [justify-content:center] [align-items:center] [padding:12px_24px] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:500] [line-height:1.42] [text-decoration:none] [position:relative] max-lg:[width:100%] max-sm:[width:100%]">
+                  <div class="text-block rel align-center-middle [color:var(--white)] [text-decoration:none] [z-index:2] [position:relative] [text-align:center] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[display:flex] max-sm:[text-align:center] max-sm:[font-size:13px] max-sm:[line-height:120%]">Back to homepage</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="banner-trigger" class="nav_banner-trigger [pointer-events:none] [border:1px_solid_#0000] [width:100%] [height:240px] [position:absolute] [top:0] [bottom:auto]"></div>
+      </section>
+      <Footer />
+      <div class="css [display:none]">
+        <div class="button-css w-embed [display:none]">
+          <Embed html={__embed0} />
+        </div>
+        <div class="custom-styles w-embed [display:none]">
+          <Embed html={__embed1} />
+        </div>
+        <div class="code-embed-2 w-embed w-script [display:none]">
+          <Embed html={__embed2} />
+        </div>
+        <div class="global-style w-embed [display:none]">
+          <Embed html={__embed3} />
         </div>
       </div>
     </div>
   </div>
+</div>
 </BaseLayout>

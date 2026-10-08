@@ -1,424 +1,26 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/theme.css';
+import { BaseLayout, Embed } from 'meno-astro/components';
 import NavBanner from '../../components/NavBanner.astro';
 import Footer from '../../components/Footer.astro';
----
-<BaseLayout
-  title={"Customer Stories | Real Client Projects by Motion The Agency"}
-  wfPage="67b47074a0297d58ac6cc3a5"
-  bodyClass={"body"}
-  description={"Real results from real clients. Explore case studies showing how our video projects solve challenges and drive impact."}
-  ogTitle={"Customer Stories | Real Client Projects by Motion The Agency"}
-  ogDescription={"Real results from real clients. Explore case studies showing how our video projects solve challenges and drive impact."}
-  ogImage={"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670cbefac830e982d28b61a8_Homepage.png"}
-  twitterTitle={"Customer Stories | Real Client Projects by Motion The Agency"}
-  twitterDescription={"Real results from real clients. Explore case studies showing how our video projects solve challenges and drive impact."}
-  twitterImage={"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670cbefac830e982d28b61a8_Homepage.png"}
-  ogType={"website"}
-  twitterCard={"summary_large_image"}
-  canonical={"https://www.motiontheagency.com/resources/customer-stories"}
->
-  <Fragment slot="head-start">
-<script is:inline type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@id": "https://www.motiontheagency.com/#organization",
-      "@type": "Organization",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "GB",
-        "addressLocality": "London",
-        "postalCode": "EC2N 4AH",
-        "streetAddress": "42-44 Bishopsgate"
-      },
-      "alternateName": "Motion Agency",
-      "email": "hello@motiontheagency.com",
-      "foundingDate": "2019",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/6707b5de43efcae5a6bbe759_Motion%20logo%20-%20square.png"
-      },
-      "name": "Motion The Agency",
-      "numberOfEmployees": {
-        "@type": "QuantitativeValue",
-        "value": 25
-      },
-      "sameAs": [
-        "https://uk.linkedin.com/company/motion-the-agency",
-        "https://www.youtube.com/@motiontheagency",
-        "https://www.instagram.com/motion.theagency/",
-        "https://clutch.co/profile/motion-agency",
-        "https://www.designrush.com/agency/profile/motion-the-agency",
-        "https://www.g2.com/products/motion-the-agency/reviews"
-      ],
-      "telephone": "+44 20 3984 7787",
-      "url": "https://www.motiontheagency.com/"
-    },
-    {
-      "@id": "https://www.motiontheagency.com/#website",
-      "@type": "WebSite",
-      "inLanguage": "en",
-      "name": "Motion The Agency",
-      "publisher": {
-        "@id": "https://www.motiontheagency.com/#organization"
-      },
-      "url": "https://www.motiontheagency.com/"
-    },
-    {
-      "@id": "https://www.motiontheagency.com/resources/customer-stories#webpage",
-      "@type": "CollectionPage",
-      "about": {
-        "@id": "https://www.motiontheagency.com/#organization"
-      },
-      "breadcrumb": {
-        "@id": "https://www.motiontheagency.com/resources/customer-stories#breadcrumb"
-      },
-      "description": "Real results from real clients. Explore case studies showing how our video projects solve challenges and drive impact.",
-      "inLanguage": "en",
-      "isPartOf": {
-        "@id": "https://www.motiontheagency.com/#website"
-      },
-      "mainEntity": {
-        "@id": "https://www.motiontheagency.com/resources/customer-stories#storylist"
-      },
-      "name": "Customer Stories | Real Client Projects by Motion The Agency",
-      "url": "https://www.motiontheagency.com/resources/customer-stories"
-    },
-    {
-      "@id": "https://www.motiontheagency.com/resources/customer-stories#storylist",
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "url": "https://www.motiontheagency.com/customer-stories/clickup"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "url": "https://www.motiontheagency.com/customer-stories/obrizum"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "url": "https://www.motiontheagency.com/customer-stories/planful-video-marketing-subscription"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "url": "https://www.motiontheagency.com/customer-stories/gotphoto"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "url": "https://www.motiontheagency.com/customer-stories/dext"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "url": "https://www.motiontheagency.com/customer-stories/mirakl"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "url": "https://www.motiontheagency.com/customer-stories/primer"
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "url": "https://www.motiontheagency.com/customer-stories/kuberno"
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "url": "https://www.motiontheagency.com/customer-stories/y-combinator"
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "url": "https://www.motiontheagency.com/customer-stories/sealit"
-        },
-        {
-          "@type": "ListItem",
-          "position": 11,
-          "url": "https://www.motiontheagency.com/customer-stories/tasknet"
-        },
-        {
-          "@type": "ListItem",
-          "position": 12,
-          "url": "https://www.motiontheagency.com/customer-stories/openmoney"
-        },
-        {
-          "@type": "ListItem",
-          "position": 13,
-          "url": "https://www.motiontheagency.com/customer-stories/dove-hero"
-        },
-        {
-          "@type": "ListItem",
-          "position": 14,
-          "url": "https://www.motiontheagency.com/customer-stories/sharpish"
-        },
-        {
-          "@type": "ListItem",
-          "position": 15,
-          "url": "https://www.motiontheagency.com/customer-stories/ai-engineering"
-        },
-        {
-          "@type": "ListItem",
-          "position": 16,
-          "url": "https://www.motiontheagency.com/customer-stories/luniate"
-        }
-      ],
-      "name": "Motion The Agency Customer Stories",
-      "numberOfItems": 16
-    },
-    {
-      "@id": "https://www.motiontheagency.com/resources/customer-stories#breadcrumb",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "item": "https://www.motiontheagency.com/",
-          "name": "Home",
-          "position": 1
-        },
-        {
-          "@type": "ListItem",
-          "item": "https://www.motiontheagency.com/resources/customer-stories",
-          "name": "Customer Stories",
-          "position": 2
-        }
-      ]
-    }
-  ]
-}
-</script>
-  </Fragment>
-  <Fragment slot="head">
-<!--  [Attributes by Finsweet] CMS Slider  -->
-<script is:inline async="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js"></script>
-<!--  [Attributes by Finsweet] CMS Filter  -->
-<script is:inline async="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js"></script>
-<script is:inline type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://www.motiontheagency.com/resources/customer-stories#webpage",
-      "url": "https://www.motiontheagency.com/resources/customer-stories",
-      "name": "Customer Stories | Motion The Agency",
-      "description": "Explore Motion The Agency’s customer stories—real client projects showcasing how our motion graphics, animation, and design services helped brands achieve measurable impact.",
-      "inLanguage": "en-US",
-      "isPartOf": { "@id": "https://www.motiontheagency.com/#website" },
-      "about": { "@id": "https://www.motiontheagency.com/#org" },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ec123abcde9f2f41b2c9b3_customer-stories-thumbnail.png",
-        "width": 1200,
-        "height": 630
-      }
-    },
-    {
-      "@type": "CollectionPage",
-      "@id": "https://www.motiontheagency.com/resources/customer-stories#collection",
-      "name": "Customer Stories Collection",
-      "description": "A curated collection of customer success stories from Motion The Agency—highlighting animation, design, and branding projects that delivered tangible business results.",
-      "publisher": { "@id": "https://www.motiontheagency.com/#org" }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.motiontheagency.com/resources/customer-stories#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.motiontheagency.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Resources",
-          "item": "https://www.motiontheagency.com/resources"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Customer Stories",
-          "item": "https://www.motiontheagency.com/resources/customer-stories"
-        }
-      ]
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://www.motiontheagency.com/#org",
-      "name": "Motion The Agency",
-      "url": "https://www.motiontheagency.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ebfe7ccb344ea14e764cd7_Link%20%E2%86%92%20cropped-motion-logo-png-04-1-1024x293.png.avif",
-        "width": 1024,
-        "height": 293
-      },
-      "image": [
-        "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ebfe7ccb344ea14e764cd7_Link%20%E2%86%92%20cropped-motion-logo-png-04-1-1024x293.png.avif"
-      ],
-      "email": "hello@motiontheagency.com",
-      "telephone": "+44 203 984 7787",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "42-44 Bishopsgate",
-        "addressLocality": "London",
-        "postalCode": "EC2N 4AH",
-        "addressCountry": "GB"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/motion-the-agency",
-        "https://www.youtube.com/@motiontheagency",
-        "https://clutch.co/profile/motion-agency-0"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "reviewCount": "25"
-      }
-    },
-    {
-      "@type": "Review",
-      "@id": "https://www.motiontheagency.com/resources/customer-stories#clutch-review",
-      "itemReviewed": {
-        "@type": "Organization",
-        "@id": "https://www.motiontheagency.com/#org",
-        "name": "Motion The Agency"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Organization",
-        "name": "Clutch",
-        "url": "https://clutch.co/profile/motion-agency-0"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Clutch"
-      },
-      "datePublished": "2024-12-15",
-      "reviewBody": "Clients consistently praise Motion The Agency for its creative excellence, technical expertise, and clear communication throughout every motion design project."
-    }
-  ]
-}
-</script>
-  </Fragment>
-<div class="page-wrapper">
-    <NavBanner />
-    <div id="cards" class="main-wrapper">
-      <section data-w-id="e870b645-7926-91eb-624c-e4356dfac346" class="section-hero">
-        <div id="banner-trigger" class="nav_banner-trigger"></div>
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="blog-hero">
-            <div class="header">
-              <h1 class="text-caps weight-regular">REAL RESULTS, REAL IMPACT</h1>
-              <h2 class="h2"><span class="span">Customer Stories</span></h2>
-            </div>
-            <p class="text-16-150">Discover how we transform concepts into reality. Dive into our curated collection of stories, highlighting impactful video projects that address real-world challenges and achieve tangible results.</p>
-            <div class="wrap-btn m-virtical">
-              <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient">
-                <div class="glowing-wrapper-borders-masker">
-                  <div class="glowing-wrapper-borders"></div>
-                </div>
-                <a href="/get-free-sample" class="glowing-wrapper-button w-inline-block">
-                  <div class="text-block rel align-center-middle">Get free sample</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="section-blog">
-        <div class="image-wrapper-blog"><img src="/images/Frame-1707478673_1.avif" loading="lazy" sizes="100vw" srcset="/images/Frame-1707478673_1-p-500.png 500w, /images/Frame-1707478673_1-p-800.png 800w, /images/Frame-1707478673_1-p-1080.png 1080w, /images/Frame-1707478673_1-p-1600.png 1600w, /images/Frame-1707478673_1-p-2000.png 2000w, /images/Frame-1707478673_1.avif 3576w" alt="A group of three giraffe standing next to each other" class="image-blog-gradient"></div>
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="blog-wrapper">
-            <div class="cms-blog-button gap-40">
-              <div class="blog-filters-wrapper">
-                <h3 class="h3 blog">All stories</h3>
-                <div class="blog-filters"></div>
-              </div>
-              <div class="w-dyn-list">
-                <div fs-cmsfilter-element="list" role="list" class="collection-list w-dyn-items">
-                  <div id="w-node-_38611b20-b837-01eb-b014-305b20bd0a92-ac6cc3a5" role="listitem" class="w-dyn-item">
-                    <div class="card-contaiiner fill">
-                      <a href="#" class="invisible-link w-inline-block"></a>
-                      <a href="#" class="card wrapper w-inline-block">
-                        <div class="card-content no-bottom-border"><img loading="lazy" src="/images/Frame-1707478606.avif" alt="" class="img-main-blog w-dyn-bind-empty"></div>
-                      </a>
-                      <div class="card">
-                        <div class="card-content no-top-border">
-                          <div class="text-wrapper-card-blog wrap">
-                            <div class="gap-16-blog">
-                              <div class="w-dyn-list">
-                                <div role="list" class="collection-list-horizontal w-dyn-items">
-                                  <div role="listitem" class="w-dyn-item">
-                                    <div fs-cmsfilter-field="category" class="text-14-150 text-color-purple w-dyn-bind-empty"></div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="rich-title w-dyn-bind-empty w-richtext"></div>
-                            </div>
-                            <div class="author-description-blog wrap">
-                              <p class="text-16-150 opacity-80 small-desc w-dyn-bind-empty"></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-dyn-empty">
-                  <div>No items found.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section class="section-cta">
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="wrapper-process">
-            <div class="contact-card">
-              <div class="contact-wrapper">
-                <div class="contact-content">
-                  <div class="gap-12">
-                    <p class="text-caps weight-regular center-small">Contact Us</p>
-                    <h2 class="h2 center-small">Ready to elevate your brand? Contact us for your <br><span class="span">Free video sample</span></h2>
-                  </div>
-                  <div class="wrap-btn-price left">
-                    <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient">
-                      <div class="glowing-wrapper-borders-masker">
-                        <div class="glowing-wrapper-borders"></div>
-                      </div>
-                      <a href="/get-free-sample" class="glowing-wrapper-button w-inline-block">
-                        <div class="text-block rel align-center-middle">Get free sample</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div id="w-node-_00039f33-53c4-cea9-f5f9-b44b4d84e1f0-ac6cc3a5" class="contact-image-wrapper"><img loading="lazy" src="/images/contact-img_1.avif" alt="A smart phone with a credit card next to it" class="img-100 img-tabs"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <Footer />
-      <div class="css">
-        <div class="button-css w-embed">
-          <style is:inline>
+
+const meta = {
+  "title": "Customer Stories | Real Client Projects by Motion The Agency",
+  "description": "Real results from real clients. Explore case studies showing how our video projects solve challenges and drive impact.",
+  "htmlAttributes": {
+    "data-wf-page": "67b47074a0297d58ac6cc3a5",
+    "data-wf-site": "66ebfb6ec8f20d5eda50eb34"
+  },
+  "ogTitle": "Customer Stories | Real Client Projects by Motion The Agency",
+  "ogDescription": "Real results from real clients. Explore case studies showing how our video projects solve challenges and drive impact.",
+  "ogImage": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670cbefac830e982d28b61a8_Homepage.png",
+  "ogType": "website",
+  "customCode": {
+    "head": "\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@id\": \"https://www.motiontheagency.com/#organization\",\n      \"@type\": \"Organization\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"addressCountry\": \"GB\",\n        \"addressLocality\": \"London\",\n        \"postalCode\": \"EC2N 4AH\",\n        \"streetAddress\": \"42-44 Bishopsgate\"\n      },\n      \"alternateName\": \"Motion Agency\",\n      \"email\": \"hello@motiontheagency.com\",\n      \"foundingDate\": \"2019\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/6707b5de43efcae5a6bbe759_Motion%20logo%20-%20square.png\"\n      },\n      \"name\": \"Motion The Agency\",\n      \"numberOfEmployees\": {\n        \"@type\": \"QuantitativeValue\",\n        \"value\": 25\n      },\n      \"sameAs\": [\n        \"https://uk.linkedin.com/company/motion-the-agency\",\n        \"https://www.youtube.com/@motiontheagency\",\n        \"https://www.instagram.com/motion.theagency/\",\n        \"https://clutch.co/profile/motion-agency\",\n        \"https://www.designrush.com/agency/profile/motion-the-agency\",\n        \"https://www.g2.com/products/motion-the-agency/reviews\"\n      ],\n      \"telephone\": \"+44 20 3984 7787\",\n      \"url\": \"https://www.motiontheagency.com/\"\n    },\n    {\n      \"@id\": \"https://www.motiontheagency.com/#website\",\n      \"@type\": \"WebSite\",\n      \"inLanguage\": \"en\",\n      \"name\": \"Motion The Agency\",\n      \"publisher\": {\n        \"@id\": \"https://www.motiontheagency.com/#organization\"\n      },\n      \"url\": \"https://www.motiontheagency.com/\"\n    },\n    {\n      \"@id\": \"https://www.motiontheagency.com/resources/customer-stories#webpage\",\n      \"@type\": \"CollectionPage\",\n      \"about\": {\n        \"@id\": \"https://www.motiontheagency.com/#organization\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"https://www.motiontheagency.com/resources/customer-stories#breadcrumb\"\n      },\n      \"description\": \"Real results from real clients. Explore case studies showing how our video projects solve challenges and drive impact.\",\n      \"inLanguage\": \"en\",\n      \"isPartOf\": {\n        \"@id\": \"https://www.motiontheagency.com/#website\"\n      },\n      \"mainEntity\": {\n        \"@id\": \"https://www.motiontheagency.com/resources/customer-stories#storylist\"\n      },\n      \"name\": \"Customer Stories | Real Client Projects by Motion The Agency\",\n      \"url\": \"https://www.motiontheagency.com/resources/customer-stories\"\n    },\n    {\n      \"@id\": \"https://www.motiontheagency.com/resources/customer-stories#storylist\",\n      \"@type\": \"ItemList\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/clickup\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/obrizum\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/planful-video-marketing-subscription\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 4,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/gotphoto\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 5,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/dext\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 6,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/mirakl\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 7,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/primer\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 8,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/kuberno\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 9,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/y-combinator\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 10,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/sealit\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 11,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/tasknet\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 12,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/openmoney\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 13,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/dove-hero\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 14,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/sharpish\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 15,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/ai-engineering\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 16,\n          \"url\": \"https://www.motiontheagency.com/customer-stories/luniate\"\n        }\n      ],\n      \"name\": \"Motion The Agency Customer Stories\",\n      \"numberOfItems\": 16\n    },\n    {\n      \"@id\": \"https://www.motiontheagency.com/resources/customer-stories#breadcrumb\",\n      \"@type\": \"BreadcrumbList\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"item\": \"https://www.motiontheagency.com/\",\n          \"name\": \"Home\",\n          \"position\": 1\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"item\": \"https://www.motiontheagency.com/resources/customer-stories\",\n          \"name\": \"Customer Stories\",\n          \"position\": 2\n        }\n      ]\n    }\n  ]\n}\n</script>\n  \n<!--  [Attributes by Finsweet] CMS Slider  -->\n<script async=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js\"></script>\n<!--  [Attributes by Finsweet] CMS Filter  -->\n<script async=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js\"></script>\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://www.motiontheagency.com/resources/customer-stories#webpage\",\n      \"url\": \"https://www.motiontheagency.com/resources/customer-stories\",\n      \"name\": \"Customer Stories | Motion The Agency\",\n      \"description\": \"Explore Motion The Agency’s customer stories—real client projects showcasing how our motion graphics, animation, and design services helped brands achieve measurable impact.\",\n      \"inLanguage\": \"en-US\",\n      \"isPartOf\": { \"@id\": \"https://www.motiontheagency.com/#website\" },\n      \"about\": { \"@id\": \"https://www.motiontheagency.com/#org\" },\n      \"primaryImageOfPage\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ec123abcde9f2f41b2c9b3_customer-stories-thumbnail.png\",\n        \"width\": 1200,\n        \"height\": 630\n      }\n    },\n    {\n      \"@type\": \"CollectionPage\",\n      \"@id\": \"https://www.motiontheagency.com/resources/customer-stories#collection\",\n      \"name\": \"Customer Stories Collection\",\n      \"description\": \"A curated collection of customer success stories from Motion The Agency—highlighting animation, design, and branding projects that delivered tangible business results.\",\n      \"publisher\": { \"@id\": \"https://www.motiontheagency.com/#org\" }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://www.motiontheagency.com/resources/customer-stories#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://www.motiontheagency.com/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Resources\",\n          \"item\": \"https://www.motiontheagency.com/resources\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"Customer Stories\",\n          \"item\": \"https://www.motiontheagency.com/resources/customer-stories\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Organization\",\n      \"@id\": \"https://www.motiontheagency.com/#org\",\n      \"name\": \"Motion The Agency\",\n      \"url\": \"https://www.motiontheagency.com\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ebfe7ccb344ea14e764cd7_Link%20%E2%86%92%20cropped-motion-logo-png-04-1-1024x293.png.avif\",\n        \"width\": 1024,\n        \"height\": 293\n      },\n      \"image\": [\n        \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ebfe7ccb344ea14e764cd7_Link%20%E2%86%92%20cropped-motion-logo-png-04-1-1024x293.png.avif\"\n      ],\n      \"email\": \"hello@motiontheagency.com\",\n      \"telephone\": \"+44 203 984 7787\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"42-44 Bishopsgate\",\n        \"addressLocality\": \"London\",\n        \"postalCode\": \"EC2N 4AH\",\n        \"addressCountry\": \"GB\"\n      },\n      \"sameAs\": [\n        \"https://www.linkedin.com/company/motion-the-agency\",\n        \"https://www.youtube.com/@motiontheagency\",\n        \"https://clutch.co/profile/motion-agency-0\"\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": \"5\",\n        \"bestRating\": \"5\",\n        \"reviewCount\": \"25\"\n      }\n    },\n    {\n      \"@type\": \"Review\",\n      \"@id\": \"https://www.motiontheagency.com/resources/customer-stories#clutch-review\",\n      \"itemReviewed\": {\n        \"@type\": \"Organization\",\n        \"@id\": \"https://www.motiontheagency.com/#org\",\n        \"name\": \"Motion The Agency\"\n      },\n      \"reviewRating\": {\n        \"@type\": \"Rating\",\n        \"ratingValue\": \"5\",\n        \"bestRating\": \"5\"\n      },\n      \"author\": {\n        \"@type\": \"Organization\",\n        \"name\": \"Clutch\",\n        \"url\": \"https://clutch.co/profile/motion-agency-0\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"Clutch\"\n      },\n      \"datePublished\": \"2024-12-15\",\n      \"reviewBody\": \"Clients consistently praise Motion The Agency for its creative excellence, technical expertise, and clear communication throughout every motion design project.\"\n    }\n  ]\n}\n</script>\n  <meta name=\"twitter:title\" content=\"Customer Stories | Real Client Projects by Motion The Agency\">\n<meta name=\"twitter:description\" content=\"Real results from real clients. Explore case studies showing how our video projects solve challenges and drive impact.\">\n<meta name=\"twitter:image\" content=\"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670cbefac830e982d28b61a8_Homepage.png\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">",
+    "bodyStart": "<script>document.body.className=\"body\";</script>"
+  }
+};
+const __embed0 = `<style>
  * {
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
@@ -515,10 +117,8 @@ import Footer from '../../components/Footer.astro';
 		transform: translate(-50%, -50%) rotate(360deg)
 	}
 }
-</style>
-        </div>
-        <div class="custom-styles w-embed">
-          <style is:inline>
+</style>`;
+const __embed1 = `<style>
         * {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -565,29 +165,25 @@ import Footer from '../../components/Footer.astro';
             z-index: 2;
         }
     }
-</style>
-        </div>
-        <div class="code-embed-2 w-embed w-script">
-          <script is:inline>
+</style>`;
+const __embed2 = `<script>
 document.getElementById("cards").onmousemove = (e) => {
   for (const card of document.getElementsByClassName("card")) {
     const rect = card.getBoundingClientRect(),
       x = e.clientX - rect.left,
       y = e.clientY - rect.top;
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
+    card.style.setProperty("--mouse-x", \`\${x}px\`);
+    card.style.setProperty("--mouse-y", \`\${y}px\`);
   }
 };
-</script>
-        </div>
-        <div class="global-style w-embed">
-          <style is:inline>
+</script>`;
+const __embed3 = `<style>
 .card_glow_background {
 	width: calc(100% + 12px);
   height: calc(100% + 12px);
 }
 .card_glow_background._2 {
-	left : calc(-100% - 24px); 
+	left : calc(-100% - 24px);
 }
 .card_glow_background._3 {
 	top : calc(-100% - 24px);
@@ -596,9 +192,127 @@ document.getElementById("cards").onmousemove = (e) => {
 	left : calc(-100% - 24px);
   top : calc(-100% - 24px);
 }
-</style>
+</style>`;
+---
+<BaseLayout meta={meta}>
+<div data-meno-label="Page content" class="body min-h-screen [color:#fff] [background-color:#080610] [overflow-x:hidden]">
+
+
+<div class="page-wrapper [color:#fff] [overflow-x:hidden]">
+    <NavBanner />
+    <div id="cards" class="main-wrapper [z-index:0] [color:#fff] [background-color:#080610] [max-width:none] [position:relative] [overflow-x:hidden]">
+      <section data-w-id="e870b645-7926-91eb-624c-e4356dfac346" class="section-hero [background-image:url('../images/Hero_1.avif')] [background-position:0_100%] [background-repeat:no-repeat] [background-size:cover] [background-attachment:scroll] [padding-top:220px] [padding-bottom:40px] max-lg:[background-position:0%] max-lg:[background-size:cover] max-lg:[padding-top:80px] max-sm:[padding-top:80px] max-sm:[padding-bottom:20px]">
+        <div id="banner-trigger" class="nav_banner-trigger [pointer-events:none] [border:1px_solid_#0000] [width:100%] [height:240px] [position:absolute] [top:0] [bottom:auto]"></div>
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="blog-hero [grid-column-gap:16px] [grid-row-gap:16px] [text-align:center] [flex-flow:column] [justify-content:center] [align-items:center] [max-width:70%] [margin-left:auto] [margin-right:auto] [display:flex]">
+            <div class="header [grid-column-gap:8px] [grid-row-gap:8px] [flex-flow:column] [display:flex] [position:relative]">
+              <h1 class="text-caps weight-regular [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative]">REAL RESULTS, REAL IMPACT</h1>
+              <h2 class="h2 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px]"><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">Customer Stories</span></h2>
+            </div>
+            <p class="text-16-150 [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Discover how we transform concepts into reality. Dive into our curated collection of stories, highlighting impactful video projects that address real-world challenges and achieve tangible results.</p>
+            <div class="wrap-btn m-virtical [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] [align-items:center] [padding-top:16px] [padding-bottom:16px] [display:flex] max-lg:[justify-content:center] max-lg:[align-items:center] max-sm:[flex-flow:column] max-sm:[justify-content:flex-start] max-sm:[align-items:center] max-sm:[width:100%]">
+              <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] [background-image:linear-gradient(90deg,_#ff008e,_#ff4dcb)] [-webkit-text-fill-color:inherit] [-webkit-background-clip:text] [background-clip:border-box] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)] max-sm:[width:fit-content]">
+                <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                  <div class="glowing-wrapper-borders [opacity:1] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+                </div>
+                <a href="/get-free-sample" class="glowing-wrapper-button w-inline-block [max-width:100%] [display:inline-flex] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [color:#fff] [letter-spacing:-.01em] [background-color:#3898ec00] [border:1px_solid_#ffffff1a] [border-radius:62.5rem] [justify-content:center] [align-items:center] [padding:12px_24px] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:500] [line-height:1.42] [text-decoration:none] [position:relative] max-lg:[width:100%] max-sm:[width:100%]">
+                  <div class="text-block rel align-center-middle [color:var(--white)] [text-decoration:none] [z-index:2] [position:relative] [text-align:center] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[display:flex] max-sm:[text-align:center] max-sm:[font-size:13px] max-sm:[line-height:120%]">Get free sample</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-blog [justify-content:center] [align-items:center] [width:100%] [max-width:none] [padding-top:80px] [padding-bottom:80px] [display:flex] [position:relative] [overflow:clip] max-lg:[padding-top:0] max-lg:[padding-bottom:40px] max-landscape:[padding-top:40px] max-landscape:[padding-bottom:40px] max-sm:[padding-top:0] max-sm:[padding-bottom:60px] max-sm:[overflow:hidden]">
+        <div class="image-wrapper-blog [pointer-events:none] [justify-content:center] [align-items:flex-start] [display:flex] [position:absolute] [inset:0%_0%_auto]"><img data-meno-optimize="false" src="/images/Frame-1707478673_1.avif" loading="lazy" sizes="100vw" srcset="/images/Frame-1707478673_1-p-500.png 500w, /images/Frame-1707478673_1-p-800.png 800w, /images/Frame-1707478673_1-p-1080.png 1080w, /images/Frame-1707478673_1-p-1600.png 1600w, /images/Frame-1707478673_1-p-2000.png 2000w, /images/Frame-1707478673_1.avif 3576w" alt="A group of three giraffe standing next to each other" class="image-blog-gradient [pointer-events:none] [min-width:1400px] [position:absolute] [bottom:auto]" /></div>
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="blog-wrapper [grid-column-gap:80px] [grid-row-gap:80px] [flex-flow:column] [width:100%] [display:flex] max-landscape:[grid-column-gap:40px] max-landscape:[grid-row-gap:40px]">
+            <div class="cms-blog-button gap-40 [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [display:flex] [align-self:stretch] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px]">
+              <div class="blog-filters-wrapper [grid-column-gap:20px] [grid-row-gap:20px] [flex-flow:column] [justify-content:space-between] [align-items:stretch] [display:flex]">
+                <h3 class="h3 blog [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:28px] [font-weight:500] [line-height:130%] max-lg:[font-size:22px] max-sm:[font-size:18px]">All stories</h3>
+                <div class="blog-filters [padding-bottom:0] [overflow:visible] max-sm:[overflow:scroll]"></div>
+              </div>
+              <div class="w-dyn-list">
+                <div fs-cmsfilter-element="list" role="list" class="collection-list w-dyn-items [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr_1fr] [grid-auto-columns:1fr] [display:grid] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[flex-flow:wrap] max-lg:[grid-template-rows:auto] max-lg:[grid-template-columns:1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:grid] max-lg:[overflow:auto] max-landscape:[grid-template-columns:1fr] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px] max-sm:[flex-flow:column]">
+                  <div id="w-node-_38611b20-b837-01eb-b014-305b20bd0a92-ac6cc3a5" role="listitem" class="w-dyn-item">
+                    <div class="card-contaiiner fill [flex:1] [color:] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814)] [border:0_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [justify-content:flex-start] [height:100%] [display:flex] [position:relative] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex] max-sm:[width:100%]">
+                      <a href="#" class="invisible-link w-inline-block [max-width:100%] [display:inline-block] [z-index:99] [width:100%] [height:100%] [position:absolute]"></a>
+                      <a href="#" class="card wrapper w-inline-block [max-width:100%] [display:flex] [aspect-ratio:auto] [width:auto] [height:auto] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [position:static] [flex:0_auto] max-lg:[border-radius:16px]">
+                        <div class="card-content no-bottom-border [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] [border-bottom-width:0] [border-bottom-right-radius:0] [border-bottom-left-radius:0] max-sm:[width:100%]"><img data-meno-optimize="false" loading="lazy" src="/images/Frame-1707478606.avif" alt="" class="img-main-blog w-dyn-bind-empty [object-fit:cover] [border-radius:12px] [width:100%] [height:auto] max-lg:[width:100%]" /></div>
+                      </a>
+                      <div class="card [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [display:flex] [position:relative] max-lg:[border-radius:16px]">
+                        <div class="card-content no-top-border [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] [border-top-width:0] [border-top-left-radius:0] [border-top-right-radius:0] max-sm:[width:100%]">
+                          <div class="text-wrapper-card-blog wrap [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [align-items:flex-start] [height:auto] [padding:24px_24px_32px] [display:flex]">
+                            <div class="gap-16-blog [z-index:111] [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [align-items:flex-start] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px] max-lg:[width:100%] max-landscape:[grid-column-gap:16px] max-landscape:[grid-row-gap:16px]">
+                              <div class="w-dyn-list">
+                                <div role="list" class="collection-list-horizontal w-dyn-items [grid-column-gap:12px] [grid-row-gap:12px] [display:flex]">
+                                  <div role="listitem" class="w-dyn-item">
+                                    <div fs-cmsfilter-field="category" class="text-14-150 text-color-purple w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [color:#726eff] max-landscape:[font-size:13px]"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="rich-title w-dyn-bind-empty w-richtext [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:600] [line-height:150%]"></div>
+                            </div>
+                            <div class="author-description-blog wrap [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [height:auto] [display:flex]">
+                              <p class="text-16-150 opacity-80 small-desc w-dyn-bind-empty [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]"></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-dyn-empty [padding:10px] [background-color:#dddddd]">
+                  <div>No items found.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section-cta [padding-top:80px] [padding-bottom:80px] [overflow:hidden] max-lg:[margin-top:0] max-lg:[padding-top:20px] max-lg:[padding-bottom:56px] max-landscape:[padding-top:0] max-landscape:[padding-bottom:80px] max-sm:[margin-top:0] max-sm:[padding-bottom:56px]">
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="wrapper-process [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [display:flex] max-landscape:[grid-column-gap:40px] max-landscape:[grid-row-gap:40px] max-sm:[grid-column-gap:32px] max-sm:[grid-row-gap:32px]">
+            <div class="contact-card [background-image:url('../images/offer-bg_1.avif')] [background-position:50%] [background-size:cover] [border:1px_solid_#ffffff1a] [border-radius:20px] [height:500px] [padding:0_0_0_64px] [transition:all_.2s] [overflow:hidden] max-lg:[height:auto] max-lg:[padding:24px] max-sm:[padding-bottom:16px] max-sm:[padding-left:16px] max-sm:[padding-right:16px]">
+              <div class="contact-wrapper [grid-column-gap:84px] [grid-row-gap:84px] [flex-flow:row] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [align-content:center] [height:100%] [display:grid] max-lg:[grid-column-gap:16px] max-lg:[grid-row-gap:16px] max-lg:[flex-flow:column] max-lg:[display:flex]">
+                <div class="contact-content [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [justify-content:center] [align-items:stretch] [padding-top:64px] [padding-bottom:64px] [display:flex] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[order:1] max-lg:[padding-top:32px] max-lg:[padding-bottom:0] max-sm:[padding-top:0]">
+                  <div class="gap-12 [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex]">
+                    <p class="text-caps weight-regular center-small [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative] max-lg:[text-align:center]">Contact Us</p>
+                    <h2 class="h2 center-small [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-lg:[text-align:center] max-sm:[text-align:center] max-sm:[font-size:28px]">Ready to elevate your brand? Contact us for your <br /><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">Free video sample</span></h2>
+                  </div>
+                  <div class="wrap-btn-price left [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] [align-items:center] [padding-top:12px] [padding-bottom:12px] [display:flex] max-lg:[flex-flow:column] max-lg:[justify-content:center] max-lg:[align-items:center] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-sm:[text-align:center] max-sm:[flex-flow:column] max-sm:[justify-content:flex-start] max-sm:[align-items:center]">
+                    <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] [background-image:linear-gradient(90deg,_#ff008e,_#ff4dcb)] [-webkit-text-fill-color:inherit] [-webkit-background-clip:text] [background-clip:border-box] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)] max-sm:[width:fit-content]">
+                      <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                        <div class="glowing-wrapper-borders [opacity:1] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+                      </div>
+                      <a href="/get-free-sample" class="glowing-wrapper-button w-inline-block [max-width:100%] [display:inline-flex] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [color:#fff] [letter-spacing:-.01em] [background-color:#3898ec00] [border:1px_solid_#ffffff1a] [border-radius:62.5rem] [justify-content:center] [align-items:center] [padding:12px_24px] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:500] [line-height:1.42] [text-decoration:none] [position:relative] max-lg:[width:100%] max-sm:[width:100%]">
+                        <div class="text-block rel align-center-middle [color:var(--white)] [text-decoration:none] [z-index:2] [position:relative] [text-align:center] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[display:flex] max-sm:[text-align:center] max-sm:[font-size:13px] max-sm:[line-height:120%]">Get free sample</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div id="w-node-_00039f33-53c4-cea9-f5f9-b44b4d84e1f0-ac6cc3a5" class="contact-image-wrapper [width:100%] [padding-right:60px] [overflow:hidden] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:1fr_1fr] max-sm:[grid-auto-columns:1fr] max-sm:[justify-content:flex-start] max-sm:[width:100%] max-sm:[display:flex] max-sm:[overflow:hidden]"><img data-meno-optimize="false" loading="lazy" src="/images/contact-img_1.avif" alt="A smart phone with a credit card next to it" class="img-100 img-tabs [border-bottom-right-radius:12px] [border-bottom-left-radius:12px] [width:100%] [min-width:111%] [min-height:1rem] max-lg:[width:100%] max-lg:[min-width:100%] max-lg:[margin-bottom:12px] max-landscape:[min-width:100%] max-sm:[width:114%] max-sm:[min-width:114%]" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+      <div class="css [display:none]">
+        <div class="button-css w-embed [display:none]">
+          <Embed html={__embed0} />
+        </div>
+        <div class="custom-styles w-embed [display:none]">
+          <Embed html={__embed1} />
+        </div>
+        <div class="code-embed-2 w-embed w-script [display:none]">
+          <Embed html={__embed2} />
+        </div>
+        <div class="global-style w-embed [display:none]">
+          <Embed html={__embed3} />
         </div>
       </div>
     </div>
   </div>
+</div>
 </BaseLayout>

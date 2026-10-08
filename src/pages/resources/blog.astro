@@ -1,413 +1,26 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/theme.css';
+import { BaseLayout, Embed } from 'meno-astro/components';
 import NavBanner from '../../components/NavBanner.astro';
 import Footer from '../../components/Footer.astro';
----
-<BaseLayout
-  title={"Motion Design & Animation Blog | Latest Insights, Tips & Trends"}
-  wfPage="6732281a16c128cb50063cd3"
-  bodyClass={"body"}
-  description={"Motion the Agency’s in-depth articles, case studies, and video tutorials that entertains, educates, and inspires. Enjoy!"}
-  ogTitle={"Motion Design & Animation Blog | Latest Insights, Tips & Trends"}
-  ogDescription={"Motion the Agency’s in-depth articles, case studies, and video tutorials that entertains, educates, and inspires. Enjoy!"}
-  ogImage={"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670cbefac830e982d28b61a8_Homepage.png"}
-  twitterTitle={"Motion Design & Animation Blog | Latest Insights, Tips & Trends"}
-  twitterDescription={"Motion the Agency’s in-depth articles, case studies, and video tutorials that entertains, educates, and inspires. Enjoy!"}
-  twitterImage={"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670cbefac830e982d28b61a8_Homepage.png"}
-  ogType={"website"}
-  twitterCard={"summary_large_image"}
-  canonical={"https://www.motiontheagency.com/resources/blog"}
->
-  <Fragment slot="head-start">
-<script is:inline type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://www.motiontheagency.com/#website",
-      "url": "https://www.motiontheagency.com/",
-      "name": "Motion The Agency",
-      "publisher": { "@id": "https://www.motiontheagency.com/#org" },
-      "inLanguage": "en-US",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://www.motiontheagency.com/search?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "CollectionPage",
-      "@id": "https://www.motiontheagency.com/resources/blog#webpage",
-      "url": "https://www.motiontheagency.com/resources/blog",
-      "name": "Motion Design & Animation Blog | Latest Insights, Tips & Trends",
-      "description": "Motion the Agency's in-depth articles, case studies, and video tutorials that entertains, educates, and inspires.",
-      "inLanguage": "en-US",
-      "isPartOf": { "@id": "https://www.motiontheagency.com/#website" },
-      "about": { "@id": "https://www.motiontheagency.com/#org" },
-      "breadcrumb": { "@id": "https://www.motiontheagency.com/resources/blog#breadcrumb" },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670cbefac830e982d28b61a8_Homepage.png",
-        "width": 1200,
-        "height": 630
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.motiontheagency.com/resources/blog#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.motiontheagency.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Resources",
-          "item": "https://www.motiontheagency.com/resources"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Blog",
-          "item": "https://www.motiontheagency.com/resources/blog"
-        }
-      ]
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://www.motiontheagency.com/#org",
-      "name": "Motion The Agency",
-      "url": "https://www.motiontheagency.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ebfe7ccb344ea14e764cd7_Link%20%E2%86%92%20cropped-motion-logo-png-04-1-1024x293.png.avif",
-        "width": 1024,
-        "height": 293
-      },
-      "email": "hello@motiontheagency.com",
-      "telephone": "+44 203 984 7787",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "42-44 Bishopsgate",
-        "addressLocality": "London",
-        "postalCode": "EC2N 4AH",
-        "addressCountry": "GB"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/motion-the-agency",
-        "https://www.youtube.com/@motiontheagency",
-        "https://clutch.co/profile/motion-agency-0"
-      ]
-    }
-  ]
-}
-</script>
-  </Fragment>
-  <Fragment slot="head">
-<!--  [Attributes by Finsweet] CMS Slider  -->
-<script is:inline async="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js"></script>
-<!--  [Attributes by Finsweet] CMS Filter  -->
-<script is:inline async="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js"></script>
-<!--  [Attributes by Finsweet] CMS Load  -->
-<script is:inline async="" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsload@1/cmsload.js"></script>
-<!--  Finsweet Attributes  -->
-<script is:inline async="" type="module" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js" fs-list=""></script>
-<script is:inline>
-if (window.location.href.includes('_page=')) {
-  const link = document.createElement('link');
-  link.rel = 'canonical';
-  link.href = 'https://www.motiontheagency.com/blog';
-  document.head.appendChild(link);
-}
-</script>
-<script is:inline>
-if (window.location.href.includes('_page=')) {
-  const meta = document.createElement('meta');
-  meta.name = 'robots';
-  meta.content = 'noindex,follow';
-  document.head.appendChild(meta);
-}
-</script>
-<script is:inline type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://www.motiontheagency.com/resources/blog#webpage",
-      "url": "https://www.motiontheagency.com/resources/blog",
-      "name": "Blog & Articles | Motion The Agency",
-      "description": "Explore Motion The Agency’s collection of in-depth articles, guides, and insights on motion design, animation, and video strategy. Learn from industry experts and discover new ideas for your brand.",
-      "inLanguage": "en-US",
-      "isPartOf": { "@id": "https://www.motiontheagency.com/#website" },
-      "about": { "@id": "https://www.motiontheagency.com/#org" },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/ee44b097-4eba-452f-a631-a48cdd919437.png",
-        "width": 1200,
-        "height": 630
-      }
-    },
-    {
-      "@type": "CollectionPage",
-      "@id": "https://www.motiontheagency.com/resources/blog#collection",
-      "name": "Motion The Agency Blog Collection",
-      "description": "A curated collection of thought leadership articles, animation tutorials, and case studies from Motion The Agency’s creative team.",
-      "publisher": { "@id": "https://www.motiontheagency.com/#org" },
-      "hasPart": {
-        "@type": "ItemList",
-        "itemListOrder": "https://schema.org/ItemListOrderAscending",
-        "numberOfItems": 9,
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "url": "https://www.motiontheagency.com/blog/how-long-should-a-2d-animation-video-be-backed-by-real-data"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "url": "https://www.motiontheagency.com/blog/ui-animation-tools-lottie-vs-rive"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "url": "https://www.motiontheagency.com/blog/10-best-ui-animation-examples-for-saas-and-ecommerce-brands"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "url": "https://www.motiontheagency.com/blog/why-every-brand-needs-product-videos-2025"
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "url": "https://www.motiontheagency.com/blog/ui-animation-principles-for-better-design"
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "url": "https://www.motiontheagency.com/blog/lottie-vs-rive-which-ui-animation-tool-wins"
-          },
-          {
-            "@type": "ListItem",
-            "position": 7,
-            "url": "https://www.motiontheagency.com/blog/ai-for-motion-design-vector-assets"
-          },
-          {
-            "@type": "ListItem",
-            "position": 8,
-            "url": "https://www.motiontheagency.com/blog/2d-animation-cost-guide-2025"
-          },
-          {
-            "@type": "ListItem",
-            "position": 9,
-            "url": "https://www.motiontheagency.com/blog/how-to-use-ui-animations-without-slowing-down-website"
-          }
-        ]
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.motiontheagency.com/resources/blog#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.motiontheagency.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Resources",
-          "item": "https://www.motiontheagency.com/resources"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Blog & Articles",
-          "item": "https://www.motiontheagency.com/resources/blog"
-        }
-      ]
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://www.motiontheagency.com/#org",
-      "name": "Motion The Agency",
-      "url": "https://www.motiontheagency.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ebfe7ccb344ea14e764cd7_Link%20%E2%86%92%20cropped-motion-logo-png-04-1-1024x293.png.avif",
-        "width": 1024,
-        "height": 293
-      },
-      "image": [
-        "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ebfe7ccb344ea14e764cd7_Link%20%E2%86%92%20cropped-motion-logo-png-04-1-1024x293.png.avif"
-      ],
-      "email": "hello@motiontheagency.com",
-      "telephone": "+44 203 984 7787",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "42-44 Bishopsgate",
-        "addressLocality": "London",
-        "postalCode": "EC2N 4AH",
-        "addressCountry": "GB"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/motion-the-agency",
-        "https://www.youtube.com/@motiontheagency",
-        "https://clutch.co/profile/motion-agency-0"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "reviewCount": "25"
-      }
-    },
-    {
-      "@type": "SpeakableSpecification",
-      "xpath": [
-        "/html/head/title",
-        "/html/body//h1"
-      ]
-    }
-  ]
-}
-</script>
-  </Fragment>
-<NavBanner />
-  <div class="page-wrapper">
-    <div id="cards" class="main-wrapper">
-      <section data-w-id="e870b645-7926-91eb-624c-e4356dfac346" class="section-hero blog">
-        <div id="banner-trigger" class="nav_banner-trigger"></div><img src="/images/Hero_1.avif" loading="lazy" sizes="(max-width: 1600px) 100vw, 1600px" srcset="/images/Hero_1Hero.avif 500w, /images/Hero_1Hero.avif 800w, /images/Hero_1.avif 1600w" alt="" class="absolute-img bot-0">
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="blog-hero">
-            <div class="header">
-              <p class="text-caps weight-regular">OUR THOUGHTS, COMPILED</p>
-              <h1 class="h2"><span class="span">Blog &amp; articles</span></h1>
-            </div>
-            <p class="text-16-150 max-w-480-hero">Motion the Agency’s in-depth articles, case studies, and video tutorials that entertains, educates, and inspires. Enjoy!</p>
-          </div>
-        </div>
-      </section>
-      <div class="section-blog margin-top-0">
-        <div class="image-wrapper-blog span"><img src="/images/Frame-1707478673_1.avif" loading="lazy" sizes="(max-width: 3576px) 100vw, 3576px" srcset="/images/Frame-1707478673_1-p-500.png 500w, /images/Frame-1707478673_1-p-800.png 800w, /images/Frame-1707478673_1-p-1080.png 1080w, /images/Frame-1707478673_1-p-1600.png 1600w, /images/Frame-1707478673_1-p-2000.png 2000w, /images/Frame-1707478673_1.avif 3576w" alt="A group of three giraffe standing next to each other" class="image-blog-gradient bot-32"></div>
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="blog-wrapper">
-            <div class="cms-blog-button gap-40">
-              <div class="blog-filters-wrapper">
-                <div class="blog-filters relative">
-                  <div class="filter-form _w-100 w-form">
-                    <form id="wf-form-search" name="wf-form-search" data-name="search" method="get" fs-cmsfilter-element="filters" class="filter-form-block relative" data-wf-page-id="6732281a16c128cb50063cd3" data-wf-element-id="b338f7f6-b8b7-869b-502e-3c3a744cc729">
-                      <div class="w-layout-hflex flex-h _16 center _w-460"><input class="field-contact w-input" maxlength="256" name="Search-blog" fs-cmsfilter-field="title" data-name="Search blog" placeholder="Search blog..." type="text" id="Search-blog" required=""></div>
-                      <h2 class="h3 blog fill">All articles</h2>
-                      <div class="w-layout-hflex flex-h _40px"><label class="radio-filter fs-cmsfilter_active w-radio">
-                          <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-filter-mark w-radio-input w--redirected-checked"></div><input type="radio" name="filters" id="filter-2" data-name="filters" style="opacity:0;position:absolute;z-index:-1" checked="" value="filter"><span fs-cmsfilter-field="category" class="radio-filter-text w-form-label" for="filter-2">All</span>
-                        </label>
-                        <div class="filters-list-wrapper w-dyn-list">
-                          <div role="list" class="filters-list w-dyn-items">
-                            <div role="listitem" class="filters-list-item w-dyn-item"><label fs-cmsfilter-field="category" class="radio-filter w-radio">
-                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-filter-mark w-radio-input"></div><input type="radio" name="filters" id="filter" data-name="filters" fs-cmsfilter-field="category" style="opacity:0;position:absolute;z-index:-1" value="filter"><span fs-cmsfilter-field="category" class="radio-filter-text w-dyn-bind-empty w-form-label" for="filter"></span>
-                              </label></div>
-                          </div>
-                          <div class="w-dyn-empty">
-                            <div>No items found.</div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                    <div class="w-form-done">
-                      <div>Thank you! Your submission has been received!</div>
-                    </div>
-                    <div class="w-form-fail">
-                      <div>Oops! Something went wrong while submitting the form.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex-40 w-dyn-list">
-                <div fs-cmsload-element="list" fs-cmsfilter-element="list" fs-cmsload-mode="pagination" role="list" class="collection-list w-dyn-items">
-                  <div role="listitem" class="w-dyn-item">
-                    <div class="card-contaiiner fill no-bg">
-                      <a href="#" class="card w-inline-block">
-                        <div class="card-content"><img loading="lazy" src="/images/Frame-1707478606.avif" alt="" class="img-main-blog w-dyn-bind-empty">
-                          <div class="text-wrapper-card-blog">
-                            <div class="gap-16-blog">
-                              <div fs-cmsfilter-field="category" class="vanish">All</div>
-                              <div fs-cmsfilter-field="category" class="text-14-150 text-color-purple w-dyn-bind-empty"></div>
-                              <div fs-cmsfilter-field="title" class="h4 w-dyn-bind-empty"></div>
-                            </div>
-                            <div class="author-description-blog">
-                              <p class="text-16-150 opacity-80 w-dyn-bind-empty"></p>
-                              <div class="author_date-blog">
-                                <div class="text-14-150 opacity-80 w-dyn-bind-empty"></div>
-                                <div class="text-14-150 opacity-80">・</div>
-                                <div class="text-14-150 opacity-80 w-dyn-bind-empty"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="empty-state w-dyn-empty">
-                  <div>No items found.</div>
-                </div>
-                <div role="navigation" aria-label="List" class="w-pagination-wrapper arrow-wrapper">
-                  <a href="#" aria-label="Previous Page" class="w-pagination-previous slider-arrow inline first"><img width="10" loading="lazy" alt="" src="/images/Arrow---Left.svg" class="image-26">
-                    <div class="text-14-150">Previous</div>
-                  </a>
-                  <a href="#" fs-cmsload-element="page-button" class="slider-arrow inline page-button">1</a>
-                  <a href="#" aria-label="Next Page" class="w-pagination-next slider-arrow inline last">
-                    <div class="text-14-150">Next</div><img loading="lazy" src="/images/Arrow---Right.svg" alt="" class="image-26">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section class="section-cta">
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="wrapper-process">
-            <div class="contact-card">
-              <div class="contact-wrapper">
-                <div class="contact-content">
-                  <div class="gap-12">
-                    <p class="text-caps weight-regular center-small">Contact Us</p>
-                    <h2 class="h2 center-small">Ready to elevate your brand? Contact us for your <br><span class="span">Free Video Sample</span></h2>
-                  </div>
-                  <div class="wrap-btn-price left">
-                    <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient">
-                      <div class="glowing-wrapper-borders-masker">
-                        <div class="glowing-wrapper-borders"></div>
-                      </div>
-                      <a href="/get-free-sample" class="glowing-wrapper-button w-inline-block">
-                        <div class="text-block rel align-center-middle">Get free sample</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div id="w-node-_689daa7a-6ff0-ee2f-8803-e88f00aaa33f-00aaa32f" class="contact-image-wrapper"><img loading="lazy" src="/images/contact-img_1.avif" alt="A smart phone with a credit card next to it" class="img-100 img-tabs"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <Footer />
-      <div class="css">
-        <div class="button-css w-embed">
-          <style is:inline>
+
+const meta = {
+  "title": "Motion Design & Animation Blog | Latest Insights, Tips & Trends",
+  "description": "Motion the Agency’s in-depth articles, case studies, and video tutorials that entertains, educates, and inspires. Enjoy!",
+  "htmlAttributes": {
+    "data-wf-page": "6732281a16c128cb50063cd3",
+    "data-wf-site": "66ebfb6ec8f20d5eda50eb34"
+  },
+  "ogTitle": "Motion Design & Animation Blog | Latest Insights, Tips & Trends",
+  "ogDescription": "Motion the Agency’s in-depth articles, case studies, and video tutorials that entertains, educates, and inspires. Enjoy!",
+  "ogImage": "https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670cbefac830e982d28b61a8_Homepage.png",
+  "ogType": "website",
+  "customCode": {
+    "head": "\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://www.motiontheagency.com/#website\",\n      \"url\": \"https://www.motiontheagency.com/\",\n      \"name\": \"Motion The Agency\",\n      \"publisher\": { \"@id\": \"https://www.motiontheagency.com/#org\" },\n      \"inLanguage\": \"en-US\",\n      \"potentialAction\": {\n        \"@type\": \"SearchAction\",\n        \"target\": {\n          \"@type\": \"EntryPoint\",\n          \"urlTemplate\": \"https://www.motiontheagency.com/search?q={search_term_string}\"\n        },\n        \"query-input\": \"required name=search_term_string\"\n      }\n    },\n    {\n      \"@type\": \"CollectionPage\",\n      \"@id\": \"https://www.motiontheagency.com/resources/blog#webpage\",\n      \"url\": \"https://www.motiontheagency.com/resources/blog\",\n      \"name\": \"Motion Design & Animation Blog | Latest Insights, Tips & Trends\",\n      \"description\": \"Motion the Agency's in-depth articles, case studies, and video tutorials that entertains, educates, and inspires.\",\n      \"inLanguage\": \"en-US\",\n      \"isPartOf\": { \"@id\": \"https://www.motiontheagency.com/#website\" },\n      \"about\": { \"@id\": \"https://www.motiontheagency.com/#org\" },\n      \"breadcrumb\": { \"@id\": \"https://www.motiontheagency.com/resources/blog#breadcrumb\" },\n      \"primaryImageOfPage\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670cbefac830e982d28b61a8_Homepage.png\",\n        \"width\": 1200,\n        \"height\": 630\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://www.motiontheagency.com/resources/blog#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://www.motiontheagency.com/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Resources\",\n          \"item\": \"https://www.motiontheagency.com/resources\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"Blog\",\n          \"item\": \"https://www.motiontheagency.com/resources/blog\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Organization\",\n      \"@id\": \"https://www.motiontheagency.com/#org\",\n      \"name\": \"Motion The Agency\",\n      \"url\": \"https://www.motiontheagency.com\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ebfe7ccb344ea14e764cd7_Link%20%E2%86%92%20cropped-motion-logo-png-04-1-1024x293.png.avif\",\n        \"width\": 1024,\n        \"height\": 293\n      },\n      \"email\": \"hello@motiontheagency.com\",\n      \"telephone\": \"+44 203 984 7787\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"42-44 Bishopsgate\",\n        \"addressLocality\": \"London\",\n        \"postalCode\": \"EC2N 4AH\",\n        \"addressCountry\": \"GB\"\n      },\n      \"sameAs\": [\n        \"https://www.linkedin.com/company/motion-the-agency\",\n        \"https://www.youtube.com/@motiontheagency\",\n        \"https://clutch.co/profile/motion-agency-0\"\n      ]\n    }\n  ]\n}\n</script>\n  \n<!--  [Attributes by Finsweet] CMS Slider  -->\n<script async=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js\"></script>\n<!--  [Attributes by Finsweet] CMS Filter  -->\n<script async=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js\"></script>\n<!--  [Attributes by Finsweet] CMS Load  -->\n<script async=\"\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsload@1/cmsload.js\"></script>\n<!--  Finsweet Attributes  -->\n<script async=\"\" type=\"module\" src=\"https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js\" fs-list=\"\"></script>\n<script>\nif (window.location.href.includes('_page=')) {\n  const link = document.createElement('link');\n  link.rel = 'canonical';\n  link.href = 'https://www.motiontheagency.com/blog';\n  document.head.appendChild(link);\n}\n</script>\n<script>\nif (window.location.href.includes('_page=')) {\n  const meta = document.createElement('meta');\n  meta.name = 'robots';\n  meta.content = 'noindex,follow';\n  document.head.appendChild(meta);\n}\n</script>\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://www.motiontheagency.com/resources/blog#webpage\",\n      \"url\": \"https://www.motiontheagency.com/resources/blog\",\n      \"name\": \"Blog & Articles | Motion The Agency\",\n      \"description\": \"Explore Motion The Agency’s collection of in-depth articles, guides, and insights on motion design, animation, and video strategy. Learn from industry experts and discover new ideas for your brand.\",\n      \"inLanguage\": \"en-US\",\n      \"isPartOf\": { \"@id\": \"https://www.motiontheagency.com/#website\" },\n      \"about\": { \"@id\": \"https://www.motiontheagency.com/#org\" },\n      \"primaryImageOfPage\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/ee44b097-4eba-452f-a631-a48cdd919437.png\",\n        \"width\": 1200,\n        \"height\": 630\n      }\n    },\n    {\n      \"@type\": \"CollectionPage\",\n      \"@id\": \"https://www.motiontheagency.com/resources/blog#collection\",\n      \"name\": \"Motion The Agency Blog Collection\",\n      \"description\": \"A curated collection of thought leadership articles, animation tutorials, and case studies from Motion The Agency’s creative team.\",\n      \"publisher\": { \"@id\": \"https://www.motiontheagency.com/#org\" },\n      \"hasPart\": {\n        \"@type\": \"ItemList\",\n        \"itemListOrder\": \"https://schema.org/ItemListOrderAscending\",\n        \"numberOfItems\": 9,\n        \"itemListElement\": [\n          {\n            \"@type\": \"ListItem\",\n            \"position\": 1,\n            \"url\": \"https://www.motiontheagency.com/blog/how-long-should-a-2d-animation-video-be-backed-by-real-data\"\n          },\n          {\n            \"@type\": \"ListItem\",\n            \"position\": 2,\n            \"url\": \"https://www.motiontheagency.com/blog/ui-animation-tools-lottie-vs-rive\"\n          },\n          {\n            \"@type\": \"ListItem\",\n            \"position\": 3,\n            \"url\": \"https://www.motiontheagency.com/blog/10-best-ui-animation-examples-for-saas-and-ecommerce-brands\"\n          },\n          {\n            \"@type\": \"ListItem\",\n            \"position\": 4,\n            \"url\": \"https://www.motiontheagency.com/blog/why-every-brand-needs-product-videos-2025\"\n          },\n          {\n            \"@type\": \"ListItem\",\n            \"position\": 5,\n            \"url\": \"https://www.motiontheagency.com/blog/ui-animation-principles-for-better-design\"\n          },\n          {\n            \"@type\": \"ListItem\",\n            \"position\": 6,\n            \"url\": \"https://www.motiontheagency.com/blog/lottie-vs-rive-which-ui-animation-tool-wins\"\n          },\n          {\n            \"@type\": \"ListItem\",\n            \"position\": 7,\n            \"url\": \"https://www.motiontheagency.com/blog/ai-for-motion-design-vector-assets\"\n          },\n          {\n            \"@type\": \"ListItem\",\n            \"position\": 8,\n            \"url\": \"https://www.motiontheagency.com/blog/2d-animation-cost-guide-2025\"\n          },\n          {\n            \"@type\": \"ListItem\",\n            \"position\": 9,\n            \"url\": \"https://www.motiontheagency.com/blog/how-to-use-ui-animations-without-slowing-down-website\"\n          }\n        ]\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://www.motiontheagency.com/resources/blog#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://www.motiontheagency.com/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Resources\",\n          \"item\": \"https://www.motiontheagency.com/resources\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"Blog & Articles\",\n          \"item\": \"https://www.motiontheagency.com/resources/blog\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Organization\",\n      \"@id\": \"https://www.motiontheagency.com/#org\",\n      \"name\": \"Motion The Agency\",\n      \"url\": \"https://www.motiontheagency.com\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ebfe7ccb344ea14e764cd7_Link%20%E2%86%92%20cropped-motion-logo-png-04-1-1024x293.png.avif\",\n        \"width\": 1024,\n        \"height\": 293\n      },\n      \"image\": [\n        \"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/66ebfe7ccb344ea14e764cd7_Link%20%E2%86%92%20cropped-motion-logo-png-04-1-1024x293.png.avif\"\n      ],\n      \"email\": \"hello@motiontheagency.com\",\n      \"telephone\": \"+44 203 984 7787\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"42-44 Bishopsgate\",\n        \"addressLocality\": \"London\",\n        \"postalCode\": \"EC2N 4AH\",\n        \"addressCountry\": \"GB\"\n      },\n      \"sameAs\": [\n        \"https://www.linkedin.com/company/motion-the-agency\",\n        \"https://www.youtube.com/@motiontheagency\",\n        \"https://clutch.co/profile/motion-agency-0\"\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": \"5\",\n        \"bestRating\": \"5\",\n        \"reviewCount\": \"25\"\n      }\n    },\n    {\n      \"@type\": \"SpeakableSpecification\",\n      \"xpath\": [\n        \"/html/head/title\",\n        \"/html/body//h1\"\n      ]\n    }\n  ]\n}\n</script>\n  <meta name=\"twitter:title\" content=\"Motion Design &amp; Animation Blog | Latest Insights, Tips &amp; Trends\">\n<meta name=\"twitter:description\" content=\"Motion the Agency’s in-depth articles, case studies, and video tutorials that entertains, educates, and inspires. Enjoy!\">\n<meta name=\"twitter:image\" content=\"https://cdn.prod.website-files.com/66ebfb6ec8f20d5eda50eb34/670cbefac830e982d28b61a8_Homepage.png\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">",
+    "bodyStart": "<script>document.body.className=\"body\";</script>"
+  }
+};
+const __embed0 = `<style>
  * {
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
@@ -504,10 +117,8 @@ if (window.location.href.includes('_page=')) {
 		transform: translate(-50%, -50%) rotate(360deg)
 	}
 }
-</style>
-        </div>
-        <div class="custom-styles w-embed">
-          <style is:inline>
+</style>`;
+const __embed1 = `<style>
         * {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -554,29 +165,25 @@ if (window.location.href.includes('_page=')) {
             z-index: 2;
         }
     }
-</style>
-        </div>
-        <div class="code-embed-2 w-embed w-script">
-          <script is:inline>
+</style>`;
+const __embed2 = `<script>
 document.getElementById("cards").onmousemove = (e) => {
   for (const card of document.getElementsByClassName("card")) {
     const rect = card.getBoundingClientRect(),
       x = e.clientX - rect.left,
       y = e.clientY - rect.top;
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
+    card.style.setProperty("--mouse-x", \`\${x}px\`);
+    card.style.setProperty("--mouse-y", \`\${y}px\`);
   }
 };
-</script>
-        </div>
-        <div class="global-style w-embed">
-          <style is:inline>
+</script>`;
+const __embed3 = `<style>
 .card_glow_background {
 	width: calc(100% + 12px);
   height: calc(100% + 12px);
 }
 .card_glow_background._2 {
-	left : calc(-100% - 24px); 
+	left : calc(-100% - 24px);
 }
 .card_glow_background._3 {
 	top : calc(-100% - 24px);
@@ -585,9 +192,148 @@ document.getElementById("cards").onmousemove = (e) => {
 	left : calc(-100% - 24px);
   top : calc(-100% - 24px);
 }
-</style>
+</style>`;
+---
+<BaseLayout meta={meta}>
+<div data-meno-label="Page content" class="body min-h-screen [color:#fff] [background-color:#080610] [overflow-x:hidden]">
+
+
+<NavBanner />
+  <div class="page-wrapper [color:#fff] [overflow-x:hidden]">
+    <div id="cards" class="main-wrapper [z-index:0] [color:#fff] [background-color:#080610] [max-width:none] [position:relative] [overflow-x:hidden]">
+      <section data-w-id="e870b645-7926-91eb-624c-e4356dfac346" class="section-hero blog [background-image:none] [background-position:0_0] [background-repeat:repeat] [background-size:auto] [background-attachment:scroll] [padding-top:220px] [padding-bottom:0] max-lg:[background-position:0%] max-lg:[background-size:cover] max-lg:[padding-top:80px] max-lg:[position:relative] max-sm:[padding-top:80px] max-sm:[padding-bottom:20px]">
+        <div id="banner-trigger" class="nav_banner-trigger [pointer-events:none] [border:1px_solid_#0000] [width:100%] [height:240px] [position:absolute] [top:0] [bottom:auto]"></div><img data-meno-optimize="false" src="/images/Hero_1.avif" loading="lazy" sizes="(max-width: 1600px) 100vw, 1600px" srcset="/images/Hero_1Hero.avif 500w, /images/Hero_1Hero.avif 800w, /images/Hero_1.avif 1600w" alt="" class="absolute-img bot-0 [width:100%] [max-width:none] [height:auto] [max-height:none] [margin-top:0] [position:absolute] [inset:auto] [z-index:-1] [bottom:32%] max-lg:[order:1] max-lg:[max-width:100%] max-lg:[margin-top:0] max-lg:[margin-left:-80px] max-lg:[margin-right:0] max-lg:[position:absolute] max-lg:[bottom:0%] max-lg:[left:0] max-lg:[right:0] max-sm:[margin-left:-40px]" />
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="blog-hero [grid-column-gap:16px] [grid-row-gap:16px] [text-align:center] [flex-flow:column] [justify-content:center] [align-items:center] [max-width:70%] [margin-left:auto] [margin-right:auto] [display:flex]">
+            <div class="header [grid-column-gap:8px] [grid-row-gap:8px] [flex-flow:column] [display:flex] [position:relative]">
+              <p class="text-caps weight-regular [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative]">OUR THOUGHTS, COMPILED</p>
+              <h1 class="h2 [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-sm:[text-align:center] max-sm:[font-size:28px]"><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">Blog &amp; articles</span></h1>
+            </div>
+            <p class="text-16-150 max-w-480-hero [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [max-width:480px] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Motion the Agency’s in-depth articles, case studies, and video tutorials that entertains, educates, and inspires. Enjoy!</p>
+          </div>
+        </div>
+      </section>
+      <div class="section-blog margin-top-0 [justify-content:center] [align-items:flex-start] [width:100%] [max-width:none] [padding-top:40px] [padding-bottom:80px] [display:flex] [position:relative] [overflow:clip] [background-image:none] [background-repeat:repeat] [background-size:auto] [background-attachment:scroll] max-lg:[padding-top:0] max-lg:[padding-bottom:40px] max-landscape:[padding-top:40px] max-landscape:[padding-bottom:40px] max-sm:[padding-top:0] max-sm:[padding-bottom:60px] max-sm:[overflow:hidden]">
+        <div class="image-wrapper-blog span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] [pointer-events:none] [justify-content:center] [align-items:flex-start] [display:flex] [position:absolute] [inset:0%_0%_auto] [bottom:0%] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]"><img data-meno-optimize="false" src="/images/Frame-1707478673_1.avif" loading="lazy" sizes="(max-width: 3576px) 100vw, 3576px" srcset="/images/Frame-1707478673_1-p-500.png 500w, /images/Frame-1707478673_1-p-800.png 800w, /images/Frame-1707478673_1-p-1080.png 1080w, /images/Frame-1707478673_1-p-1600.png 1600w, /images/Frame-1707478673_1-p-2000.png 2000w, /images/Frame-1707478673_1.avif 3576w" alt="A group of three giraffe standing next to each other" class="image-blog-gradient bot-32 [pointer-events:none] [min-width:1400px] [position:absolute] [bottom:auto] [height:80%] [top:12%]" /></div>
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="blog-wrapper [grid-column-gap:80px] [grid-row-gap:80px] [flex-flow:column] [width:100%] [display:flex] max-landscape:[grid-column-gap:40px] max-landscape:[grid-row-gap:40px]">
+            <div class="cms-blog-button gap-40 [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [display:flex] [align-self:stretch] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px]">
+              <div class="blog-filters-wrapper [grid-column-gap:20px] [grid-row-gap:20px] [flex-flow:column] [justify-content:space-between] [align-items:stretch] [display:flex]">
+                <div class="blog-filters relative [padding-bottom:0] [overflow:visible] max-sm:[overflow:visible] max-sm:[position:relative]">
+                  <div class="filter-form _w-100 w-form [margin:0_0_15px] [margin-bottom:0] max-sm:[width:100%]">
+                    <form id="wf-form-search" name="wf-form-search" data-name="search" method="get" fs-cmsfilter-element="filters" class="filter-form-block relative [grid-column-gap:40px] [grid-row-gap:40px] [justify-content:flex-start] [align-items:center] [display:flex] [flex-flow:column] [position:relative] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px] max-sm:[width:100%]" data-wf-page-id="6732281a16c128cb50063cd3" data-wf-element-id="b338f7f6-b8b7-869b-502e-3c3a744cc729">
+                      <div class="w-layout-hflex flex-h _16 center _w-460 [flex-direction:row] [align-items:center] [display:flex] [grid-column-gap:16px] [grid-row-gap:16px] [align-self:auto] [flex:1] [justify-content:center] [width:460px] max-lg:[grid-column-gap:40px] max-lg:[grid-row-gap:40px] max-lg:[flex-flow:wrap] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr_1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:flex] max-landscape:[grid-template-columns:1fr_1fr] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px] max-sm:[grid-template-rows:auto] max-sm:[grid-template-columns:1fr_1fr] max-sm:[grid-auto-columns:1fr] max-sm:[display:flex] max-sm:[justify-items:start] max-sm:[text-align:center] max-sm:[width:auto]"><input class="field-contact w-input [display:block] [width:100%] [height:48px] [padding:12px_20px] [margin-bottom:0] [font-size:16px] [line-height:150%] [color:#fff] [vertical-align:middle] [background-color:#191922] [border:1px_solid_#ffffff1a] [-webkit-backdrop-filter:blur(6px)] [backdrop-filter:blur(6px)] [border-radius:24px] [font-family:Switzer,_sans-serif] [transition:all_.2s] focus:[border-color:#ffffff80] focus:[outline:0]" maxlength="256" name="Search-blog" fs-cmsfilter-field="title" data-name="Search blog" placeholder="Search blog..." type="text" id="Search-blog" required="" /></div>
+                      <h2 class="h3 blog fill [color:#fff] [text-wrap:balance] [font-family:Switzer,_sans-serif] [font-size:28px] [font-weight:500] [line-height:130%] [width:100%] [margin-top:64px] max-lg:[font-size:22px] max-sm:[font-size:18px]">All articles</h2>
+                      <div class="w-layout-hflex flex-h _40px [flex-direction:row] [align-items:flex-start] [display:flex] [grid-column-gap:40px] [grid-row-gap:40px] [align-self:baseline] max-lg:[grid-column-gap:40px] max-lg:[grid-row-gap:40px] max-lg:[flex-flow:wrap] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr_1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:flex] max-landscape:[grid-template-columns:1fr_1fr] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:1fr_1fr] max-sm:[grid-auto-columns:1fr] max-sm:[display:flex] max-sm:[flex-flow:row] max-sm:[overflow:auto]"><label class="radio-filter fs-cmsfilter_active w-radio [display:block] [margin-bottom:0] [padding-left:0] [color:var(--pink)]">
+                          <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-filter-mark w-radio-input w--redirected-checked [margin:4px_0_0] [line-height:normal] [float:left] [margin-left:-20px] [margin-top:3px] [border:1px_solid_#ccc] [border-radius:50%] [width:12px] [height:12px] [display:none]"></div><input type="radio" name="filters" id="filter-2" data-name="filters" checked="" value="filter" class="[opacity:0] [position:absolute] [z-index:-1]" /><span fs-cmsfilter-field="category" class="radio-filter-text w-form-label [display:inline-block] [cursor:pointer] [font-weight:400] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [line-height:150%] max-sm:[font-size:13px]" for="filter-2">All</span>
+                        </label>
+                        <div class="filters-list-wrapper w-dyn-list">
+                          <div role="list" class="filters-list w-dyn-items [grid-column-gap:40px] [grid-row-gap:40px] [justify-content:flex-start] [align-items:center] [display:flex] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px]">
+                            <div role="listitem" class="filters-list-item w-dyn-item max-lg:[flex:none] max-sm:[flex:none]"><label fs-cmsfilter-field="category" class="radio-filter w-radio [display:block] [margin-bottom:0] [padding-left:0]">
+                                <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-filter-mark w-radio-input [margin:4px_0_0] [line-height:normal] [float:left] [margin-left:-20px] [margin-top:3px] [border:1px_solid_#ccc] [border-radius:50%] [width:12px] [height:12px] [display:none]"></div><input type="radio" name="filters" id="filter" data-name="filters" fs-cmsfilter-field="category" value="filter" class="[opacity:0] [position:absolute] [z-index:-1]" /><span fs-cmsfilter-field="category" class="radio-filter-text w-dyn-bind-empty w-form-label [display:inline-block] [cursor:pointer] [font-weight:400] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [line-height:150%] max-sm:[font-size:13px]" for="filter"></span>
+                              </label></div>
+                          </div>
+                          <div class="w-dyn-empty [padding:10px] [background-color:#dddddd]">
+                            <div>No items found.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="w-form-done [display:none] [padding:20px] [text-align:center] [background-color:#dddddd]">
+                      <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="w-form-fail [display:none] [margin-top:10px] [padding:10px] [background-color:#ffdede]">
+                      <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-40 w-dyn-list [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [display:flex] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px]">
+                <div fs-cmsload-element="list" fs-cmsfilter-element="list" fs-cmsload-mode="pagination" role="list" class="collection-list w-dyn-items [grid-column-gap:40px] [grid-row-gap:40px] [grid-template-rows:auto] [grid-template-columns:1fr_1fr_1fr] [grid-auto-columns:1fr] [display:grid] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[flex-flow:wrap] max-lg:[grid-template-rows:auto] max-lg:[grid-template-columns:1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:grid] max-lg:[overflow:auto] max-landscape:[grid-template-columns:1fr] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px] max-sm:[flex-flow:column]">
+                  <div role="listitem" class="w-dyn-item">
+                    <div class="card-contaiiner fill no-bg [flex:1] [color:] [background-image:none] [border:0_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [justify-content:flex-start] [height:100%] [display:flex] [position:relative] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[border-radius:20px] max-lg:[flex-flow:column] max-lg:[order:1] max-lg:[display:flex] max-sm:[width:100%]">
+                      <a href="#" class="card w-inline-block [max-width:100%] [display:flex] [aspect-ratio:auto] [width:100%] [height:100%] [color:var(--white)] [cursor:pointer] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:16px] [flex-direction:column] [justify-content:center] [align-items:center] [padding:0] [text-decoration:none] [position:relative] max-lg:[border-radius:16px]">
+                        <div class="card-content [z-index:1] [opacity:1] [justify-content:flex-start] [align-items:stretch] [position:relative] [background-image:radial-gradient(circle_at_100%_-15%,_#140d24,_#0a0814_53%)] [border:1px_solid_#ffffff0d] [border-radius:13px] [flex-flow:column] [align-self:stretch] [width:auto] [height:auto] [overflow:hidden] max-sm:[width:100%]"><img data-meno-optimize="false" loading="lazy" src="/images/Frame-1707478606.avif" alt="" class="img-main-blog w-dyn-bind-empty [object-fit:cover] [border-radius:12px] [width:100%] [height:auto] max-lg:[width:100%]" />
+                          <div class="text-wrapper-card-blog [grid-column-gap:4px] [grid-row-gap:4px] [flex-flow:column] [align-items:flex-start] [height:100%] [padding:24px_24px_32px] [display:flex]">
+                            <div class="gap-16-blog [z-index:111] [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [align-items:flex-start] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px] max-lg:[width:100%] max-landscape:[grid-column-gap:16px] max-landscape:[grid-row-gap:16px]">
+                              <div fs-cmsfilter-field="category" class="vanish [display:none]">All</div>
+                              <div fs-cmsfilter-field="category" class="text-14-150 text-color-purple w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [color:#726eff] max-landscape:[font-size:13px]"></div>
+                              <div fs-cmsfilter-field="title" class="h4 w-dyn-bind-empty [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:20px] [font-weight:600] [line-height:120%] max-sm:[font-size:18px]"></div>
+                            </div>
+                            <div class="author-description-blog [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [height:100%] [display:flex]">
+                              <p class="text-16-150 opacity-80 w-dyn-bind-empty [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:400] [line-height:150%] [opacity:.8] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]"></p>
+                              <div class="author_date-blog [grid-column-gap:4px] [grid-row-gap:4px] [margin-top:auto] [display:flex]">
+                                <div class="text-14-150 opacity-80 w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]"></div>
+                                <div class="text-14-150 opacity-80 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]">・</div>
+                                <div class="text-14-150 opacity-80 w-dyn-bind-empty [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [opacity:.8] [pointer-events:auto] [text-wrap:balance] max-landscape:[font-size:13px] max-lg:[font-size:13px]"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="empty-state w-dyn-empty [padding:10px] [background-color:#ddd0] [color:var(--untitled-ui--primary600)] [text-align:center]">
+                  <div>No items found.</div>
+                </div>
+                <div role="navigation" aria-label="List" class="w-pagination-wrapper arrow-wrapper [flex-wrap:wrap] [justify-content:center] [display:flex] [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:row] [align-items:stretch] [left:-30px]">
+                  <a href="#" aria-label="Previous Page" class="w-pagination-previous slider-arrow inline first [color:#fff] [background-color:#fafafa33] [border:1px_solid_#ffffff1a] [border-radius:8px] [margin-left:0] [margin-right:0] [padding:9px_20px] [font-size:14px] [display:flex] [justify-content:center] [align-items:center] [max-width:none] [max-height:48px] [order:-1] [padding-left:4px] [text-decoration:none] max-landscape:[margin-left:-48px] max-sm:[display:flex] max-sm:[inset:auto_0%_-10%]"><img data-meno-optimize="false" width="10" loading="lazy" alt="" src="/images/Arrow---Left.svg" class="image-26 [width:32px] [max-width:32px]" />
+                    <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Previous</div>
+                  </a>
+                  <a href="#" fs-cmsload-element="page-button" class="slider-arrow inline page-button [background-color:#ffffff1a] [border:1px_solid_#ffffff1a] [border-radius:8px] [justify-content:center] [align-items:center] [max-width:none] [max-height:48px] [margin-left:0] [display:flex] [margin-right:0] [color:#fff] [width:48px] [height:48px] [font-family:Switzer,_sans-serif] [font-size:18px] [font-weight:400] [text-decoration:none] max-landscape:[margin-left:-48px] max-sm:[display:none] max-sm:[inset:auto_0%_-10%]">1</a>
+                  <a href="#" aria-label="Next Page" class="w-pagination-next slider-arrow inline last [color:#fff] [background-color:#fafafa00] [border:1px_solid_#ffffff1a] [border-radius:8px] [margin-left:0] [margin-right:0] [padding:9px_20px] [font-size:14px] [display:flex] [justify-content:center] [align-items:center] [max-width:none] [max-height:48px] [background-image:linear-gradient(-90deg,_#581de3,_#726eff)] [order:1] [padding-right:4px] [text-decoration:none] max-landscape:[margin-left:-48px] max-sm:[display:flex] max-sm:[inset:auto_0%_-10%]">
+                    <div class="text-14-150 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:13px]">Next</div><img data-meno-optimize="false" loading="lazy" src="/images/Arrow---Right.svg" alt="" class="image-26 [width:32px] [max-width:32px]" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section-cta [padding-top:80px] [padding-bottom:80px] [overflow:hidden] max-lg:[margin-top:0] max-lg:[padding-top:20px] max-lg:[padding-bottom:56px] max-landscape:[padding-top:0] max-landscape:[padding-bottom:80px] max-sm:[margin-top:0] max-sm:[padding-bottom:56px]">
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="wrapper-process [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [display:flex] max-landscape:[grid-column-gap:40px] max-landscape:[grid-row-gap:40px] max-sm:[grid-column-gap:32px] max-sm:[grid-row-gap:32px]">
+            <div class="contact-card [background-image:url('../images/offer-bg_1.avif')] [background-position:50%] [background-size:cover] [border:1px_solid_#ffffff1a] [border-radius:20px] [height:500px] [padding:0_0_0_64px] [transition:all_.2s] [overflow:hidden] max-lg:[height:auto] max-lg:[padding:24px] max-sm:[padding-bottom:16px] max-sm:[padding-left:16px] max-sm:[padding-right:16px]">
+              <div class="contact-wrapper [grid-column-gap:84px] [grid-row-gap:84px] [flex-flow:row] [grid-template-rows:auto] [grid-template-columns:1fr_1fr] [grid-auto-columns:1fr] [align-content:center] [height:100%] [display:grid] max-lg:[grid-column-gap:16px] max-lg:[grid-row-gap:16px] max-lg:[flex-flow:column] max-lg:[display:flex]">
+                <div class="contact-content [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [justify-content:center] [align-items:stretch] [padding-top:64px] [padding-bottom:64px] [display:flex] max-lg:[grid-column-gap:20px] max-lg:[grid-row-gap:20px] max-lg:[order:1] max-lg:[padding-top:32px] max-lg:[padding-bottom:0] max-sm:[padding-top:0]">
+                  <div class="gap-12 [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex]">
+                    <p class="text-caps weight-regular center-small [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] max-landscape:[font-size:12px] max-sm:[font-size:10px] max-sm:[align-self:stretch] max-sm:[position:relative] max-lg:[text-align:center]">Contact Us</p>
+                    <h2 class="h2 center-small [color:#fff] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:44px] [font-weight:600] [line-height:120%] max-lg:[font-size:40px] max-lg:[text-align:center] max-sm:[text-align:center] max-sm:[font-size:28px]">Ready to elevate your brand? Contact us for your <br /><span class="span [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,_#ff13bb,_#e225ff_40%,_#5a55ff)] [-webkit-background-clip:text] [background-clip:text] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)]">Free Video Sample</span></h2>
+                  </div>
+                  <div class="wrap-btn-price left [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] [align-items:center] [padding-top:12px] [padding-bottom:12px] [display:flex] max-lg:[flex-flow:column] max-lg:[justify-content:center] max-lg:[align-items:center] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-sm:[text-align:center] max-sm:[flex-flow:column] max-sm:[justify-content:flex-start] max-sm:[align-items:center]">
+                    <div data-w-id="3e6cbf2e-007d-7623-22f4-04c01a120a13" class="glowing-wrapper glowing-wrapper-active gradient [border-radius:62.5rem] [display:inline-block] [position:relative] [overflow:hidden] [background-image:linear-gradient(90deg,_#ff008e,_#ff4dcb)] [-webkit-text-fill-color:inherit] [-webkit-background-clip:text] [background-clip:border-box] max-landscape:[background-image:linear-gradient(90deg,_#cd1bcc,_#8f3be8)] max-sm:[background-image:linear-gradient(90deg,_#cd1bcc_25%,_#726eff)] max-sm:[width:fit-content]">
+                      <div class="glowing-wrapper-borders-masker [opacity:0] [border-radius:62.5rem] [width:100%] [padding:.06rem] [line-height:100%] [transition:opacity_1s] [position:absolute] [top:0] [left:0]">
+                        <div class="glowing-wrapper-borders [opacity:1] [width:100%] [position:absolute] [top:50%] [left:50%] [transform:translate(-50%,_-50%)]"></div>
+                      </div>
+                      <a href="/get-free-sample" class="glowing-wrapper-button w-inline-block [max-width:100%] [display:inline-flex] [z-index:1] [grid-column-gap:6px] [grid-row-gap:6px] [color:#fff] [letter-spacing:-.01em] [background-color:#3898ec00] [border:1px_solid_#ffffff1a] [border-radius:62.5rem] [justify-content:center] [align-items:center] [padding:12px_24px] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:500] [line-height:1.42] [text-decoration:none] [position:relative] max-lg:[width:100%] max-sm:[width:100%]">
+                        <div class="text-block rel align-center-middle [color:var(--white)] [text-decoration:none] [z-index:2] [position:relative] [text-align:center] max-landscape:[justify-content:center] max-landscape:[align-items:center] max-landscape:[display:flex] max-sm:[text-align:center] max-sm:[font-size:13px] max-sm:[line-height:120%]">Get free sample</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div id="w-node-_689daa7a-6ff0-ee2f-8803-e88f00aaa33f-00aaa32f" class="contact-image-wrapper [width:100%] [padding-right:60px] [overflow:hidden] max-sm:[grid-column-gap:16px] max-sm:[grid-row-gap:16px] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:1fr_1fr] max-sm:[grid-auto-columns:1fr] max-sm:[justify-content:flex-start] max-sm:[width:100%] max-sm:[display:flex] max-sm:[overflow:hidden]"><img data-meno-optimize="false" loading="lazy" src="/images/contact-img_1.avif" alt="A smart phone with a credit card next to it" class="img-100 img-tabs [border-bottom-right-radius:12px] [border-bottom-left-radius:12px] [width:100%] [min-width:111%] [min-height:1rem] max-lg:[width:100%] max-lg:[min-width:100%] max-lg:[margin-bottom:12px] max-landscape:[min-width:100%] max-sm:[width:114%] max-sm:[min-width:114%]" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+      <div class="css [display:none]">
+        <div class="button-css w-embed [display:none]">
+          <Embed html={__embed0} />
+        </div>
+        <div class="custom-styles w-embed [display:none]">
+          <Embed html={__embed1} />
+        </div>
+        <div class="code-embed-2 w-embed w-script [display:none]">
+          <Embed html={__embed2} />
+        </div>
+        <div class="global-style w-embed [display:none]">
+          <Embed html={__embed3} />
         </div>
       </div>
     </div>
   </div>
+</div>
 </BaseLayout>

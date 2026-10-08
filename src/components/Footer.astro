@@ -1,15 +1,8 @@
 ---
-// Shared Webflow footer section. Extracted from the export; markup kept verbatim.
-// `w--current` / aria-current are computed per page, matching what Webflow bakes into each export.
-import { isCurrentPath } from '../lib/current';
-const current = (href: string) => isCurrentPath(href, Astro.url.pathname);
----
-<section class="section-footer">
-        <div class="w-layout-blockcontainer container-1280 container-breadcrumb w-container">
-          <nav id="js-breadcrumb" aria-label="Breadcrumb" class="div-block-65 dynamic-breadcrumb">
-            <ol role="list" class="list-6 dynamic-breadcrumb__items text-caps w-list-unstyled"></ol>
-            <div class="w-embed w-script">
-              <script is:inline>
+import { resolveProps, cx } from 'meno-astro';
+import { Embed } from 'meno-astro/components';
+const { class: className } = resolveProps(Astro, {});
+const __embed0 = `<script>
 (function () {
   function initBreadcrumb() {
     var container = document.getElementById('js-breadcrumb');
@@ -110,168 +103,179 @@ const current = (href: string) => isCurrentPath(href, Astro.url.pathname);
     initBreadcrumb();
   }
 })();
-</script>
+</script>`;
+const __embed1 = `<style>
+.link-contact-call {
+    color: white !important;
+}
+</style>`;
+const __embed2 = `<script>(function(a,b,c,d){window.fetch("https://www.g2.com/products/motion-the-agency/rating_schema.json").then(e=>e.json()).then(f=>{c=a.createElement(b);c.type="application/ld+json";c.text=JSON.stringify(f);d=a.getElementsByTagName(b)[0];d.parentNode.insertBefore(c,d);});})(document,"script");</script>`;
+const __embed3 = `<script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>`;
+const __embed4 = `<style>
+.item-contact {
+    color: white !important;
+}
+</style>`;
+---
+<section class={cx("section-footer [background-image:url('../images/Footer---BG-2-1_1.avif')] [background-position:50%_0] [background-repeat:no-repeat] [background-size:cover] [order:9999] [padding-top:24px] [overflow:hidden] max-lg:[padding-top:0]", className)}>
+        <div class="w-layout-blockcontainer container-1280 container-breadcrumb w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] [margin-bottom:60px] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-lg:[margin-bottom:20px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px] max-landscape:[margin-bottom:0]">
+          <nav id="js-breadcrumb" aria-label="Breadcrumb" class="div-block-65 dynamic-breadcrumb [display:flex] [position:relative]">
+            <ol role="list" class="list-6 dynamic-breadcrumb__items text-caps w-list-unstyled [padding-left:0] [list-style:none] [color:#fff9] [letter-spacing:4.2px] [text-transform:uppercase] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [text-decoration:none] [list-style-type:none] [display:flex] [margin-bottom:0] [position:relative] max-landscape:[font-size:12px] max-sm:[font-size:10px]"></ol>
+            <div class="w-embed w-script">
+              <Embed html={__embed0} />
             </div>
           </nav>
         </div>
-        <div class="w-layout-blockcontainer container-1280 w-container">
-          <div class="wrapper-footer">
-            <div class="column-1">
-              <div class="w-layout-vflex"><img src="/images/Link-%E2%86%92-cropped-motion-logo-png-04-1-1024x293.png.avif" loading="lazy" alt="motion the agency logo light mode" class="image-5">
-                <div class="text-14-150 footer">We bring ideas to life with bold motion graphics, 2D/3D animation, UI Design, and Lottie Animations. <br>Helping tech &amp; SaaS brands stand out.</div>
+        <div class="w-layout-blockcontainer container-1280 w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-sm:[max-width:none] max-sm:[padding-top:40px] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:64px] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+          <div class="wrapper-footer [grid-column-gap:40px] [grid-row-gap:40px] [justify-content:space-between] [display:flex] max-lg:[grid-column-gap:0px] max-lg:[grid-row-gap:0px] max-lg:[flex-flow:column]">
+            <div class="column-1 [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [display:flex] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px] max-lg:[min-width:auto] max-lg:[margin-bottom:40px]">
+              <div class="w-layout-vflex [flex-direction:column] [align-items:flex-start] [display:flex]"><img data-meno-optimize="false" src="/images/Link-%E2%86%92-cropped-motion-logo-png-04-1-1024x293.png.avif" loading="lazy" alt="motion the agency logo light mode" class="image-5 [width:180px] [margin-left:-12px] max-lg:[margin-bottom:12px] max-lg:[margin-left:-10px] max-landscape:[margin-bottom:8px] max-sm:[width:140px]" />
+                <div class="text-14-150 footer [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [color:#fffc] [width:360px] max-landscape:[font-size:13px]">We bring ideas to life with bold motion graphics, 2D/3D animation, UI Design, and Lottie Animations. <br />Helping tech &amp; SaaS brands stand out.</div>
               </div>
-              <div class="social-link-block">
+              <div class="social-link-block [grid-column-gap:40px] [grid-row-gap:40px] [flex-flow:column] [display:flex]">
                 <div class="link-contact-call-wrapper">
-                  <a href="https://share.google/u2xcCUZKEpk2THYOp" class="link-contact-call w-inline-block">
-                    <div class="ic-1-call w-embed"><svg width="20" height="28" viewbox="0 0 20 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <a href="https://share.google/u2xcCUZKEpk2THYOp" class="link-contact-call w-inline-block [max-width:100%] [display:flex] [grid-column-gap:4px] [grid-row-gap:4px] [color:var(--white)] [align-items:center] [padding-top:8px] [padding-bottom:8px] [font-family:Switzer,_sans-serif] [font-size:14px] [line-height:120%] [text-decoration:none] [transition:all_.2s] hover:[color:#fffc] max-sm:[color:#fff]">
+                    <div class="ic-1-call w-embed [width:20px] [height:28px]"><svg width="20" height="28" viewbox="0 0 20 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.37501 5C7.5523 5.00215 5.80487 5.72717 4.51602 7.01602C3.22718 8.30486 2.50216 10.0523 2.50001 11.875C2.49782 13.3645 2.98437 14.8136 3.88501 16C3.88501 16 4.07251 16.2469 4.10313 16.2825L9.37501 22.5L14.6494 16.2794C14.6769 16.2463 14.865 16 14.865 16L14.8656 15.9981C15.7658 14.8123 16.2521 13.3638 16.25 11.875C16.2479 10.0523 15.5228 8.30486 14.234 7.01602C12.9451 5.72717 11.1977 5.00215 9.37501 5V5ZM9.37501 14.375C8.88055 14.375 8.3972 14.2284 7.98608 13.9537C7.57496 13.679 7.25453 13.2885 7.06531 12.8317C6.87609 12.3749 6.82658 11.8722 6.92304 11.3873C7.01951 10.9023 7.25761 10.4569 7.60724 10.1072C7.95687 9.7576 8.40233 9.5195 8.88728 9.42304C9.37223 9.32657 9.8749 9.37608 10.3317 9.5653C10.7885 9.75452 11.179 10.075 11.4537 10.4861C11.7284 10.8972 11.875 11.3805 11.875 11.875C11.8742 12.5378 11.6105 13.1732 11.1419 13.6419C10.6732 14.1105 10.0378 14.3742 9.37501 14.375V14.375Z" fill="currentColor"></path>
                       </svg></div>
                     <div>42-44 Bishopsgate, London, United Kingdom, EC2N 4AH</div>
                   </a>
-                  <a href="mailto:hello@motiontheagency.com" class="link-contact-call w-inline-block">
-                    <div class="ic-2-call w-embed"><svg width="20" height="24" viewbox="0 0 20 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <a href="mailto:hello@motiontheagency.com" class="link-contact-call w-inline-block [max-width:100%] [display:flex] [grid-column-gap:4px] [grid-row-gap:4px] [color:var(--white)] [align-items:center] [padding-top:8px] [padding-bottom:8px] [font-family:Switzer,_sans-serif] [font-size:14px] [line-height:120%] [text-decoration:none] [transition:all_.2s] hover:[color:#fffc] max-sm:[color:#fff]">
+                    <div class="ic-2-call w-embed [width:20px] [height:24px]"><svg width="20" height="24" viewbox="0 0 20 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.5891 9.97266C16.6984 9.89062 16.8625 9.97266 16.8625 10.1094V15.6875C16.8625 16.4258 16.2609 17 15.55 17H4.175C3.43672 17 2.8625 16.4258 2.8625 15.6875V10.1094C2.8625 9.97266 2.99922 9.89062 3.10859 9.97266C3.7375 10.4648 4.53047 11.0664 7.31953 13.0898C7.89375 13.5 8.87813 14.4023 9.8625 14.4023C10.8195 14.4023 11.8313 13.5 12.3781 13.0898C15.1672 11.0664 15.9602 10.4648 16.5891 9.97266ZM9.8625 13.5C9.20625 13.5273 8.30391 12.707 7.83906 12.3789C4.20234 9.75391 3.92891 9.50781 3.10859 8.85156C2.94453 8.74219 2.8625 8.55078 2.8625 8.33203V7.8125C2.8625 7.10156 3.43672 6.5 4.175 6.5H15.55C16.2609 6.5 16.8625 7.10156 16.8625 7.8125V8.33203C16.8625 8.55078 16.7531 8.74219 16.5891 8.85156C15.7688 9.50781 15.4953 9.75391 11.8586 12.3789C11.3938 12.707 10.4914 13.5273 9.8625 13.5Z" fill="currentColor"></path>
                       </svg></div>
                     <div>hello@motiontheagency.com</div>
                   </a>
-                  <div class="text-white-embed w-embed">
-                    <style is:inline>
-.link-contact-call {
-    color: white !important;
-}
-</style>
+                  <div class="text-white-embed w-embed max-sm:[display:none]">
+                    <Embed html={__embed1} />
                   </div>
                 </div>
               </div>
-              <div class="w-layout-hflex flex-h _16 mobile-h">
-                <div class="code-embed-9 w-embed w-script">
-                  <a href="https://www.g2.com/products/motion-the-agency/reviews?utm_source=review-widget" title="Read reviews of Motion The Agency on G2"><img class="full-width" style="max-width: 140px" alt="Read Motion The Agency reviews on G2" src="https://www.g2.com/products/motion-the-agency/widgets/stars?color=white&amp;type=read"></a>
-                  <script is:inline>(function(a,b,c,d){window.fetch("https://www.g2.com/products/motion-the-agency/rating_schema.json").then(e=>e.json()).then(f=>{c=a.createElement(b);c.type="application/ld+json";c.text=JSON.stringify(f);d=a.getElementsByTagName(b)[0];d.parentNode.insertBefore(c,d);});})(document,"script");</script>
+              <div class="w-layout-hflex flex-h _16 mobile-h [flex-direction:row] [align-items:center] [display:flex] [grid-column-gap:16px] [grid-row-gap:16px] [align-self:baseline] [flex:1] [justify-content:flex-start] max-lg:[grid-column-gap:40px] max-lg:[grid-row-gap:40px] max-lg:[flex-flow:wrap] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr_1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:flex] max-landscape:[grid-template-columns:1fr_1fr] max-sm:[grid-column-gap:8px] max-sm:[grid-row-gap:8px] max-sm:[grid-template-rows:auto] max-sm:[grid-template-columns:1fr_1fr] max-sm:[grid-auto-columns:1fr] max-sm:[display:flex] max-sm:[justify-items:start] max-sm:[flex-flow:row] max-sm:[width:100%]">
+                <div class="code-embed-9 w-embed w-script [max-width:200px] [margin-top:8px] [margin-bottom:12px] max-sm:[width:100%]">
+                  <a href="https://www.g2.com/products/motion-the-agency/reviews?utm_source=review-widget" title="Read reviews of Motion The Agency on G2"><img data-meno-optimize="false" class="full-width [max-width:140px]" alt="Read Motion The Agency reviews on G2" src="https://www.g2.com/products/motion-the-agency/widgets/stars?color=white&amp;type=read" /></a>
+                  <Embed html={__embed2} />
                 </div>
-                <div class="code-embed-9 w-embed w-script">
-                  <script is:inline type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>
+                <div class="code-embed-9 w-embed w-script [max-width:200px] [margin-top:8px] [margin-bottom:12px] max-sm:[width:100%]">
+                  <Embed html={__embed3} />
                   <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="2" data-height="45" data-nofollow="true" data-expandifr="true" data-darkbg="darkbg" data-clutchcompany-id="1917615"></div>
                 </div>
               </div>
-              <div class="w-layout-hflex flex-v gap-16 left-align">
-                <div class="w-layout-hflex flex-h _12"><img src="/images/sparkIcon.svg" loading="lazy" alt="" class="ic-24">
-                  <div class="w-layout-hflex flex-h _8 v-mobile">
-                    <div class="heading-16-120">Ask AI about us!</div>
-                    <div class="text-14-150 _64">Get an instant, unbiased summary!</div>
+              <div class="w-layout-hflex flex-v gap-16 left-align [flex-direction:row] [align-items:flex-start] [display:flex] [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [max-width:600px] [justify-content:center] [align-self:flex-start] max-lg:[max-width:100%] max-lg:[width:100%] max-lg:[height:100%] max-lg:[text-align:left]">
+                <div class="w-layout-hflex flex-h _12 [flex-direction:row] [align-items:center] [display:flex] [grid-column-gap:8px] [grid-row-gap:8px] [align-self:auto] [justify-content:center] max-lg:[grid-column-gap:12px] max-lg:[grid-row-gap:12px] max-lg:[flex-flow:row] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr_1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:flex] max-landscape:[grid-template-columns:1fr_1fr] max-sm:[grid-column-gap:20px] max-sm:[grid-row-gap:32px] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:1fr_1fr] max-sm:[grid-auto-columns:1fr] max-sm:[display:flex]"><img data-meno-optimize="false" src="/images/sparkIcon.svg" loading="lazy" alt="" class="ic-24 [width:24px] [height:24px]" />
+                  <div class="w-layout-hflex flex-h _8 v-mobile [flex-direction:row] [align-items:center] [display:flex] [grid-column-gap:8px] [grid-row-gap:8px] [align-self:auto] [justify-content:center] max-lg:[grid-column-gap:40px] max-lg:[grid-row-gap:40px] max-lg:[flex-flow:row] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr_1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:flex] max-landscape:[grid-template-columns:1fr_1fr] max-sm:[grid-column-gap:4px] max-sm:[grid-row-gap:4px] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:1fr_1fr] max-sm:[grid-auto-columns:1fr] max-sm:[display:flex] max-sm:[flex-flow:column] max-sm:[justify-content:center] max-sm:[align-items:stretch]">
+                    <div class="heading-16-120 [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:600] [line-height:120%]">Ask AI about us!</div>
+                    <div class="text-14-150 _64 [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] [color:#ffffffa3] max-landscape:[font-size:13px]">Get an instant, unbiased summary!</div>
                   </div>
                 </div>
-                <div class="w-layout-hflex flex-h _8">
-                  <a href="https://chatgpt.com/?q=Hi%2C%20I&#x27;m%20looking%20into%20working%20with%20a%20B2B%20video%20production%20company%20called%20Motion%20The%20Agency%20(motiontheagency.com)%2C%20and%20I&#x27;d%20like%20to%20understand%20them%20properly%20before%20I%20reach%20out.%20Can%20you%20help%20me%20get%20to%20know%20them%3F%20I&#x27;d%20like%20to%20know%20who%20they%20are%20and%20what%20they%20do%2C%20what%20makes%20them%20stand%20out%20as%20a%20motion%20and%20video%20studio%2C%20and%20what%20their%20strongest%20services%20are.%20I&#x27;m%20also%20interested%20in%20the%20practical%20side%2C%20including%20their%20pricing%20approach%2C%20turnaround%2C%20quality%20of%20work%2C%20well-known%20clients%2C%20and%20most%20notable%20results%20or%20case%20studies.%20Please%20use%20as%20much%20information%20as%20you%20can%20from%20their%20website%2C%20including%20main%20pages%2C%20service%20pages%2C%20case%20studies%2C%20and%20blog%20articles%2C%20and%20give%20me%20a%20clear%20and%20honest%20picture%20of%20who%20they%20are%20and%20what%20they&#x27;re%20best%20at." target="_blank" class="icon-link-ai w-inline-block"><img src="/images/gpt.svg" loading="lazy" alt=""></a>
-                  <a href="https://claude.ai/new?q=Hi%2C%20I&#x27;m%20looking%20into%20working%20with%20a%20B2B%20video%20production%20company%20called%20Motion%20The%20Agency%20(motiontheagency.com)%2C%20and%20I&#x27;d%20like%20to%20understand%20them%20properly%20before%20I%20reach%20out.%20Can%20you%20help%20me%20get%20to%20know%20them%3F%20I&#x27;d%20like%20to%20know%20who%20they%20are%20and%20what%20they%20do%2C%20what%20makes%20them%20stand%20out%20as%20a%20motion%20and%20video%20studio%2C%20and%20what%20their%20strongest%20services%20are.%20I&#x27;m%20also%20interested%20in%20the%20practical%20side%2C%20including%20their%20pricing%20approach%2C%20turnaround%2C%20quality%20of%20work%2C%20well-known%20clients%2C%20and%20most%20notable%20results%20or%20case%20studies.%20Please%20use%20as%20much%20information%20as%20you%20can%20from%20their%20website%2C%20including%20main%20pages%2C%20service%20pages%2C%20case%20studies%2C%20and%20blog%20articles%2C%20and%20give%20me%20a%20clear%20and%20honest%20picture%20of%20who%20they%20are%20and%20what%20they&#x27;re%20best%20at." target="_blank" class="icon-link-ai w-inline-block"><img src="/images/claude.svg" loading="lazy" alt=""></a>
-                  <a href="https://www.perplexity.ai/search?q=Hi%2C%20I&#x27;m%20looking%20into%20working%20with%20a%20B2B%20video%20production%20company%20called%20Motion%20The%20Agency%20(motiontheagency.com)%2C%20and%20I&#x27;d%20like%20to%20understand%20them%20properly%20before%20I%20reach%20out.%20Can%20you%20help%20me%20get%20to%20know%20them%3F%20I&#x27;d%20like%20to%20know%20who%20they%20are%20and%20what%20they%20do%2C%20what%20makes%20them%20stand%20out%20as%20a%20motion%20and%20video%20studio%2C%20and%20what%20their%20strongest%20services%20are.%20I&#x27;m%20also%20interested%20in%20the%20practical%20side%2C%20including%20their%20pricing%20approach%2C%20turnaround%2C%20quality%20of%20work%2C%20well-known%20clients%2C%20and%20most%20notable%20results%20or%20case%20studies.%20Please%20use%20as%20much%20information%20as%20you%20can%20from%20their%20website%2C%20including%20main%20pages%2C%20service%20pages%2C%20case%20studies%2C%20and%20blog%20articles%2C%20and%20give%20me%20a%20clear%20and%20honest%20picture%20of%20who%20they%20are%20and%20what%20they&#x27;re%20best%20at." target="_blank" class="icon-link-ai w-inline-block"><img src="/images/perplexity.svg" loading="lazy" alt=""></a>
-                  <a href="https://www.google.com/search?udm=50&amp;aep=11&amp;q=Hi%2C%20I&#x27;m%20looking%20into%20working%20with%20a%20B2B%20video%20production%20company%20called%20Motion%20The%20Agency%20(motiontheagency.com)%2C%20and%20I&#x27;d%20like%20to%20understand%20them%20properly%20before%20I%20reach%20out.%20Can%20you%20help%20me%20get%20to%20know%20them%3F%20I&#x27;d%20like%20to%20know%20who%20they%20are%20and%20what%20they%20do%2C%20what%20makes%20them%20stand%20out%20as%20a%20motion%20and%20video%20studio%2C%20and%20what%20their%20strongest%20services%20are.%20I&#x27;m%20also%20interested%20in%20the%20practical%20side%2C%20including%20their%20pricing%20approach%2C%20turnaround%2C%20quality%20of%20work%2C%20well-known%20clients%2C%20and%20most%20notable%20results%20or%20case%20studies.%20Please%20use%20as%20much%20information%20as%20you%20can%20from%20their%20website%2C%20including%20main%20pages%2C%20service%20pages%2C%20case%20studies%2C%20and%20blog%20articles%2C%20and%20give%20me%20a%20clear%20and%20honest%20picture%20of%20who%20they%20are%20and%20what%20they&#x27;re%20best%20at." target="_blank" class="icon-link-ai w-inline-block"><img src="/images/gemini.svg" loading="lazy" alt=""></a>
-                  <a href="https://grok.com/?q=Hi%2C%20I&#x27;m%20looking%20into%20working%20with%20a%20B2B%20video%20production%20company%20called%20Motion%20The%20Agency%20(motiontheagency.com)%2C%20and%20I&#x27;d%20like%20to%20understand%20them%20properly%20before%20I%20reach%20out.%20Can%20you%20help%20me%20get%20to%20know%20them%3F%20I&#x27;d%20like%20to%20know%20who%20they%20are%20and%20what%20they%20do%2C%20what%20makes%20them%20stand%20out%20as%20a%20motion%20and%20video%20studio%2C%20and%20what%20their%20strongest%20services%20are.%20I&#x27;m%20also%20interested%20in%20the%20practical%20side%2C%20including%20their%20pricing%20approach%2C%20turnaround%2C%20quality%20of%20work%2C%20well-known%20clients%2C%20and%20most%20notable%20results%20or%20case%20studies.%20Please%20use%20as%20much%20information%20as%20you%20can%20from%20their%20website%2C%20including%20main%20pages%2C%20service%20pages%2C%20case%20studies%2C%20and%20blog%20articles%2C%20and%20give%20me%20a%20clear%20and%20honest%20picture%20of%20who%20they%20are%20and%20what%20they&#x27;re%20best%20at." target="_blank" class="icon-link-ai w-inline-block"><img src="/images/grok.svg" loading="lazy" alt=""></a>
+                <div class="w-layout-hflex flex-h _8 [flex-direction:row] [align-items:center] [display:flex] [grid-column-gap:8px] [grid-row-gap:8px] [align-self:auto] [justify-content:center] max-lg:[grid-column-gap:40px] max-lg:[grid-row-gap:40px] max-lg:[flex-flow:row] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr_1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:flex] max-landscape:[grid-template-columns:1fr_1fr] max-sm:[grid-column-gap:20px] max-sm:[grid-row-gap:32px] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:1fr_1fr] max-sm:[grid-auto-columns:1fr] max-sm:[display:flex]">
+                  <a href="https://chatgpt.com/?q=Hi%2C%20I&#x27;m%20looking%20into%20working%20with%20a%20B2B%20video%20production%20company%20called%20Motion%20The%20Agency%20(motiontheagency.com)%2C%20and%20I&#x27;d%20like%20to%20understand%20them%20properly%20before%20I%20reach%20out.%20Can%20you%20help%20me%20get%20to%20know%20them%3F%20I&#x27;d%20like%20to%20know%20who%20they%20are%20and%20what%20they%20do%2C%20what%20makes%20them%20stand%20out%20as%20a%20motion%20and%20video%20studio%2C%20and%20what%20their%20strongest%20services%20are.%20I&#x27;m%20also%20interested%20in%20the%20practical%20side%2C%20including%20their%20pricing%20approach%2C%20turnaround%2C%20quality%20of%20work%2C%20well-known%20clients%2C%20and%20most%20notable%20results%20or%20case%20studies.%20Please%20use%20as%20much%20information%20as%20you%20can%20from%20their%20website%2C%20including%20main%20pages%2C%20service%20pages%2C%20case%20studies%2C%20and%20blog%20articles%2C%20and%20give%20me%20a%20clear%20and%20honest%20picture%20of%20who%20they%20are%20and%20what%20they&#x27;re%20best%20at." target="_blank" class="icon-link-ai w-inline-block [max-width:100%] [display:flex] [border:0px_solid_var(--untitled-ui--primary700)] [background-color:#ffffff08] [border-radius:8px] [justify-content:center] [align-items:center] [width:48px] [height:48px] [transition:opacity_.1s_cubic-bezier(.645,_.045,_.355,_1),_border-width_.1s_cubic-bezier(.645,_.045,_.355,_1)] [position:relative] [overflow:hidden] hover:[opacity:.64] hover:[background-color:#ffffff08] hover:[border-width:2px]"><img src="/images/gpt.svg" loading="lazy" alt="" /></a>
+                  <a href="https://claude.ai/new?q=Hi%2C%20I&#x27;m%20looking%20into%20working%20with%20a%20B2B%20video%20production%20company%20called%20Motion%20The%20Agency%20(motiontheagency.com)%2C%20and%20I&#x27;d%20like%20to%20understand%20them%20properly%20before%20I%20reach%20out.%20Can%20you%20help%20me%20get%20to%20know%20them%3F%20I&#x27;d%20like%20to%20know%20who%20they%20are%20and%20what%20they%20do%2C%20what%20makes%20them%20stand%20out%20as%20a%20motion%20and%20video%20studio%2C%20and%20what%20their%20strongest%20services%20are.%20I&#x27;m%20also%20interested%20in%20the%20practical%20side%2C%20including%20their%20pricing%20approach%2C%20turnaround%2C%20quality%20of%20work%2C%20well-known%20clients%2C%20and%20most%20notable%20results%20or%20case%20studies.%20Please%20use%20as%20much%20information%20as%20you%20can%20from%20their%20website%2C%20including%20main%20pages%2C%20service%20pages%2C%20case%20studies%2C%20and%20blog%20articles%2C%20and%20give%20me%20a%20clear%20and%20honest%20picture%20of%20who%20they%20are%20and%20what%20they&#x27;re%20best%20at." target="_blank" class="icon-link-ai w-inline-block [max-width:100%] [display:flex] [border:0px_solid_var(--untitled-ui--primary700)] [background-color:#ffffff08] [border-radius:8px] [justify-content:center] [align-items:center] [width:48px] [height:48px] [transition:opacity_.1s_cubic-bezier(.645,_.045,_.355,_1),_border-width_.1s_cubic-bezier(.645,_.045,_.355,_1)] [position:relative] [overflow:hidden] hover:[opacity:.64] hover:[background-color:#ffffff08] hover:[border-width:2px]"><img src="/images/claude.svg" loading="lazy" alt="" /></a>
+                  <a href="https://www.perplexity.ai/search?q=Hi%2C%20I&#x27;m%20looking%20into%20working%20with%20a%20B2B%20video%20production%20company%20called%20Motion%20The%20Agency%20(motiontheagency.com)%2C%20and%20I&#x27;d%20like%20to%20understand%20them%20properly%20before%20I%20reach%20out.%20Can%20you%20help%20me%20get%20to%20know%20them%3F%20I&#x27;d%20like%20to%20know%20who%20they%20are%20and%20what%20they%20do%2C%20what%20makes%20them%20stand%20out%20as%20a%20motion%20and%20video%20studio%2C%20and%20what%20their%20strongest%20services%20are.%20I&#x27;m%20also%20interested%20in%20the%20practical%20side%2C%20including%20their%20pricing%20approach%2C%20turnaround%2C%20quality%20of%20work%2C%20well-known%20clients%2C%20and%20most%20notable%20results%20or%20case%20studies.%20Please%20use%20as%20much%20information%20as%20you%20can%20from%20their%20website%2C%20including%20main%20pages%2C%20service%20pages%2C%20case%20studies%2C%20and%20blog%20articles%2C%20and%20give%20me%20a%20clear%20and%20honest%20picture%20of%20who%20they%20are%20and%20what%20they&#x27;re%20best%20at." target="_blank" class="icon-link-ai w-inline-block [max-width:100%] [display:flex] [border:0px_solid_var(--untitled-ui--primary700)] [background-color:#ffffff08] [border-radius:8px] [justify-content:center] [align-items:center] [width:48px] [height:48px] [transition:opacity_.1s_cubic-bezier(.645,_.045,_.355,_1),_border-width_.1s_cubic-bezier(.645,_.045,_.355,_1)] [position:relative] [overflow:hidden] hover:[opacity:.64] hover:[background-color:#ffffff08] hover:[border-width:2px]"><img src="/images/perplexity.svg" loading="lazy" alt="" /></a>
+                  <a href="https://www.google.com/search?udm=50&amp;aep=11&amp;q=Hi%2C%20I&#x27;m%20looking%20into%20working%20with%20a%20B2B%20video%20production%20company%20called%20Motion%20The%20Agency%20(motiontheagency.com)%2C%20and%20I&#x27;d%20like%20to%20understand%20them%20properly%20before%20I%20reach%20out.%20Can%20you%20help%20me%20get%20to%20know%20them%3F%20I&#x27;d%20like%20to%20know%20who%20they%20are%20and%20what%20they%20do%2C%20what%20makes%20them%20stand%20out%20as%20a%20motion%20and%20video%20studio%2C%20and%20what%20their%20strongest%20services%20are.%20I&#x27;m%20also%20interested%20in%20the%20practical%20side%2C%20including%20their%20pricing%20approach%2C%20turnaround%2C%20quality%20of%20work%2C%20well-known%20clients%2C%20and%20most%20notable%20results%20or%20case%20studies.%20Please%20use%20as%20much%20information%20as%20you%20can%20from%20their%20website%2C%20including%20main%20pages%2C%20service%20pages%2C%20case%20studies%2C%20and%20blog%20articles%2C%20and%20give%20me%20a%20clear%20and%20honest%20picture%20of%20who%20they%20are%20and%20what%20they&#x27;re%20best%20at." target="_blank" class="icon-link-ai w-inline-block [max-width:100%] [display:flex] [border:0px_solid_var(--untitled-ui--primary700)] [background-color:#ffffff08] [border-radius:8px] [justify-content:center] [align-items:center] [width:48px] [height:48px] [transition:opacity_.1s_cubic-bezier(.645,_.045,_.355,_1),_border-width_.1s_cubic-bezier(.645,_.045,_.355,_1)] [position:relative] [overflow:hidden] hover:[opacity:.64] hover:[background-color:#ffffff08] hover:[border-width:2px]"><img src="/images/gemini.svg" loading="lazy" alt="" /></a>
+                  <a href="https://grok.com/?q=Hi%2C%20I&#x27;m%20looking%20into%20working%20with%20a%20B2B%20video%20production%20company%20called%20Motion%20The%20Agency%20(motiontheagency.com)%2C%20and%20I&#x27;d%20like%20to%20understand%20them%20properly%20before%20I%20reach%20out.%20Can%20you%20help%20me%20get%20to%20know%20them%3F%20I&#x27;d%20like%20to%20know%20who%20they%20are%20and%20what%20they%20do%2C%20what%20makes%20them%20stand%20out%20as%20a%20motion%20and%20video%20studio%2C%20and%20what%20their%20strongest%20services%20are.%20I&#x27;m%20also%20interested%20in%20the%20practical%20side%2C%20including%20their%20pricing%20approach%2C%20turnaround%2C%20quality%20of%20work%2C%20well-known%20clients%2C%20and%20most%20notable%20results%20or%20case%20studies.%20Please%20use%20as%20much%20information%20as%20you%20can%20from%20their%20website%2C%20including%20main%20pages%2C%20service%20pages%2C%20case%20studies%2C%20and%20blog%20articles%2C%20and%20give%20me%20a%20clear%20and%20honest%20picture%20of%20who%20they%20are%20and%20what%20they&#x27;re%20best%20at." target="_blank" class="icon-link-ai w-inline-block [max-width:100%] [display:flex] [border:0px_solid_var(--untitled-ui--primary700)] [background-color:#ffffff08] [border-radius:8px] [justify-content:center] [align-items:center] [width:48px] [height:48px] [transition:opacity_.1s_cubic-bezier(.645,_.045,_.355,_1),_border-width_.1s_cubic-bezier(.645,_.045,_.355,_1)] [position:relative] [overflow:hidden] hover:[opacity:.64] hover:[background-color:#ffffff08] hover:[border-width:2px]"><img src="/images/grok.svg" loading="lazy" alt="" /></a>
                 </div>
               </div>
             </div>
-            <div class="flex-h _40px footer">
-              <div id="w-node-cdc59cc7-9dd5-0b1e-461b-3643144b04ed-144b04dc" class="column-3">
-                <div class="gap-16">
-                  <div class="text-16-150 weight-bold">Animation services</div>
-                  <div class="list">
-                    <a aria-current={current("/services/ui-animation") ? "page" : undefined} href="/services/ui-animation" class:list={["footer-link", current("/services/ui-animation") && "w--current"]}>UI animation</a>
-                    <a aria-current={current("/services/sizzle-reels") ? "page" : undefined} href="/services/sizzle-reels" class:list={["footer-link", current("/services/sizzle-reels") && "w--current"]}>Sizzle reels</a>
-                    <a aria-current={current("/services/2d-animation") ? "page" : undefined} href="/services/2d-animation" class:list={["footer-link", current("/services/2d-animation") && "w--current"]}>2D animation</a>
-                    <a aria-current={current("/services/3d-animation") ? "page" : undefined} href="/services/3d-animation" class:list={["footer-link", current("/services/3d-animation") && "w--current"]}>3D animation</a>
-                    <a aria-current={current("/services/social-media") ? "page" : undefined} href="/services/social-media" class:list={["footer-link", current("/services/social-media") && "w--current"]}>Social media content</a>
-                    <a aria-current={current("/services/branded-motion") ? "page" : undefined} href="/services/branded-motion" class:list={["footer-link", current("/services/branded-motion") && "w--current"]}>Branded motion graphics</a>
-                    <a aria-current={current("/services/animated-product") ? "page" : undefined} href="/services/animated-product" class:list={["footer-link", current("/services/animated-product") && "w--current"]}>Animated product videos</a>
-                    <a aria-current={current("/services/corporate-video") ? "page" : undefined} href="/services/corporate-video" class:list={["footer-link", current("/services/corporate-video") && "w--current"]}>Corporate videos</a>
-                    <a aria-current={current("/services/training-video") ? "page" : undefined} href="/services/training-video" class:list={["footer-link", current("/services/training-video") && "w--current"]}>Training videos</a>
-                    <a aria-current={current("/services/explainer-video") ? "page" : undefined} href="/services/explainer-video" class:list={["footer-link", current("/services/explainer-video") && "w--current"]}>Explainer videos</a>
-                    <a aria-current={current("/services/lottie") ? "page" : undefined} href="/services/lottie" class:list={["footer-link", current("/services/lottie") && "w--current"]}>Lottie animation</a>
+            <div class="flex-h _40px footer [grid-column-gap:32px] [grid-row-gap:32px] [align-self:auto] [display:flex] [flex:1] [justify-content:space-between] max-lg:[grid-column-gap:40px] max-lg:[grid-row-gap:40px] max-lg:[flex-flow:wrap] max-lg:[grid-template-rows:auto_auto] max-lg:[grid-template-columns:1fr_1fr_1fr] max-lg:[grid-auto-columns:1fr] max-lg:[display:flex] max-landscape:[grid-template-columns:1fr_1fr] max-landscape:[grid-column-gap:24px] max-landscape:[grid-row-gap:24px] max-landscape:[justify-content:space-between] max-landscape:[align-self:stretch] max-sm:[grid-column-gap:24px] max-sm:[grid-row-gap:24px] max-sm:[grid-template-rows:auto_auto] max-sm:[grid-template-columns:1fr_1fr] max-sm:[grid-auto-columns:1fr] max-sm:[display:grid] max-sm:[flex-flow:wrap] max-sm:[overflow:auto]">
+              <div id="w-node-cdc59cc7-9dd5-0b1e-461b-3643144b04ed-144b04dc" class="column-3 [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [align-self:baseline] [display:flex] max-landscape:[flex:1]">
+                <div class="gap-16 [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [max-width:600px] [display:flex] max-lg:[max-width:100%]">
+                  <div class="text-16-150 weight-bold [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:600] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Animation services</div>
+                  <div class="list [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex]">
+                    <a href="/services/ui-animation" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">UI animation</a>
+                    <a href="/services/sizzle-reels" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Sizzle reels</a>
+                    <a href="/services/2d-animation" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">2D animation</a>
+                    <a href="/services/3d-animation" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">3D animation</a>
+                    <a href="/services/social-media" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Social media content</a>
+                    <a href="/services/branded-motion" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Branded motion graphics</a>
+                    <a href="/services/animated-product" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Animated product videos</a>
+                    <a href="/services/corporate-video" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Corporate videos</a>
+                    <a href="/services/training-video" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Training videos</a>
+                    <a href="/services/explainer-video" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Explainer videos</a>
+                    <a href="/services/lottie" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Lottie animation</a>
                   </div>
                 </div>
               </div>
-              <div id="w-node-_09c10ff7-676d-14b5-00e4-ce8e8e35f2ad-144b04dc" class="column-1-tablet">
-                <div class="gap-16">
-                  <div class="text-16-150 weight-bold">Design services</div>
-                  <div class="list">
-                    <a aria-current={current("/services/web-design") ? "page" : undefined} href="/services/web-design" class:list={["footer-link", current("/services/web-design") && "w--current"]}>Web design</a>
-                    <a aria-current={current("/services/ui-design") ? "page" : undefined} href="/services/ui-design" class:list={["footer-link", current("/services/ui-design") && "w--current"]}>UI design</a>
-                    <a aria-current={current("/services/brand-design") ? "page" : undefined} href="/services/brand-design" class:list={["footer-link", current("/services/brand-design") && "w--current"]}>Brand design</a>
+              <div id="w-node-_09c10ff7-676d-14b5-00e4-ce8e8e35f2ad-144b04dc" class="column-1-tablet [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [align-self:baseline] [display:flex] max-landscape:[flex:1] max-sm:[flex:none] max-sm:[align-self:auto]">
+                <div class="gap-16 [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [max-width:600px] [display:flex] max-lg:[max-width:100%]">
+                  <div class="text-16-150 weight-bold [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:600] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Design services</div>
+                  <div class="list [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex]">
+                    <a href="/services/web-design" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Web design</a>
+                    <a href="/services/ui-design" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">UI design</a>
+                    <a href="/services/brand-design" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Brand design</a>
                   </div>
                 </div>
-                <div class="column-2 pricing-wrapper">
-                  <div class="text-16-150 weight-bold">Pricing</div>
-                  <div class="list">
-                    <a aria-current={current("/pricing/motion-graphics-price") ? "page" : undefined} href="/pricing/motion-graphics-price" class:list={["footer-link", current("/pricing/motion-graphics-price") && "w--current"]}>Fixed price</a>
-                    <a aria-current={current("/pricing/design-subscription-services") ? "page" : undefined} href="/pricing/design-subscription-services" class:list={["footer-link", current("/pricing/design-subscription-services") && "w--current"]}>Subscription</a>
-                    <a aria-current={current("/pricing/creative-credits") ? "page" : undefined} href="/pricing/creative-credits" class:list={["footer-link", current("/pricing/creative-credits") && "w--current"]}>Creative credits</a>
-                    <a aria-current={current("/pricing") ? "page" : undefined} href="/pricing" class:list={["footer-link", current("/pricing") && "w--current"]}>Compare all pricing</a>
-                  </div>
-                </div>
-              </div>
-              <div id="w-node-cdc59cc7-9dd5-0b1e-461b-3643144b050a-144b04dc" class="column-2 hide">
-                <div class="w-layout-vflex column-4">
-                  <div class="list">
-                    <div class="text-16-150 weight-bold">For whom</div>
-                    <a aria-current={current("/for-whom/startup") ? "page" : undefined} href="/for-whom/startup" class:list={["footer-link", current("/for-whom/startup") && "w--current"]}>Startup</a>
-                    <a aria-current={current("/for-whom/scaleup") ? "page" : undefined} href="/for-whom/scaleup" class:list={["footer-link", current("/for-whom/scaleup") && "w--current"]}>Scaleup</a>
-                    <a aria-current={current("/for-whom/enterprise") ? "page" : undefined} href="/for-whom/enterprise" class:list={["footer-link", current("/for-whom/enterprise") && "w--current"]}>Enterprise</a>
-                    <a aria-current={current("/for-whom/saas") ? "page" : undefined} href="/for-whom/saas" class:list={["footer-link", current("/for-whom/saas") && "w--current"]}>SaaS</a>
-                    <a aria-current={current("/for-whom/marketing") ? "page" : undefined} href="/for-whom/marketing" class:list={["footer-link", current("/for-whom/marketing") && "w--current"]}>Marketing</a>
-                    <a aria-current={current("/for-whom/b2b") ? "page" : undefined} href="/for-whom/b2b" class:list={["footer-link", current("/for-whom/b2b") && "w--current"]}>B2B</a>
-                    <a aria-current={current("/for-whom/tech") ? "page" : undefined} href="/for-whom/tech" class:list={["footer-link", current("/for-whom/tech") && "w--current"]}>Tech</a>
-                    <a aria-current={current("/for-whom/ai") ? "page" : undefined} href="/for-whom/ai" class:list={["footer-link", current("/for-whom/ai") && "w--current"]}>AI</a>
-                    <a aria-current={current("/for-whom/web3") ? "page" : undefined} href="/for-whom/web3" class:list={["footer-link", current("/for-whom/web3") && "w--current"]}>Web3</a>
-                    <a aria-current={current("/for-whom/healthcare") ? "page" : undefined} href="/for-whom/healthcare" class:list={["footer-link", current("/for-whom/healthcare") && "w--current"]}>Healthcare</a>
+                <div class="column-2 pricing-wrapper [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [display:flex] [position:relative] [overflow:hidden] [flex:0_auto] max-lg:[height:auto] max-lg:[grid-column-gap:16px] max-lg:[grid-row-gap:16px] max-lg:[margin-top:32px] max-sm:[margin-top:0]">
+                  <div class="text-16-150 weight-bold [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:600] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Pricing</div>
+                  <div class="list [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex]">
+                    <a href="/pricing/motion-graphics-price" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Fixed price</a>
+                    <a href="/pricing/design-subscription-services" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Subscription</a>
+                    <a href="/pricing/creative-credits" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Creative credits</a>
+                    <a href="/pricing" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Compare all pricing</a>
                   </div>
                 </div>
               </div>
-              <div id="w-node-cdc59cc7-9dd5-0b1e-461b-3643144b051a-144b04dc" class="column-4">
-                <div class="column-2 pricing-wrapper">
-                  <div class="text-16-150 weight-bold">Resources</div>
-                  <div class="list">
-                    <a aria-current={current("/resources/blog") ? "page" : undefined} href="/resources/blog" class:list={["footer-link", current("/resources/blog") && "w--current"]}>Blog</a>
-                    <a aria-current={current("/resources/customer-stories") ? "page" : undefined} href="/resources/customer-stories" class:list={["footer-link", current("/resources/customer-stories") && "w--current"]}>Customer stories</a>
-                    <a aria-current={current("/resources/video-cost-calculator") ? "page" : undefined} href="/resources/video-cost-calculator" class:list={["footer-link", current("/resources/video-cost-calculator") && "w--current"]}>Video cost calculator</a>
-                    <a aria-current={current("/resources/ai-video-script-generator") ? "page" : undefined} href="/resources/ai-video-script-generator" class:list={["footer-link", current("/resources/ai-video-script-generator") && "w--current"]}>Free AI video script generator</a>
-                  </div>
-                </div>
-                <div class="gap-16 company-wrapper">
-                  <div class="text-16-150 weight-bold">Company</div>
-                  <div class="list">
-                    <a aria-current={current("/about-us") ? "page" : undefined} href="/about-us" class:list={["footer-link", current("/about-us") && "w--current"]}>About us</a>
-                    <a aria-current={current("/our-work") ? "page" : undefined} href="/our-work" class:list={["footer-link", current("/our-work") && "w--current"]}>Our work</a>
-                    <a aria-current={current("/how-it-works") ? "page" : undefined} href="/how-it-works" class:list={["footer-link", current("/how-it-works") && "w--current"]}>How it works</a>
-                    <a aria-current={current("/contact-us") ? "page" : undefined} href="/contact-us" class:list={["footer-link", current("/contact-us") && "w--current"]}>Contact us</a>
+              <div id="w-node-cdc59cc7-9dd5-0b1e-461b-3643144b050a-144b04dc" class="column-2 hide [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [display:flex] [flex:0_auto] [align-self:baseline] max-sm:[flex:1]">
+                <div class="w-layout-vflex column-4 [flex-direction:column] [align-items:flex-start] [display:flex] [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [align-self:baseline] max-landscape:[flex-flow:row] max-sm:[grid-column-gap:32px] max-sm:[grid-row-gap:32px] max-sm:[flex-flow:column] max-sm:[flex:1]">
+                  <div class="list [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex]">
+                    <div class="text-16-150 weight-bold [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:600] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">For whom</div>
+                    <a href="/for-whom/startup" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Startup</a>
+                    <a href="/for-whom/scaleup" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Scaleup</a>
+                    <a href="/for-whom/enterprise" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Enterprise</a>
+                    <a href="/for-whom/saas" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">SaaS</a>
+                    <a href="/for-whom/marketing" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Marketing</a>
+                    <a href="/for-whom/b2b" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">B2B</a>
+                    <a href="/for-whom/tech" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Tech</a>
+                    <a href="/for-whom/ai" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">AI</a>
+                    <a href="/for-whom/web3" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Web3</a>
+                    <a href="/for-whom/healthcare" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Healthcare</a>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="banner-footer">
-          <div class="line-gradient">
-            <div class="w-layout-blockcontainer container-1280 footer w-container">
-              <div class="wrapper-banner-logo space-between">
-                <div class="social-link mobile-center">
-                  <a href="https://www.youtube.com/@motiontheagency" class="w-inline-block"><img src="/images/bi_youtube.svg" loading="lazy" alt="youtube icon" class="social-icon"></a>
-                  <a href="https://www.linkedin.com/company/motion-the-agency/" class="w-inline-block"><img src="/images/mdi_linkedin.svg" loading="lazy" alt="linkedin icon" class="social-icon"></a>
-                  <a href="https://www.behance.net/motiontheagency" class="w-inline-block"><img src="/images/behance-icon.svg" loading="lazy" alt="" class="social-icon"></a>
+              <div id="w-node-cdc59cc7-9dd5-0b1e-461b-3643144b051a-144b04dc" class="column-4 [grid-column-gap:32px] [grid-row-gap:32px] [flex-flow:column] [align-self:baseline] [display:flex] max-landscape:[flex-flow:row] max-sm:[grid-column-gap:32px] max-sm:[grid-row-gap:32px] max-sm:[flex-flow:column] max-sm:[flex:1]">
+                <div class="column-2 pricing-wrapper [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [display:flex] [position:relative] [overflow:hidden] [flex:0_auto] max-lg:[height:auto] max-lg:[grid-column-gap:16px] max-lg:[grid-row-gap:16px] max-lg:[margin-top:32px] max-sm:[margin-top:0]">
+                  <div class="text-16-150 weight-bold [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:600] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Resources</div>
+                  <div class="list [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex]">
+                    <a href="/resources/blog" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Blog</a>
+                    <a href="/resources/customer-stories" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Customer stories</a>
+                    <a href="/resources/video-cost-calculator" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Video cost calculator</a>
+                    <a href="/resources/ai-video-script-generator" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Free AI video script generator</a>
+                  </div>
                 </div>
-                <div class="gap-24-h mobile-v">
-                  <div class="text-14-150 footnote">© 2026 Motion The Agency. All rights reserved.</div>
-                  <div class="div-block-41">
-                    <a aria-current={current("/legal/terms-of-services") ? "page" : undefined} href="/legal/terms-of-services" class:list={["ft-link", current("/legal/terms-of-services") && "w--current"]}>Terms of Service</a>
-                    <a aria-current={current("/legal/privacy-policy") ? "page" : undefined} href="/legal/privacy-policy" class:list={["ft-link", current("/legal/privacy-policy") && "w--current"]}>Privacy Policy</a>
+                <div class="gap-16 company-wrapper [grid-column-gap:16px] [grid-row-gap:16px] [flex-flow:column] [max-width:600px] [display:flex] max-lg:[max-width:100%] max-landscape:[width:33%] max-sm:[width:100%]">
+                  <div class="text-16-150 weight-bold [letter-spacing:.2px] [text-wrap:balance] [margin-top:0] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:16px] [font-weight:600] [line-height:150%] max-lg:[letter-spacing:.2px] max-lg:[font-size:15px] max-landscape:[letter-spacing:.2px] max-landscape:[font-size:13px]">Company</div>
+                  <div class="list [grid-column-gap:12px] [grid-row-gap:12px] [flex-flow:column] [display:flex]">
+                    <a href="/about-us" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">About us</a>
+                    <a href="/our-work" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Our work</a>
+                    <a href="/how-it-works" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">How it works</a>
+                    <a href="/contact-us" class="footer-link [color:#ffffff80] [font-family:Inter,_sans-serif] [font-weight:400] [line-height:150%] [text-decoration:none] [transition:color_.2s] hover:[color:#fff]">Contact us</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="text-white-embed w-embed">
-          <style is:inline>
-.item-contact {
-    color: white !important;
-}
-</style>
+        <div class="banner-footer [grid-column-gap:6px] [grid-row-gap:6px] [flex-flow:column] [justify-content:flex-start] [align-items:center] [margin-top:80px] [padding-bottom:0] [display:flex] max-lg:[text-align:center] max-lg:[margin-top:40px]">
+          <div class="line-gradient [background-image:linear-gradient(#7f05ec,_#6837f6)] [justify-content:center] [align-items:center] [width:100%] [padding-top:20px] [padding-bottom:20px] [line-height:150%] [display:flex] max-lg:[padding-left:20px] max-lg:[padding-right:20px] max-sm:[flex-flow:row] max-sm:[padding:12px_0]">
+            <div class="w-layout-blockcontainer container-1280 footer w-container [margin-left:auto] [margin-right:auto] [max-width:1360px] [display:block] [width:100%] [padding-left:40px] [padding-right:40px] [text-decoration:none] max-lg:[max-width:728px] max-lg:[margin-top:0] max-lg:[padding:40px] max-lg:[padding-top:0] max-sm:[max-width:none] max-sm:[padding-top:0] max-landscape:[max-width:none] max-landscape:[margin-top:0] max-landscape:[padding-top:0] max-landscape:[padding-left:20px] max-landscape:[padding-right:20px]">
+              <div class="wrapper-banner-logo space-between [justify-content:space-between] [align-items:center] [display:flex] max-landscape:[grid-column-gap:12px] max-landscape:[grid-row-gap:12px] max-landscape:[flex-flow:column-reverse] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px] max-sm:[text-align:left] max-sm:[flex-flow:column-reverse] max-sm:[align-items:flex-start]">
+                <div class="social-link mobile-center [grid-column-gap:12px] [grid-row-gap:12px] [justify-content:flex-start] [align-items:center] [display:flex] max-landscape:[width:100%] max-sm:[justify-content:center] max-sm:[align-items:center]">
+                  <a href="https://www.youtube.com/@motiontheagency" class="w-inline-block [max-width:100%] [display:inline-block]"><img data-meno-optimize="false" src="/images/bi_youtube.svg" loading="lazy" alt="youtube icon" class="social-icon [min-height:32px]" /></a>
+                  <a href="https://www.linkedin.com/company/motion-the-agency/" class="w-inline-block [max-width:100%] [display:inline-block]"><img data-meno-optimize="false" src="/images/mdi_linkedin.svg" loading="lazy" alt="linkedin icon" class="social-icon [min-height:32px]" /></a>
+                  <a href="https://www.behance.net/motiontheagency" class="w-inline-block [max-width:100%] [display:inline-block]"><img data-meno-optimize="false" src="/images/behance-icon.svg" loading="lazy" alt="" class="social-icon [min-height:32px]" /></a>
+                </div>
+                <div class="gap-24-h mobile-v [grid-column-gap:24px] [grid-row-gap:24px] [justify-content:flex-start] [align-items:center] [display:flex] max-landscape:[grid-column-gap:12px] max-landscape:[grid-row-gap:12px] max-landscape:[flex-flow:row] max-landscape:[align-items:flex-start] max-landscape:[width:100%] max-sm:[flex-flow:column] max-sm:[justify-content:center] max-sm:[align-items:center]">
+                  <div class="text-14-150 footnote [letter-spacing:.2px] [white-space:normal] [margin-bottom:0] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:12px]">© 2026 Motion The Agency. All rights reserved.</div>
+                  <div class="div-block-41 [grid-column-gap:20px] [grid-row-gap:20px] [justify-content:flex-start] [align-items:center] [display:flex] max-landscape:[grid-column-gap:12px] max-landscape:[grid-row-gap:12px] max-sm:[grid-column-gap:12px] max-sm:[grid-row-gap:12px] max-sm:[display:flex]">
+                    <a href="/legal/terms-of-services" class="ft-link [color:#fff] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:12px]">Terms of Service</a>
+                    <a href="/legal/privacy-policy" class="ft-link [color:#fff] [font-family:Switzer,_sans-serif] [font-size:14px] [font-weight:400] [line-height:150%] max-landscape:[font-size:12px]">Privacy Policy</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-white-embed w-embed max-sm:[display:none]">
+          <Embed html={__embed4} />
         </div>
       </section>
